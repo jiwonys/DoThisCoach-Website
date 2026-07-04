@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="/" aria-label="DoThis home">
         <img src="assets/dothis-logo.png" alt="" />
@@ -38,7 +40,7 @@
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Fitness, nutrition, and recovery in one daily plan</p>
-          <h1>Take the next useful step toward your goal.</h1>
+          <h1>Fitness coaching that turns goals into today.</h1>
           <p class="hero-lede">
             DoThis turns training, macros, recovery, and life schedule changes into clear daily actions. Built for
             people who want progress without juggling a dozen notes, videos, calculators, and guesswork.
@@ -54,6 +56,20 @@
             <span>Daily goals</span>
             <span>Food logging</span>
           </div>
+          <div class="trust-strip" aria-label="DoThis focus areas">
+            <div>
+              <strong>Workout</strong>
+              <span>Strength, sport, mobility, and repeatable progression</span>
+            </div>
+            <div>
+              <strong>Nutrition</strong>
+              <span>Calories, macros, recent foods, and barcode logging</span>
+            </div>
+            <div>
+              <strong>Coach</strong>
+              <span>Adjust around preferences, soreness, schedule, and context</span>
+            </div>
+          </div>
         </div>
         <div class="phone-stage" aria-label="DoThis app preview">
           <div class="phone">
@@ -65,6 +81,7 @@
               </div>
               <span>0/5</span>
             </div>
+            <div class="mini-progress" aria-hidden="true"><span></span></div>
             <div class="metric-grid">
               <div>
                 <small>Energy</small>
@@ -108,33 +125,39 @@
             adjust when real life changes the plan.
           </p>
         </div>
+        <div class="feature-tabs" aria-label="Product focus">
+          <button class="feature-tab is-active" type="button" data-filter="all">All</button>
+          <button class="feature-tab" type="button" data-filter="training">Training</button>
+          <button class="feature-tab" type="button" data-filter="nutrition">Nutrition</button>
+          <button class="feature-tab" type="button" data-filter="coach">Coach</button>
+        </div>
         <div class="feature-grid">
-          <article class="feature-card">
+          <article class="feature-card" data-category="coach">
             <span class="feature-icon">01</span>
             <h3>Daily goals</h3>
             <p>Get a focused plan for the day based on training days, rest days, nutrition targets, and your schedule.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-category="training">
             <span class="feature-icon">02</span>
             <h3>Workout generation</h3>
             <p>Generate strength, sport, warmup, mobility, rehab-aware, and prehab-focused sessions from your goals.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-category="training">
             <span class="feature-icon">03</span>
             <h3>Progressive overload memory</h3>
             <p>Reuse prior workouts, favorite exercises, and training history so sessions can progress more intelligently.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-category="nutrition">
             <span class="feature-icon">04</span>
             <h3>Nutrition tracking</h3>
             <p>Log food, scan barcodes, reuse recent foods, and compare your day against calorie and macro targets.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-category="coach">
             <span class="feature-icon">05</span>
             <h3>Adaptive coach</h3>
             <p>Tell DoThis about injuries, soreness, preferences, schedule changes, or goals so future plans can adapt.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card" data-category="training">
             <span class="feature-icon">06</span>
             <h3>Workout imports</h3>
             <p>Bring in your own workout plan, save it, repeat it, or improve it for today's training session.</p>
@@ -193,6 +216,21 @@
             <strong>See what changed</strong>
             <p>Workout history, weight trend, goals, and weekly consistency.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="results-strip" aria-label="DoThis outcomes">
+        <div>
+          <strong data-count="5">0</strong>
+          <span>daily actions in a focused plan</span>
+        </div>
+        <div>
+          <strong data-count="90">0</strong>
+          <span>minute workouts can be planned</span>
+        </div>
+        <div>
+          <strong data-count="24">0</strong>
+          <span>hour plan rhythm around your day</span>
         </div>
       </section>
 
