@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Strength Training for Weight Loss Without Losing Muscle</title><desc id="desc">DoThis training article cover</desc>
+  <rect width="1200" height="630" fill="#f7fafc"/><rect x="48" y="48" width="1104" height="534" rx="28" fill="#ffffff" stroke="#dce5ea" stroke-width="3"/>
+  <circle cx="1020" cy="160" r="112" fill="#dffcf0"/><circle cx="1020" cy="160" r="68" fill="#10b981" opacity=".16"/>
+  <path d="M965 160h110M1020 105v110" stroke="#047857" stroke-width="20" stroke-linecap="round"/>
+  <text x="88" y="130" class="brand">DOTHIS TRAINING LIBRARY</text><text x="88" y="285" class="title">Strength Training for Weight</text><text x="88" y="371" class="title">Loss</text>
+  <text x="88" y="548" class="url">dothiscoach.com/articles</text>
+  <style>.brand{font:800 25px system-ui;letter-spacing:4px;fill:#047857}.title{font:900 66px system-ui;fill:#101320}.url{font:700 25px system-ui;fill:#687084}</style>
+  </svg>

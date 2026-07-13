@@ -1,0 +1,9 @@
+{
+  "name": "dothiscoach-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:articles": "node scripts/build-articles.mjs",
+    "check:site": "node scripts/check-site.mjs"
+  }
+}

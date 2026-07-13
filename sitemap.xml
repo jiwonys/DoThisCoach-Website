@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://dothiscoach.com/</loc>
-  </url>
-  <url>
-    <loc>https://dothiscoach.com/privacy.html</loc>
-  </url>
-  <url>
-    <loc>https://dothiscoach.com/terms.html</loc>
-  </url>
-  <url>
-    <loc>https://dothiscoach.com/support.html</loc>
-  </url>
+  <url><loc>https://dothiscoach.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://dothiscoach.com/articles/</loc><lastmod>2026-07-13</lastmod><priority>0.9</priority></url>
+  <url><loc>https://dothiscoach.com/articles/beginner-gym-workout-plan-3-day/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/full-body-dumbbell-workout/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/upper-lower-workout-split/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/push-pull-legs-routine/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/strength-training-weight-loss-preserve-muscle/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/body-recomposition-workout-plan/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/progressive-overload-guide/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/30-minute-workout-busy-professionals/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/volleyball-strength-conditioning-workout/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/articles/knee-friendly-lower-body-workout/</loc><lastmod>2026-07-13</lastmod><priority>0.8</priority></url>
+  <url><loc>https://dothiscoach.com/privacy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://dothiscoach.com/terms.html</loc><priority>0.3</priority></url>
+  <url><loc>https://dothiscoach.com/support.html</loc><priority>0.5</priority></url>
 </urlset>

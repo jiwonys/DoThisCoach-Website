@@ -15,7 +15,7 @@ setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
 const revealTargets = document.querySelectorAll(
-  ".hero-copy, .phone-stage, .feature-card, .split-section > *, .showcase > *, .mini-screens > *, .results-strip > *, .pricing-card, .contact-card, .safety, .support-hero, .support-grid article, .legal-page section",
+  ".hero-copy, .phone-stage, .feature-card, .article-preview-heading > *, .article-preview-grid article, .split-section > *, .showcase > *, .mini-screens > *, .results-strip > *, .pricing-card, .contact-card, .safety, .support-hero, .support-grid article, .legal-page section",
 );
 
 revealTargets.forEach((target, index) => {
