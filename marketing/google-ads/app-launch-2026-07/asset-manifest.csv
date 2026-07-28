@@ -1,0 +1,13 @@
+concept,format,width,height,file
+adaptive-training,landscape,1200,628,final/adaptive-training-landscape-1200x628.jpg
+adaptive-training,square,1200,1200,final/adaptive-training-square-1200x1200.jpg
+adaptive-training,portrait,1200,1500,final/adaptive-training-portrait-1200x1500.jpg
+food-tracking,landscape,1200,628,final/food-tracking-landscape-1200x628.jpg
+food-tracking,square,1200,1200,final/food-tracking-square-1200x1200.jpg
+food-tracking,portrait,1200,1500,final/food-tracking-portrait-1200x1500.jpg
+busy-professional,landscape,1200,628,final/busy-professional-landscape-1200x628.jpg
+busy-professional,square,1200,1200,final/busy-professional-square-1200x1200.jpg
+busy-professional,portrait,1200,1500,final/busy-professional-portrait-1200x1500.jpg
+volleyball-performance,landscape,1200,628,final/volleyball-performance-landscape-1200x628.jpg
+volleyball-performance,square,1200,1200,final/volleyball-performance-square-1200x1200.jpg
+volleyball-performance,portrait,1200,1500,final/volleyball-performance-portrait-1200x1500.jpg

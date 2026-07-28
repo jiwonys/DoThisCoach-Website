@@ -15,7 +15,7 @@ setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
 const revealTargets = document.querySelectorAll(
-  ".hero-copy, .phone-stage, .feature-card, .article-preview-heading > *, .article-preview-grid article, .split-section > *, .showcase > *, .mini-screens > *, .results-strip > *, .pricing-card, .contact-card, .safety, .support-hero, .support-grid article, .legal-page section",
+  ".hero-copy, .phone-stage, .feature-card, .article-preview-heading > *, .article-preview-grid article, .split-section > *, .showcase > *, .mini-screens > *, .results-strip > *, .pricing-tier, .contact-card, .safety, .support-hero, .support-grid article, .legal-page section",
 );
 
 revealTargets.forEach((target, index) => {
@@ -108,7 +108,11 @@ featureTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     const filter = tab.dataset.filter || "all";
 
-    featureTabs.forEach((item) => item.classList.toggle("is-active", item === tab));
+    featureTabs.forEach((item) => {
+      const isActive = item === tab;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
     featureCards.forEach((card) => {
       const isMatch = filter === "all" || card.dataset.category === filter;
       card.classList.toggle("is-filtered-out", !isMatch);

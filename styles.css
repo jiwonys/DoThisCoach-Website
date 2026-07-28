@@ -387,6 +387,7 @@ p {
 
 .app-card,
 .task-card,
+.decision-card,
 .metric-grid > div {
   border: 1px solid rgba(255, 255, 255, 0.09);
   background: #191b2c;
@@ -502,6 +503,64 @@ p {
 
 .task-card.blue {
   border-left: 4px solid var(--cyan);
+}
+
+.decision-card {
+  margin-top: 10px;
+  padding: 15px 16px;
+  border-radius: 20px;
+  border-color: rgba(56, 189, 248, 0.28);
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), #191b2c 72%);
+}
+
+.decision-heading,
+.decision-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.decision-heading small {
+  color: #7dd3fc;
+  font-size: 0.7rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.decision-heading span {
+  color: #86efac;
+  font-size: 0.69rem;
+  font-weight: 850;
+}
+
+.decision-card strong {
+  display: block;
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 0.94rem;
+  line-height: 1.28;
+}
+
+.decision-card p {
+  margin: 7px 0 10px;
+  color: #b8c1d5;
+  font-size: 0.79rem;
+  line-height: 1.38;
+}
+
+.decision-actions {
+  justify-content: flex-start;
+}
+
+.decision-actions span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #dbeafe;
+  font-size: 0.7rem;
+  font-weight: 850;
 }
 
 .tabbar {
@@ -653,7 +712,8 @@ p {
   box-shadow: 0 22px 52px rgba(16, 24, 40, 0.13);
 }
 
-.feature-card.is-filtered-out {
+.feature-card.is-filtered-out,
+.feature-card.reveal.is-visible.is-filtered-out {
   opacity: 0.22;
 }
 
@@ -847,8 +907,8 @@ p {
   display: block;
   margin-bottom: 8px;
   color: var(--green-dark);
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1;
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+  line-height: 1.12;
 }
 
 .results-strip span {
@@ -856,19 +916,52 @@ p {
   font-weight: 780;
 }
 
-.pricing-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  background:
-    linear-gradient(135deg, rgba(16, 185, 129, 0.13), transparent 42%),
-    rgba(255, 255, 255, 0.86);
+.pricing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 16px;
 }
 
-.pricing-card p {
-  max-width: 700px;
-  margin-bottom: 0;
+.pricing-tier {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing-tier.is-premium {
+  background:
+    radial-gradient(circle at 94% 8%, rgba(56, 189, 248, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(16, 185, 129, 0.15), transparent 45%),
+    #ffffff;
+}
+
+.pricing-tier ul {
+  display: grid;
+  gap: 11px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-tier li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--muted);
+  line-height: 1.48;
+}
+
+.pricing-tier li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green-dark);
+  font-weight: 1000;
+}
+
+.pricing-tier .primary-button {
+  margin-top: 24px;
 }
 
 .fine-print {
@@ -1022,7 +1115,7 @@ p {
   .hero,
   .split-section,
   .showcase,
-  .pricing-card {
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1069,7 +1162,7 @@ p {
 
   .hero-actions .primary-button,
   .hero-actions .secondary-button,
-  .pricing-card .primary-button,
+  .pricing-tier .primary-button,
   .contact-card .primary-button {
     width: 100%;
   }
