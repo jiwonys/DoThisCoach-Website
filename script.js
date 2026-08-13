@@ -199,16 +199,18 @@ const screenshotControls = document.querySelectorAll(".screenshot-control");
 const screenshotCards = [...document.querySelectorAll(".screenshot-card")];
 const screenshotGallery = document.querySelector(".screenshot-gallery");
 
-const setScreenshot = (key, shouldScroll = true) => {
+const setScreenshot = (key) => {
   screenshotControls.forEach((control) => {
     const isActive = control.dataset.shot === key;
     control.classList.toggle("is-active", isActive);
     control.setAttribute("aria-pressed", String(isActive));
   });
 
-  screenshotCards.forEach((card) => card.classList.toggle("is-active", card.dataset.shotCard === key));
-  const activeCard = screenshotCards.find((card) => card.dataset.shotCard === key);
-  if (shouldScroll && activeCard) activeCard.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  screenshotCards.forEach((card) => {
+    const isActive = card.dataset.shotCard === key;
+    card.classList.toggle("is-active", isActive);
+    card.hidden = !isActive;
+  });
 };
 
 screenshotControls.forEach((control) => {
