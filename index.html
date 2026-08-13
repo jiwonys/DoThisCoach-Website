@@ -64,6 +64,7 @@
       </a>
       <nav aria-label="Main navigation">
         <a href="#features">Autopilot</a>
+        <a href="#workflows">Workflows</a>
         <a href="articles/">Articles</a>
         <a href="#pricing">Pricing</a>
         <a href="#partners">Partners</a>
@@ -107,51 +108,22 @@
             </li>
           </ul>
         </div>
-        <div class="phone-stage" aria-hidden="true">
-          <div class="phone">
-            <div class="phone-top"></div>
-            <div class="app-card goal-card">
-              <div>
-                <small>Your day</small>
-                <strong>Volleyball tonight. Keep strength work upper-body focused.</strong>
-              </div>
-              <span>1/4</span>
-            </div>
-            <div class="mini-progress" aria-hidden="true"><span></span></div>
-            <div class="metric-grid">
-              <div>
-                <small>Sport load</small>
-                <strong>High tonight</strong>
-              </div>
-              <div>
-                <small>Recovery</small>
-                <strong>Ready</strong>
-              </div>
-            </div>
-            <div class="task-card green">
-              <small>Daily goal 1</small>
-              <strong>Complete a 12-minute shoulder and knee primer</strong>
-              <p>Prepare for court work without adding fatigue.</p>
-            </div>
-            <div class="task-card orange">
-              <small>Daily goal 2</small>
-              <strong>Fuel before volleyball and finish the protein target</strong>
-              <p>Carbohydrates are shifted toward tonight's session.</p>
-            </div>
-            <div class="decision-card">
-              <div class="decision-heading">
-                <small>Plan adjusted</small>
-                <span>High confidence</span>
-              </div>
-              <strong>Lower-body lifting moved to Sunday.</strong>
-              <p>Why: last night's sport load and today's volleyball would overlap.</p>
-              <div class="decision-actions"><span>Approved</span><span>Undo</span></div>
-            </div>
-            <div class="tabbar">
-              <span>Today</span>
-              <span>Workout</span>
-              <span>Coach</span>
-            </div>
+        <div class="hero-product" aria-label="DoThis app preview">
+          <figure class="hero-shot hero-shot-main">
+            <img
+              src="assets/screenshots/today-plan.webp"
+              alt="DoThis Today screen showing a coordinated daily plan"
+              width="640"
+              height="1386"
+              fetchpriority="high"
+            />
+          </figure>
+          <figure class="hero-shot hero-shot-side" aria-hidden="true">
+            <img src="assets/screenshots/adaptive-workout.webp" alt="" width="640" height="1386" />
+          </figure>
+          <div class="hero-product-note">
+            <span>Today</span>
+            <strong>One plan across training, food, and recovery.</strong>
           </div>
         </div>
       </section>
@@ -203,6 +175,97 @@
             <h3>Explain, approve, undo</h3>
             <p>Material changes carry evidence, confidence, and a plain-language reason. You keep the final say.</p>
           </article>
+        </div>
+      </section>
+
+      <section id="workflows" class="workflow-section" aria-labelledby="workflow-title">
+        <div class="section-heading workflow-heading">
+          <p class="eyebrow">See Autopilot in motion</p>
+          <h2 id="workflow-title">Life changes. Your whole plan responds.</h2>
+          <p>
+            Explore common athlete scenarios. DoThis connects each new signal to one coordinated decision, then keeps
+            you in control of the result.
+          </p>
+        </div>
+        <div class="workflow-tabs" role="group" aria-label="Autopilot workflow examples">
+          <button class="workflow-tab is-active" type="button" aria-pressed="true" data-workflow="sport">
+            Game tonight
+          </button>
+          <button class="workflow-tab" type="button" aria-pressed="false" data-workflow="schedule">
+            Missed a lift
+          </button>
+          <button class="workflow-tab" type="button" aria-pressed="false" data-workflow="recovery">
+            Low recovery
+          </button>
+        </div>
+        <div class="workflow-shell">
+          <div class="workflow-story" aria-live="polite">
+            <div class="workflow-step" data-step="signal">
+              <span>01 · Signal</span>
+              <strong id="workflow-signal">Volleyball match added for 7:00 PM</strong>
+              <p id="workflow-context">High court load now overlaps with a scheduled lower-body lift.</p>
+            </div>
+            <div class="workflow-connector" aria-hidden="true"></div>
+            <div class="workflow-step is-decision" data-step="decision">
+              <span>02 · Coordinated decision</span>
+              <strong id="workflow-decision">Protect the match. Move heavy legs to Sunday.</strong>
+              <p id="workflow-reason">Upper-body work stays. Carbohydrates shift toward pre-game fuel.</p>
+            </div>
+            <div class="workflow-connector" aria-hidden="true"></div>
+            <div class="workflow-step" data-step="control">
+              <span>03 · Your control</span>
+              <strong id="workflow-outcome">Review what changed, why, and what happens next.</strong>
+              <p>Approve the update or undo it. DoThis never hides a meaningful plan change.</p>
+            </div>
+          </div>
+          <aside class="workflow-summary" aria-label="Workflow outcome preview">
+            <p class="workflow-summary-label">Today's coordinated outcome</p>
+            <div class="workflow-summary-status"><span></span> Plan updated</div>
+            <h3 id="workflow-summary-title">Ready for the court without wasted fatigue.</h3>
+            <ul id="workflow-summary-list">
+              <li>12-minute shoulder and knee primer</li>
+              <li>Lower-body lift moved to Sunday</li>
+              <li>Pre-game carbohydrate target added</li>
+            </ul>
+            <div class="workflow-summary-actions" aria-hidden="true"><span>Approved</span><span>Undo</span></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="screenshot-section" aria-labelledby="screenshots-title">
+        <div class="section-heading screenshot-heading">
+          <div>
+            <p class="eyebrow">Inside DoThis</p>
+            <h2 id="screenshots-title">Built to answer “what should I do next?”</h2>
+          </div>
+          <p>
+            Real product screens, not concept art. Swipe on mobile or use the controls to explore how each part of your
+            fitness life stays connected.
+          </p>
+        </div>
+        <div class="screenshot-controls" aria-label="Choose product screenshot">
+          <button class="screenshot-control is-active" type="button" data-shot="today" aria-pressed="true">Today</button>
+          <button class="screenshot-control" type="button" data-shot="workout" aria-pressed="false">Workout</button>
+          <button class="screenshot-control" type="button" data-shot="nutrition" aria-pressed="false">Nutrition</button>
+          <button class="screenshot-control" type="button" data-shot="coach" aria-pressed="false">Coach</button>
+        </div>
+        <div class="screenshot-gallery" tabindex="0" aria-label="DoThis product screenshots">
+          <figure class="screenshot-card is-active" data-shot-card="today">
+            <img src="assets/screenshots/today-plan.webp" alt="Today view with daily goals and priorities" width="640" height="1386" loading="lazy" />
+            <figcaption><strong>Know what matters today</strong><span>One short action list across every goal.</span></figcaption>
+          </figure>
+          <figure class="screenshot-card" data-shot-card="workout">
+            <img src="assets/screenshots/adaptive-workout.webp" alt="Adaptive workout plan with warmup and progression guidance" width="640" height="1386" loading="lazy" />
+            <figcaption><strong>Train with context</strong><span>Sport load and recovery inform each session.</span></figcaption>
+          </figure>
+          <figure class="screenshot-card" data-shot-card="nutrition">
+            <img src="assets/screenshots/ai-nutrition.webp" alt="AI meal estimate with editable calorie and macro values" width="640" height="1386" loading="lazy" />
+            <figcaption><strong>Log food in seconds</strong><span>Review estimates before anything reaches your log.</span></figcaption>
+          </figure>
+          <figure class="screenshot-card" data-shot-card="coach">
+            <img src="assets/screenshots/coach-memory.webp" alt="Coach conversation adapting training around athlete context" width="640" height="1386" loading="lazy" />
+            <figcaption><strong>Coach with memory</strong><span>Preferences and constraints stay connected to the plan.</span></figcaption>
+          </figure>
         </div>
       </section>
 

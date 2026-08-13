@@ -120,6 +120,112 @@ featureTabs.forEach((tab) => {
   });
 });
 
+const workflowContent = {
+  sport: {
+    signal: "Volleyball match added for 7:00 PM",
+    context: "High court load now overlaps with a scheduled lower-body lift.",
+    decision: "Protect the match. Move heavy legs to Sunday.",
+    reason: "Upper-body work stays. Carbohydrates shift toward pre-game fuel.",
+    outcome: "Review what changed, why, and what happens next.",
+    title: "Ready for the court without wasted fatigue.",
+    items: [
+      "12-minute shoulder and knee primer",
+      "Lower-body lift moved to Sunday",
+      "Pre-game carbohydrate target added",
+    ],
+  },
+  schedule: {
+    signal: "Tuesday's strength session was missed",
+    context: "Two planned lifts remain, but stacking both tomorrow would overload the week.",
+    decision: "Rebuild the week around the sessions that still matter.",
+    reason: "Priority work moves forward. Lower-value volume drops instead of becoming a backlog.",
+    outcome: "See the repaired schedule before accepting it.",
+    title: "No guilt pile. No accidental double day.",
+    items: ["Main strength session moved to Thursday", "Accessory volume reduced", "Weekly progression kept intact"],
+  },
+  recovery: {
+    signal: "Energy is low and knee soreness is elevated",
+    context: "Today's planned intensity no longer matches current readiness.",
+    decision: "Lower fatigue while keeping useful movement in the day.",
+    reason: "Hard jumps come out. Mobility, walking, protein, and sleep stay actionable.",
+    outcome: "Choose the conservative update or keep the original plan.",
+    title: "Recovery becomes part of progress, not a detour.",
+    items: ["High-impact work removed", "20-minute recovery session added", "Sleep target moved to highest priority"],
+  },
+};
+
+const workflowTabs = document.querySelectorAll(".workflow-tab");
+const workflowFields = {
+  signal: document.getElementById("workflow-signal"),
+  context: document.getElementById("workflow-context"),
+  decision: document.getElementById("workflow-decision"),
+  reason: document.getElementById("workflow-reason"),
+  outcome: document.getElementById("workflow-outcome"),
+  title: document.getElementById("workflow-summary-title"),
+  list: document.getElementById("workflow-summary-list"),
+};
+
+const setWorkflow = (key) => {
+  const content = workflowContent[key];
+  if (!content) return;
+
+  workflowTabs.forEach((tab) => {
+    const isActive = tab.dataset.workflow === key;
+    tab.classList.toggle("is-active", isActive);
+    tab.setAttribute("aria-pressed", String(isActive));
+  });
+
+  Object.entries(workflowFields).forEach(([field, element]) => {
+    if (!element || field === "list") return;
+    element.textContent = content[field];
+  });
+
+  if (workflowFields.list) {
+    workflowFields.list.replaceChildren(
+      ...content.items.map((item) => {
+        const row = document.createElement("li");
+        row.textContent = item;
+        return row;
+      }),
+    );
+  }
+};
+
+workflowTabs.forEach((tab) => {
+  tab.addEventListener("click", () => setWorkflow(tab.dataset.workflow));
+});
+
+const screenshotControls = document.querySelectorAll(".screenshot-control");
+const screenshotCards = [...document.querySelectorAll(".screenshot-card")];
+const screenshotGallery = document.querySelector(".screenshot-gallery");
+
+const setScreenshot = (key, shouldScroll = true) => {
+  screenshotControls.forEach((control) => {
+    const isActive = control.dataset.shot === key;
+    control.classList.toggle("is-active", isActive);
+    control.setAttribute("aria-pressed", String(isActive));
+  });
+
+  screenshotCards.forEach((card) => card.classList.toggle("is-active", card.dataset.shotCard === key));
+  const activeCard = screenshotCards.find((card) => card.dataset.shotCard === key);
+  if (shouldScroll && activeCard) activeCard.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+};
+
+screenshotControls.forEach((control) => {
+  control.addEventListener("click", () => setScreenshot(control.dataset.shot));
+});
+
+if (screenshotGallery) {
+  screenshotGallery.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    const currentIndex = Math.max(0, screenshotCards.findIndex((card) => card.classList.contains("is-active")));
+    const direction = event.key === "ArrowRight" ? 1 : -1;
+    const nextIndex = Math.min(screenshotCards.length - 1, Math.max(0, currentIndex + direction));
+    setScreenshot(screenshotCards[nextIndex].dataset.shotCard);
+  });
+}
+
 const tiltCards = document.querySelectorAll(".feature-card");
 
 tiltCards.forEach((card) => {
