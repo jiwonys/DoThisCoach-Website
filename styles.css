@@ -148,8 +148,10 @@ nav {
 }
 
 nav a {
+  flex: 0 0 auto;
   padding: 9px 13px;
   border-radius: 999px;
+  white-space: nowrap;
   transition:
     color 0.18s ease,
     background 0.18s ease;
@@ -681,12 +683,98 @@ p {
 .split-section,
 .showcase,
 .results-strip,
+.preview-offer,
 .workflow-section,
 .screenshot-section,
 .safety,
 .legal-page,
 .support-page {
   padding: clamp(54px, 7vw, 92px) clamp(18px, 5vw, 76px);
+}
+
+.preview-offer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+  color: white;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(16, 185, 129, 0.26), transparent 32rem),
+    radial-gradient(circle at 92% 88%, rgba(56, 189, 248, 0.18), transparent 28rem),
+    #101320;
+}
+
+.preview-offer-copy {
+  max-width: 760px;
+}
+
+.preview-offer h2,
+.preview-offer-copy > p:not(.eyebrow) {
+  color: white;
+}
+
+.preview-offer-copy > p:not(.eyebrow) {
+  color: #c6ceda;
+  font-size: 1.05rem;
+}
+
+.preview-offer-copy .primary-button {
+  margin-top: 8px;
+}
+
+.preview-choice {
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.preview-day {
+  display: inline-flex;
+  padding: 7px 11px;
+  border-radius: 999px;
+  color: #052d21;
+  background: #6ee7b7;
+  font-size: 0.74rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.preview-choice h3 {
+  margin: 18px 0 12px;
+  color: white;
+  font-size: clamp(1.45rem, 2.7vw, 2.2rem);
+  line-height: 1.12;
+}
+
+.preview-choice p {
+  color: #c6ceda;
+}
+
+.preview-choice ul {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.preview-choice li {
+  position: relative;
+  padding-left: 24px;
+  color: #e7ebf1;
+  line-height: 1.45;
+}
+
+.preview-choice li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #5ee9bd;
+  font-weight: 950;
 }
 
 .workflow-section {
@@ -1542,12 +1630,18 @@ p {
     width: 100%;
     overflow-x: auto;
     justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
   }
 
   .hero,
   .split-section,
   .showcase,
   .pricing-grid,
+  .preview-offer,
   .workflow-shell,
   .screenshot-heading {
     grid-template-columns: 1fr;
