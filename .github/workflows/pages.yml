@@ -25,13 +25,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production site
+        run: npm run build:site
+
+      - name: Verify production artifact
+        run: npm run lint:html && npm run check:experience && npm run check:dist
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment

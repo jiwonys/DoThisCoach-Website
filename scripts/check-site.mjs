@@ -2,8 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const ignoredDirs = new Set([".git", "node_modules"]);
+const sourceRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const root = process.env.SITE_ROOT ? path.resolve(sourceRoot, process.env.SITE_ROOT) : sourceRoot;
+const ignoredDirs = new Set([".git", ".playwright-cli", "node_modules", "output", "concept-dist", "dist"]);
 
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
   if (ignoredDirs.has(entry.name)) return [];
@@ -74,4 +75,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Site check passed: ${htmlFiles.length} HTML pages, ${articleFiles.length} articles, ${sitemapUrls.length} sitemap URLs.`);
+console.log(`Site check passed for ${path.relative(sourceRoot, root) || "source"}: ${htmlFiles.length} HTML pages, ${articleFiles.length} articles, ${sitemapUrls.length} sitemap URLs.`);

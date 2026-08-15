@@ -1,18 +1,34 @@
 # DoThisCoach Website
 
-Static GitHub Pages website for DoThis.
+GitHub Pages website for DoThis. The marketing homepage uses a progressively enhanced React Three Fiber experience while articles, support, privacy, and terms remain lightweight static pages.
 
 ## Local Preview
 
-Open `index.html` in a browser, or run a tiny static server:
+Install dependencies and run Vite:
 
 ```bash
-python -m http.server 8080
+npm ci
+npm run dev
 ```
+
+The homepage keeps its essential copy, navigation, product information, pricing terms, safety guidance, and App Store links in semantic HTML. WebGL is a deferred enhancement rather than the source of required content.
+
+## Verification
+
+```bash
+npm run check:site
+npm run lint:html
+npm run check:experience
+npm run build:site
+npm run check:dist
+npm run preview:site
+```
+
+`build:site` compiles the homepage into `dist` and copies all article, legal, support, feed, sitemap, robots, CNAME, and shared static assets into the deployable artifact.
 
 ## Deployment
 
-This repository deploys to GitHub Pages through `.github/workflows/pages.yml`.
+This repository deploys to GitHub Pages through `.github/workflows/pages.yml`. A push to `main` installs locked dependencies, builds the production artifact, verifies `dist`, and uploads only `dist` to Pages.
 
 Required GitHub repository setting:
 
