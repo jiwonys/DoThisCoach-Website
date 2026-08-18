@@ -77,6 +77,7 @@ html {
 }
 
 body {
+  counter-reset: section;
   margin: 0;
   font-family: var(--font-body);
   font-size: var(--step-0);
@@ -313,17 +314,131 @@ button:focus-visible,
   }
 }
 
+/* ── Hero ────────────────────────────────────────────────────────────────
+   Was left-copy / right-phone, the default SaaS split. Now a centred
+   declarative statement with the product on its own full-bleed stage below,
+   so the headline gets the full measure and the screenshots get real size
+   instead of being squeezed into 40% of the viewport. */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.78fr);
-  align-items: center;
-  gap: clamp(34px, 6vw, 76px);
-  min-height: calc(100vh - 69px);
-  padding: clamp(42px, 7vw, 82px) clamp(18px, 5vw, 76px) clamp(44px, 6vw, 70px);
+  justify-items: center;
+  text-align: center;
+  padding: clamp(4.5rem, 11vw, 9rem) clamp(20px, 5vw, 76px) clamp(2.5rem, 4vw, 4rem);
 }
 
 .hero-copy {
-  max-width: 720px;
+  max-width: 60rem;
+  display: grid;
+  justify-items: center;
+}
+
+.hero h1 {
+  max-width: 15ch;
+  font-size: clamp(3rem, 8.2vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.hero .hero-lede {
+  max-width: 46ch;
+  margin-inline: auto;
+}
+
+.hero .hero-actions,
+.hero .hero-proof {
+  justify-content: center;
+}
+
+/* Full-bleed product stage. The shots sit on a wide plinth with a green
+   bloom behind them, so the app reads as the light source in the page. */
+.hero-stage {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  padding: 0 clamp(20px, 5vw, 76px);
+  overflow: hidden;
+}
+
+.hero-stage::before {
+  content: "";
+  position: absolute;
+  inset: 12% 50% auto auto;
+  translate: 50% 0;
+  width: min(1100px, 92vw);
+  aspect-ratio: 1.6;
+  border-radius: 999px;
+  background: radial-gradient(closest-side, rgba(46, 230, 139, 0.2), transparent 72%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+/* Horizon line the phones stand on, so the stage has a floor. */
+.hero-stage::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong) 22%, var(--line-strong) 78%, transparent);
+}
+
+/* ── Ticker ──────────────────────────────────────────────────────────── */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.4rem, 2.4vw, 2.2rem) 0;
+  border-bottom: 1px solid var(--line);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.4rem, 3vw, 3rem);
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+.marquee span {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.26);
+  white-space: nowrap;
+}
+
+.marquee i {
+  width: 7px;
+  height: 7px;
+  flex: none;
+  border-radius: 999px;
+  background: var(--green);
+  opacity: 0.75;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+.hero-trust {
+  padding: clamp(3rem, 6vw, 5.5rem) clamp(20px, 5vw, 76px);
+}
+
+/* Numbered chapters, borrowed from Linear's 1.0-5.0 device: the page reads as
+   a sequence rather than a pile of sections. The counter is CSS-only, so no
+   number is announced to assistive tech or duplicated in the copy. */
+.section-heading .eyebrow::before {
+  counter-increment: section;
+  content: counter(section, decimal-leading-zero);
+  width: auto;
+  height: auto;
+  background: none;
+  opacity: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--soft);
 }
 
 .eyebrow {
@@ -443,20 +558,22 @@ p {
 
 .trust-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 24px;
-  max-width: 760px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: clamp(0.9rem, 1.6vw, 1.5rem);
+  margin: 0 auto;
+  max-width: 1240px;
   padding: 0;
   list-style: none;
 }
 
 .trust-strip li {
-  padding: 16px;
-  border: 1px solid rgba(16, 24, 40, 0.08);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 0.5rem;
+  padding: clamp(1.4rem, 2.2vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset;
 }
 
 .trust-strip strong,
@@ -483,7 +600,8 @@ p {
 
 .hero-product {
   position: relative;
-  min-height: 730px;
+  width: min(1180px, 100%);
+  min-height: clamp(560px, 62vw, 880px);
   display: grid;
   place-items: center;
   isolation: isolate;
@@ -493,35 +611,36 @@ p {
   content: "";
   position: absolute;
   z-index: -2;
-  width: min(520px, 90vw);
-  aspect-ratio: 1;
+  width: min(820px, 92vw);
+  aspect-ratio: 1.1;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 34% 32%, rgba(16, 185, 129, 0.34), transparent 48%),
-    radial-gradient(circle at 68% 65%, rgba(56, 189, 248, 0.3), transparent 46%);
-  filter: blur(8px);
+    radial-gradient(circle at 36% 34%, rgba(46, 230, 139, 0.3), transparent 52%),
+    radial-gradient(circle at 70% 66%, rgba(91, 124, 255, 0.24), transparent 50%);
+  filter: blur(16px);
 }
 
 .hero-product::after {
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 8% 4% 4%;
-  border: 1px solid rgba(16, 24, 40, 0.08);
-  border-radius: 48px;
-  background: rgba(255, 255, 255, 0.06);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(16px);
+  inset: 18% -14% 0;
+  border: 0;
+  border-radius: 50% 50% 0 0 / 14% 14% 0 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 62%);
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
 }
 
 .hero-shot {
   position: absolute;
   margin: 0;
   overflow: hidden;
-  border: 8px solid #111421;
-  border-radius: 38px;
+  border: 8px solid #1b2028;
+  border-radius: 42px;
   background: #101320;
-  box-shadow: 0 36px 90px rgba(16, 24, 40, 0.27);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 60px 120px rgba(0, 0, 0, 0.7);
 }
 
 .hero-shot img {
@@ -532,32 +651,32 @@ p {
 
 .hero-shot-main {
   z-index: 2;
-  width: min(340px, 68vw);
-  left: 8%;
+  width: min(400px, 62vw);
+  left: 50%;
   top: 0;
-  transform: rotate(-2.5deg);
+  transform: translateX(-58%) rotate(-3deg);
 }
 
 .hero-shot-side {
   z-index: 1;
-  width: min(275px, 55vw);
-  right: 3%;
-  top: 84px;
-  opacity: 0.82;
-  transform: rotate(5deg);
+  width: min(340px, 52vw);
+  left: 50%;
+  top: 96px;
+  opacity: 0.9;
+  transform: translateX(18%) rotate(5deg);
 }
 
 .hero-product-note {
   position: absolute;
   z-index: 3;
-  right: 0;
-  bottom: 52px;
-  width: min(270px, 68vw);
+  right: clamp(0px, 6vw, 90px);
+  bottom: 14%;
+  width: min(280px, 68vw);
   padding: 17px 18px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 20px;
-  background: rgba(16, 19, 32, 0.92);
-  box-shadow: 0 20px 52px rgba(16, 24, 40, 0.24);
+  background: rgba(13, 16, 22, 0.86);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(14px);
 }
 
@@ -1279,10 +1398,78 @@ p {
   background: var(--green);
 }
 
+/* ── Bento ───────────────────────────────────────────────────────────────
+   Six equal cards read as a spec sheet. Weighting the two the product leads
+   with (Today, Workout) gives the block a focal point and a real composition
+   instead of a uniform row. Collapses to a plain stack below 900px. */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
-  gap: clamp(0.9rem, 1.6vw, 1.4rem);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(0.9rem, 1.4vw, 1.25rem);
+}
+
+.feature-card {
+  grid-column: span 2;
+}
+
+.feature-card:nth-child(1) {
+  grid-column: span 4;
+  grid-row: span 2;
+  justify-content: flex-end;
+  min-height: 17rem;
+  background:
+    linear-gradient(160deg, rgba(46, 230, 139, 0.14), rgba(255, 255, 255, 0.02) 58%);
+  border-color: rgba(46, 230, 139, 0.22);
+}
+
+.feature-card:nth-child(1) h3 {
+  font-size: var(--step-3);
+  letter-spacing: -0.03em;
+}
+
+.feature-card:nth-child(1) p {
+  max-width: 34ch;
+  font-size: var(--step-1);
+  line-height: 1.5;
+}
+
+/* 01 anchors a 4x2 block; 02 and 03 stack beside it; 04-06 form the base row.
+   Six columns divide evenly three ways, so nothing is ever left stranded. */
+.feature-card:nth-child(2),
+.feature-card:nth-child(3) {
+  grid-column: 5 / span 2;
+  justify-content: flex-end;
+}
+
+.feature-card:nth-child(n + 4) {
+  grid-column: span 2;
+}
+
+/* Oversized index numeral, watermark rather than label. */
+.feature-icon {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.4vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(46, 230, 139, 0.5);
+  margin-bottom: auto;
+}
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card,
+  .feature-card:nth-child(1),
+  .feature-card:nth-child(2),
+  .feature-card:nth-child(n + 3) {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 0;
+  }
 }
 
 .article-preview-section {
@@ -2204,5 +2391,50 @@ p {
 
   .chat-msg {
     max-width: 94%;
+  }
+}
+/* The overlapping two-phone stage is a wide-screen composition: it relies on
+   absolute offsets that cannot be made to fit a phone without clipping. Below
+   760px it becomes one centred device with the caption in normal flow, which
+   is robust at any width instead of tuned to one. */
+@media (max-width: 760px) {
+  .hero-product {
+    display: grid;
+    justify-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    min-height: 0;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-product::before {
+    width: min(560px, 96vw);
+  }
+
+  .hero-product::after {
+    inset: 22% -6% 0;
+  }
+
+  .hero-shot {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .hero-shot-main {
+    width: min(310px, 74vw);
+  }
+
+  .hero-shot-side {
+    display: none;
+  }
+
+  .hero-product-note {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(340px, 84vw);
   }
 }
