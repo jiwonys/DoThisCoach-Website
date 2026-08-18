@@ -228,23 +228,9 @@ if (screenshotGallery) {
   });
 }
 
-const tiltCards = document.querySelectorAll(".feature-card");
-
-tiltCards.forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    if (!window.matchMedia("(pointer: fine)").matches) return;
-    const rect = card.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    card.style.setProperty("--card-tilt-x", `${x * 4}deg`);
-    card.style.setProperty("--card-tilt-y", `${y * -4}deg`);
-  });
-
-  card.addEventListener("pointerleave", () => {
-    card.style.setProperty("--card-tilt-x", "0deg");
-    card.style.setProperty("--card-tilt-y", "0deg");
-  });
-});
+/* The feature-card 3D tilt was retired along with its CSS transform. These
+   listeners were writing --card-tilt-* variables that nothing reads any more,
+   running a pointermove handler on every card for no visible effect. */
 
 const counters = document.querySelectorAll("[data-count]");
 const animatedCounters = new WeakSet();
