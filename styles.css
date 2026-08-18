@@ -1791,3 +1791,262 @@ p {
     overflow-x: auto;
   }
 }
+
+/* ==========================================================================
+   Sport-day positioning sections
+   Wedge, coach memory, progression audit, FAQ. Uses the existing tokens
+   (--ink, --muted, --green, --card, --line, --radius, --shadow) so these
+   inherit the site's light theme instead of introducing a second one.
+   ========================================================================== */
+
+.wedge-grid,
+.prog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+.wedge-card,
+.prog-card {
+  background: var(--card-solid);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.wedge-card h3,
+.prog-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+}
+
+.wedge-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.wedge-card li {
+  position: relative;
+  padding-left: 1.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.wedge-card li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.wedge-card.is-generic li::before {
+  content: "\2715";
+  background: rgba(251, 113, 133, 0.14);
+  color: var(--coral);
+}
+
+.wedge-card.is-dothis {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: linear-gradient(160deg, var(--mint) 0%, var(--card-solid) 62%);
+}
+
+.wedge-card.is-dothis li::before {
+  content: "\2713";
+  background: rgba(16, 185, 129, 0.18);
+  color: var(--green-dark);
+}
+
+.wedge-card.is-dothis li {
+  color: var(--ink);
+}
+
+/* --- coach memory replay --- */
+
+.memory-chat {
+  max-width: 40rem;
+  margin: 2.25rem auto 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.chat-msg {
+  margin: 0;
+  padding: 0.9rem 1.15rem;
+  border-radius: 1.15rem;
+  line-height: 1.5;
+  max-width: 85%;
+}
+
+.chat-msg.is-user {
+  justify-self: end;
+  background: var(--green);
+  color: #04231a;
+  font-weight: 600;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.chat-msg.is-coach {
+  justify-self: start;
+  background: var(--card-solid);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  border-bottom-left-radius: 0.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.chat-msg.is-system {
+  justify-self: start;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.32);
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.9rem;
+}
+
+.chat-msg.is-system::before {
+  content: "\2713 ";
+}
+
+/* --- progression audit --- */
+
+.prog-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.prog-card.is-highlight {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: linear-gradient(160deg, var(--mint) 0%, var(--card-solid) 62%);
+}
+
+.lift-ladder {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lift-ladder li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.lift-ladder li:last-child {
+  border-bottom: none;
+}
+
+.lift-ladder span {
+  color: var(--muted);
+}
+
+.lift-ladder strong {
+  color: var(--green-dark);
+  font-size: 1.05rem;
+}
+
+.lift-ladder em {
+  color: var(--soft);
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+/* --- developer note + FAQ --- */
+
+.dev-note {
+  margin: 2rem 0 0;
+  padding: 1.6rem 1.75rem;
+  background: var(--card-solid);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  max-width: 46rem;
+}
+
+.dev-note p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.dev-note strong {
+  color: var(--ink);
+}
+
+.dev-note footer {
+  margin-top: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.faq-list {
+  margin-top: 1.75rem;
+  max-width: 46rem;
+}
+
+.faq-list details {
+  border-bottom: 1px solid var(--line);
+  padding: 1.1rem 0;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  color: var(--green-dark);
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.faq-list details[open] summary::after {
+  content: "\2013";
+}
+
+.faq-list p {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .wedge-card,
+  .prog-card {
+    padding: 1.35rem;
+  }
+
+  .chat-msg {
+    max-width: 94%;
+  }
+}
