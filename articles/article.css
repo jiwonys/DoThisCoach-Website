@@ -38,19 +38,19 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
    vertically centred button, so the body wrapped to a short orphan line and
    left a block of dead space beside it. Constrain the measure, tighten the
    type, and let the card size to its content. */
-/* Stacked rather than two-column. Side-by-side looked right in the abstract
-   but the copy could never fill a 760px card next to a 190px button, so every
-   version left either a dead channel mid-card or a button pinned against the
-   right edge. Letting the heading run the full width and dropping the button
-   onto its own line uses the card instead of decorating it. */
-.article-cta { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: start; margin: 36px 0; padding: 2rem 2.25rem; border: 1px solid rgba(46, 230, 139, 0.28); border-radius: var(--radius); background: linear-gradient(135deg, rgba(46, 230, 139, 0.13), rgba(46, 230, 139, 0.03)); }
-.article-cta > div { display: grid; gap: 0.5rem; }
-.article-cta .eyebrow { margin: 0; font-size: 0.68rem; }
-.article-cta h2 { margin: 0; font-size: 1.35rem; line-height: 1.3; letter-spacing: -0.02em; }
-/* The body gets a measure even though the heading does not: a 76ch line of
-   0.95rem text across the full card is past comfortable reading width. */
-.article-cta p { margin: 0; font-size: 0.95rem; line-height: 1.6; max-width: 56ch; }
-.article-cta .primary-button { white-space: nowrap; justify-self: start; }
+/* Two columns with a deliberately narrow copy measure and a large button
+   centred in the remaining space. The copy column is the smaller of the two on
+   purpose: a heading that wraps in three short lines reads as a statement,
+   while the button stops being an afterthought pinned to an edge and becomes
+   the thing the card is for. */
+.article-cta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 2.5rem; align-items: center; margin: 40px 0; padding: 3rem; border: 1px solid rgba(46, 230, 139, 0.16); border-radius: var(--radius); background: linear-gradient(135deg, rgba(46, 230, 139, 0.06), rgba(46, 230, 139, 0.015)); }
+.article-cta > div { display: grid; gap: 1rem; }
+.article-cta .eyebrow { margin: 0; font-size: 0.72rem; letter-spacing: 0.18em; }
+.article-cta h2 { margin: 0; font-size: 1.75rem; line-height: 1.16; letter-spacing: -0.02em; }
+/* No max-width: the narrow column already sets the measure, and a second cap
+   on top of it only reintroduces the dead space this layout removes. */
+.article-cta p { margin: 0; font-size: 0.95rem; line-height: 1.75; }
+.article-cta .primary-button { white-space: nowrap; justify-self: center; min-height: 86px; padding: 0 2.6rem; font-size: 1.32rem; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.28) inset, 0 0 64px rgba(46, 230, 139, 0.3), 0 14px 40px rgba(46, 230, 139, 0.3); }
 .faq-list { border-top: 1px solid var(--line); }
 .faq-list details { border-bottom: 1px solid var(--line); }
 .faq-list summary { padding: 18px 4px; cursor: pointer; color: var(--ink); font-weight: 650; }
@@ -82,8 +82,9 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
   .article-layout { display: block; padding-top: 0; }
   .article-toc { position: static; grid-template-columns: repeat(3, auto); gap: 4px 12px; margin-bottom: 20px; border-block: 1px solid var(--line); }
   .article-toc strong { grid-column: 1 / -1; }
-  .article-cta { grid-template-columns: 1fr; }
-  .article-cta .primary-button { justify-self: start; }
+  .article-cta { grid-template-columns: 1fr; gap: 1.75rem; }
+  .article-cta h2 { font-size: 1.5rem; }
+  .article-cta .primary-button { justify-self: stretch; min-height: 60px; font-size: 1.05rem; }
 }
 @media (max-width: 620px) {
   .article-header nav { display: none; }
@@ -92,7 +93,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
   .article-layout { padding-inline: 18px; }
   .article-toc { grid-template-columns: repeat(2, 1fr); }
   .library-grid, .related > div { grid-template-columns: 1fr; }
-  .article-cta { padding: 1.5rem 1.35rem; }
+  .article-cta { padding: 2rem 1.5rem; }
   th, td { padding: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .library-card { transition: none; } }
