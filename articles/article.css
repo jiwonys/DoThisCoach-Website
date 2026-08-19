@@ -15,7 +15,10 @@
 .article-toc a { padding: 7px 0; color: var(--muted); font-size: .88rem; }
 .article-toc a:hover { color: var(--green); }
 .article-body { min-width: 0; }
-.article-body > section { padding: 32px 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+/* :not(.article-cta) so a card dropped into this container keeps its own
+   padding and border. Without it, this selector outranks .article-cta and
+   every container needs a bespoke override. */
+.article-body > section:not(.article-cta) { padding: 32px 0; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
 .article-body h2 { font-size: clamp(1.65rem, 3vw, 2.35rem); }
 .article-body h3 { margin-top: 28px; font-size: 1.34rem; }
 .article-body p, .article-body li { font-size: 1rem; line-height: 1.72; }
@@ -49,7 +52,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
    outranks a bare .article-cta and silently flattened this card's horizontal
    padding to zero and its top border to the default line colour. Matching that
    selector's specificity is required here, not stylistic. */
-.article-body > section.article-cta { padding: 3rem; border: 1px solid rgba(46, 230, 139, 0.16); }
+.article-cta { padding: 3rem; border: 1px solid rgba(46, 230, 139, 0.16); }
 .article-cta > div { display: grid; gap: 1rem; }
 .article-cta .eyebrow { margin: 0; font-size: 0.72rem; letter-spacing: 0.18em; }
 .article-cta h2 { margin: 0; font-size: 1.75rem; line-height: 1.16; letter-spacing: -0.02em; }
@@ -99,7 +102,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
   .article-layout { padding-inline: 18px; }
   .article-toc { grid-template-columns: repeat(2, 1fr); }
   .library-grid, .related > div { grid-template-columns: 1fr; }
-  .article-body > section.article-cta { padding: 2rem 1.5rem; }
+  .article-cta { padding: 2rem 1.5rem; }
   th, td { padding: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .library-card { transition: none; } }
@@ -108,8 +111,8 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
    These share the article shell but have no table of contents, so they use a
    single centred column rather than .article-layout's sidebar grid. */
 .comparison-body { max-width: 860px; margin: 0 auto; padding: 8px 24px 88px; }
-.comparison-body > section { padding: 34px 0; border-top: 1px solid var(--line); }
-.comparison-body > section:first-child { border-top: 0; }
+.comparison-body > section:not(.article-cta) { padding: 34px 0; border-top: 1px solid var(--line); }
+.comparison-body > section:not(.article-cta):first-child { border-top: 0; }
 .comparison-body h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin: 0 0 10px; }
 .comparison-body p { font-size: 1rem; line-height: 1.72; }
 .comparison-table { width: 100%; border-collapse: collapse; }
@@ -126,7 +129,6 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 .comparison-disclaimer { padding: 26px 0 0; border-top: 1px solid var(--line); }
 .comparison-disclaimer h2 { font-size: 1.05rem; }
 .comparison-disclaimer p { font-size: 0.86rem; line-height: 1.65; opacity: 0.72; }
-.library-card-meta { display: block; margin-top: 10px; font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green); }
 @media (max-width: 720px) {
   .compare-fit-grid { grid-template-columns: 1fr; }
   .comparison-body { padding-inline: 18px; }

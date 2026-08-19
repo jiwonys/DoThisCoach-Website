@@ -114,7 +114,9 @@ ${footer(2)}
 }
 
 // Index
-const cards = comparisons.map((c) => `<a class="library-card" href="${c.slug}/"><h2>${escapeHtml(c.title)}</h2><p>${escapeHtml(c.description)}</p><span class="library-card-meta">Verified ${VERIFIED_ON}</span></a>`).join("");
+// Same structure as the article index: the padding lives on `.library-card a`,
+// so an anchor used *as* the card gets none.
+const cards = comparisons.map((c) => `<article class="library-card"><a href="${c.slug}/"><span>Verified ${VERIFIED_ON}</span><h2>${escapeHtml(c.title)}</h2><p>${escapeHtml(c.description)}</p></a></article>`).join("");
 fs.mkdirSync(path.join(root, "compare"), { recursive: true });
 fs.writeFileSync(path.join(root, "compare", "index.html"),
 `<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Compare DoThis With Other Training Apps | DoThis</title><meta name="description" content="Sourced, dated comparisons between DoThis and other strength training apps, including what each competitor does better."/><link rel="canonical" href="${siteUrl}/compare/"/>${ICONS}<link rel="stylesheet" href="../styles.css?v=${cssVersion()}"/><link rel="stylesheet" href="../articles/article.css?v=${cssVersion()}"/></head><body class="article-page">
