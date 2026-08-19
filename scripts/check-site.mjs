@@ -3,7 +3,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const ignoredDirs = new Set([".git", "node_modules"]);
+// _to_delete holds a stale one-megabyte standalone preview whose relative links
+// were never meant to resolve from the site root; walking it produced a dozen
+// broken-reference errors that drowned the real ones.
+const ignoredDirs = new Set([".git", "node_modules", "_to_delete"]);
 
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
   if (ignoredDirs.has(entry.name)) return [];
@@ -64,7 +67,13 @@ for (const url of sitemapUrls) {
 }
 
 const articleFiles = htmlFiles.filter((file) => /articles\/[^/]+\/index\.html$/.test(file));
-if (articleFiles.length !== 10) errors.push(`Expected 10 article pages, found ${articleFiles.length}`);
+// Derived from the catalog rather than hardcoded: the old literal 10 went stale
+// the first time an article was added and reported a successful build as a
+// failure ever after.
+const { articles } = await import("./article-content.mjs");
+if (articleFiles.length !== articles.length) {
+  errors.push(`Expected ${articles.length} article pages from the catalog, found ${articleFiles.length}`);
+}
 if (!sitemapUrls.includes("https://dothiscoach.com/articles/")) errors.push("sitemap.xml: article index is missing");
 if (!fs.existsSync(path.join(root, "feed.xml"))) errors.push("feed.xml is missing");
 
