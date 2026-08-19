@@ -1261,18 +1261,43 @@ p {
   background: #6ee7b7;
 }
 
+/* Was a full-width stack: heading stranded top-left, a 460px device centred
+   below it, and a dead third of the row to the right. Now a split -- copy and
+   controls left, the device right at a believable phone size. */
 .screenshot-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  /* auto / 1fr keeps the tall spanning device from inflating the first row and
+     pushing the tab pills to the bottom of the section. */
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(2rem, 5vw, 5rem);
+  row-gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: start;
   overflow: hidden;
   background: var(--paper-sunken);
-  border-bottom: 1px solid rgba(16, 24, 40, 0.06);
+  border-bottom: 1px solid var(--line);
+}
+
+.screenshot-heading {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.screenshot-controls {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.screenshot-gallery {
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 .screenshot-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.55fr);
-  gap: clamp(28px, 6vw, 72px);
-  align-items: end;
-  max-width: none;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: start;
+  max-width: 40rem;
 }
 
 .screenshot-heading > p {
@@ -1299,19 +1324,19 @@ p {
 
 .screenshot-gallery {
   display: grid;
-  grid-template-columns: minmax(280px, 460px);
+  grid-template-columns: minmax(230px, 320px);
   justify-content: center;
-  padding: 8px 2px 28px;
+  padding: 0 2px 1.5rem;
 }
 
 .screenshot-card {
   position: relative;
   margin: 0;
   overflow: hidden;
-  border: 1px solid rgba(16, 24, 40, 0.12);
-  border-radius: 28px;
+  border: 8px solid #1b2028;
+  border-radius: 40px;
   background: #101320;
-  box-shadow: 0 18px 46px rgba(16, 24, 40, 0.12);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 40px 90px rgba(0, 0, 0, 0.6);
   transition: 0.22s ease;
 }
 
@@ -2442,5 +2467,22 @@ p {
     right: auto;
     bottom: auto;
     width: min(340px, 84vw);
+  }
+}
+
+@media (max-width: 900px) {
+  .screenshot-section {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-heading,
+  .screenshot-controls,
+  .screenshot-gallery {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .screenshot-gallery {
+    justify-content: start;
   }
 }
