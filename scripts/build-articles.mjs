@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { articles, sources } from "./article-content.mjs";
+import { comparisons } from "./comparison-content.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const appRoot = path.resolve(root, "../DoThis");
@@ -222,6 +223,10 @@ const sitemapEntries = [
   { loc: `${siteUrl}/`, priority: "1.0" },
   { loc: `${siteUrl}/articles/`, priority: "0.9", lastmod: articles[0]?.modified },
   ...articles.map((article) => ({ loc: `${siteUrl}/articles/${article.slug}/`, priority: "0.8", lastmod: article.modified })),
+  // Comparison pages are rendered by build-comparisons.mjs, but the sitemap is
+  // written here so there is exactly one file that owns it.
+  { loc: `${siteUrl}/compare/`, priority: "0.7" },
+  ...comparisons.map((c) => ({ loc: `${siteUrl}/compare/${c.slug}/`, priority: "0.7", lastmod: c.published })),
   { loc: `${siteUrl}/privacy.html`, priority: "0.3" },
   { loc: `${siteUrl}/terms.html`, priority: "0.3" },
   { loc: `${siteUrl}/support.html`, priority: "0.5" },
