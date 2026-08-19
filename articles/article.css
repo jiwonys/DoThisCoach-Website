@@ -38,11 +38,15 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
    vertically centred button, so the body wrapped to a short orphan line and
    left a block of dead space beside it. Constrain the measure, tighten the
    type, and let the card size to its content. */
-.article-cta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(1.25rem, 3vw, 2.25rem); align-items: center; margin: 40px 0; padding: clamp(1.5rem, 3vw, 2rem); border: 1px solid rgba(46, 230, 139, 0.28); border-radius: var(--radius); background: linear-gradient(135deg, rgba(46, 230, 139, 0.13), rgba(46, 230, 139, 0.03)); }
-.article-cta > div { max-width: 44ch; display: grid; gap: 0.4rem; }
-.article-cta .eyebrow { margin: 0; font-size: 0.68rem; }
-.article-cta h2 { margin: 0; font-size: 1.3rem; line-height: 1.22; letter-spacing: -0.02em; }
-.article-cta p { margin: 0; font-size: 0.95rem; line-height: 1.55; }
+/* The copy is deliberately uncapped. A max-width here looks like the safe
+   choice but the grid's 1fr column still claims the full 760px body width, so
+   capping the text only opens a dead channel between the last word and the
+   button. Letting the copy run to the gap is what keeps the card balanced. */
+.article-cta { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem; align-items: center; margin: 32px 0; padding: 1.35rem 1.5rem; border: 1px solid rgba(46, 230, 139, 0.28); border-radius: var(--radius); background: linear-gradient(135deg, rgba(46, 230, 139, 0.13), rgba(46, 230, 139, 0.03)); }
+.article-cta > div { display: grid; gap: 0.3rem; }
+.article-cta .eyebrow { margin: 0; font-size: 0.64rem; }
+.article-cta h2 { margin: 0; font-size: 1.15rem; line-height: 1.25; letter-spacing: -0.015em; }
+.article-cta p { margin: 0; font-size: 0.9rem; line-height: 1.5; }
 .article-cta .primary-button { white-space: nowrap; }
 .faq-list { border-top: 1px solid var(--line); }
 .faq-list details { border-bottom: 1px solid var(--line); }
