@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join the DoThis partner program and earn recurring commissions by helping athletes train around their sport.">
+  <meta name="theme-color" content="#07110f">
+  <title>DoThis Partners</title>
+  <link rel="icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="site-header shell">
+    <a class="brand" href="/partner/" aria-label="DoThis Partners home">
+      <img src="/apple-touch-icon.png" alt="" width="44" height="44">
+      <span>DoThis <em>Partners</em></span>
+    </a>
+    <button class="ghost" id="session-action" type="button">Partner sign in</button>
+  </header>
+
+  <main>
+    <section class="hero shell" id="public-view">
+      <div class="hero-copy">
+        <p class="eyebrow">Built with athletes. Shared by athletes.</p>
+        <h1>Help athletes train smarter. <span>Earn while they stay.</span></h1>
+        <p class="lede">Give your audience a real first-month offer. Earn <strong>$2</strong> when a verified subscriber joins—and <strong>$3</strong> for every paid month they renew.</p>
+        <div class="rate-strip" aria-label="Partner commission rates">
+          <div><strong>$7.99</strong><span>subscriber’s first month</span></div>
+          <div><strong>$2</strong><span>your verified signup commission</span></div>
+          <div><strong>$3</strong><span>your paid renewal commission</span></div>
+        </div>
+        <p class="fine">Commissions have a 30-day verification hold. Refunds and chargebacks are reversed. Approval required.</p>
+      </div>
+
+      <section class="card application-card" aria-labelledby="apply-title">
+        <div id="auth-tabs" class="tabs" role="tablist">
+          <button class="tab active" type="button" data-panel="apply" role="tab" aria-selected="true">Apply</button>
+          <button class="tab" type="button" data-panel="login" role="tab" aria-selected="false">Sign in</button>
+        </div>
+
+        <form id="apply-form" class="form-panel active" autocomplete="on">
+          <div class="form-head"><p class="eyebrow">Partner application</p><h2 id="apply-title">Claim your code.</h2><p>Choose the name your audience will remember. We review every partner.</p></div>
+          <label>Email<input required name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com"></label>
+          <div class="two">
+            <label>Username<input required name="username" autocomplete="username" minlength="3" maxlength="30" placeholder="yourname"></label>
+            <label>TikTok<input required name="tiktokUsername" autocomplete="off" maxlength="40" placeholder="@yourhandle"></label>
+          </div>
+          <label>Preferred promo code<div class="code-input"><span>DOTHIS /</span><input required name="preferredCode" autocomplete="off" minlength="3" maxlength="24" placeholder="YOURNAME"></div><small>3–24 letters or numbers. Starts with a letter.</small></label>
+          <div class="two">
+            <label>Password<input required name="password" type="password" autocomplete="new-password" minlength="10" maxlength="128" placeholder="10+ characters"></label>
+            <label>Confirm password<input required name="passwordConfirmation" type="password" autocomplete="new-password" minlength="10" maxlength="128" placeholder="Repeat password"></label>
+          </div>
+          <label class="check"><input required name="acceptedTerms" type="checkbox"><span>I accept the <a href="#terms">partner terms</a>, will clearly disclose my relationship with DoThis, and will not spam or make misleading claims.</span></label>
+          <p class="form-message" id="apply-message" role="alert"></p>
+          <button class="primary" type="submit">Submit application <span>→</span></button>
+        </form>
+
+        <form id="login-form" class="form-panel" autocomplete="on">
+          <div class="form-head"><p class="eyebrow">Welcome back</p><h2>Partner sign in.</h2><p>See your code and verified earnings.</p></div>
+          <label>Email or username<input required name="identity" autocomplete="username" maxlength="254"></label>
+          <label>Password<input required name="password" type="password" autocomplete="current-password" maxlength="128"></label>
+          <p class="form-message" id="login-message" role="alert"></p>
+          <button class="primary" type="submit">Sign in <span>→</span></button>
+        </form>
+      </section>
+    </section>
+
+    <section class="dashboard shell hidden" id="dashboard-view" aria-live="polite">
+      <div class="dashboard-head">
+        <div><p class="eyebrow">Partner dashboard</p><h1 id="welcome-title">Welcome.</h1><p id="status-copy"></p></div>
+        <span class="status" id="partner-status">Pending</span>
+      </div>
+      <div class="code-card" id="code-card">
+        <div><p>Your audience code</p><strong id="partner-code">—</strong><span>First month: $7.99</span></div>
+        <button class="primary compact" id="copy-code" type="button">Copy code</button>
+      </div>
+      <div class="simple-metrics">
+        <article><span>Verified subscribers</span><strong id="subscriber-count">0</strong></article>
+        <article><span>Active subscribers</span><strong id="active-count">0</strong></article>
+        <article><span>Pending earnings</span><strong id="pending-earnings">$0.00</strong></article>
+        <article><span>Paid earnings</span><strong id="paid-earnings">$0.00</strong></article>
+      </div>
+      <section class="card next-step"><p class="eyebrow">What to share</p><h2>Tell people why you use it.</h2><p>Show how DoThis builds strength around sport days and Match Day. Share your honest experience. Always disclose that you may earn a commission.</p></section>
+    </section>
+
+    <section class="terms shell" id="terms">
+      <p class="eyebrow">Simple, honest partnership</p>
+      <h2>Earn from real subscribers. Not clicks.</h2>
+      <div class="terms-grid">
+        <p><strong>Verified payments only.</strong> $2 after a referred subscriber’s qualifying initial paid transaction, then $3 for each qualifying paid renewal.</p>
+        <p><strong>30-day hold.</strong> Earnings remain pending while payments, refunds, and chargebacks settle. Reversed payments reverse commissions.</p>
+        <p><strong>Promote truthfully.</strong> Disclose your relationship. No self-referrals, spam, impersonation, paid-search brand bidding, or unsupported health/performance claims.</p>
+        <p><strong>Your taxes.</strong> Partners are independent promoters, not employees. Payout eligibility and required tax documentation apply.</p>
+      </div>
+      <p class="apple-note">Offer-code eligibility, availability, and redemption are controlled by Apple and may vary by account or region. Codes have no cash value and may not be resold. Apple is not a sponsor of this partner program.</p>
+    </section>
+  </main>
+  <footer class="shell"><span>© 2026 DoThis</span><nav><a href="/terms.html">App terms</a><a href="/privacy.html">Privacy</a><a href="mailto:support@dothiscoach.com">Support</a></nav></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
