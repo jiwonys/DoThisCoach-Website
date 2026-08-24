@@ -8,6 +8,9 @@
   <title>DoThis Partners</title>
   <link rel="icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./styles.css">
+  <style>
+    .payout-card{padding:26px;margin-top:22px}.payout-card h2{margin:0;font-size:30px}.payout-card>p,.payout-card>div>p{color:var(--muted);line-height:1.6}.details-form{display:grid;gap:14px;max-width:620px}.details-form label{display:grid;gap:7px;font-size:12px;font-weight:800}.details-form input{border:1px solid var(--line);background:rgba(255,255,255,.045);color:var(--text);padding:14px;border-radius:13px;font:inherit}.payout-actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.provider-note{font-size:13px!important;border-left:3px solid var(--mint);padding-left:13px}
+  </style>
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
@@ -46,12 +49,15 @@
             <label>Username<input required name="username" autocomplete="username" minlength="3" maxlength="30" placeholder="yourname"></label>
             <label>TikTok<input required name="tiktokUsername" autocomplete="off" maxlength="40" placeholder="@yourhandle"></label>
           </div>
+          <label>Country of residence<input required name="countryCode" autocomplete="country" value="US" readonly><small>The manual payout pilot is currently available only to United States promoters.</small></label>
           <label>Preferred promo code<div class="code-input"><span>DOTHIS /</span><input required name="preferredCode" autocomplete="off" minlength="3" maxlength="24" placeholder="YOURNAME"></div><small>3–24 letters or numbers. Starts with a letter.</small></label>
           <div class="two">
             <label>Password<input required name="password" type="password" autocomplete="new-password" minlength="10" maxlength="128" placeholder="10+ characters"></label>
             <label>Confirm password<input required name="passwordConfirmation" type="password" autocomplete="new-password" minlength="10" maxlength="128" placeholder="Repeat password"></label>
           </div>
-          <label class="check"><input required name="acceptedTerms" type="checkbox"><span>I accept the <a href="#terms">partner terms</a>, will clearly disclose my relationship with DoThis, and will not spam or make misleading claims.</span></label>
+          <label class="check"><input required name="ageEligible" type="checkbox"><span>I confirm I am at least 18 years old and legally able to join.</span></label>
+          <label class="check"><input required name="acceptedPromoterAgreement" type="checkbox"><span>I have read and accept the <a href="#promoter-agreement">Promoter Agreement</a> (version 2026-08-23-manual-us-v1).</span></label>
+          <label class="check"><input required name="acceptedFtcAgreement" type="checkbox"><span>I separately accept the <a href="#ftc-agreement">FTC and advertising disclosure agreement</a> (version 2026-08-23-manual-us-v1).</span></label>
           <p class="form-message" id="apply-message" role="alert"></p>
           <button class="primary" type="submit">Submit application <span>→</span></button>
         </form>
@@ -75,12 +81,29 @@
         <div><p>Your audience code</p><strong id="partner-code">—</strong><span>First month: $7.99</span></div>
         <button class="primary compact" id="copy-code" type="button">Copy code</button>
       </div>
-      <div class="simple-metrics">
-        <article><span>Verified subscribers</span><strong id="subscriber-count">0</strong></article>
-        <article><span>Active subscribers</span><strong id="active-count">0</strong></article>
-        <article><span>Pending earnings</span><strong id="pending-earnings">$0.00</strong></article>
-        <article><span>Paid earnings</span><strong id="paid-earnings">$0.00</strong></article>
+      <div class="simple-metrics" aria-label="Payout metrics">
+        <article><span>Estimated earnings</span><strong id="estimated-total">$0.00</strong></article>
+        <article><span>Available for payout</span><strong id="available-earnings">$0.00</strong></article>
+        <article><span>Pending subscription verification</span><strong id="pending-verification">$0.00</strong></article>
+        <article><span>Tax information required</span><strong id="tax-required">Yes</strong></article>
       </div>
+      <section class="card payout-card" id="details-card">
+        <p class="eyebrow">Required before payout</p><h2>Complete partner details.</h2>
+        <p>Existing partners keep their login and promo code. Current agreements and country/age details are required only before payout.</p>
+        <form id="details-form" class="details-form">
+          <label>Country<input required name="countryCode" value="US" readonly><small>The manual payout pilot is United States only.</small></label>
+          <label class="check"><input required name="ageEligible" type="checkbox"><span>I meet the age requirement.</span></label>
+          <label class="check"><input required name="acceptedPromoterAgreement" type="checkbox"><span>I accept the <a href="#promoter-agreement">Promoter Agreement</a> (2026-08-23-manual-us-v1).</span></label>
+          <label class="check"><input required name="acceptedFtcAgreement" type="checkbox"><span>I separately accept the <a href="#ftc-agreement">FTC/disclosure agreement</a> (2026-08-23-manual-us-v1).</span></label>
+          <p class="form-message" id="details-message" role="alert"></p><button class="primary" type="submit">Save required details <span>→</span></button>
+        </form>
+      </section>
+      <section class="card payout-card" id="payout-card">
+        <div><p class="eyebrow">Payout request</p><h2 id="payout-title">Request available commissions.</h2><p id="payout-copy"></p></div>
+        <div class="payout-actions"><button class="primary compact" id="request-payout" type="button">Request payout</button><button class="ghost hidden" id="cancel-payout" type="button">Cancel request</button></div>
+        <p class="provider-note">US-only manual payout pilot. DoThis administration provides secure verification instructions after a request. Never email tax forms, SSNs/TINs, bank credentials, or identity documents. DoThis stores only verification status and an external payment reference.</p>
+        <p class="form-message" id="payout-message" role="alert"></p>
+      </section>
       <section class="card next-step"><p class="eyebrow">What to share</p><h2>Tell people why you use it.</h2><p>Show how DoThis builds strength around sport days and Match Day. Share your honest experience. Always disclose that you may earn a commission.</p></section>
     </section>
 
@@ -90,8 +113,9 @@
       <div class="terms-grid">
         <p><strong>Verified payments only.</strong> $2 after a referred subscriber’s qualifying initial paid transaction, then $3 for each qualifying paid renewal through month 12. The initial purchase counts as month 1; commissions stop after 12 total subscription months.</p>
         <p><strong>30-day hold.</strong> Earnings remain pending while payments, refunds, and chargebacks settle. Reversed payments reverse commissions.</p>
-        <p><strong>Promote truthfully.</strong> Disclose your relationship. No self-referrals, spam, impersonation, paid-search brand bidding, or unsupported health/performance claims.</p>
-        <p><strong>Your taxes.</strong> Partners are independent promoters, not employees. Payout eligibility and required tax documentation apply.</p>
+        <p id="promoter-agreement"><strong>Promoter Agreement · version 2026-08-23-manual-us-v1.</strong> This pilot is limited to United States promoters. Commissions require verifiable, eligible production App Store monthly payments. Trials, free/family/yearly plans, unverified events, self-referrals, invalid traffic, fraud, refunds, and chargebacks do not qualify. Negative adjustments reduce later payouts. We may hold, reject, or suspend for fraud, spam, misleading claims, missing disclosure, policy abuse, or legal/compliance risk. Manual review and payment-rail delays can occur. Earnings do not expire while the account remains in good standing, subject to applicable unclaimed-property law, and the commission window lasts at least the stated 12 subscription months.</p>
+        <p id="ftc-agreement"><strong>FTC and advertising disclosure agreement · version 2026-08-23-manual-us-v1.</strong> Clearly and conspicuously disclose that you may earn a commission wherever you promote DoThis. Follow FTC endorsement guidance and every applicable advertising law. Do not hide disclosure in hashtags or make unsupported health, performance, pricing, or earnings claims.</p>
+        <p><strong>Your taxes and payout.</strong> Partners are independent promoters, not employees. A completed W-9, identity confirmation, and verified payout destination are required before manual payment. DoThis provides secure instructions and never requests tax or bank information by email. DoThis stores only verification status and the external transaction reference. Withholding and tax reporting may apply.</p>
       </div>
       <p class="apple-note">Offer-code eligibility, availability, and redemption are controlled by Apple and may vary by account or region. Codes have no cash value and may not be resold. Apple is not a sponsor of this partner program.</p>
     </section>
