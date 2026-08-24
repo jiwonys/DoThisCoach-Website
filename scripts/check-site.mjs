@@ -19,6 +19,7 @@ const errors = [];
 const warnings = [];
 const titles = new Map();
 const descriptions = new Map();
+const appStoreUrl = "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181";
 
 const addUnique = (map, value, file, label) => {
   if (!value) return;
@@ -76,6 +77,19 @@ if (articleFiles.length !== articles.length) {
 }
 if (!sitemapUrls.includes("https://dothiscoach.com/articles/")) errors.push("sitemap.xml: article index is missing");
 if (!fs.existsSync(path.join(root, "feed.xml"))) errors.push("feed.xml is missing");
+
+const appRedirectPath = path.join(root, "app", "index.html");
+if (!fs.existsSync(appRedirectPath)) {
+  errors.push("app/index.html is missing");
+} else {
+  const appRedirectHtml = fs.readFileSync(appRedirectPath, "utf8");
+  if (!appRedirectHtml.includes(`window.location.replace("${appStoreUrl}")`)) {
+    errors.push("app/index.html: JavaScript redirect does not target the canonical App Store listing");
+  }
+  if (!appRedirectHtml.includes(`content="0; url=${appStoreUrl}"`)) {
+    errors.push("app/index.html: fallback meta redirect does not target the canonical App Store listing");
+  }
+}
 
 for (const warning of warnings) console.warn(`WARN ${warning}`);
 if (errors.length) {

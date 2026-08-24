@@ -76,3 +76,7 @@ dothiscoach.com
 ```
 
 DNS should point `dothiscoach.com` to GitHub Pages.
+
+`/app` is a no-index redirect page for the live DoThis App Store listing. It
+uses JavaScript for immediate navigation and a meta-refresh fallback because
+GitHub Pages does not provide per-path HTTP redirects.
