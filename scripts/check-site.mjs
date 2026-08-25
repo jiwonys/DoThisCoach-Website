@@ -19,7 +19,14 @@ const errors = [];
 const warnings = [];
 const titles = new Map();
 const descriptions = new Map();
-const appStoreUrl = "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181";
+const appStoreRedirects = new Map([
+  ["app/index.html", "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181?ppid=654f8be5-8f71-488b-88f5-9a1dd46b487b"],
+  ["app/basketball/index.html", "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181?ppid=cdf59172-8f34-4ab9-9fa3-ef33a5fc403f"],
+  ["app/pickleball/index.html", "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181?ppid=241f0bc6-b245-475f-a6b9-3fcf3fd96fcf"],
+  ["app/soccer/index.html", "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181?ppid=18dd4e91-caeb-4a72-b729-1b0ee698831d"],
+  ["app/tennis/index.html", "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181?ppid=4c8635a3-522a-41ba-a3d0-214bca0320c5"],
+  ["app/volleyball/index.html", "https://apps.apple.com/us/app/dothis-ai-coach-for-athletes/id6771322181?ppid=bf00e022-ab60-403e-bc06-a2d3dbdde491"],
+]);
 
 const addUnique = (map, value, file, label) => {
   if (!value) return;
@@ -78,16 +85,21 @@ if (articleFiles.length !== articles.length) {
 if (!sitemapUrls.includes("https://dothiscoach.com/articles/")) errors.push("sitemap.xml: article index is missing");
 if (!fs.existsSync(path.join(root, "feed.xml"))) errors.push("feed.xml is missing");
 
-const appRedirectPath = path.join(root, "app", "index.html");
-if (!fs.existsSync(appRedirectPath)) {
-  errors.push("app/index.html is missing");
-} else {
+for (const [relativePath, appStoreUrl] of appStoreRedirects) {
+  const appRedirectPath = path.join(root, relativePath);
+  if (!fs.existsSync(appRedirectPath)) {
+    errors.push(`${relativePath} is missing`);
+    continue;
+  }
   const appRedirectHtml = fs.readFileSync(appRedirectPath, "utf8");
   if (!appRedirectHtml.includes(`window.location.replace("${appStoreUrl}")`)) {
-    errors.push("app/index.html: JavaScript redirect does not target the canonical App Store listing");
+    errors.push(`${relativePath}: JavaScript redirect does not target its App Store product page`);
   }
   if (!appRedirectHtml.includes(`content="0; url=${appStoreUrl}"`)) {
-    errors.push("app/index.html: fallback meta redirect does not target the canonical App Store listing");
+    errors.push(`${relativePath}: fallback meta redirect does not target its App Store product page`);
+  }
+  if (!appRedirectHtml.includes(`<link rel="canonical" href="${appStoreUrl}">`)) {
+    errors.push(`${relativePath}: canonical URL does not target its App Store product page`);
   }
 }
 
