@@ -1503,6 +1503,214 @@ p {
   }
 }
 
+/* ==========================================================================
+   App Store-aligned athlete-first homepage
+   The general-athlete App Store page is the acquisition source of truth. The
+   website now opens with the same identity, approved athlete creative, deep
+   teal light, and current product-story sequence without copying Apple's UI.
+   ========================================================================== */
+.app-store-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 440px);
+  align-items: center;
+  justify-items: stretch;
+  gap: clamp(2.5rem, 6vw, 7rem);
+  min-height: calc(100svh - 76px);
+  padding: clamp(3.5rem, 7vw, 6.5rem) max(5vw, calc((100vw - 1320px) / 2)) 0;
+  overflow: hidden;
+  text-align: left;
+  background:
+    radial-gradient(72% 110% at 87% 42%, rgba(0, 215, 163, 0.18), transparent 62%),
+    radial-gradient(60% 70% at 13% 8%, rgba(36, 103, 255, 0.13), transparent 70%),
+    linear-gradient(112deg, #061416 0%, #07111c 45%, #071019 100%);
+  border-bottom: 1px solid rgba(57, 233, 180, 0.18);
+}
+
+.app-store-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(72, 220, 182, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72, 220, 182, 0.12) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 45%, #000 100%);
+}
+
+.app-store-hero .hero-copy {
+  justify-items: start;
+  max-width: 760px;
+  padding-bottom: clamp(3rem, 8vw, 7rem);
+}
+
+.hero-app-identity {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.hero-app-identity img {
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 19px;
+  box-shadow: 0 18px 45px rgba(0, 220, 170, 0.14);
+}
+
+.hero-app-identity span,
+.hero-app-identity strong,
+.hero-app-identity small {
+  display: block;
+}
+
+.hero-app-identity strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height: 1.18;
+}
+
+.hero-app-identity small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.app-store-hero .eyebrow {
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.2em;
+}
+
+.app-store-hero h1 {
+  max-width: 9.5ch;
+  margin: 0;
+  font-size: clamp(4rem, 7.8vw, 7.4rem);
+  line-height: 0.89;
+  letter-spacing: -0.052em;
+  text-wrap: balance;
+}
+
+.app-store-hero .hero-lede {
+  max-width: 39rem;
+  margin: 1.6rem 0 0;
+  color: #c3cbd6;
+  font-size: clamp(1.08rem, 1.7vw, 1.35rem);
+  line-height: 1.65;
+  text-align: left;
+}
+
+.app-store-hero .hero-actions,
+.app-store-hero .hero-proof {
+  justify-content: flex-start;
+}
+
+.hero-store-facts {
+  margin-top: 1rem;
+}
+
+.hero-athlete-creative {
+  align-self: end;
+  width: min(100%, 440px);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(72, 220, 182, 0.26);
+  border-bottom: 0;
+  border-radius: 38px 38px 0 0;
+  background: #050910;
+  box-shadow: 0 0 0 8px rgba(2, 10, 16, 0.55), 0 45px 110px rgba(0, 0, 0, 0.72);
+}
+
+.hero-athlete-creative img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.app-store-screenshot-section {
+  background:
+    radial-gradient(60% 70% at 83% 28%, rgba(0, 208, 163, 0.12), transparent 65%),
+    #071016;
+}
+
+.app-store-screenshot-section .screenshot-gallery {
+  grid-template-columns: minmax(260px, 350px);
+}
+
+.app-store-screenshot-section .screenshot-card {
+  border-width: 1px;
+  border-color: rgba(72, 220, 182, 0.24);
+  border-radius: 30px;
+  background: #050910;
+}
+
+.app-store-screenshot-section .screenshot-card.is-active {
+  border-color: rgba(72, 220, 182, 0.72);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.62), 0 0 45px rgba(16, 185, 129, 0.12);
+}
+
+.app-store-screenshot-section .screenshot-card figcaption {
+  position: static;
+  padding: 18px 20px 20px;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  background: #0b111a;
+  backdrop-filter: none;
+}
+
+@media (max-width: 980px) {
+  .app-store-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 38vw);
+    gap: 2.5rem;
+    padding-top: 3rem;
+  }
+
+  .app-store-hero h1 {
+    font-size: clamp(3.5rem, 8vw, 5rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .app-store-hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    gap: 2.25rem;
+    padding: 2.5rem 20px 0;
+  }
+
+  .app-store-hero .hero-copy {
+    justify-items: start;
+    padding-bottom: 0;
+  }
+
+  .app-store-hero h1 {
+    max-width: 8.5ch;
+    font-size: clamp(3.25rem, 16vw, 5rem);
+  }
+
+  .app-store-hero .hero-actions {
+    width: 100%;
+  }
+
+  .hero-app-identity {
+    margin-bottom: 1.4rem;
+  }
+
+  .hero-athlete-creative {
+    justify-self: center;
+    width: min(100%, 430px);
+  }
+
+  .app-store-screenshot-section .screenshot-gallery {
+    grid-template-columns: minmax(0, min(88vw, 380px));
+  }
+}
+
 .article-preview-section {
   background: var(--paper-sunken);
 }
@@ -2484,5 +2692,52 @@ p {
 
   .screenshot-gallery {
     justify-content: start;
+  }
+}
+
+/* Final mobile acquisition pass. Keep the first viewport focused on the App
+   Store message and athlete creative; full navigation remains in the footer. */
+@media (max-width: 760px) {
+  .site-header {
+    position: relative;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-block: 12px;
+  }
+
+  .site-header nav {
+    display: none;
+  }
+
+  .site-header .nav-cta {
+    width: auto;
+    min-height: 42px;
+    padding-inline: 1.15rem;
+  }
+
+  .app-store-hero {
+    padding-top: 2.25rem;
+  }
+
+  .hero-app-identity {
+    display: none;
+  }
+
+  .app-store-hero .hero-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.8fr);
+    gap: 10px;
+  }
+
+  .app-store-hero .hero-actions .primary-button,
+  .app-store-hero .hero-actions .secondary-button {
+    width: auto;
+    min-width: 0;
+    padding-inline: 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .hero-store-facts {
+    margin-bottom: 0;
   }
 }
