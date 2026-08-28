@@ -74,7 +74,7 @@ for (const url of sitemapUrls) {
   if (!fs.existsSync(target)) errors.push(`sitemap.xml: missing local page for ${url}`);
 }
 
-const articleFiles = htmlFiles.filter((file) => /articles\/[^/]+\/index\.html$/.test(file));
+const articleFiles = htmlFiles.filter((file) => /articles[\\/][^\\/]+[\\/]index\.html$/.test(file));
 // Derived from the catalog rather than hardcoded: the old literal 10 went stale
 // the first time an article was added and reported a successful build as a
 // failure ever after.
