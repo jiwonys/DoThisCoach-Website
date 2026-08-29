@@ -1,0 +1,8 @@
+# Website Asset Manifest
+
+## `athlete-week-threshold-v1.webp`
+
+- Purpose: Homepage hero image illustrating the core product promise, “Strength training that knows when you play.”
+- Source: Generated with OpenAI image generation on 2026-08-28.
+- Treatment: Converted from the generated PNG to WebP at quality 86. The source PNG remains in the Codex generated-images directory.
+- Prompt: “Create a premium editorial hero photograph for the DoThis athlete-training website. Subject: a committed adult recreational volleyball athlete standing at the exact threshold between a modern strength gym and an indoor volleyball court, holding a volleyball at one hip with a loaded barbell and squat rack visible behind on the gym side. The two environments should feel like one continuous real location, connected by crisp white court lines that flow through the image, visually expressing strength training that knows when you play. Athlete looks focused and capable, not like a fitness influencer. Natural sweat, real fabric texture, grounded anatomy, candid documentary sports photography. Lighting: late-afternoon hard directional light with a subtle warm glow, deep court-ink shadows, restrained mint and electric-blue practical accents that match brand colors. Composition: cinematic wide landscape, athlete positioned right of center, generous clean negative space on the left for website headline, strong diagonal court line leading toward subject. Photorealistic, high-end sports campaign, sophisticated grain, authentic community-sport atmosphere. No text, no letters, no logo, no phone, no UI, no floating graphics, no impossible architecture, no extra limbs, no distorted hands, no glossy 3D render.”
