@@ -99,8 +99,9 @@ const selectEngineState = (state, options = {}) => {
   engineSteps.forEach((step) => step.classList.toggle("is-active", step.dataset.engineStep === state));
   engineViews.forEach((view) => view.setAttribute("aria-hidden", String(view.dataset.engineView !== state)));
 
-  if (options.scrollCopy && window.innerWidth > 900) {
-    document.querySelector(`[data-engine-step="${state}"]`)?.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "center" });
+  if (options.scrollCopy) {
+    const target = window.innerWidth > 900 ? document.querySelector(`[data-engine-step="${state}"]`) : engineStage;
+    target?.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: window.innerWidth > 900 ? "center" : "start" });
   }
 };
 
