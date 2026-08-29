@@ -327,16 +327,16 @@ nav a:hover::after { right: 0; }
 
 .product-section { padding-bottom: 3rem; }
 .product-showcase { display: grid; gap: clamp(4rem, 10vw, 9rem); }
-.product-story { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.72fr); align-items: center; justify-content: space-between; gap: clamp(3rem, 10vw, 9rem); max-width: 1050px; margin: 0 auto; }
+.product-story { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(380px, 0.8fr); align-items: center; justify-content: space-between; gap: clamp(3rem, 8vw, 7rem); max-width: 1120px; margin: 0 auto; }
 .product-story-reverse .product-copy { order: 2; }
 .product-story-reverse .phone-shot { order: 1; }
 .product-copy { position: relative; }
 .story-number { position: absolute; top: -4rem; right: 0; z-index: -1; color: rgba(243,247,245,0.035); font-family: var(--display); font-size: 9rem; font-weight: 800; line-height: 1; }
 .product-copy h3 { margin: 0.65rem 0 1.25rem; font-size: clamp(2.1rem, 4.2vw, 4rem); line-height: 1; letter-spacing: -0.05em; }
 .product-copy > p:not(.card-label) { color: var(--slate); }
-.phone-shot { position: relative; width: min(100%, 370px); margin: 0 auto; }
+.phone-shot { position: relative; width: 100%; max-width: 420px; aspect-ratio: 640 / 1391; margin: 0 auto; }
 .phone-shot::before { content: ""; position: absolute; inset: 11% -15% 5%; z-index: -1; border-radius: 50%; background: rgba(94,240,180,0.1); filter: blur(45px); }
-.phone-shot img { display: block; width: 100%; border: 1px solid var(--line-strong); border-radius: 38px; box-shadow: 0 35px 90px rgba(0,0,0,0.52); }
+.phone-shot img { display: block; width: 100%; max-width: 640px; height: auto; aspect-ratio: 640 / 1391; object-fit: contain; border: 1px solid var(--line-strong); border-radius: 32px; box-shadow: 0 35px 90px rgba(0,0,0,0.52); }
 
 .coach-lab { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: clamp(3rem, 7vw, 7rem); align-items: start; }
 .coach-lab .section-intro { position: sticky; top: 120px; }
@@ -492,7 +492,7 @@ nav a:hover::after { right: 0; }
   .comparison-grid { grid-template-columns: 1fr; }
   .product-story { grid-template-columns: 1fr; }
   .product-story-reverse .product-copy, .product-story-reverse .phone-shot { order: initial; }
-  .phone-shot { width: min(82vw, 340px); }
+  .phone-shot { width: 100%; max-width: 640px; }
   .coach-demo { padding: 0.85rem; border-radius: var(--radius); }
   .scenario-tabs { display: grid; grid-template-columns: 1fr; border-radius: var(--radius-sm); }
   .scenario-tab { border-radius: 8px; }
