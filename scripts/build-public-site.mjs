@@ -1,4 +1,4 @@
-import { cp, mkdir, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, rm, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
@@ -33,6 +33,16 @@ for (const file of publicFiles) {
 for (const directory of publicDirectories) {
   await cp(resolve(root, directory), resolve(output, directory), { recursive: true });
 }
+
+const pruneProvenanceSidecars = async (directory) => {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const target = resolve(directory, entry.name);
+    if (entry.isDirectory()) await pruneProvenanceSidecars(target);
+    else if (entry.name.endsWith(".webp.json")) await rm(target);
+  }
+};
+
+await pruneProvenanceSidecars(resolve(output, "assets"));
 
 await writeFile(resolve(output, ".nojekyll"), "");
 console.log(`Public site packaged in ${output}`);

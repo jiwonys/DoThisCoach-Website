@@ -1,21 +1,19 @@
 ---
 name: "DoThis: Train For Your Game"
-description: "A nocturnal second awakening that restores athletic identity before revealing the product."
+description: "The production Athlete Signal Split system for the DoThis marketing homepage."
 colors:
-  arena-black: "#030608"
-  arena-raised: "#071014"
-  arena-sport: "#050a0d"
-  arena-inside: "#06100f"
+  article-night: "#07090c"
+  article-sunken: "#0b0e12"
+  article-raised: "#101419"
+  chalk: "#f2f4f3"
+  copy-muted: "#a7b0b8"
+  control-inactive: "#78828a"
+  signal: "#2ee68b"
+  cool-blue: "#5b7cff"
+  quiet-rule: "rgba(255, 255, 255, 0.11)"
+  strong-rule: "rgba(255, 255, 255, 0.18)"
+  action-ink: "#04140d"
   screen-black: "#0b1013"
-  chalk-white: "#f5f3ed"
-  chalk-soft: "#b9c2be"
-  emerald: "#24d3a2"
-  signal: "#78f3ce"
-  night-line: "rgba(245, 243, 237, 0.2)"
-  selector-muted: "#7d8d88"
-  safety-muted: "#7d8a86"
-  footer-muted: "#899591"
-  sport-general: "#24d3a2"
   sport-soccer: "#43d990"
   sport-basketball: "#f3a33b"
   sport-pickleball: "#c9ec52"
@@ -23,262 +21,258 @@ colors:
   sport-volleyball: "#49d8c4"
 typography:
   display:
-    fontFamily: "Work Sans, sans-serif"
+    fontFamily: "Archivo Black, sans-serif"
     fontSize: "clamp(4rem, 8vw, 6rem)"
-    fontWeight: 800
-    lineHeight: 0.82
-    letterSpacing: "-0.04em"
-  headline:
-    fontFamily: "Work Sans, sans-serif"
-    fontSize: "clamp(3.5rem, 7vw, 6rem)"
-    fontWeight: 760
-    lineHeight: 0.9
-    letterSpacing: "-0.04em"
-  serif-voice:
-    fontFamily: "Cormorant Garamond, Georgia, serif"
-    fontSize: "clamp(1.7rem, 2.7vw, 2.55rem)"
     fontWeight: 400
-    lineHeight: 1.08
-    letterSpacing: "normal"
+    lineHeight: 0.92
+    letterSpacing: "-0.035em"
+  headline:
+    fontFamily: "Archivo Black, sans-serif"
+    fontSize: "clamp(3.2rem, 6vw, 4.7rem)"
+    fontWeight: 400
+    lineHeight: 0.95
+    letterSpacing: "-0.035em"
   body:
     fontFamily: "Work Sans, sans-serif"
-    fontSize: "1rem"
+    fontSize: "clamp(0.96rem, 1.3vw, 1.12rem)"
     fontWeight: 400
     lineHeight: 1.55
     letterSpacing: "normal"
   action:
     fontFamily: "Work Sans, sans-serif"
-    fontSize: "0.86rem"
-    fontWeight: 800
-    lineHeight: 1.55
-    letterSpacing: "normal"
-  header-action:
-    fontFamily: "Work Sans, sans-serif"
-    fontSize: "0.78rem"
-    fontWeight: 700
+    fontSize: "0.82rem"
+    fontWeight: 780
     lineHeight: 1.55
     letterSpacing: "normal"
   navigation:
     fontFamily: "Work Sans, sans-serif"
-    fontSize: "0.75rem"
-    fontWeight: 650
+    fontSize: "0.78rem"
+    fontWeight: 620
     lineHeight: 1.55
-    letterSpacing: "0.08em"
+    letterSpacing: "normal"
   selector:
     fontFamily: "Work Sans, sans-serif"
     fontSize: "0.75rem"
-    fontWeight: 700
+    fontWeight: 720
     lineHeight: 1.55
-    letterSpacing: "0.06em"
+    letterSpacing: "normal"
 rounded:
   square: "0px"
+  skip-link: "8px"
   icon: "12px"
   screen: "16px"
   pill: "999px"
 spacing:
-  xs: "12px"
-  sm: "16px"
-  md: "20px"
-  lg: "24px"
-  xl: "28px"
-  2xl: "34px"
-  3xl: "42px"
+  compact: "8px"
+  mobile-gutter: "16px"
+  content-gap: "24px"
+  section-gutter: "clamp(24px, 8vw, 120px)"
 components:
   button-primary:
-    backgroundColor: "rgba(245, 243, 237, 0.045)"
-    textColor: "{colors.chalk-white}"
+    backgroundColor: "{colors.signal}"
+    textColor: "{colors.action-ink}"
     typography: "{typography.action}"
     rounded: "{rounded.pill}"
-    padding: "7px 8px 7px 24px"
-    height: "58px"
-  button-primary-hover:
-    backgroundColor: "rgba(120, 243, 206, 0.08)"
-    textColor: "{colors.chalk-white}"
-    typography: "{typography.action}"
-    rounded: "{rounded.pill}"
-    padding: "7px 8px 7px 24px"
-    height: "58px"
-  button-header:
-    backgroundColor: "transparent"
-    textColor: "{colors.chalk-white}"
-    typography: "{typography.header-action}"
-    rounded: "{rounded.pill}"
-    padding: "0 20px"
+    padding: "0 22px"
     height: "48px"
+  button-primary-hover:
+    backgroundColor: "{colors.chalk}"
+    textColor: "{colors.action-ink}"
+    typography: "{typography.action}"
+    rounded: "{rounded.pill}"
+    padding: "0 22px"
+    height: "48px"
+  button-header:
+    backgroundColor: "{colors.signal}"
+    textColor: "{colors.action-ink}"
+    typography: "{typography.action}"
+    rounded: "{rounded.pill}"
+    padding: "0 18px"
+    height: "44px"
   sport-option:
     backgroundColor: "transparent"
-    textColor: "{colors.selector-muted}"
+    textColor: "{colors.control-inactive}"
     typography: "{typography.selector}"
     rounded: "{rounded.square}"
-    padding: "0"
+    padding: "0 9px"
     height: "48px"
   sport-option-selected:
-    backgroundColor: "transparent"
-    textColor: "{colors.sport-general}"
+    backgroundColor: "color-mix(in srgb, #2ee68b 9%, transparent)"
+    textColor: "{colors.signal}"
     typography: "{typography.selector}"
     rounded: "{rounded.square}"
-    padding: "0"
+    padding: "0 9px"
     height: "48px"
-  native-screen:
+  progress-screen:
     backgroundColor: "{colors.screen-black}"
     rounded: "{rounded.screen}"
+    width: "min(28vw, 360px)"
 ---
 
-# Design System: DoThis
+# Design System: DoThis Athlete Signal Split
 
 ## Overview
 
-**Creative North Star: "Second Awakening"**
+**Creative North Star: "Athlete Signal Split"**
 
-DoThis is a nocturnal arena in the instant before an athlete returns to motion. Near-black full-viewport chapters, disciplined white type, and life-size campaign portrait planes create recognition and tension before the page explains anything. Emerald arrives as a rare signal of readiness, not a decorative brand wash.
+Athlete Signal Split presents the DoThis homepage as a live training signal rather than a generic fitness landing page. An article-night ground, chalk-white command type, one synchronized athlete plane, and quiet ruled controls make the visitor feel competitive possibility before the page explains the method. Signal green carries the current choice and action; cool blue remains a restrained counterlight.
 
-The visual system is sparse and identity-first. Work Sans delivers compressed, uppercase commands; italic Cormorant Garamond carries the private inner voice. Real Today, Workout, and Progress screens appear only as a restrained three-screen glimpse, preserving mystery while making the App Store action credible.
+The system is direct, dark, and evidence-led. Archivo Black commands; Work Sans explains. Fine grain, low-chroma athlete imagery, and black-on-black tonal shifts add physical texture without turning the interface into card chrome. The story stays to four chapters: hero and selector, the week-led method, one real Progress screen, and the closing challenge.
+
+This document governs the production marketing homepage in `index.html`, `home.css`, and `home.js`. It does not redesign the native iPhone app or automatically replace the established systems on articles, comparison, support, legal, or acquisition redirect pages. `PRODUCT.md` remains authoritative for product truth, and the asset and App Store destination manifests remain authoritative for evidence and routing.
 
 **Key Characteristics:**
 
-- Nocturnal arena-black chapters with subtle green-black tonal shifts.
-- Athlete campaign portraits treated as full-height spatial planes.
-- Monumental Work Sans commands cut by intimate italic Cormorant Garamond lines.
-- Emerald signal color used for awakening language, focus, selection, and action.
-- Full-viewport pacing with one emotional job per chapter.
-- One coherent sport state across portrait, whisper, accent, URL, and App Store route.
-- Three real product screens staged as physical evidence, never a feature gallery.
+- Article-night ground with a green signal glow, cool-blue counterlight, and fine fixed grain.
+- Archivo Black for commands and Work Sans for every explanatory or interactive role.
+- One split hero that keeps the promise, synchronized athlete, all six sport states, and primary App Store action in the first viewport.
+- Four restrained chapters: hero and selector, week-led method, one real Progress screen, and closing challenge.
+- One coherent sport state across desktop and mobile media, emotional line, accent, URL, selected control, and App Store route.
+- One `620ms` signal sweep for sport changes; reduced-motion state changes are immediate.
+- Real product evidence stays readable, singular, and unmodified.
 
 ## Colors
 
-Near-blacks build the arena, chalk whites hold the voice, and the emerald signal punctures the darkness; sport accents appear only inside the synchronized sport state.
+Near-black article surfaces hold the page together, chalk carries information, and the active sport accent behaves as a live signal. Cool blue provides atmospheric separation but never competes with the current action.
 
 ### Primary
 
-- **Emerald Signal** (`#24d3a2`): Primary actions, selection, text selection, focus, and the default sport state.
-- **Awakening Light** (`#78f3ce`): Serif emphasis, closing commands, scroll cue, and primary-action hover.
-- **Sport Accents** (`#24d3a2`, `#43d990`, `#f3a33b`, `#c9ec52`, `#c8ef53`, `#49d8c4`): General, Soccer, Basketball, Pickleball, Tennis, and Volleyball states respectively.
+- **Signal Green** (`#2ee68b`): General sport accent, primary action fill, focus and selection color, text selection, signal sweep, and the terminal point of the method line.
+- **Cool Arena Blue** (`#5b7cff`): Low-opacity counterlight behind the page, method, and product proof. It is atmospheric, not interactive.
+- **Sport Accents** (`#43d990`, `#f3a33b`, `#c9ec52`, `#c8ef53`, `#49d8c4`): Soccer, Basketball, Pickleball, Tennis, and Volleyball respectively. The General state uses Signal Green.
 
 ### Neutral
 
-- **Arena Black** (`#030608`): Page ground, hero darkness, manifesto, final awakening, and scrolled-header veil.
-- **Raised Arena** (`#071014`): Available raised nocturnal surface token.
-- **Sport Arena** (`#050a0d`): Sport chapter ground and vignette destination.
-- **Inside Arena** (`#06100f`): Product-glimpse chapter ground.
-- **Screen Black** (`#0b1013`): Native-screen frame backing.
-- **Chalk White** (`#f5f3ed`): Primary copy and interactive reversal.
-- **Soft Chalk** (`#b9c2be`): Supporting copy and quiet navigation.
-- **Night Rule** (`rgba(245, 243, 237, 0.2)`): Hairline separators.
-- **Muted Text** (`#7d8d88`, `#7d8a86`, `#899591`): Inactive sport choices, safety copy, and footer metadata.
+- **Article Night** (`#07090c`): Page and hero ground, header veil source, safety band, and footer.
+- **Article Sunken** (`#0b0e12`): Method and closing chapter plane.
+- **Article Raised** (`#101419`): Reserved raised night surface from the implemented root palette.
+- **Screen Black** (`#0b1013`): Backing behind the real Progress screenshot.
+- **Chalk** (`#f2f4f3`): Primary copy and the hover reversal for signal actions.
+- **Muted Copy** (`#a7b0b8`): Supporting statements, navigation, captions, and Premium Preview terms.
+- **Inactive Control** (`#78828a`): Unselected sport controls, safety copy, and footer metadata.
+- **Quiet Rule** (`rgba(255, 255, 255, 0.11)`): Hairlines, dock boundary, selector baselines, nav shell, and scrolled-header divider.
+- **Strong Rule** (`rgba(255, 255, 255, 0.18)`): Method connectors before they resolve into the active signal.
+- **Action Ink** (`#04140d`): High-contrast text on sport-accent and Chalk action fills.
 
 ### Named Rules
 
-**The Signal Stays Rare Rule.** Emerald marks awakening, choice, focus, or action; it does not become ambient decoration or a broad background field.
+**The One Active Signal Rule.** The current sport accent owns actions, focus, selection, the emotional emphasis, and the sweep at the same time; never show competing sport accents in one state.
 
-**The Sport State Is Whole Rule.** A sport choice changes portrait, whisper, accent, URL state, and every App Store action together; never change one part alone.
+**The Blue Stays Counterlight Rule.** Cool blue may shape atmosphere behind content, but it never becomes a primary button, selector state, focus outline, or headline emphasis.
 
 ## Typography
 
-**Display Font:** Work Sans (with `sans-serif` fallback)
-**Body Font:** Work Sans (with `sans-serif` fallback)
-**Expressive Font:** Cormorant Garamond (with `Georgia, serif` fallback)
+**Display Font:** Archivo Black (with `sans-serif` fallback)
 
-**Character:** Work Sans is athletic discipline: heavy, condensed by tight tracking, and declarative in uppercase. Cormorant Garamond is the returning inner voice: italic, high-contrast, and deliberately softer.
+**Body Font:** Work Sans (with `sans-serif` fallback)
+
+**Character:** Archivo Black is the competitive command voice: dense, blunt, and visually immovable at its single `400` weight. Work Sans carries explanation and control labels with enough weight range to stay clear against the dark field. There is no ornamental or emotional serif voice in this system.
 
 ### Hierarchy
 
-- **Display:** Work Sans, weight 800, `clamp(4rem, 8vw, 6rem)`, line-height `0.82`, letter-spacing `-0.04em`, uppercase. Hero and closing commands only.
-- **Headline:** Work Sans, weights 760–780, `clamp(3.3rem, 6vw, 6rem)` to `clamp(3.5rem, 7vw, 6rem)`, line-height `0.86–0.9`, letter-spacing `-0.04em`, uppercase where used. Major chapter statements.
-- **Serif Voice:** Cormorant Garamond italic, `clamp(1.7rem, 2.7vw, 2.55rem)` in the hero and up to `clamp(2rem, 4.5vw, 4.5rem)` in the manifesto. Use for recognition, longing, and the second half of split headlines.
-- **Body:** Work Sans, weight 400, `1rem`, line-height `1.55`. The homepage intentionally uses little paragraph copy.
-- **Action:** Work Sans, weights 700–800, `0.82rem–0.86rem`. Keep action labels short and direct.
-- **Navigation:** Work Sans, weight 650, `0.75rem`, letter-spacing `0.08em`, uppercase.
-- **Selector:** Work Sans, weight 700, `0.75rem`, letter-spacing `0.06em`, uppercase.
-- **Micro Copy:** Work Sans, `0.75rem–0.76rem`, muted color. Premium Preview terms, safety guidance, and footer metadata.
+- **Display:** Archivo Black, weight `400`, `clamp(4rem, 8vw, 6rem)`, line-height `0.92`, letter-spacing `-0.035em`. Use for the uppercase hero and closing challenge; the hero may start at `4.6rem` on desktop.
+- **Headline:** Archivo Black, weight `400`, `clamp(3.2rem, 6vw, 4.7rem)`, line-height `0.94–0.95`, letter-spacing `-0.035em`. Use sentence case for the method and Progress chapters.
+- **Body:** Work Sans, weight `400`, `clamp(0.96rem, 1.3vw, 1.12rem)`, line-height `1.55`, with measures between `34ch` and `43ch`. Keep explanation brief.
+- **Action:** Work Sans, weight `780`, `0.82rem`, line-height `1.55`. Header action reduces to `0.76rem`; labels remain short and literal.
+- **Navigation:** Work Sans, weight `620`, `0.78rem`, line-height `1.55`. Use sentence case inside the compact pill shell.
+- **Selector:** Work Sans, weight `720`, `0.75rem`, line-height `1.55`. Sport names stay on one line; the dock title uses weight `650`, tracking `0.08em`, and uppercase.
+- **Micro Copy:** Work Sans, `0.75rem`, line-height `1.35–1.55`, in Muted Copy or Inactive Control. Use for Premium Preview terms, safety guidance, and footer metadata.
 
 ### Named Rules
 
-**The Outer-and-Inner Voice Rule.** Work Sans commands in public; italic Cormorant Garamond reveals what the athlete already knows.
+**The One Command Face Rule.** Archivo Black owns every major homepage command; do not reintroduce Cormorant Garamond or another expressive display family into this surface.
 
-**The Narrow Command Rule.** Monumental statements remain between roughly 7ch and 13ch so scale creates impact without becoming a banner.
+**The Short Command Rule.** Keep display lines between roughly `8ch` and `12ch`; scale and line breaks should produce force without turning a heading into a banner.
 
 ## Layout
 
-The page advances through full-viewport chapters rather than conventional content sections. Hero and manifesto use `100svh`; sport and product chapters use `110svh`; the closing chapter uses `94svh`. Desktop compositions are asymmetric: the hero portrait owns the right `57%`, the sport chapter splits `56% / 44%`, and the product glimpse splits `.72fr / 1.28fr`. Horizontal insets use fluid clamps such as `clamp(24px, 7vw, 110px)` and `clamp(24px, 8vw, 130px)`.
+The homepage has four narrative chapters plus supporting safety and footer bands. The hero and selector form one `100svh` first viewport with a `760px` desktop minimum: copy occupies the left `0.88fr`, athlete media the right `1.12fr`, and a `136px` sport dock spans the bottom. The method chapter uses `max(72svh, 620px)` and a `1.45fr / 0.55fr` copy split. The Progress proof uses `max(92svh, 820px)` and a `0.84fr / 1.16fr` split. The closing challenge uses `max(68svh, 560px)`. Section gutters use `clamp(24px, 8vw, 120px)` where the composition needs broad breathing room.
 
-The three product screens occupy a minimum `880px` stage. Each frame is `min(31vw, 360px)` and rotated `-5deg`, `1deg`, and `6deg`, with staggered bottom offsets; overlap and cropping imply a larger product world without turning the chapter into a carousel.
+At `900px`, main navigation hides, the hero shifts to `0.78fr / 1.22fr`, the dock becomes `152px` tall, and the Progress screen fixes at `300px`. At `760px`, the hero stacks into a `39svh` athlete plane, command copy, and a two-row `3 × 2` selector dock; the primary action fills the available width. Method and proof become single-column chapters, the Progress screen becomes `clamp(224px, 62vw, 242px)`, and page gutters become `16px`. Minimum supported width is `320px`; short landscape viewports below `700px` use a `700px` hero minimum instead of forcing `100svh`.
 
-At `900px`, desktop navigation disappears, portrait and copy proportions tighten, the product chapter stacks, and screens widen to `39vw`. At `620px`, header height becomes `70px`, page gutters become `16px`, the hero becomes a bottom-anchored image plane, the sport portrait becomes `72svh`, the selector becomes a horizontal scroller, primary and final actions become full width, and screens widen to `62vw` inside a fixed `820px` stage. Minimum supported body width is `320px`.
+Desktop athlete sources are `1200 × 2150` approved campaign portraits. At `760px` and below, the `<picture>` element switches to deterministic `780 × 658` derivatives documented in `assets/awakening/ASSET_MANIFEST.md` and `docs/design/asset-manifest.json`; every derivative preserves the face, full stance, and sport equipment over a darkened blur of its own source.
 
 ### Named Rules
 
-**The One Beat Per Viewport Rule.** Each chapter carries one emotional beat: promise, recognition, sport choice, product proof, or wake-up command.
+**The Four-Chapter Rule.** Keep the homepage sequence to promise and choice, week-led method, one Progress proof, and closing challenge; supporting safety and footer bands do not become new feature chapters.
 
-**The Glimpse, Not Gallery Rule.** Show exactly the restrained Today, Workout, and Progress trio at readable scale; do not expand the homepage into a feature grid.
+**The One Real Screen Rule.** The homepage shows one readable, current Progress screen. Do not restore the discarded three-screen stack or turn this surface into a feature gallery.
 
 ## Elevation & Depth
 
-The system is flat until imagery needs spatial separation. Depth comes from portrait planes, directional gradients, vignette transitions, crop, overlap, rotation, and one heavy shadow under native screens. Ordinary copy and controls receive no persistent shadow.
+Depth comes first from tonal night planes, green and blue radial counterlight, the athlete vignette, the faint `48px` hero grid, and a fixed `2.6%` grain layer. Controls remain compact and low-profile. Only the action pills and real screenshot receive persistent lift.
 
 ### Shadow Vocabulary
 
-- **Screen Lift:** `0 38px 100px rgba(0,0,0,.55)` for each real product-screen frame.
-- **Scrolled Header Veil:** `rgba(3, 6, 8, 0.92)` plus a `1px` Night Rule border after `24px` scroll; this is tonal depth, not a shadow.
+- **Action Lift:** `0 12px 30px rgba(0, 0, 0, 0.34)` under primary and header actions.
+- **Evidence Lift:** `0 38px 100px rgba(0, 0, 0, 0.55)` under the real Progress screenshot.
+- **Signal Glow:** `0 0 18px` in the current sport accent, attached only to the moving `1px` signal sweep.
+- **Scrolled Header Veil:** `rgba(7, 9, 12, 0.9)` with a `1px` Quiet Rule after `20px` scroll; it is tonal separation, not a floating shadow.
 
 ### Named Rules
 
-**The Evidence Owns Depth Rule.** Persistent shadow belongs to real product evidence; atmosphere elsewhere comes from black-on-black layering and portrait gradients.
+**The Proof Owns Heavy Lift Rule.** The real Progress screen is the only object allowed the large Evidence Lift; do not use that shadow on copy, selectors, or decorative containers.
+
+**The Texture Stays Subliminal Rule.** Grain remains fixed at `0.026` opacity and the background grid remains faint; neither may compete with copy or athlete detail.
 
 ## Shapes
 
-The form language is hard-edged and cinematic, with fully rounded conversion actions as the deliberate soft counterpoint. Rules are one-pixel lines. Sport choices are borderless text set on a ruled strip. Pill geometry is reserved for actions, while the approved app icon keeps a `12px` radius and real native screens use `16px` clipping. Portrait planes and chapters clip overflow so the page feels framed, not carded.
+The system combines open, square-edged chapters with compact pill controls. Primary actions and the desktop navigation shell use a `999px` radius; the approved app icon uses `12px`; the real Progress frame uses `16px`; and the keyboard skip link uses `8px`. Sport options remain rectangular and borderless with a single ruled baseline. One-pixel lines and clipped media planes establish structure without content cards.
 
 ### Named Rules
 
-**The No Card Chrome Rule.** Do not introduce rounded content cards, glass panels, or floating feature tiles into the open arena composition.
+**The Open Field Rule.** Do not wrap chapter copy in rounded cards, glass panels, or floating feature tiles; space, tonal planes, and rules already carry the hierarchy.
 
 ## Components
 
 ### Buttons
 
-- **Primary / Final:** Compact glass-dark full pill with Chalk White text, `58px` minimum height, `7px 8px 7px 24px` padding, and a `42px` Awakening Light `>` disc. Mobile actions stay content-width instead of stretching edge to edge.
-- **Hover:** Lift `2px` over `220ms` using `cubic-bezier(.16, 1, .3, 1)` while the outline gains signal color and the arrow disc moves right by `2px`.
-- **Header:** Transparent full pill with a `1px rgba(245, 243, 237, 0.52)` border, `48px` minimum height, and `0 20px` padding. Hover reverses to Chalk White on Arena Black.
-- **Text / Ghost:** No fill or custom chrome; minimum height `48px`, weight 700, and a visible underline.
-- **Focus:** Global `3px` Sport Accent outline with `5px` offset.
+- **Primary:** Signal-filled full pill, Action Ink text, `48px` minimum height, and `0 22px` padding. Hover lifts `2px` over `180ms` and reverses the fill to Chalk.
+- **Header:** Same signal/action relationship at a compact `44px` minimum height, `0 18px` padding, and `112px` minimum width.
+- **Focus:** Every interactive element uses a `3px` current-sport outline with `4px` offset.
+- **Mobile:** The hero action spans the dock width. The closing action is capped at `358px` while remaining able to fill the viewport.
 
-### Chips
+### Sport Selector
 
-- **Style:** Borderless uppercase text on a strip bounded by Night Rule, with `48px` minimum height and `20px` horizontal gaps.
-- **State:** Unselected is `#7d8d88`; hover is Chalk White; selected is the active sport accent. One roving tab stop supports Arrow Left, Arrow Right, Home, and End.
-- **Mobile:** One-line horizontal overflow with hidden scrollbar; selection is centered programmatically.
-
-### Cards / Containers
-
-- **Native Screens:** Screen Black backing, `16px` radius, clipped overflow, Screen Lift shadow, and no internal padding. Real screenshots remain unmodified.
-- **Content Chapters:** No cards. Use full-bleed tonal planes, image crops, gradients, rules, and open space.
+- **Structure:** Six allowlisted buttons in one desktop row and a `3 × 2` mobile grid. Each target is at least `48px` high on desktop and `44px` on mobile.
+- **Default / Hover:** Inactive Control text on transparent ground; hover shifts to Chalk.
+- **Selected:** Current sport accent text over a `9%` accent tint, with `aria-pressed="true"` and the only `tabindex="0"`.
+- **Keyboard:** Arrow keys wrap through choices; Home and End jump to the first and last state.
 
 ### Navigation
 
-The fixed `82px` desktop header uses a three-column grid: brand, centered links, and header action. Links are uppercase Soft Chalk at `0.75rem`, weight 650, and `0.08em` tracking; hover becomes Chalk White. Once scrolled beyond `24px`, the header receives the translucent Arena Black veil and Night Rule. At `900px`, navigation links disappear; the brand and action remain. At `620px`, header height becomes `70px`, icon becomes `38px`, and action height becomes `44px`.
+The fixed `64px` header uses a three-column grid: brand, centered pill navigation, and compact action. The navigation shell has `4px` padding, a `1px` Quiet Rule, and `999px` corners; links have a `40px` minimum height and turn to the current sport accent on hover. Navigation links hide at `900px`, while brand and action remain. The header gains its veil and bottom rule after `20px` scroll.
 
-### Athlete Portrait Plane
+### Athlete Signal Plane
 
-Campaign portraits fill their plane with `object-fit: cover`, muted saturation (`.8`), and slight contrast (`1.06–1.08`). Desktop uses directional black gradients to merge portrait and copy; mobile uses a bottom-up gradient so copy can anchor below the face and body. Portrait changes use the browser View Transition API when available.
+Approved campaign portraits fill the media plane with `object-fit: cover`, saturation `0.83`, and contrast `1.06`, then merge into Article Night through directional gradients. Each sport defines its own desktop focal position; mobile uses the prepared derivative without hiding the face, stance, or equipment.
 
-### Three-Screen Glimpse
+Changing sport synchronizes the desktop portrait, mobile portrait source, alt text, emotional line, current accent, `?sport=` URL, `aria-pressed` state, roving tab stop, and all three App Store route actions. Unknown query values fall back to General, and browser back/forward reapplies the matching state. The one visible signal sweep runs for `620ms` with `cubic-bezier(0.16, 1, 0.3, 1)`; supported browsers also use a `140ms` outgoing and `430ms` incoming View Transition. Under `prefers-reduced-motion: reduce`, the sweep is removed, View Transition animation is disabled, smooth scrolling stops, and state changes are effectively instant at `0.001ms`.
 
-The Today, Workout, and Progress captures form one restrained physical stack. The center Workout screen sits above the other two; each screen keeps its native aspect ratio and is partially cropped by the chapter. Never repaint, synthesize, or decorate the UI itself.
+### Method Line
+
+The ruled method component maps “Your sport” and “Your week” to “Next workout” across two thin gradient connectors. Supporting labels use Muted Copy; the result uses the current sport accent. On mobile it keeps all five elements in one compressed row rather than becoming a diagram card.
+
+### Progress Evidence
+
+The proof chapter contains one unpadded, `16px`-clipped frame for `assets/screenshots/progress-trends.webp`, backed by Screen Black and lifted by the Evidence Lift. Preserve its `640 × 1391` aspect ratio and original interface pixels. The Progress screen stays the same across sport states because it is general product evidence, not sport-specific acquisition art.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** keep Second Awakening nocturnal, sparse, identity-first, and paced in full-viewport chapters.
-- **Do** use approved athlete campaign portraits as large spatial planes and real simulator captures as product evidence.
-- **Do** preserve the Work Sans and italic Cormorant Garamond outer/inner voice split.
-- **Do** keep portrait, whisper, active accent, URL state, and App Store destination synchronized for all six sport states.
-- **Do** preserve `44px` minimum touch targets, `3px` focus outlines, keyboard sport selection, meaningful non-JavaScript content, and reduced-motion behavior.
+- **Do** keep Athlete Signal Split scoped to the production homepage unless another surface is explicitly approved to adopt it.
+- **Do** preserve the four-chapter order and keep the hero’s promise, athlete, six sport choices, Premium Preview terms, and primary action visible in the first viewport.
+- **Do** synchronize media, emotional line, accent, URL, selected state, accessible label, and allowlisted App Store route for General plus all five sports.
+- **Do** use the documented mobile athlete derivatives at `760px` and below and preserve every athlete’s face, full stance, and equipment.
+- **Do** use only the real Progress screenshot as homepage product evidence and keep its native pixels intact.
+- **Do** preserve keyboard navigation, `44px` minimum touch targets, `3px` focus outlines, meaningful non-JavaScript content, and immediate reduced-motion state changes.
+- **Do** describe App Store actions as clicks or discovery, not installs, and preserve the verified one-time 7-day Premium Preview language.
 
 ### Don't:
 
-- **Don't** revive the previous warm-paper identity or dense explanatory chapters.
-- **Don't** broaden emerald into a decorative wash or mix multiple sport accents in one state.
-- **Don't** turn the three-screen glimpse into a product gallery, dashboard, or carousel.
-- **Don't** fabricate, repaint, crop away, or visually modify product UI; screenshots are evidence.
-- **Don't** add generic fitness imagery, glassmorphism, rounded-card grids, gradients unrelated to portrait integration, testimonials, metrics, medical outcomes, or unsupported product claims.
+- **Don't** restore Second Awakening’s Cormorant Garamond voice, repeated identity chapters, three-screen pile, or full-viewport sequence.
+- **Don't** let cool blue become an active sport color or display multiple sport accents in one state.
+- **Don't** add generic fitness scaffolding, feature-card grids, glass panels, fake dashboards, testimonials, metrics, urgency, medical outcomes, or guaranteed performance claims.
+- **Don't** fabricate or repaint app UI, modify the approved logo, or present campaign athletes as customers or endorsers.
+- **Don't** change `/app` routes, forward arbitrary query strings, or replace verified custom-product-page destinations with one generic App Store listing.

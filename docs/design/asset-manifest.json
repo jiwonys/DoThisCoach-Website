@@ -237,10 +237,10 @@
       "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/general-athlete.png",
       "kind": "athlete_campaign_image",
       "sport": "general",
-      "feature": "second-awakening",
+      "feature": "athlete-signal-split-desktop",
       "dimensions": { "width": 1200, "height": 2150 },
       "crop": "Keep all five athletes visible; portrait may crop vertically but not relabel sports",
-      "releaseRelevance": "second-awakening-homepage",
+      "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
     },
     {
@@ -249,10 +249,10 @@
       "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/soccer.png",
       "kind": "athlete_campaign_image",
       "sport": "soccer",
-      "feature": "second-awakening",
+      "feature": "athlete-signal-split-desktop",
       "dimensions": { "width": 1200, "height": 2150 },
       "crop": "Preserve athlete, ball, and field context",
-      "releaseRelevance": "second-awakening-homepage",
+      "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
     },
     {
@@ -261,10 +261,10 @@
       "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/basketball.png",
       "kind": "athlete_campaign_image",
       "sport": "basketball",
-      "feature": "second-awakening",
+      "feature": "athlete-signal-split-desktop",
       "dimensions": { "width": 1200, "height": 2150 },
       "crop": "Preserve athlete, basketball, and court context",
-      "releaseRelevance": "second-awakening-homepage",
+      "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
     },
     {
@@ -273,10 +273,10 @@
       "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/pickleball.png",
       "kind": "athlete_campaign_image",
       "sport": "pickleball",
-      "feature": "second-awakening",
+      "feature": "athlete-signal-split-desktop",
       "dimensions": { "width": 1200, "height": 2150 },
       "crop": "Preserve athlete, paddle, ball, and court context",
-      "releaseRelevance": "second-awakening-homepage",
+      "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
     },
     {
@@ -285,10 +285,10 @@
       "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/tennis.png",
       "kind": "athlete_campaign_image",
       "sport": "tennis",
-      "feature": "second-awakening",
+      "feature": "athlete-signal-split-desktop",
       "dimensions": { "width": 1200, "height": 2150 },
       "crop": "Preserve athlete, racket, and court context",
-      "releaseRelevance": "second-awakening-homepage",
+      "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
     },
     {
@@ -297,11 +297,83 @@
       "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/volleyball.png",
       "kind": "athlete_campaign_image",
       "sport": "volleyball",
-      "feature": "second-awakening",
+      "feature": "athlete-signal-split-desktop",
       "dimensions": { "width": 1200, "height": 2150 },
       "crop": "Preserve athlete, volleyball, knee pads, and court context",
-      "releaseRelevance": "second-awakening-homepage",
+      "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
+    },
+    {
+      "id": "awakening-general-mobile",
+      "path": "assets/awakening/mobile/general.webp",
+      "source": "assets/awakening/general.webp",
+      "kind": "athlete_campaign_image",
+      "sport": "general",
+      "feature": "athlete-signal-split-mobile",
+      "dimensions": { "width": 780, "height": 658 },
+      "crop": "Unused upper field removed; all five athletes and sport equipment remain visible over a darkened blur of the same approved source",
+      "releaseRelevance": "production-homepage-mobile",
+      "approval": "deterministic-responsive-derivative"
+    },
+    {
+      "id": "awakening-soccer-mobile",
+      "path": "assets/awakening/mobile/soccer.webp",
+      "source": "assets/awakening/soccer.webp",
+      "kind": "athlete_campaign_image",
+      "sport": "soccer",
+      "feature": "athlete-signal-split-mobile",
+      "dimensions": { "width": 780, "height": 658 },
+      "crop": "Unused upper field removed; athlete face, full stance, ball, and field remain visible over a darkened blur of the same approved source",
+      "releaseRelevance": "production-homepage-mobile",
+      "approval": "deterministic-responsive-derivative"
+    },
+    {
+      "id": "awakening-basketball-mobile",
+      "path": "assets/awakening/mobile/basketball.webp",
+      "source": "assets/awakening/basketball.webp",
+      "kind": "athlete_campaign_image",
+      "sport": "basketball",
+      "feature": "athlete-signal-split-mobile",
+      "dimensions": { "width": 780, "height": 658 },
+      "crop": "Unused upper field removed; athlete face, full stance, basketball, and court remain visible over a darkened blur of the same approved source",
+      "releaseRelevance": "production-homepage-mobile",
+      "approval": "deterministic-responsive-derivative"
+    },
+    {
+      "id": "awakening-pickleball-mobile",
+      "path": "assets/awakening/mobile/pickleball.webp",
+      "source": "assets/awakening/pickleball.webp",
+      "kind": "athlete_campaign_image",
+      "sport": "pickleball",
+      "feature": "athlete-signal-split-mobile",
+      "dimensions": { "width": 780, "height": 658 },
+      "crop": "Unused upper field removed; athlete face, paddle, ball, and court remain visible over a darkened blur of the same approved source",
+      "releaseRelevance": "production-homepage-mobile",
+      "approval": "deterministic-responsive-derivative"
+    },
+    {
+      "id": "awakening-tennis-mobile",
+      "path": "assets/awakening/mobile/tennis.webp",
+      "source": "assets/awakening/tennis.webp",
+      "kind": "athlete_campaign_image",
+      "sport": "tennis",
+      "feature": "athlete-signal-split-mobile",
+      "dimensions": { "width": 780, "height": 658 },
+      "crop": "Unused upper field removed; athlete face, racket, and court remain visible over a darkened blur of the same approved source",
+      "releaseRelevance": "production-homepage-mobile",
+      "approval": "deterministic-responsive-derivative"
+    },
+    {
+      "id": "awakening-volleyball-mobile",
+      "path": "assets/awakening/mobile/volleyball.webp",
+      "source": "assets/awakening/volleyball.webp",
+      "kind": "athlete_campaign_image",
+      "sport": "volleyball",
+      "feature": "athlete-signal-split-mobile",
+      "dimensions": { "width": 780, "height": 658 },
+      "crop": "Unused upper field removed; athlete face, volleyball, knee pads, and court remain visible over a darkened blur of the same approved source",
+      "releaseRelevance": "production-homepage-mobile",
+      "approval": "deterministic-responsive-derivative"
     }
   ]
 }

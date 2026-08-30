@@ -17,7 +17,8 @@ const ignoredDirs = new Set([
   "docs",
   "node_modules",
   "output",
-  "prototype-src"
+  "prototype-src",
+  "prototypes"
 ]);
 
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {

@@ -1,54 +1,353 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-30T01:30:57Z",
-  "title": "Design System: DoThis",
+  "generatedAt": "2026-08-30T04:03:48Z",
+  "title": "Design System: DoThis Athlete Signal Split",
   "extensions": {
     "colorMeta": {
-      "arena-black": { "role": "neutral", "displayName": "Arena Black", "canonical": "#030608", "tonalRamp": ["oklch(15% 0.012 220)", "oklch(27% 0.012 220)", "oklch(39% 0.012 220)", "oklch(51% 0.012 220)", "oklch(63% 0.012 220)", "oklch(75% 0.012 220)", "oklch(87% 0.012 220)", "oklch(95% 0.012 220)"] },
-      "arena-raised": { "role": "neutral", "displayName": "Raised Arena", "canonical": "#071014", "tonalRamp": ["oklch(15% 0.018 220)", "oklch(27% 0.018 220)", "oklch(39% 0.018 220)", "oklch(51% 0.018 220)", "oklch(63% 0.018 220)", "oklch(75% 0.018 220)", "oklch(87% 0.018 220)", "oklch(95% 0.018 220)"] },
-      "arena-sport": { "role": "neutral", "displayName": "Sport Arena", "canonical": "#050a0d", "tonalRamp": ["oklch(15% 0.014 220)", "oklch(27% 0.014 220)", "oklch(39% 0.014 220)", "oklch(51% 0.014 220)", "oklch(63% 0.014 220)", "oklch(75% 0.014 220)", "oklch(87% 0.014 220)", "oklch(95% 0.014 220)"] },
-      "arena-inside": { "role": "neutral", "displayName": "Inside Arena", "canonical": "#06100f", "tonalRamp": ["oklch(15% 0.018 175)", "oklch(27% 0.018 175)", "oklch(39% 0.018 175)", "oklch(51% 0.018 175)", "oklch(63% 0.018 175)", "oklch(75% 0.018 175)", "oklch(87% 0.018 175)", "oklch(95% 0.018 175)"] },
-      "screen-black": { "role": "neutral", "displayName": "Screen Black", "canonical": "#0b1013", "tonalRamp": ["oklch(15% 0.012 220)", "oklch(27% 0.012 220)", "oklch(39% 0.012 220)", "oklch(51% 0.012 220)", "oklch(63% 0.012 220)", "oklch(75% 0.012 220)", "oklch(87% 0.012 220)", "oklch(95% 0.012 220)"] },
-      "chalk-white": { "role": "neutral", "displayName": "Chalk White", "canonical": "#f5f3ed", "tonalRamp": ["oklch(15% 0.008 90)", "oklch(27% 0.008 90)", "oklch(39% 0.008 90)", "oklch(51% 0.008 90)", "oklch(63% 0.008 90)", "oklch(75% 0.008 90)", "oklch(87% 0.008 90)", "oklch(95% 0.008 90)"] },
-      "chalk-soft": { "role": "neutral", "displayName": "Soft Chalk", "canonical": "#b9c2be", "tonalRamp": ["oklch(15% 0.014 165)", "oklch(27% 0.014 165)", "oklch(39% 0.014 165)", "oklch(51% 0.014 165)", "oklch(63% 0.014 165)", "oklch(75% 0.014 165)", "oklch(87% 0.014 165)", "oklch(95% 0.014 165)"] },
-      "emerald": { "role": "primary", "displayName": "Emerald Signal", "canonical": "#24d3a2", "tonalRamp": ["oklch(15% 0.15 165)", "oklch(27% 0.15 165)", "oklch(39% 0.15 165)", "oklch(51% 0.15 165)", "oklch(63% 0.15 165)", "oklch(75% 0.15 165)", "oklch(87% 0.15 165)", "oklch(95% 0.15 165)"] },
-      "signal": { "role": "primary", "displayName": "Awakening Light", "canonical": "#78f3ce", "tonalRamp": ["oklch(15% 0.12 165)", "oklch(27% 0.12 165)", "oklch(39% 0.12 165)", "oklch(51% 0.12 165)", "oklch(63% 0.12 165)", "oklch(75% 0.12 165)", "oklch(87% 0.12 165)", "oklch(95% 0.12 165)"] },
-      "night-line": { "role": "neutral", "displayName": "Night Rule", "canonical": "rgba(245, 243, 237, 0.2)", "tonalRamp": ["oklch(15% 0.008 90 / .2)", "oklch(27% 0.008 90 / .2)", "oklch(39% 0.008 90 / .2)", "oklch(51% 0.008 90 / .2)", "oklch(63% 0.008 90 / .2)", "oklch(75% 0.008 90 / .2)", "oklch(87% 0.008 90 / .2)", "oklch(95% 0.008 90 / .2)"] },
-      "selector-muted": { "role": "neutral", "displayName": "Selector Muted", "canonical": "#7d8d88", "tonalRamp": ["oklch(15% 0.022 165)", "oklch(27% 0.022 165)", "oklch(39% 0.022 165)", "oklch(51% 0.022 165)", "oklch(63% 0.022 165)", "oklch(75% 0.022 165)", "oklch(87% 0.022 165)", "oklch(95% 0.022 165)"] },
-      "safety-muted": { "role": "neutral", "displayName": "Safety Muted", "canonical": "#7d8a86", "tonalRamp": ["oklch(15% 0.018 165)", "oklch(27% 0.018 165)", "oklch(39% 0.018 165)", "oklch(51% 0.018 165)", "oklch(63% 0.018 165)", "oklch(75% 0.018 165)", "oklch(87% 0.018 165)", "oklch(95% 0.018 165)"] },
-      "footer-muted": { "role": "neutral", "displayName": "Footer Muted", "canonical": "#899591", "tonalRamp": ["oklch(15% 0.018 165)", "oklch(27% 0.018 165)", "oklch(39% 0.018 165)", "oklch(51% 0.018 165)", "oklch(63% 0.018 165)", "oklch(75% 0.018 165)", "oklch(87% 0.018 165)", "oklch(95% 0.018 165)"] },
-      "sport-general": { "role": "primary", "displayName": "General Sport Accent", "canonical": "#24d3a2", "tonalRamp": ["oklch(15% 0.15 165)", "oklch(27% 0.15 165)", "oklch(39% 0.15 165)", "oklch(51% 0.15 165)", "oklch(63% 0.15 165)", "oklch(75% 0.15 165)", "oklch(87% 0.15 165)", "oklch(95% 0.15 165)"] },
-      "sport-soccer": { "role": "primary", "displayName": "Soccer Sport Accent", "canonical": "#43d990", "tonalRamp": ["oklch(15% 0.15 150)", "oklch(27% 0.15 150)", "oklch(39% 0.15 150)", "oklch(51% 0.15 150)", "oklch(63% 0.15 150)", "oklch(75% 0.15 150)", "oklch(87% 0.15 150)", "oklch(95% 0.15 150)"] },
-      "sport-basketball": { "role": "primary", "displayName": "Basketball Sport Accent", "canonical": "#f3a33b", "tonalRamp": ["oklch(15% 0.16 65)", "oklch(27% 0.16 65)", "oklch(39% 0.16 65)", "oklch(51% 0.16 65)", "oklch(63% 0.16 65)", "oklch(75% 0.16 65)", "oklch(87% 0.16 65)", "oklch(95% 0.16 65)"] },
-      "sport-pickleball": { "role": "primary", "displayName": "Pickleball Sport Accent", "canonical": "#c9ec52", "tonalRamp": ["oklch(15% 0.17 120)", "oklch(27% 0.17 120)", "oklch(39% 0.17 120)", "oklch(51% 0.17 120)", "oklch(63% 0.17 120)", "oklch(75% 0.17 120)", "oklch(87% 0.17 120)", "oklch(95% 0.17 120)"] },
-      "sport-tennis": { "role": "primary", "displayName": "Tennis Sport Accent", "canonical": "#c8ef53", "tonalRamp": ["oklch(15% 0.17 120)", "oklch(27% 0.17 120)", "oklch(39% 0.17 120)", "oklch(51% 0.17 120)", "oklch(63% 0.17 120)", "oklch(75% 0.17 120)", "oklch(87% 0.17 120)", "oklch(95% 0.17 120)"] },
-      "sport-volleyball": { "role": "primary", "displayName": "Volleyball Sport Accent", "canonical": "#49d8c4", "tonalRamp": ["oklch(15% 0.12 180)", "oklch(27% 0.12 180)", "oklch(39% 0.12 180)", "oklch(51% 0.12 180)", "oklch(63% 0.12 180)", "oklch(75% 0.12 180)", "oklch(87% 0.12 180)", "oklch(95% 0.12 180)"] }
+      "article-night": {
+        "role": "neutral",
+        "displayName": "Article Night",
+        "canonical": "#07090c",
+        "tonalRamp": [
+          "oklch(15% 0.008 255.5)",
+          "oklch(27% 0.008 255.5)",
+          "oklch(39% 0.008 255.5)",
+          "oklch(51% 0.008 255.5)",
+          "oklch(63% 0.008 255.5)",
+          "oklch(75% 0.008 255.5)",
+          "oklch(87% 0.008 255.5)",
+          "oklch(95% 0.008 255.5)"
+        ]
+      },
+      "article-sunken": {
+        "role": "neutral",
+        "displayName": "Article Sunken",
+        "canonical": "#0b0e12",
+        "tonalRamp": [
+          "oklch(15% 0.010 255.7)",
+          "oklch(27% 0.010 255.7)",
+          "oklch(39% 0.010 255.7)",
+          "oklch(51% 0.010 255.7)",
+          "oklch(63% 0.010 255.7)",
+          "oklch(75% 0.010 255.7)",
+          "oklch(87% 0.010 255.7)",
+          "oklch(95% 0.010 255.7)"
+        ]
+      },
+      "article-raised": {
+        "role": "neutral",
+        "displayName": "Article Raised",
+        "canonical": "#101419",
+        "tonalRamp": [
+          "oklch(15% 0.012 254.1)",
+          "oklch(27% 0.012 254.1)",
+          "oklch(39% 0.012 254.1)",
+          "oklch(51% 0.012 254.1)",
+          "oklch(63% 0.012 254.1)",
+          "oklch(75% 0.012 254.1)",
+          "oklch(87% 0.012 254.1)",
+          "oklch(95% 0.012 254.1)"
+        ]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "Chalk",
+        "canonical": "#f2f4f3",
+        "tonalRamp": [
+          "oklch(15% 0.002 165.1)",
+          "oklch(27% 0.002 165.1)",
+          "oklch(39% 0.002 165.1)",
+          "oklch(51% 0.002 165.1)",
+          "oklch(63% 0.002 165.1)",
+          "oklch(75% 0.002 165.1)",
+          "oklch(87% 0.002 165.1)",
+          "oklch(95% 0.002 165.1)"
+        ]
+      },
+      "copy-muted": {
+        "role": "neutral",
+        "displayName": "Muted Copy",
+        "canonical": "#a7b0b8",
+        "tonalRamp": [
+          "oklch(15% 0.015 244.8)",
+          "oklch(27% 0.015 244.8)",
+          "oklch(39% 0.015 244.8)",
+          "oklch(51% 0.015 244.8)",
+          "oklch(63% 0.015 244.8)",
+          "oklch(75% 0.015 244.8)",
+          "oklch(87% 0.015 244.8)",
+          "oklch(95% 0.015 244.8)"
+        ]
+      },
+      "control-inactive": {
+        "role": "neutral",
+        "displayName": "Inactive Control",
+        "canonical": "#78828a",
+        "tonalRamp": [
+          "oklch(15% 0.017 241.9)",
+          "oklch(27% 0.017 241.9)",
+          "oklch(39% 0.017 241.9)",
+          "oklch(51% 0.017 241.9)",
+          "oklch(63% 0.017 241.9)",
+          "oklch(75% 0.017 241.9)",
+          "oklch(87% 0.017 241.9)",
+          "oklch(95% 0.017 241.9)"
+        ]
+      },
+      "signal": {
+        "role": "primary",
+        "displayName": "Signal Green",
+        "canonical": "#2ee68b",
+        "tonalRamp": [
+          "oklch(15% 0.190 155.2)",
+          "oklch(27% 0.190 155.2)",
+          "oklch(39% 0.190 155.2)",
+          "oklch(51% 0.190 155.2)",
+          "oklch(63% 0.190 155.2)",
+          "oklch(75% 0.190 155.2)",
+          "oklch(87% 0.190 155.2)",
+          "oklch(95% 0.190 155.2)"
+        ]
+      },
+      "cool-blue": {
+        "role": "secondary",
+        "displayName": "Cool Arena Blue",
+        "canonical": "#5b7cff",
+        "tonalRamp": [
+          "oklch(15% 0.198 269.4)",
+          "oklch(27% 0.198 269.4)",
+          "oklch(39% 0.198 269.4)",
+          "oklch(51% 0.198 269.4)",
+          "oklch(63% 0.198 269.4)",
+          "oklch(75% 0.198 269.4)",
+          "oklch(87% 0.198 269.4)",
+          "oklch(95% 0.198 269.4)"
+        ]
+      },
+      "quiet-rule": {
+        "role": "neutral",
+        "displayName": "Quiet Rule",
+        "canonical": "rgba(255, 255, 255, 0.11)",
+        "tonalRamp": [
+          "rgba(255,255,255,.03)",
+          "rgba(255,255,255,.06)",
+          "rgba(255,255,255,.09)",
+          "rgba(255,255,255,.12)",
+          "rgba(255,255,255,.18)",
+          "rgba(255,255,255,.28)",
+          "rgba(255,255,255,.48)",
+          "rgba(255,255,255,.72)"
+        ]
+      },
+      "strong-rule": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "rgba(255, 255, 255, 0.18)",
+        "tonalRamp": [
+          "rgba(255,255,255,.05)",
+          "rgba(255,255,255,.09)",
+          "rgba(255,255,255,.13)",
+          "rgba(255,255,255,.18)",
+          "rgba(255,255,255,.26)",
+          "rgba(255,255,255,.38)",
+          "rgba(255,255,255,.58)",
+          "rgba(255,255,255,.8)"
+        ]
+      },
+      "action-ink": {
+        "role": "neutral",
+        "displayName": "Action Ink",
+        "canonical": "#04140d",
+        "tonalRamp": [
+          "oklch(15% 0.028 164.6)",
+          "oklch(27% 0.028 164.6)",
+          "oklch(39% 0.028 164.6)",
+          "oklch(51% 0.028 164.6)",
+          "oklch(63% 0.028 164.6)",
+          "oklch(75% 0.028 164.6)",
+          "oklch(87% 0.028 164.6)",
+          "oklch(95% 0.028 164.6)"
+        ]
+      },
+      "screen-black": {
+        "role": "neutral",
+        "displayName": "Screen Black",
+        "canonical": "#0b1013",
+        "tonalRamp": [
+          "oklch(15% 0.010 234.5)",
+          "oklch(27% 0.010 234.5)",
+          "oklch(39% 0.010 234.5)",
+          "oklch(51% 0.010 234.5)",
+          "oklch(63% 0.010 234.5)",
+          "oklch(75% 0.010 234.5)",
+          "oklch(87% 0.010 234.5)",
+          "oklch(95% 0.010 234.5)"
+        ]
+      },
+      "sport-soccer": {
+        "role": "primary",
+        "displayName": "Soccer Accent",
+        "canonical": "#43d990",
+        "tonalRamp": [
+          "oklch(15% 0.164 157.5)",
+          "oklch(27% 0.164 157.5)",
+          "oklch(39% 0.164 157.5)",
+          "oklch(51% 0.164 157.5)",
+          "oklch(63% 0.164 157.5)",
+          "oklch(75% 0.164 157.5)",
+          "oklch(87% 0.164 157.5)",
+          "oklch(95% 0.164 157.5)"
+        ]
+      },
+      "sport-basketball": {
+        "role": "primary",
+        "displayName": "Basketball Accent",
+        "canonical": "#f3a33b",
+        "tonalRamp": [
+          "oklch(15% 0.148 68.9)",
+          "oklch(27% 0.148 68.9)",
+          "oklch(39% 0.148 68.9)",
+          "oklch(51% 0.148 68.9)",
+          "oklch(63% 0.148 68.9)",
+          "oklch(75% 0.148 68.9)",
+          "oklch(87% 0.148 68.9)",
+          "oklch(95% 0.148 68.9)"
+        ]
+      },
+      "sport-pickleball": {
+        "role": "primary",
+        "displayName": "Pickleball Accent",
+        "canonical": "#c9ec52",
+        "tonalRamp": [
+          "oklch(15% 0.180 121.2)",
+          "oklch(27% 0.180 121.2)",
+          "oklch(39% 0.180 121.2)",
+          "oklch(51% 0.180 121.2)",
+          "oklch(63% 0.180 121.2)",
+          "oklch(75% 0.180 121.2)",
+          "oklch(87% 0.180 121.2)",
+          "oklch(95% 0.180 121.2)"
+        ]
+      },
+      "sport-tennis": {
+        "role": "primary",
+        "displayName": "Tennis Accent",
+        "canonical": "#c8ef53",
+        "tonalRamp": [
+          "oklch(15% 0.184 122.3)",
+          "oklch(27% 0.184 122.3)",
+          "oklch(39% 0.184 122.3)",
+          "oklch(51% 0.184 122.3)",
+          "oklch(63% 0.184 122.3)",
+          "oklch(75% 0.184 122.3)",
+          "oklch(87% 0.184 122.3)",
+          "oklch(95% 0.184 122.3)"
+        ]
+      },
+      "sport-volleyball": {
+        "role": "primary",
+        "displayName": "Volleyball Accent",
+        "canonical": "#49d8c4",
+        "tonalRamp": [
+          "oklch(15% 0.124 181.9)",
+          "oklch(27% 0.124 181.9)",
+          "oklch(39% 0.124 181.9)",
+          "oklch(51% 0.124 181.9)",
+          "oklch(63% 0.124 181.9)",
+          "oklch(75% 0.124 181.9)",
+          "oklch(87% 0.124 181.9)",
+          "oklch(95% 0.124 181.9)"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero and closing commands." },
-      "headline": { "displayName": "Headline", "purpose": "Major chapter statements." },
-      "serif-voice": { "displayName": "Serif Voice", "purpose": "Private recognition, longing, and split-headline emphasis." },
-      "body": { "displayName": "Body", "purpose": "Sparse explanatory copy." },
-      "action": { "displayName": "Action", "purpose": "Primary conversion actions." },
-      "header-action": { "displayName": "Header Action", "purpose": "Compact fixed-header conversion action." },
-      "navigation": { "displayName": "Navigation", "purpose": "Desktop section links." },
-      "selector": { "displayName": "Selector", "purpose": "Sport choices." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Uppercase hero and closing commands."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sentence-case method and Progress chapter headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Sparse product explanation."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Primary and header conversion labels."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Compact desktop section links."
+      },
+      "selector": {
+        "displayName": "Selector",
+        "purpose": "Six sport-state controls."
+      }
     },
     "shadows": [
-      { "name": "screen-lift", "value": "0 38px 100px rgba(0,0,0,.55)", "purpose": "Structural depth beneath real product-screen evidence." }
+      {
+        "name": "action-lift",
+        "value": "0 12px 30px rgba(0, 0, 0, 0.34)",
+        "purpose": "Persistent compact lift under primary and header actions."
+      },
+      {
+        "name": "evidence-lift",
+        "value": "0 38px 100px rgba(0, 0, 0, 0.55)",
+        "purpose": "Structural depth under the one real Progress screen."
+      },
+      {
+        "name": "signal-glow",
+        "value": "0 0 18px var(--sport-accent)",
+        "purpose": "Glow attached only to the moving one-pixel signal sweep."
+      }
     ],
     "motion": [
-      { "name": "ease-awakening", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Primary-action lift and incoming sport-state reveal." },
-      { "name": "header-state", "value": "220ms ease", "purpose": "Scrolled-header background and border." },
-      { "name": "control-color", "value": "180ms ease", "purpose": "Header and primary-action color changes." },
-      { "name": "action-lift", "value": "220ms cubic-bezier(.16, 1, .3, 1)", "purpose": "Three-pixel primary-action hover lift." },
-      { "name": "sport-out", "value": "160ms ease-out", "purpose": "Outgoing root fade for sport changes." },
-      { "name": "sport-in", "value": "520ms cubic-bezier(.16, 1, .3, 1)", "purpose": "Incoming clipped, blurred sport-state reveal." },
-      { "name": "reduced-motion", "value": ".001ms", "purpose": "Global animation and transition duration under prefers-reduced-motion; root view transitions are disabled." }
+      {
+        "name": "signal-ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Signal sweep, action lift, and incoming sport-state reveal."
+      },
+      {
+        "name": "signal-sweep",
+        "value": "620ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Single line crossing the athlete plane after a sport change."
+      },
+      {
+        "name": "control-state",
+        "value": "160ms ease",
+        "purpose": "Navigation and selector color state changes."
+      },
+      {
+        "name": "action-state",
+        "value": "180ms",
+        "purpose": "Primary action lift and color reversal."
+      },
+      {
+        "name": "view-transition",
+        "value": "140ms out / 430ms in",
+        "purpose": "Optional root transition between synchronized sport states."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.001ms; sweep hidden; View Transition disabled",
+        "purpose": "Effectively instant state changes under prefers-reduced-motion."
+      }
     ],
     "breakpoints": [
-      { "name": "compact", "value": "900px" },
-      { "name": "mobile", "value": "620px" }
+      {
+        "name": "compact",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-athlete",
+        "value": "760px"
+      },
+      {
+        "name": "short-landscape",
+        "value": "700px height"
+      }
     ]
   },
   "components": [
@@ -56,84 +355,130 @@
       "name": "Primary Action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Compact glass-dark conversion action with a signal arrow disc, used in hero and closing awakening chapters.",
-      "html": "<a class=\"ds-primary-action\" href=\"#\">Train with DoThis</a>",
-      "css": ".ds-primary-action { display:inline-flex; align-items:center; justify-content:space-between; width:fit-content; min-height:58px; padding:7px 8px 7px 24px; color:var(--white, #f5f3ed); background:rgba(245,243,237,.045); border:1px solid rgba(245,243,237,.28); border-radius:999px; box-shadow:inset 0 1px 0 rgba(255,255,255,.07); text-decoration:none; font:720 .82rem/1.55 \"Work Sans\", sans-serif; letter-spacing:.01em; backdrop-filter:blur(14px); transition:transform 220ms var(--ease, cubic-bezier(.16,1,.3,1)), background-color 180ms ease, border-color 180ms ease; } .ds-primary-action::after { content:\">\"; display:grid; place-items:center; width:42px; height:42px; margin-left:22px; color:var(--black, #030608); background:var(--signal, #78f3ce); border-radius:50%; font-size:1.1rem; font-weight:700; line-height:1; transition:transform 220ms var(--ease, cubic-bezier(.16,1,.3,1)), background-color 180ms ease; } .ds-primary-action:hover { transform:translateY(-2px); background:rgba(120,243,206,.08); border-color:rgba(120,243,206,.62); } .ds-primary-action:hover::after { transform:translateX(2px); background:var(--white, #f5f3ed); } .ds-primary-action:focus-visible { outline:3px solid var(--sport-accent, #24d3a2); outline-offset:5px; } .ds-primary-action:active { transform:translateY(0); }"
+      "description": "Signal-filled conversion action used in the hero and closing challenge.",
+      "html": "<a class=\"ds-primary-action\" href=\"#\">Train for your game</a>",
+      "css": ".ds-primary-action{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;color:#04140d;background:var(--sport-accent,#2ee68b);border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.34);text-decoration:none;font:780 .82rem/1.55 \"Work Sans\",sans-serif;white-space:nowrap;transition:transform 180ms cubic-bezier(.16,1,.3,1),background-color 180ms ease}.ds-primary-action:hover{transform:translateY(-2px);background:#f2f4f3}.ds-primary-action:focus-visible{outline:3px solid var(--sport-accent,#2ee68b);outline-offset:4px}"
     },
     {
       "name": "Header Action",
       "kind": "button",
       "refersTo": "button-header",
-      "description": "Restrained pill conversion action reserved for the fixed header.",
-      "html": "<a class=\"ds-header-action\" href=\"#\">Train with us</a>",
-      "css": ".ds-header-action { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; color:var(--white, #f5f3ed); background:transparent; border:1px solid rgba(245,243,237,.52); border-radius:999px; text-decoration:none; font:700 .78rem/1.55 \"Work Sans\", sans-serif; transition:color 180ms ease, background-color 180ms ease, border-color 180ms ease; } .ds-header-action:hover { color:var(--black, #030608); background:var(--white, #f5f3ed); border-color:var(--white, #f5f3ed); } .ds-header-action:focus-visible { outline:3px solid var(--sport-accent, #24d3a2); outline-offset:5px; }"
+      "description": "Compact synchronized App Store action reserved for the fixed header.",
+      "html": "<a class=\"ds-header-action\" href=\"#\">View app</a>",
+      "css": ".ds-header-action{display:inline-flex;align-items:center;justify-content:center;min-width:112px;min-height:44px;padding:0 18px;color:#04140d;background:var(--sport-accent,#2ee68b);border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.34);text-decoration:none;font:780 .76rem/1.55 \"Work Sans\",sans-serif;transition:transform 180ms cubic-bezier(.16,1,.3,1),background-color 180ms ease}.ds-header-action:hover{transform:translateY(-2px);background:#f2f4f3}.ds-header-action:focus-visible{outline:3px solid var(--sport-accent,#2ee68b);outline-offset:4px}"
     },
     {
       "name": "Sport Selector",
       "kind": "chip",
       "refersTo": "sport-option",
-      "description": "Ruled row of borderless sport choices with one active signal color.",
-      "html": "<div class=\"ds-sport-selector\" role=\"group\" aria-label=\"Choose your sport\"><button type=\"button\" aria-pressed=\"true\">All</button><button type=\"button\" aria-pressed=\"false\">Soccer</button><button type=\"button\" aria-pressed=\"false\">Basketball</button></div>",
-      "css": ".ds-sport-selector { display:flex; gap:0 20px; border-block:1px solid var(--line, rgba(245,243,237,.2)); overflow-x:auto; scrollbar-width:none; } .ds-sport-selector::-webkit-scrollbar { display:none; } .ds-sport-selector button { flex:0 0 auto; min-height:48px; padding:0; color:#7d8d88; background:transparent; border:0; cursor:pointer; font:700 .75rem/1.55 \"Work Sans\", sans-serif; letter-spacing:.06em; text-transform:uppercase; } .ds-sport-selector button:hover { color:var(--white, #f5f3ed); } .ds-sport-selector button[aria-pressed=\"true\"] { color:var(--sport-accent, #24d3a2); } .ds-sport-selector button:focus-visible { outline:3px solid var(--sport-accent, #24d3a2); outline-offset:5px; }"
+      "description": "Six-state ruled selector with one active accent and a mobile 3 × 2 layout.",
+      "html": "<div class=\"ds-sport-selector\" role=\"group\" aria-label=\"Choose your sport\"><button aria-pressed=\"true\">All</button><button aria-pressed=\"false\">Soccer</button><button aria-pressed=\"false\">Basketball</button><button aria-pressed=\"false\">Pickleball</button><button aria-pressed=\"false\">Tennis</button><button aria-pressed=\"false\">Volleyball</button></div>",
+      "css": ".ds-sport-selector{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));background:rgba(7,9,12,.94)}.ds-sport-selector button{min-height:48px;padding:0 9px;overflow:hidden;color:#78828a;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.11);font:720 .75rem/1.55 \"Work Sans\",sans-serif;text-overflow:ellipsis;white-space:nowrap;transition:color 160ms ease,background-color 160ms ease}.ds-sport-selector button:hover{color:#f2f4f3}.ds-sport-selector button[aria-pressed=\"true\"]{color:var(--sport-accent,#2ee68b);background:color-mix(in srgb,var(--sport-accent,#2ee68b) 9%,transparent)}.ds-sport-selector button:focus-visible{outline:3px solid var(--sport-accent,#2ee68b);outline-offset:4px}@media(max-width:760px){.ds-sport-selector{grid-template-columns:repeat(3,minmax(0,1fr))}.ds-sport-selector button{min-height:44px}}"
     },
     {
-      "name": "Navigation",
+      "name": "Header Navigation",
       "kind": "nav",
-      "description": "Centered uppercase section navigation for the transparent fixed header.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#\">Awakening</a><a href=\"#\">Your sport</a><a href=\"#\">Inside</a></nav>",
-      "css": ".ds-nav { display:flex; justify-content:center; gap:clamp(20px,3vw,44px); } .ds-nav a { display:inline-flex; align-items:center; min-height:44px; color:var(--white-soft, #b9c2be); text-decoration:none; font:650 .75rem/1.55 \"Work Sans\", sans-serif; letter-spacing:.08em; text-transform:uppercase; } .ds-nav a:hover { color:var(--white, #f5f3ed); } .ds-nav a:focus-visible { outline:3px solid var(--sport-accent, #24d3a2); outline-offset:5px; }"
+      "description": "Quiet pill navigation centered in the fixed desktop header.",
+      "html": "<nav class=\"ds-header-nav\" aria-label=\"Main navigation\"><a href=\"#\">Method</a><a href=\"#\">Inside</a><a href=\"#\">Articles</a></nav>",
+      "css": ".ds-header-nav{display:flex;align-items:center;gap:2px;padding:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.11);border-radius:999px}.ds-header-nav a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;color:#a7b0b8;border-radius:999px;text-decoration:none;font:620 .78rem/1.55 \"Work Sans\",sans-serif;transition:color 160ms ease,background-color 160ms ease}.ds-header-nav a:hover{color:var(--sport-accent,#2ee68b);background:rgba(255,255,255,.04)}.ds-header-nav a:focus-visible{outline:3px solid var(--sport-accent,#2ee68b);outline-offset:4px}@media(max-width:900px){.ds-header-nav{display:none}}"
     },
     {
-      "name": "Native Screen",
-      "kind": "card",
-      "refersTo": "native-screen",
-      "description": "Unpadded, clipped frame for one real DoThis screenshot in the three-screen glimpse.",
-      "html": "<figure class=\"ds-native-screen\"><div class=\"ds-screen-placeholder\">REAL DOTHIS SCREEN</div></figure>",
-      "css": ".ds-native-screen { width:min(31vw,360px); margin:0; overflow:hidden; color:var(--white, #f5f3ed); background:#0b1013; border-radius:16px; box-shadow:0 38px 100px rgba(0,0,0,.55); transform:rotate(1deg); } .ds-screen-placeholder { display:grid; place-items:center; aspect-ratio:640/1391; padding:24px; color:var(--white-soft, #b9c2be); font:700 .75rem/1.55 \"Work Sans\", sans-serif; letter-spacing:.06em; text-align:center; } .ds-native-screen:focus-within { outline:3px solid var(--sport-accent, #24d3a2); outline-offset:5px; }"
-    },
-    {
-      "name": "Athlete Portrait Plane",
+      "name": "Method Line",
       "kind": "custom",
-      "description": "Full-height campaign portrait merged into arena black by a directional vignette.",
-      "html": "<figure class=\"ds-athlete-plane\"><div class=\"ds-athlete-placeholder\">APPROVED ATHLETE PORTRAIT</div></figure>",
-      "css": ".ds-athlete-plane { position:relative; min-height:520px; margin:0; overflow:hidden; background:#050a0d; isolation:isolate; } .ds-athlete-placeholder { display:grid; place-items:center; min-height:520px; color:var(--white-soft, #b9c2be); background:linear-gradient(90deg,rgba(5,10,13,.08) 30%,rgba(5,10,13,.45) 53%,#050a0d 100%), linear-gradient(0deg,#050a0d 0%,transparent 28%); font:700 .75rem/1.55 \"Work Sans\", sans-serif; letter-spacing:.08em; text-align:center; } .ds-athlete-plane:focus-within { outline:3px solid var(--sport-accent, #24d3a2); outline-offset:5px; }"
+      "description": "Ruled five-part pipeline showing sport and week resolving into the next workout.",
+      "html": "<div class=\"ds-method-line\"><span>Your sport</span><i></i><span>Your week</span><i></i><strong>Next workout</strong></div>",
+      "css": ".ds-method-line{display:grid;grid-template-columns:auto minmax(24px,1fr) auto minmax(24px,1fr) auto;gap:18px;align-items:center;padding:20px 0;color:#a7b0b8;border-block:1px solid rgba(255,255,255,.11);font:650 clamp(.78rem,1vw,.9rem)/1.55 \"Work Sans\",sans-serif}.ds-method-line i{height:1px;background:linear-gradient(90deg,rgba(255,255,255,.18),var(--sport-accent,#2ee68b))}.ds-method-line strong{color:var(--sport-accent,#2ee68b)}@media(max-width:760px){.ds-method-line{gap:10px;padding-block:18px;font-size:.75rem}}"
+    },
+    {
+      "name": "Progress Evidence Frame",
+      "kind": "card",
+      "refersTo": "progress-screen",
+      "description": "Unpadded frame for the one approved, real Progress screenshot.",
+      "html": "<figure class=\"ds-progress-frame\"><div class=\"ds-progress-placeholder\">Approved Progress screenshot</div></figure>",
+      "css": ".ds-progress-frame{width:min(28vw,360px);margin:0;overflow:hidden;background:#0b1013;border-radius:16px;box-shadow:0 38px 100px rgba(0,0,0,.55)}.ds-progress-placeholder{display:grid;place-items:center;aspect-ratio:640/1391;padding:24px;color:#a7b0b8;background:linear-gradient(180deg,#101419,#0b1013);font:650 .75rem/1.55 \"Work Sans\",sans-serif;text-align:center}@media(max-width:900px){.ds-progress-frame{width:300px}}@media(max-width:760px){.ds-progress-frame{width:clamp(224px,62vw,242px)}}"
+    },
+    {
+      "name": "Athlete Signal Plane",
+      "kind": "custom",
+      "description": "Synchronized athlete media plane with one 620ms signal sweep.",
+      "html": "<figure class=\"ds-athlete-plane\"><div class=\"ds-athlete-placeholder\">Approved athlete campaign image</div><span class=\"ds-signal-sweep\" aria-hidden=\"true\"></span></figure>",
+      "css": ".ds-athlete-plane{position:relative;min-height:520px;margin:0;overflow:hidden;background:#07090c}.ds-athlete-placeholder{display:grid;place-items:center;min-height:520px;color:#a7b0b8;background:linear-gradient(90deg,#07090c,rgba(7,9,12,.22) 38%,transparent 68%),radial-gradient(58% 45% at 100% 36%,rgba(91,124,255,.15),transparent 72%);font:650 .75rem/1.55 \"Work Sans\",sans-serif}.ds-signal-sweep{position:absolute;top:13%;right:0;left:0;height:1px;background:var(--sport-accent,#2ee68b);box-shadow:0 0 18px var(--sport-accent,#2ee68b);animation:ds-signal-scan 620ms cubic-bezier(.16,1,.3,1) both}@keyframes ds-signal-scan{0%{opacity:0;transform:translateY(-18vh)}18%{opacity:.88}100%{opacity:0;transform:translateY(66vh)}}@media(prefers-reduced-motion:reduce){.ds-signal-sweep{display:none}}"
     }
   ],
   "narrative": {
-    "northStar": "Second Awakening",
-    "overview": "DoThis is a nocturnal arena in the instant before an athlete returns to motion. Near-black full-viewport chapters, disciplined white type, and life-size campaign portrait planes create recognition and tension before the page explains anything. Emerald arrives as a rare signal of readiness, not a decorative brand wash.\n\nThe visual system is sparse and identity-first. Work Sans delivers compressed, uppercase commands; italic Cormorant Garamond carries the private inner voice. Real Today, Workout, and Progress screens appear only as a restrained three-screen glimpse, preserving mystery while making the App Store action credible.",
+    "northStar": "Athlete Signal Split",
+    "overview": "Athlete Signal Split presents the DoThis homepage as a live training signal rather than a generic fitness landing page. An article-night ground, chalk-white command type, one synchronized athlete plane, and quiet ruled controls make the visitor feel competitive possibility before the page explains the method. Signal green carries the current choice and action; cool blue remains a restrained counterlight.\n\nThe system is direct, dark, and evidence-led. Archivo Black commands; Work Sans explains. Fine grain, low-chroma athlete imagery, and black-on-black tonal shifts add physical texture without turning the interface into card chrome. The story stays to four chapters: hero and selector, the week-led method, one real Progress screen, and the closing challenge.\n\nThis document governs the production marketing homepage in `index.html`, `home.css`, and `home.js`. It does not redesign the native iPhone app or automatically replace the established systems on articles, comparison, support, legal, or acquisition redirect pages. `PRODUCT.md` remains authoritative for product truth, and the asset and App Store destination manifests remain authoritative for evidence and routing.",
     "keyCharacteristics": [
-      "Nocturnal arena-black chapters with subtle green-black tonal shifts.",
-      "Athlete campaign portraits treated as full-height spatial planes.",
-      "Monumental Work Sans commands cut by intimate italic Cormorant Garamond lines.",
-      "Emerald signal color used for awakening language, focus, selection, and action.",
-      "Full-viewport pacing with one emotional job per chapter.",
-      "One coherent sport state across portrait, whisper, accent, URL, and App Store route.",
-      "Three real product screens staged as physical evidence, never a feature gallery."
+      "Article-night ground with a green signal glow, cool-blue counterlight, and fine fixed grain.",
+      "Archivo Black for commands and Work Sans for every explanatory or interactive role.",
+      "One split hero that keeps the promise, synchronized athlete, all six sport states, and primary App Store action in the first viewport.",
+      "Four restrained chapters: hero and selector, week-led method, one real Progress screen, and closing challenge.",
+      "One coherent sport state across desktop and mobile media, emotional line, accent, URL, selected control, and App Store route.",
+      "One `620ms` signal sweep for sport changes; reduced-motion state changes are immediate.",
+      "Real product evidence stays readable, singular, and unmodified."
     ],
     "rules": [
-      { "name": "The Signal Stays Rare Rule", "body": "Emerald marks awakening, choice, focus, or action; it does not become ambient decoration or a broad background field.", "section": "colors" },
-      { "name": "The Sport State Is Whole Rule", "body": "A sport choice changes portrait, whisper, accent, URL state, and every App Store action together; never change one part alone.", "section": "colors" },
-      { "name": "The Outer-and-Inner Voice Rule", "body": "Work Sans commands in public; italic Cormorant Garamond reveals what the athlete already knows.", "section": "typography" },
-      { "name": "The Narrow Command Rule", "body": "Monumental statements remain between roughly 7ch and 13ch so scale creates impact without becoming a banner.", "section": "typography" },
-      { "name": "The One Beat Per Viewport Rule", "body": "Each chapter carries one emotional beat: promise, recognition, sport choice, product proof, or wake-up command.", "section": "layout" },
-      { "name": "The Glimpse, Not Gallery Rule", "body": "Show exactly the restrained Today, Workout, and Progress trio at readable scale; do not expand the homepage into a feature grid.", "section": "layout" },
-      { "name": "The Evidence Owns Depth Rule", "body": "Persistent shadow belongs to real product evidence; atmosphere elsewhere comes from black-on-black layering and portrait gradients.", "section": "elevation" },
-      { "name": "The No Card Chrome Rule", "body": "Do not introduce rounded content cards, glass panels, or floating feature tiles into the open arena composition.", "section": "shapes" }
+      {
+        "name": "The One Active Signal Rule",
+        "body": "The current sport accent owns actions, focus, selection, the emotional emphasis, and the sweep at the same time; never show competing sport accents in one state.",
+        "section": "colors"
+      },
+      {
+        "name": "The Blue Stays Counterlight Rule",
+        "body": "Cool blue may shape atmosphere behind content, but it never becomes a primary button, selector state, focus outline, or headline emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Command Face Rule",
+        "body": "Archivo Black owns every major homepage command; do not reintroduce Cormorant Garamond or another expressive display family into this surface.",
+        "section": "typography"
+      },
+      {
+        "name": "The Short Command Rule",
+        "body": "Keep display lines between roughly `8ch` and `12ch`; scale and line breaks should produce force without turning a heading into a banner.",
+        "section": "typography"
+      },
+      {
+        "name": "The Four-Chapter Rule",
+        "body": "Keep the homepage sequence to promise and choice, week-led method, one Progress proof, and closing challenge; supporting safety and footer bands do not become new feature chapters.",
+        "section": "layout"
+      },
+      {
+        "name": "The One Real Screen Rule",
+        "body": "The homepage shows one readable, current Progress screen. Do not restore the discarded three-screen stack or turn this surface into a feature gallery.",
+        "section": "layout"
+      },
+      {
+        "name": "The Proof Owns Heavy Lift Rule",
+        "body": "The real Progress screen is the only object allowed the large Evidence Lift; do not use that shadow on copy, selectors, or decorative containers.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Texture Stays Subliminal Rule",
+        "body": "Grain remains fixed at `0.026` opacity and the background grid remains faint; neither may compete with copy or athlete detail.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Open Field Rule",
+        "body": "Do not wrap chapter copy in rounded cards, glass panels, or floating feature tiles; space, tonal planes, and rules already carry the hierarchy.",
+        "section": "shapes"
+      }
     ],
     "dos": [
-      "Do keep Second Awakening nocturnal, sparse, identity-first, and paced in full-viewport chapters.",
-      "Do use approved athlete campaign portraits as large spatial planes and real simulator captures as product evidence.",
-      "Do preserve the Work Sans and italic Cormorant Garamond outer/inner voice split.",
-      "Do keep portrait, whisper, active accent, URL state, and App Store destination synchronized for all six sport states.",
-      "Do preserve 44px minimum touch targets, 3px focus outlines, keyboard sport selection, meaningful non-JavaScript content, and reduced-motion behavior."
+      "Do keep Athlete Signal Split scoped to the production homepage unless another surface is explicitly approved to adopt it.",
+      "Do preserve the four-chapter order and keep the hero’s promise, athlete, six sport choices, Premium Preview terms, and primary action visible in the first viewport.",
+      "Do synchronize media, emotional line, accent, URL, selected state, accessible label, and allowlisted App Store route for General plus all five sports.",
+      "Do use the documented mobile athlete derivatives at `760px` and below and preserve every athlete’s face, full stance, and equipment.",
+      "Do use only the real Progress screenshot as homepage product evidence and keep its native pixels intact.",
+      "Do preserve keyboard navigation, `44px` minimum touch targets, `3px` focus outlines, meaningful non-JavaScript content, and immediate reduced-motion state changes.",
+      "Do describe App Store actions as clicks or discovery, not installs, and preserve the verified one-time 7-day Premium Preview language."
     ],
     "donts": [
-      "Don't revive the previous warm-paper identity or dense explanatory chapters.",
-      "Don't broaden emerald into a decorative wash or mix multiple sport accents in one state.",
-      "Don't turn the three-screen glimpse into a product gallery, dashboard, or carousel.",
-      "Don't fabricate, repaint, crop away, or visually modify product UI; screenshots are evidence.",
-      "Don't add generic fitness imagery, glassmorphism, rounded-card grids, gradients unrelated to portrait integration, testimonials, metrics, medical outcomes, or unsupported product claims."
+      "Don't restore Second Awakening’s Cormorant Garamond voice, repeated identity chapters, three-screen pile, or full-viewport sequence.",
+      "Don't let cool blue become an active sport color or display multiple sport accents in one state.",
+      "Don't add generic fitness scaffolding, feature-card grids, glass panels, fake dashboards, testimonials, metrics, urgency, medical outcomes, or guaranteed performance claims.",
+      "Don't fabricate or repaint app UI, modify the approved logo, or present campaign athletes as customers or endorsers.",
+      "Don't change `/app` routes, forward arbitrary query strings, or replace verified custom-product-page destinations with one generic App Store listing."
     ]
   }
 }

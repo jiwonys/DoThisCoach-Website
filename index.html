@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DoThis: Wake Up the Athlete</title>
-    <meta name="description" content="You can be a lethal athlete. Train like one with DoThis." />
-    <meta property="og:title" content="DoThis — You can be lethal." />
-    <meta property="og:description" content="The athlete in you never left. Train like one with DoThis." />
+    <title>DoThis: Train for Your Game</title>
+    <meta name="description" content="Strength work built around the sport and week you set. Choose your game and discover DoThis on the App Store." />
+    <meta property="og:title" content="DoThis — Train for your game" />
+    <meta property="og:description" content="You can be lethal. Train like it with strength work built around your sport and week." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dothiscoach.com/" />
     <meta property="og:image" content="https://dothiscoach.com/assets/awakening/general.webp" />
@@ -15,58 +15,50 @@
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/icon-96.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#030608" />
+    <meta name="theme-color" content="#07090c" />
+    <link rel="preload" href="assets/fonts/archivo-black-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/fonts/cormorant-garamond-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/awakening/general.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="stylesheet" href="home.css?v=20260829i" />
+    <link rel="stylesheet" href="home.css?v=20260829n" />
     <script type="application/ld+json">
       {"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"DoThis Labs LLC","url":"https://dothiscoach.com/","logo":"https://dothiscoach.com/assets/dothis-logo.png"},{"@type":"SoftwareApplication","name":"DoThis: Train For Your Game","applicationCategory":"HealthApplication","operatingSystem":"iPhone","url":"https://dothiscoach.com/","downloadUrl":"https://dothiscoach.com/app/","description":"Sport-aware strength training, nutrition, Coach context, and progress tracking for athletes who still play.","audience":{"@type":"Audience","audienceType":"Athletes who strength train and play a sport"}}]}
     </script>
   </head>
   <body data-sport="general">
     <!--
-      THESIS: DoThis does not explain fitness software; it wakes up the athlete who still believes there is more in them.
-      OWN-WORLD: Nocturnal arena black, real athlete portraits, disciplined white type, emerald signal light, and a high-contrast serif voice that arrives like dawn.
-      STORY: Desire identity, confront dormancy, choose the game, glimpse the work, then wake the athlete.
-      FIRST VIEWPORT: One lethal promise occupies the dark left plane while an unlabelled athlete portrait emerges from the right; one action sits beneath the vow.
-      FORM: Second Awakening, user-pinned direction, seed 42f10102, informed by multiplane dawn depth.
+      THESIS: DoThis sends one signal: the athlete is not finished, and generic fitness-page scaffolding is refused.
+      OWN-WORLD: Training-library night ground, chalk Archivo commands, rare signal green, cool arena light, fine grain, and quiet ruled controls.
+      STORY: Feel possibility, choose the game, understand that the week leads, see one real product screen, then act.
+      FIRST VIEWPORT: Command left, synchronized athlete right, all six sports and one primary action visible without scrolling.
+      FORM: Athlete Signal Split, grounded candidate 3, seed fc520847, user approved 2026-08-29.
       FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
     -->
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="/" aria-label="DoThis home"><img src="assets/icons/icon-96.png" alt="" width="42" height="42" /><span>DoThis</span></a>
-      <nav aria-label="Main navigation"><a href="#awakening">Awakening</a><a href="#your-sport">Your sport</a><a href="#inside">Inside</a></nav>
-      <a class="header-action" href="app/" data-sport-action data-cta-location="header">Train with us</a>
+      <a class="brand" href="/" aria-label="DoThis home"><img src="assets/icons/icon-96.png" alt="" width="38" height="38" /><span>DoThis</span></a>
+      <nav aria-label="Main navigation"><a href="#method">Method</a><a href="#inside">Inside</a><a href="articles/">Articles</a></nav>
+      <a class="header-action" href="app/" data-sport-action data-cta-location="header"><span>View app</span></a>
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-image" aria-hidden="true"><img src="assets/awakening/general.webp" alt="" width="1200" height="2150" fetchpriority="high" decoding="async" /></div>
-        <div class="hero-shade" aria-hidden="true"></div>
+      <section id="your-game" class="hero" aria-labelledby="hero-title" data-stage>
         <div class="hero-copy">
-          <h1 id="hero-title"><span>You can be a</span><em>lethal athlete.</em></h1>
-          <p>You just need to train like one.</p>
-          <a class="primary-action" href="app/" data-sport-action data-cta-location="hero">Train with DoThis</a>
-          <small>7-day Premium Preview · No payment · No automatic charge</small>
+          <h1 id="hero-title">You can be <em>lethal.</em></h1>
+          <p><strong>Train like it.</strong> Built around the sport and week you set.</p>
         </div>
-        <a class="scroll-cue" href="#awakening">Wake the athlete <span aria-hidden="true">↓</span></a>
-      </section>
 
-      <section id="awakening" class="manifesto" aria-labelledby="manifesto-title">
-        <div class="manifesto-line" aria-hidden="true"></div>
-        <h2 id="manifesto-title">You never stopped<br />being an athlete.</h2>
-        <p>You stopped training like one.</p>
-        <strong>This is your second awakening.</strong>
-      </section>
+        <figure class="hero-media">
+          <picture>
+            <source media="(max-width: 760px)" srcset="assets/awakening/mobile/general.webp" data-sport-source />
+            <img src="assets/awakening/general.webp" alt="Illustrative adult recreational athletes across multiple sports" width="1200" height="2150" fetchpriority="high" decoding="async" data-sport-image />
+          </picture>
+          <span class="signal-sweep" aria-hidden="true"></span>
+          <figcaption data-sport-line aria-live="polite">Your game still matters.</figcaption>
+        </figure>
 
-      <section id="your-sport" class="sport-awakening" aria-labelledby="sport-title">
-        <div class="sport-portrait"><img src="assets/awakening/general.webp" alt="Adult recreational athletes ready to train across multiple sports" width="1200" height="2150" loading="lazy" decoding="async" data-sport-image /></div>
-        <div class="sport-vignette" aria-hidden="true"></div>
-        <div class="sport-copy">
-          <h2 id="sport-title">Your game is<br /><em>still waiting.</em></h2>
-          <p data-sport-whisper aria-live="polite">The athlete is still there.</p>
+        <section class="sport-dock" aria-labelledby="sport-title">
+          <h2 id="sport-title">Choose your game</h2>
           <div class="sport-selector" role="group" aria-label="Choose your sport">
             <button type="button" data-sport-option="general" aria-pressed="true">All</button>
             <button type="button" data-sport-option="soccer" aria-pressed="false" tabindex="-1">Soccer</button>
@@ -75,37 +67,50 @@
             <button type="button" data-sport-option="tennis" aria-pressed="false" tabindex="-1">Tennis</button>
             <button type="button" data-sport-option="volleyball" aria-pressed="false" tabindex="-1">Volleyball</button>
           </div>
-          <a class="ghost-action" href="app/" data-sport-action data-cta-location="sport">Train for your game</a>
+          <div id="free-preview" class="hero-action-group">
+            <a class="primary-action" href="app/" data-sport-action data-cta-location="hero">Train for your game</a>
+            <small>One-time 7-day Premium Preview · No payment · No automatic charge.</small>
+          </div>
+        </section>
+      </section>
+
+      <section id="method" class="method" aria-labelledby="method-title">
+        <div id="features" class="method-copy">
+          <h2 id="method-title">Your week enters first. The workout follows.</h2>
+          <p>Set your sport and game days. DoThis builds around that week.</p>
+        </div>
+        <div class="method-line" aria-label="Your sport and your week inform your next workout">
+          <span>Your sport</span><i aria-hidden="true"></i><span>Your week</span><i aria-hidden="true"></i><strong>Next workout</strong>
         </div>
       </section>
 
-      <section id="inside" class="inside" aria-labelledby="inside-title">
-        <div class="inside-copy">
-          <h2 id="inside-title">Your next session<br /><em>is waiting.</em></h2>
-          <a class="text-action" href="app/" data-sport-action data-cta-location="inside">Open DoThis</a>
+      <section id="inside" class="proof" aria-labelledby="proof-title">
+        <div class="proof-copy">
+          <h2 id="proof-title">See the work add up.</h2>
+          <p>Progress reflects completed work and planned sport days.</p>
         </div>
-        <div class="screen-stage" aria-label="Real DoThis app screens">
-          <figure class="screen screen-today"><img src="assets/screenshots/today-plan.webp" alt="DoThis Today plan coordinating sport, training, food, and recovery" width="640" height="1391" loading="lazy" decoding="async" /></figure>
-          <figure class="screen screen-workout"><img src="assets/screenshots/adaptive-workout.webp" alt="DoThis generated workout with exact exercise targets" width="640" height="1391" loading="lazy" decoding="async" /></figure>
-          <figure class="screen screen-progress"><img src="assets/screenshots/progress-trends.webp" alt="DoThis progress view built from completed training" width="640" height="1391" loading="lazy" decoding="async" /></figure>
-        </div>
+        <figure class="proof-screen">
+          <img src="assets/screenshots/progress-trends.webp" alt="Current DoThis Progress screen showing completed training trends" width="640" height="1391" loading="lazy" decoding="async" />
+          <figcaption class="sr-only">Current DoThis Progress screen.</figcaption>
+        </figure>
       </section>
 
-      <section class="final-awakening" aria-labelledby="final-title">
-        <p>The athlete in you never left.</p>
-        <h2 id="final-title">Wake it up.</h2>
-        <strong>Train with us. Become a lethal athlete.</strong>
-        <a class="final-action" href="app/" data-sport-action data-cta-location="closing">Train with DoThis</a>
+      <section class="closing" aria-labelledby="closing-title">
+        <h2 id="closing-title">Make them notice.</h2>
+        <a class="primary-action" href="app/" data-sport-action data-cta-location="closing">Train for your game</a>
       </section>
 
-      <section class="safety" aria-label="Responsible guidance"><p>Educational fitness and nutrition guidance only. Stop for pain or unsafe symptoms and consult a qualified professional when appropriate.</p></section>
+      <aside class="safety" aria-label="Responsible guidance">
+        <p>Educational fitness and nutrition guidance only. Stop for pain or unsafe symptoms and consult a qualified professional when appropriate.</p>
+      </aside>
     </main>
 
     <footer class="site-footer">
-      <a class="brand" href="/" aria-label="DoThis home"><img src="assets/icons/icon-96.png" alt="" width="40" height="40" /><span>DoThis</span></a>
-      <div><a href="articles/">Training library</a><a href="compare/">Compare</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
+      <a class="brand footer-brand" href="/" aria-label="DoThis home"><img src="assets/icons/icon-96.png" alt="" width="38" height="38" /><span>DoThis</span></a>
+      <nav aria-label="Footer navigation"><a href="articles/">Training library</a><a href="compare/">Compare</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
       <p>© <span id="year"></span> DoThis Labs LLC</p>
     </footer>
-    <script src="home.js?v=20260829h"></script>
+
+    <script src="home.js?v=20260829n"></script>
   </body>
 </html>

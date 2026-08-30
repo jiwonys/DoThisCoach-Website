@@ -1,0 +1,4 @@
+{
+  "prompt": "Origin: assets/awakening/basketball.webp. Deterministic responsive derivative created by scripts/build-mobile-athlete-assets.mjs: remove only unused upper background, preserve original full athlete and sport-equipment pixels, resize to 780x658, and composite over a darkened blurred fill from the same approved source. No generated or repainted pixels.",
+  "createdAt": "2026-08-30T04:10:12.427Z"
+}

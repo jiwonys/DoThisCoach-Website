@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>DoThis Prototype — Arena Aperture</title>
+    <link rel="preload" href="../../assets/fonts/archivo-black-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../assets/awakening/general.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="shared.css" />
+  </head>
+  <body data-active-sport="general">
+    <!--
+      THESIS: Sport choice opens the arena instead of navigating a feature catalogue.
+      OWN-WORLD: Article-night texture, chalk and signal green, one ruled aperture, blunt Archivo commands.
+      STORY: Hear the challenge, open a sport, recognize the athlete, act.
+      FIRST VIEWPORT: Full-width command, horizontal athlete aperture, complete selector, one action.
+      FORM: Arena aperture, grounded candidate 1 and Impeccable pick, seed fc520847.
+      FINISH: prototype only; production remains untouched until user approval.
+    -->
+    <header class="prototype-header">
+      <a class="brand" href="../../" aria-label="DoThis home"><img src="../../assets/icons/icon-96.png" alt="" width="38" height="38" /><span>DoThis</span></a>
+      <a class="header-action" href="../../app/" data-sport-action>View app</a>
+    </header>
+    <main class="prototype arena-aperture" data-stage>
+      <div class="aperture-copy">
+        <h1>You have <em>another gear.</em></h1>
+        <p class="truth">Your week has a game in it. <strong>Your training should know.</strong></p>
+      </div>
+      <figure class="sport-media aperture-media">
+        <img src="../../assets/awakening/general.webp" alt="Adult recreational athletes across multiple sports" width="1200" height="2150" fetchpriority="high" data-sport-image />
+        <span class="switch-line" aria-hidden="true"></span>
+        <figcaption data-sport-line>Train for the player you still are.</figcaption>
+      </figure>
+      <section class="sport-panel" aria-labelledby="aperture-sport-title">
+        <h2 id="aperture-sport-title">Choose your game</h2>
+        <div class="sport-selector" role="group" aria-label="Choose your sport">
+          <button type="button" data-sport="general" aria-pressed="true">All</button>
+          <button type="button" data-sport="soccer" aria-pressed="false" tabindex="-1">Soccer</button>
+          <button type="button" data-sport="basketball" aria-pressed="false" tabindex="-1">Basketball</button>
+          <button type="button" data-sport="pickleball" aria-pressed="false" tabindex="-1">Pickleball</button>
+          <button type="button" data-sport="tennis" aria-pressed="false" tabindex="-1">Tennis</button>
+          <button type="button" data-sport="volleyball" aria-pressed="false" tabindex="-1">Volleyball</button>
+        </div>
+        <a class="primary-action" href="../../app/" data-sport-action>Train for your game</a>
+      </section>
+    </main>
+    <script src="shared.js"></script>
+  </body>
+</html>

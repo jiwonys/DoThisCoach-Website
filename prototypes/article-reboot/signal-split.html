@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>DoThis Prototype — Athlete Signal Split</title>
+    <link rel="preload" href="../../assets/fonts/archivo-black-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../assets/awakening/general.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="shared.css" />
+  </head>
+  <body data-active-sport="general">
+    <!--
+      THESIS: The athlete is not explained; one live signal tells them they are not finished.
+      OWN-WORLD: Article-night ground, chalk type, emerald signal, cool arena light, measured grid, no ornamental serif.
+      STORY: Feel possibility, recognize a sport, see truthful coordination language, act.
+      FIRST VIEWPORT: Command left, selected athlete right, all six sports and one action visible without scrolling.
+      FORM: After-hours scoreboard, grounded candidate 3, seed fc520847.
+      FINISH: prototype only; production remains untouched until user approval.
+    -->
+    <header class="prototype-header">
+      <a class="brand" href="../../" aria-label="DoThis home"><img src="../../assets/icons/icon-96.png" alt="" width="38" height="38" /><span>DoThis</span></a>
+      <a class="header-action" href="../../app/" data-sport-action>View app</a>
+    </header>
+    <main class="prototype signal-split" data-stage>
+      <div class="signal-copy">
+        <h1>You can be <em>lethal.</em></h1>
+        <p class="truth"><strong>Train like it.</strong> Strength work built around the sport and week you set.</p>
+      </div>
+      <figure class="sport-media signal-media">
+        <img src="../../assets/awakening/general.webp" alt="Adult recreational athletes across multiple sports" width="1200" height="2150" fetchpriority="high" data-sport-image />
+        <span class="switch-line" aria-hidden="true"></span>
+        <figcaption data-sport-line>Train for the player you still are.</figcaption>
+      </figure>
+      <section class="sport-panel" aria-labelledby="signal-sport-title">
+        <h2 id="signal-sport-title">Choose your game</h2>
+        <div class="sport-selector" role="group" aria-label="Choose your sport">
+          <button type="button" data-sport="general" aria-pressed="true">All</button>
+          <button type="button" data-sport="soccer" aria-pressed="false" tabindex="-1">Soccer</button>
+          <button type="button" data-sport="basketball" aria-pressed="false" tabindex="-1">Basketball</button>
+          <button type="button" data-sport="pickleball" aria-pressed="false" tabindex="-1">Pickleball</button>
+          <button type="button" data-sport="tennis" aria-pressed="false" tabindex="-1">Tennis</button>
+          <button type="button" data-sport="volleyball" aria-pressed="false" tabindex="-1">Volleyball</button>
+        </div>
+        <a class="primary-action" href="../../app/" data-sport-action>Train for your game</a>
+      </section>
+    </main>
+    <script src="shared.js"></script>
+  </body>
+</html>
