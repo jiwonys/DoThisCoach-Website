@@ -6,6 +6,18 @@
     "build:articles": "node scripts/build-articles.mjs",
     "check:site": "node scripts/check-site.mjs",
     "build:comparisons": "node scripts/build-comparisons.mjs",
-    "build:site": "npm run build:articles && npm run build:comparisons"
+    "build:site": "npm run build:articles && npm run build:comparisons",
+    "build:public": "npm run build:site && node scripts/build-public-site.mjs",
+    "check:redesign": "node scripts/redesign-production-check.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
+    "css-select": "^7.0.0",
+    "css-tree": "^3.2.1",
+    "domutils": "^4.0.2",
+    "htmlparser2": "^12.0.0",
+    "lighthouse": "^12.8.2",
+    "sharp": "^0.35.4"
   }
 }

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dark athletic DoThis website direction using approved athlete and real product evidence for every supported sport." />
+    <meta name="theme-color" content="#070b0f" />
+    <title>DoThis Prototype — Night Match</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="../prototype.js" defer></script>
+  </head>
+  <body data-default-sport="tennis" data-sport="tennis">
+    <!--
+      THESIS: The weight room is one phase of game-day preparation; refuse the black-and-neon gym template by anchoring every state in real sport boards.
+      OWN-WORLD: Rain-dark arena black, chalk-white type, sport-specific signal color, hard rails, and luminous approved campaign evidence.
+      STORY: Pick the court or field, see what DoThis coordinates, then open the exact App Store destination.
+      FIRST VIEWPORT: Headline and selector occupy the left third; two full-height sport boards form a live tunnel on the right; CTA stays visible beside the choice.
+      FORM: Night-match broadcast tunnel, user-pinned dark athletic alternate, seed 4dac8443.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="DoThis home"><img src="/assets/dothis-logo.png" alt="" width="44" height="44" /><span>DoThis</span></a>
+      <div class="status"><span></span><p>Training coordinated with the sport you still play.</p></div>
+      <a class="top-action" href="/app/tennis/" data-sport-action>Get DoThis for Tennis</a>
+    </header>
+
+    <main id="main" class="arena">
+      <section class="story" aria-labelledby="title">
+        <h1 id="title">Train for<br />your game.<br /><em>Not just<br />the gym.</em></h1>
+        <p class="lede">Workouts built around your sport, with nutrition and progress tracking in the same app.</p>
+
+        <div class="sport-picker">
+          <div class="picker-heading"><span>Choose your sport</span><strong data-sport-label>Tennis</strong></div>
+          <div class="sport-options" role="group" aria-label="Choose your sport">
+            <button type="button" data-sport-option="general" aria-pressed="false">General</button>
+            <button type="button" data-sport-option="soccer" aria-pressed="false">Soccer</button>
+            <button type="button" data-sport-option="basketball" aria-pressed="false">Basketball</button>
+            <button type="button" data-sport-option="pickleball" aria-pressed="false">Pickleball</button>
+            <button type="button" data-sport-option="tennis" aria-pressed="true">Tennis</button>
+            <button type="button" data-sport-option="volleyball" aria-pressed="false">Volleyball</button>
+          </div>
+        </div>
+
+        <p class="benefit" data-sport-benefit>Lift around practices and match days—not against them.</p>
+        <div class="actions">
+          <a class="primary-action" href="/app/tennis/" data-sport-action>Get DoThis for Tennis</a>
+          <a class="secondary-action" href="#product-proof">See real app screens</a>
+        </div>
+      </section>
+
+      <section id="product-proof" class="visual" data-sport-visual data-active-sport="tennis" aria-label="Selected sport product evidence">
+        <div class="beam beam-top"><span>ATHLETE SIGNAL</span><span>LIVE PRODUCT PROOF</span></div>
+        <figure class="board board-athlete"><img src="/assets/sports/tennis-hero.webp" alt="DoThis tennis athlete App Store marketing board" width="660" height="1434" fetchpriority="high" data-sport-hero /></figure>
+        <figure class="board board-product"><img src="/assets/sports/tennis-workout.webp" alt="DoThis tennis workout board with real simulator UI" width="660" height="1434" fetchpriority="high" data-sport-workout /></figure>
+        <div class="beam beam-bottom"><strong>One sport state</strong><span>Imagery · benefit · product · destination</span></div>
+      </section>
+    </main>
+  </body>
+</html>

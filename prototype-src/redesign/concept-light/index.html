@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Light editorial DoThis website direction using approved athlete and real product evidence for every supported sport." />
+    <meta name="theme-color" content="#f2efe7" />
+    <title>DoThis Prototype — Field Manual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="../prototype.js" defer></script>
+  </head>
+  <body data-default-sport="tennis" data-sport="tennis">
+    <!--
+      THESIS: Training belongs to the athlete's whole week, not an isolated gym template; refuse the generic fitness hero.
+      OWN-WORLD: Warm field-manual paper, black editorial type, DoThis green, ruled evidence, and full-height approved sport boards.
+      STORY: Recognize your sport, see the real product, then open its exact App Store page.
+      FIRST VIEWPORT: Monumental proposition left; selector and CTA under it; athlete and workout boards share the right half at readable scale.
+      FORM: Athlete field manual, grounded candidate 5, seed 4dac8443.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="DoThis home">
+        <img src="/assets/dothis-logo.png" alt="" width="44" height="44" />
+        <span>DoThis</span>
+      </a>
+      <p>Strength training for people who still play.</p>
+      <a class="top-action" href="/app/tennis/" data-sport-action>Get DoThis for Tennis</a>
+    </header>
+
+    <main id="main" class="hero-shell">
+      <section class="story" aria-labelledby="title">
+        <h1 id="title">Train for your game.<br /><em>Not just the gym.</em></h1>
+        <p class="lede">Workouts built around your sport, with nutrition and progress tracking in the same app.</p>
+
+        <div class="sport-picker">
+          <div class="picker-label"><span>Choose your sport</span><strong data-sport-label>Tennis</strong></div>
+          <div class="sport-options" role="group" aria-label="Choose your sport">
+            <button type="button" data-sport-option="general" aria-pressed="false">General</button>
+            <button type="button" data-sport-option="soccer" aria-pressed="false">Soccer</button>
+            <button type="button" data-sport-option="basketball" aria-pressed="false">Basketball</button>
+            <button type="button" data-sport-option="pickleball" aria-pressed="false">Pickleball</button>
+            <button type="button" data-sport-option="tennis" aria-pressed="true">Tennis</button>
+            <button type="button" data-sport-option="volleyball" aria-pressed="false">Volleyball</button>
+          </div>
+        </div>
+
+        <p class="benefit" data-sport-benefit>Lift around practices and match days—not against them.</p>
+        <div class="actions">
+          <a class="primary-action" href="/app/tennis/" data-sport-action>Get DoThis for Tennis</a>
+          <a class="secondary-action" href="#product-proof">See real app screens</a>
+        </div>
+        <p class="proof-note">Approved App Store boards. Real simulator UI. No fabricated screens.</p>
+      </section>
+
+      <section id="product-proof" class="visual" data-sport-visual data-active-sport="tennis" aria-label="Selected sport product evidence">
+        <div class="rule-label"><span>ATHLETE</span><span>PRODUCT</span></div>
+        <figure class="board board-athlete">
+          <img src="/assets/sports/tennis-hero.webp" alt="DoThis tennis athlete App Store marketing board" width="660" height="1434" fetchpriority="high" data-sport-hero />
+        </figure>
+        <figure class="board board-product">
+          <img src="/assets/sports/tennis-workout.webp" alt="DoThis tennis workout board with real simulator UI" width="660" height="1434" fetchpriority="high" data-sport-workout />
+        </figure>
+        <p class="visual-caption"><strong>Same sport.</strong> Athlete story, workout proof, and destination move together.</p>
+      </section>
+    </main>
+  </body>
+</html>

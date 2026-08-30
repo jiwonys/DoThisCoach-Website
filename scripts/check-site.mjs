@@ -6,7 +6,19 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 // _to_delete holds a stale one-megabyte standalone preview whose relative links
 // were never meant to resolve from the site root; walking it produced a dozen
 // broken-reference errors that drowned the real ones.
-const ignoredDirs = new Set([".git", "node_modules", "_to_delete"]);
+const ignoredDirs = new Set([
+  ".agents",
+  ".git",
+  ".impeccable",
+  ".playwright-cli",
+  ".venv-design",
+  "_site",
+  "_to_delete",
+  "docs",
+  "node_modules",
+  "output",
+  "prototype-src"
+]);
 
 const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
   if (ignoredDirs.has(entry.name)) return [];

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Two working DoThis marketing website hero and sport-selector directions for art-direction review." />
+    <title>DoThis Redesign Direction Prototypes</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 32px; font-family: Arial, sans-serif; background: #e9ebe6; color: #111915; }
+      main { width: min(100%, 1100px); margin: 0 auto; }
+      h1 { max-width: 14ch; margin: 0 0 12px; font-size: clamp(2.5rem, 7vw, 5rem); line-height: .93; letter-spacing: -.04em; }
+      p { max-width: 68ch; line-height: 1.55; }
+      .directions { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+      a { display: grid; min-height: 280px; padding: 28px; border-radius: 16px; text-decoration: none; transition: transform 180ms ease; }
+      a:hover { transform: translateY(-4px); }
+      a:focus-visible { outline: 3px solid #111915; outline-offset: 4px; }
+      .light { background: #f2efe7; color: #111915; }
+      .dark { background: #070b0f; color: #f4f5f0; }
+      small { margin-top: auto; opacity: .65; }
+      strong { max-width: 12ch; font-size: 2.3rem; line-height: 1; }
+      span { margin-top: 12px; line-height: 1.45; opacity: .76; }
+      @media (max-width: 680px) { body { padding: 18px; } .directions { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Two working directions. One product truth.</h1>
+      <p>Both prototypes use approved sport boards, preserve real simulator UI, and route every sport to its verified App Store custom product page.</p>
+      <div class="directions">
+        <a class="light" href="concept-light/?sport=tennis"><small>DIRECTION A</small><strong>Field Manual</strong><span>Light editorial. Product evidence reads like a decisive athlete training dossier.</span></a>
+        <a class="dark" href="concept-dark/?sport=tennis"><small>DIRECTION B</small><strong>Night Match</strong><span>Dark athletic. Sport and app evidence occupy one broadcast-like arena.</span></a>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-08-29",
+  "appId": "6771322181",
+  "verification": {
+    "source": "Local redirect HTML inspected and each live route opened with Playwright",
+    "deviceGalleryLimitation": "Browser verification confirms the final URL and ppid, not the gallery displayed by the native iPhone App Store."
+  },
+  "destinations": [
+    {
+      "id": "general",
+      "sourceRoute": "/app/",
+      "behavior": "JavaScript location.replace with meta-refresh and anchor fallbacks",
+      "finalUrl": "https://apps.apple.com/us/app/dothis-train-for-your-game/id6771322181?ppid=654f8be5-8f71-488b-88f5-9a1dd46b487b",
+      "ppid": "654f8be5-8f71-488b-88f5-9a1dd46b487b",
+      "attribution": "No arbitrary query forwarding",
+      "status": "verified"
+    },
+    {
+      "id": "soccer",
+      "sourceRoute": "/app/soccer/",
+      "behavior": "JavaScript location.replace with meta-refresh and anchor fallbacks",
+      "finalUrl": "https://apps.apple.com/us/app/dothis-train-for-your-game/id6771322181?ppid=18dd4e91-caeb-4a72-b729-1b0ee698831d",
+      "ppid": "18dd4e91-caeb-4a72-b729-1b0ee698831d",
+      "attribution": "No arbitrary query forwarding",
+      "status": "verified"
+    },
+    {
+      "id": "basketball",
+      "sourceRoute": "/app/basketball/",
+      "behavior": "JavaScript location.replace with meta-refresh and anchor fallbacks",
+      "finalUrl": "https://apps.apple.com/us/app/dothis-train-for-your-game/id6771322181?ppid=cdf59172-8f34-4ab9-9fa3-ef33a5fc403f",
+      "ppid": "cdf59172-8f34-4ab9-9fa3-ef33a5fc403f",
+      "attribution": "No arbitrary query forwarding",
+      "status": "verified"
+    },
+    {
+      "id": "pickleball",
+      "sourceRoute": "/app/pickleball/",
+      "behavior": "JavaScript location.replace with meta-refresh and anchor fallbacks",
+      "finalUrl": "https://apps.apple.com/us/app/dothis-train-for-your-game/id6771322181?ppid=241f0bc6-b245-475f-a6b9-3fcf3fd96fcf",
+      "ppid": "241f0bc6-b245-475f-a6b9-3fcf3fd96fcf",
+      "attribution": "No arbitrary query forwarding",
+      "status": "verified"
+    },
+    {
+      "id": "tennis",
+      "sourceRoute": "/app/tennis/",
+      "behavior": "JavaScript location.replace with meta-refresh and anchor fallbacks",
+      "finalUrl": "https://apps.apple.com/us/app/dothis-train-for-your-game/id6771322181?ppid=4c8635a3-522a-41ba-a3d0-214bca0320c5",
+      "ppid": "4c8635a3-522a-41ba-a3d0-214bca0320c5",
+      "attribution": "No arbitrary query forwarding",
+      "status": "verified"
+    },
+    {
+      "id": "volleyball",
+      "sourceRoute": "/app/volleyball/",
+      "behavior": "JavaScript location.replace with meta-refresh and anchor fallbacks",
+      "finalUrl": "https://apps.apple.com/us/app/dothis-train-for-your-game/id6771322181?ppid=bf00e022-ab60-403e-bc06-a2d3dbdde491",
+      "ppid": "bf00e022-ab60-403e-bc06-a2d3dbdde491",
+      "attribution": "No arbitrary query forwarding",
+      "status": "verified"
+    }
+  ]
+}
