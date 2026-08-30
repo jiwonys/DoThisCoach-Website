@@ -3,247 +3,109 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DoThis: Train For Your Game</title>
-    <meta name="description" content="Sport-aware strength training, nutrition, Coach context, and progress tracking for athletes who still play." />
-    <meta property="og:title" content="DoThis — Train for your game. Not just the gym." />
-    <meta property="og:description" content="Workouts built around your sport, with nutrition and progress tracking in the same app." />
+    <title>DoThis: Wake Up the Athlete</title>
+    <meta name="description" content="You can be a lethal athlete. Train like one with DoThis." />
+    <meta property="og:title" content="DoThis — You can be lethal." />
+    <meta property="og:description" content="The athlete in you never left. Train like one with DoThis." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dothiscoach.com/" />
-    <meta property="og:image" content="https://dothiscoach.com/assets/sports/general-hero.webp" />
+    <meta property="og:image" content="https://dothiscoach.com/assets/awakening/general.webp" />
     <link rel="canonical" href="https://dothiscoach.com/" />
     <link rel="alternate" type="application/rss+xml" title="DoThis Training Library" href="feed.xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/icon-96.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#f2efe7" />
-    <link rel="preload" href="assets/fonts/archivo-black-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <meta name="theme-color" content="#030608" />
     <link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="home.css?v=20260829h" />
+    <link rel="preload" href="assets/fonts/cormorant-garamond-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/awakening/general.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="stylesheet" href="home.css?v=20260829i" />
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"DoThis Labs LLC","url":"https://dothiscoach.com/","logo":"https://dothiscoach.com/assets/dothis-logo.png"},{"@type":"SoftwareApplication","name":"DoThis: Train For Your Game","applicationCategory":"HealthApplication","operatingSystem":"iPhone","url":"https://dothiscoach.com/","downloadUrl":"https://dothiscoach.com/app/","description":"Sport-aware strength training, nutrition, Coach context, and progress tracking for athletes who still play.","audience":{"@type":"Audience","audienceType":"Athletes who strength train and play a sport"},"featureList":["Athlete Week planning","Sport-aware workout generation","Editable workout imports","Food and macro logging","Coach context and editable memory","Progress based on completed training"]}]}
+      {"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"DoThis Labs LLC","url":"https://dothiscoach.com/","logo":"https://dothiscoach.com/assets/dothis-logo.png"},{"@type":"SoftwareApplication","name":"DoThis: Train For Your Game","applicationCategory":"HealthApplication","operatingSystem":"iPhone","url":"https://dothiscoach.com/","downloadUrl":"https://dothiscoach.com/app/","description":"Sport-aware strength training, nutrition, Coach context, and progress tracking for athletes who still play.","audience":{"@type":"Audience","audienceType":"Athletes who strength train and play a sport"}}]}
     </script>
   </head>
-  <body data-default-sport="general" data-sport="general">
+  <body data-sport="general">
     <!--
-      THESIS: Training belongs to the athlete's whole week, not an isolated gym template; refuse the generic fitness hero.
-      OWN-WORLD: Warm field-manual paper, black editorial type, DoThis green, ruled evidence, and full-height approved sport boards.
-      STORY: Recognize your sport, see real product evidence, understand one training situation, then open the exact App Store page.
-      FIRST VIEWPORT: Monumental proposition left; selector and CTA under it; athlete and workout boards share the right half at readable scale.
-      FORM: Athlete field manual, grounded candidate 5, seed 4dac8443.
+      THESIS: DoThis does not explain fitness software; it wakes up the athlete who still believes there is more in them.
+      OWN-WORLD: Nocturnal arena black, real athlete portraits, disciplined white type, emerald signal light, and a high-contrast serif voice that arrives like dawn.
+      STORY: Desire identity, confront dormancy, choose the game, glimpse the work, then wake the athlete.
+      FIRST VIEWPORT: One lethal promise occupies the dark left plane while an unlabelled athlete portrait emerges from the right; one action sits beneath the vow.
+      FORM: Second Awakening, user-pinned direction, seed 42f10102, informed by multiplane dawn depth.
       FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
     -->
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="/" aria-label="DoThis home">
-        <img src="assets/icons/icon-96.png" alt="" width="42" height="42" />
-        <span>DoThis</span>
-      </a>
-      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">
-        <span class="sr-only">Open navigation</span>
-        <span aria-hidden="true"></span><span aria-hidden="true"></span>
-      </button>
-      <nav id="site-navigation" aria-label="Main navigation">
-        <a href="#how">How it works</a>
-        <a href="#inside">Inside the app</a>
-        <a href="#trust">Athlete control</a>
-        <a href="#faq">FAQ</a>
-        <a href="articles/">Training library</a>
-      </nav>
-      <a class="header-action" href="app/" data-sport-action data-compact-action data-cta-location="header" aria-label="Get DoThis">Get the app</a>
+      <a class="brand" href="/" aria-label="DoThis home"><img src="assets/icons/icon-96.png" alt="" width="42" height="42" /><span>DoThis</span></a>
+      <nav aria-label="Main navigation"><a href="#awakening">Awakening</a><a href="#your-sport">Your sport</a><a href="#inside">Inside</a></nav>
+      <a class="header-action" href="app/" data-sport-action data-cta-location="header">Train with us</a>
     </header>
 
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-story">
-          <h1 id="hero-title">Train for your game.<br /><em>Not just the gym.</em></h1>
-          <p class="hero-lede">Workouts built around your sport, with nutrition and progress tracking in the same app.</p>
+        <div class="hero-image" aria-hidden="true"><img src="assets/awakening/general.webp" alt="" width="1200" height="2150" fetchpriority="high" decoding="async" /></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <h1 id="hero-title"><span>You can be a</span><em>lethal athlete.</em></h1>
+          <p>You just need to train like one.</p>
+          <a class="primary-action" href="app/" data-sport-action data-cta-location="hero">Train with DoThis</a>
+          <small>7-day Premium Preview · No payment · No automatic charge</small>
+        </div>
+        <a class="scroll-cue" href="#awakening">Wake the athlete <span aria-hidden="true">↓</span></a>
+      </section>
 
-          <div class="sport-picker">
-            <div class="picker-heading"><span>Choose your sport</span><strong data-sport-label>General</strong></div>
-            <div class="sport-options" role="group" aria-label="Choose your sport">
-              <button type="button" data-sport-option="general" aria-pressed="true">General</button>
-              <button type="button" data-sport-option="soccer" aria-pressed="false" tabindex="-1">Soccer</button>
-              <button type="button" data-sport-option="basketball" aria-pressed="false" tabindex="-1">Basketball</button>
-              <button type="button" data-sport-option="pickleball" aria-pressed="false" tabindex="-1">Pickleball</button>
-              <button type="button" data-sport-option="tennis" aria-pressed="false" tabindex="-1">Tennis</button>
-              <button type="button" data-sport-option="volleyball" aria-pressed="false" tabindex="-1">Volleyball</button>
-            </div>
+      <section id="awakening" class="manifesto" aria-labelledby="manifesto-title">
+        <div class="manifesto-line" aria-hidden="true"></div>
+        <h2 id="manifesto-title">You never stopped<br />being an athlete.</h2>
+        <p>You stopped training like one.</p>
+        <strong>This is your second awakening.</strong>
+      </section>
+
+      <section id="your-sport" class="sport-awakening" aria-labelledby="sport-title">
+        <div class="sport-portrait"><img src="assets/awakening/general.webp" alt="Adult recreational athletes ready to train across multiple sports" width="1200" height="2150" loading="lazy" decoding="async" data-sport-image /></div>
+        <div class="sport-vignette" aria-hidden="true"></div>
+        <div class="sport-copy">
+          <h2 id="sport-title">Your game is<br /><em>still waiting.</em></h2>
+          <p data-sport-whisper aria-live="polite">The athlete is still there.</p>
+          <div class="sport-selector" role="group" aria-label="Choose your sport">
+            <button type="button" data-sport-option="general" aria-pressed="true">All</button>
+            <button type="button" data-sport-option="soccer" aria-pressed="false" tabindex="-1">Soccer</button>
+            <button type="button" data-sport-option="basketball" aria-pressed="false" tabindex="-1">Basketball</button>
+            <button type="button" data-sport-option="pickleball" aria-pressed="false" tabindex="-1">Pickleball</button>
+            <button type="button" data-sport-option="tennis" aria-pressed="false" tabindex="-1">Tennis</button>
+            <button type="button" data-sport-option="volleyball" aria-pressed="false" tabindex="-1">Volleyball</button>
           </div>
-
-          <p class="sport-benefit" data-sport-benefit aria-live="polite">Strength sessions organized around the sport and schedule you bring.</p>
-          <div class="hero-actions">
-            <a class="primary-action" href="app/" data-sport-action data-cta-location="hero">Get DoThis</a>
-            <a class="text-action" href="#how">See how your week becomes a session</a>
-          </div>
-          <p class="evidence-note">Approved App Store boards with real simulator UI; screens are not fabricated.</p>
-        </div>
-
-        <div class="hero-evidence" data-sport-visual data-active-sport="general" aria-label="Selected sport product evidence">
-          <div class="evidence-labels"><span>Athlete</span><span>Product</span></div>
-          <figure class="evidence-board evidence-athlete">
-            <img src="assets/sports/general-hero.webp" alt="DoThis multi-sport athlete App Store marketing board" width="660" height="1434" fetchpriority="high" decoding="async" data-sport-hero />
-          </figure>
-          <figure class="evidence-board evidence-product">
-            <img src="assets/sports/general-workout.webp" alt="DoThis general sport-aware workout board with real simulator UI" width="660" height="1434" fetchpriority="high" decoding="async" data-sport-workout />
-          </figure>
-          <p class="evidence-caption"><strong>One sport state.</strong> Imagery, benefit, product proof, and destination move together.</p>
+          <a class="ghost-action" href="app/" data-sport-action data-cta-location="sport">Train for your game</a>
         </div>
       </section>
 
-      <section id="how" class="week-story" aria-labelledby="week-title">
-        <div class="section-heading">
-          <h2 id="week-title">Your week enters first. The workout follows.</h2>
-          <p>DoThis starts with the schedule you confirm, asks how much training fits today, then delivers a session with the reason still visible.</p>
+      <section id="inside" class="inside" aria-labelledby="inside-title">
+        <div class="inside-copy">
+          <h2 id="inside-title">Your next session<br /><em>is waiting.</em></h2>
+          <a class="text-action" href="app/" data-sport-action data-cta-location="inside">Open DoThis</a>
         </div>
-
-        <div class="week-sequence" aria-label="Example of an Athlete Week becoming a workout">
-          <ol class="week-steps">
-            <li>
-              <h3>1. Set the week: Tuesday is Match Day.</h3>
-              <p>Sport, Match Day, Gym, Cardio, Rest, or Not Sure stay tied to the dates you chose.</p>
-            </li>
-            <li>
-              <h3>2. Choose today’s dose: Sports Prep, lighter, or full.</h3>
-              <p>You decide how much additional training belongs beside the sport already on your calendar.</p>
-            </li>
-            <li>
-              <h3>3. Get the session: Targets plus a reason.</h3>
-              <p>The workout shows its exercises, dose, and why that emphasis fits the day.</p>
-            </li>
-          </ol>
-
-          <div class="week-product">
-            <figure class="native-screen native-week">
-              <img src="assets/screenshots/today-plan.webp" alt="DoThis Today screen showing a coordinated daily plan" width="640" height="1391" loading="lazy" decoding="async" />
-            </figure>
-            <figure class="native-screen native-workout">
-              <img src="assets/screenshots/adaptive-workout.webp" alt="DoThis Workout screen showing a generated strength session" width="640" height="1391" loading="lazy" decoding="async" />
-            </figure>
-            <p>Example shown with fictional marketing data.</p>
-          </div>
+        <div class="screen-stage" aria-label="Real DoThis app screens">
+          <figure class="screen screen-today"><img src="assets/screenshots/today-plan.webp" alt="DoThis Today plan coordinating sport, training, food, and recovery" width="640" height="1391" loading="lazy" decoding="async" /></figure>
+          <figure class="screen screen-workout"><img src="assets/screenshots/adaptive-workout.webp" alt="DoThis generated workout with exact exercise targets" width="640" height="1391" loading="lazy" decoding="async" /></figure>
+          <figure class="screen screen-progress"><img src="assets/screenshots/progress-trends.webp" alt="DoThis progress view built from completed training" width="640" height="1391" loading="lazy" decoding="async" /></figure>
         </div>
       </section>
 
-      <section id="inside" class="product-story" aria-labelledby="inside-title">
-        <div class="section-heading section-heading-dark">
-          <h2 id="inside-title">The useful parts stay connected.</h2>
-          <p>Training, food, progress, and Coach context live in one athlete record instead of four disconnected apps.</p>
-        </div>
-
-        <article class="product-chapter chapter-workout">
-          <div class="chapter-copy">
-            <h3>Train with a plan that knows what else is happening.</h3>
-            <p>Generated workouts use the sport, schedule, equipment, goals, recovery context, and completed training available for that day.</p>
-            <ul><li>Exact exercise and set targets</li><li>Visible schedule-fit explanation</li><li>Current valid workout preserved when replacement fails</li></ul>
-          </div>
-          <figure><img src="assets/screenshots/adaptive-workout.webp" alt="DoThis generated workout with schedule context and exercise targets" width="640" height="1391" loading="lazy" decoding="async" /></figure>
-        </article>
-
-        <article class="product-chapter chapter-nutrition">
-          <figure><img src="assets/screenshots/ai-nutrition.webp" alt="DoThis nutrition screen showing food logging and macro information" width="640" height="1391" loading="lazy" decoding="async" /></figure>
-          <div class="chapter-copy">
-            <h3>Fuel stays close to the training it supports.</h3>
-            <p>Log food with search, barcode, manual entry, or a reviewable AI estimate. Calories and macros remain part of the same daily picture.</p>
-            <a href="articles/combining-cardio-and-lifting/">Read practical training guidance</a>
-          </div>
-        </article>
-
-        <article class="product-chapter chapter-progress">
-          <div class="chapter-copy">
-            <h3>Progress comes from work you completed.</h3>
-            <p>Weekly summaries connect completed workouts, logged sets, earned progression, last working weights, and planned sport or cardio days.</p>
-          </div>
-          <div class="paired-screens">
-            <figure><img src="assets/screenshots/progress-trends.webp" alt="DoThis Progress screen showing completed training trends" width="640" height="1391" loading="lazy" decoding="async" /></figure>
-            <figure><img src="assets/screenshots/coach-memory.webp" alt="DoThis Coach Memory screen with review and edit controls" width="640" height="1391" loading="lazy" decoding="async" /></figure>
-          </div>
-        </article>
+      <section class="final-awakening" aria-labelledby="final-title">
+        <p>The athlete in you never left.</p>
+        <h2 id="final-title">Wake it up.</h2>
+        <strong>Train with us. Become a lethal athlete.</strong>
+        <a class="final-action" href="app/" data-sport-action data-cta-location="closing">Train with DoThis</a>
       </section>
 
-      <section id="trust" class="control-story" aria-labelledby="control-title">
-        <div class="control-statement">
-          <h2 id="control-title">AI can propose.<br /><em>You remain the authority.</em></h2>
-          <p>Coach can explain and remember limited context. Workouts, logs, and plan changes still happen where you can see and confirm them.</p>
-        </div>
-        <div class="control-lines">
-          <article><h3>Memory is visible.</h3><p>Review, edit, or delete what Coach retains. Temporary daily context can expire.</p></article>
-          <article><h3>Your valid plan stays put.</h3><p>If a new plan cannot be delivered, DoThis keeps the valid one already available.</p></article>
-          <article><h3>Bring your own workout.</h3><p>Paste a plan, review the editable preview, resolve missing details, then choose whether to save it.</p></article>
-        </div>
-      </section>
-
-      <section class="preview" aria-labelledby="preview-title">
-        <div>
-          <h2 id="preview-title">Try the connected experience for 7 days.</h2>
-          <p>The Premium Preview begins after your first personalized workout is ready. No payment required. No automatic charge.</p>
-        </div>
-        <div class="preview-after">
-          <h3>After Preview</h3>
-          <p>Your local workouts, logs, and progress remain available. Premium is required for new personalized AI features and cloud sync.</p>
-        </div>
-      </section>
-
-      <section id="faq" class="faq" aria-labelledby="faq-title">
-        <div class="faq-heading">
-          <h2 id="faq-title">Questions athletes ask before downloading.</h2>
-          <p>Take a clear look at whether DoThis fits how you train.</p>
-        </div>
-        <div class="faq-list">
-          <details>
-            <summary>Is DoThis only for one sport?</summary>
-            <p>No. Current sport-specific acquisition states include Soccer, Basketball, Pickleball, Tennis, and Volleyball, with a general multi-sport option.</p>
-          </details>
-          <details>
-            <summary>What happens when I have a match or sport day?</summary>
-            <p>You confirm the day in Athlete Week. When generating training, DoThis can use that context and present Sports Prep, lighter, or full-workout choices where applicable.</p>
-          </details>
-          <details>
-            <summary>Can I bring a workout I already use?</summary>
-            <p>Yes. Workout import creates an editable preview so you can review the parsed exercise order and targets before saving.</p>
-          </details>
-          <details>
-            <summary>Does the Preview start charging automatically?</summary>
-            <p>No. The 7-day Premium Preview requires no payment and does not charge automatically.</p>
-          </details>
-          <details>
-            <summary>Is DoThis medical advice?</summary>
-            <p>No. DoThis provides educational fitness and nutrition support, not medical advice, diagnosis, or treatment.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="training-library" aria-labelledby="library-title">
-        <div>
-          <h2 id="library-title">Useful training guidance before you download.</h2>
-          <p>Complete sessions, substitutions, progression rules, and sport context remain available on the website.</p>
-        </div>
-        <div class="guide-links">
-          <a href="articles/progressive-overload-guide/"><strong>Progressive overload without blind weight jumps</strong><span>Read guide</span></a>
-          <a href="articles/training-around-game-day/"><strong>How to organize lifting around game day</strong><span>Read guide</span></a>
-          <a href="articles/strength-training-for-tennis/"><strong>Strength training for tennis athletes</strong><span>Read guide</span></a>
-        </div>
-      </section>
-
-      <section class="closing" aria-labelledby="closing-title">
-        <h2 id="closing-title">Make the gym count in your game.</h2>
-        <p data-closing-benefit>Strength sessions organized around the sport and schedule you bring.</p>
-        <a class="closing-action" href="app/" data-sport-action data-cta-location="closing">Get DoThis</a>
-        <small>Designed for iPhone · Free download · In-app purchases</small>
-      </section>
-
-      <section class="safety" aria-labelledby="safety-title">
-        <h2 id="safety-title">Responsible guidance</h2>
-        <p>Stop for pain, dizziness, chest pain, or unsafe symptoms. Consult a qualified professional for injuries or medical conditions.</p>
-      </section>
+      <section class="safety" aria-label="Responsible guidance"><p>Educational fitness and nutrition guidance only. Stop for pain or unsafe symptoms and consult a qualified professional when appropriate.</p></section>
     </main>
 
     <footer class="site-footer">
       <a class="brand" href="/" aria-label="DoThis home"><img src="assets/icons/icon-96.png" alt="" width="40" height="40" /><span>DoThis</span></a>
-      <div class="footer-links"><a href="articles/">Training library</a><a href="compare/">Compare</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a><a href="mailto:help@dothiscoach.com">Contact</a></div>
+      <div><a href="articles/">Training library</a><a href="compare/">Compare</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
       <p>© <span id="year"></span> DoThis Labs LLC</p>
     </footer>
-
-    <script src="home.js?v=20260829g"></script>
+    <script src="home.js?v=20260829h"></script>
   </body>
 </html>

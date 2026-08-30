@@ -23,6 +23,7 @@ Verified 2026-08-29 in `/Users/jiwonkim/Desktop/DoThis/DoThisCoach-Website`.
 - Python 3.14.5 isolated in `.venv-design`; OpenAI SDK 3.6.0 and Pillow 12.3.0 installed.
 - `cwebp` 1.6.0 available for responsive WebP derivatives.
 - Archivo Black and Work Sans are self-hosted under `assets/fonts/` to remove runtime font-CDN dependencies. Both Google Fonts source records identify the families as SIL Open Font License fonts; license copies ship beside the files.
+- Second Awakening adds self-hosted Cormorant Garamond for its high-contrast dawn voice, with its SIL Open Font License copy beside the WOFF2 files.
 
 ## OpenAI image-production preflight
 
@@ -42,4 +43,4 @@ Verified 2026-08-29 in `/Users/jiwonkim/Desktop/DoThis/DoThisCoach-Website`.
 - Live route checks preserved every expected `ppid` value.
 - A browser check confirms constructed destinations, not the exact gallery ultimately displayed on a physical iPhone.
 - Public packaging now writes `_site/` from an explicit allowlist, keeping `.agents`, design documentation, prototypes, local environments, and generation tooling outside the deployed artifact.
-- Final Lighthouse 12.8.2 mobile lab results on the local production artifact: Performance 96, Accessibility 100, Best Practices 100, SEO 100; FCP 1.1s, LCP 2.7s, TBT 0ms, CLS 0.
+- Final Second Awakening Lighthouse 12.8.2 mobile lab results on the local production artifact: Performance 97, Accessibility 100, Best Practices 100, SEO 100; FCP 0.9s, LCP 2.6s, TBT 0ms, CLS 0.

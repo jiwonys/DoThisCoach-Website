@@ -8,7 +8,7 @@ Verified 2026-08-29 against the packaged static artifact in `_site/` served at `
 BASE_URL=http://127.0.0.1:4174 npm run check:redesign
 ```
 
-Result: `PASS production redesign: 224 assertions`.
+Result: `PASS second awakening: 229 assertions`.
 
 Coverage:
 
@@ -39,27 +39,26 @@ Results:
 
 Lighthouse 12.8.2, default mobile throttling, local packaged production artifact:
 
-- Performance: 96
+- Performance: 97
 - Accessibility: 100
 - Best Practices: 100
 - SEO: 100
-- First Contentful Paint: 1.1s
-- Largest Contentful Paint: 2.7s
+- First Contentful Paint: 0.9s
+- Largest Contentful Paint: 2.6s
 - Total Blocking Time: 0ms
 - Cumulative Layout Shift: 0
-- Speed Index: 1.1s
+- Speed Index: 0.9s
 
-Full JSON: `docs/design/final/lighthouse-mobile.json`.
+Full JSON: `docs/design/awakening/lighthouse-mobile.json`.
 
 ## Visual review
 
-- Final desktop/mobile full-page captures and section crops are in `docs/design/final/`.
-- Product screens remain readable in focused section captures.
-- Impeccable detector findings were resolved where mechanical: hover contrast, evidence-label sizing, mobile small text, dropdown border/shadow overlap, and aphoristic repeated copy.
-- Full-bleed section padding warnings were false positives; section children use bounded containers or explicit inline padding.
-- Warm paper ground remains intentional because the user approved Field Manual and the color derives from the existing DoThis brand direction.
+- Final desktop/mobile full-page captures and section crops are in `docs/design/awakening/`.
+- The page now uses nocturnal athlete photography, sparse copy, a high-contrast serif voice, restrained product proof, and full-viewport pacing.
+- Detector palette/font findings reflected intentionally stale Field Manual documentation; DESIGN.md is regenerated after the independent ship verdict.
+- Full-bleed and clipped-overflow warnings are intentional for campaign photo planes and partially revealed product screens, not menus or popovers.
 - Vercel Web Interface Guidelines review confirmed semantic controls, focus, reduced motion, explicit image dimensions, lazy loading, URL state, keyboard access, self-hosted critical fonts, and touch behavior.
-- Independent Impeccable finish review reached `ship`. Reviewer-scored fixes resolved the generic capsule header, week-sequence eyebrow labels, and mobile active-sport visibility regression; remaining findings are clear.
+- Independent Impeccable finish review reached `ship`, judged the premium ceiling reached, and reported remaining findings clear.
 
 ## Remaining device limitation
 

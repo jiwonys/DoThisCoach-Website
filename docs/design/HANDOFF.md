@@ -2,15 +2,15 @@
 
 ## Athlete-facing outcome
 
-The homepage now lets an athlete choose General, Soccer, Basketball, Pickleball, Tennis, or Volleyball and immediately see matching athlete imagery, product evidence, benefit copy, accent color, URL state, and the correct App Store custom product-page destination. The full page explains how Athlete Week becomes a workout, shows training/nutrition/progress/Coach evidence, clarifies athlete control, states verified Premium Preview behavior, and closes with the selected sport CTA.
+The homepage now feels like a second athletic awakening instead of product documentation. It opens with one lethal-athlete promise, confronts dormant identity, lets the visitor choose a sport through approved athlete portraits, reveals only three real app screens, and closes with a direct command to wake up and train. General, Soccer, Basketball, Pickleball, Tennis, and Volleyball still map to the correct App Store custom product-page destination.
 
 ## Production implementation
 
-- `index.html`: semantic homepage narrative, SEO metadata, structured data, sport selector, verified product/Preview copy, FAQ, guides, legal/support footer, and persistent direction contract.
-- `home.css`: approved Field Manual system, responsive layouts, self-hosted fonts, focus/touch/reduced-motion behavior, sport-state accent, and product evidence treatments.
-- `home.js`: fixed allowlisted sport state, synchronized proof/copy/CTA routing, URL history and deep links, resize-aware selected-control visibility, keyboard navigation, mobile menu, and existing local analytics event pattern.
-- `assets/sports/`: 12 optimized WebP derivatives from approved App Store masters.
-- `assets/fonts/`: self-hosted Archivo Black and Work Sans WOFF2 files with OFL license copies.
+- `index.html`: sparse Second Awakening narrative, user-approved lethal-athlete language, SEO metadata, structured data, sport selector, restrained real product proof, minimal legal/support footer, and persistent direction contract.
+- `home.css`: nocturnal arena world, full-viewport pacing, premium athlete photography, Work Sans/Cormorant Garamond typography, focus/touch/reduced-motion behavior, and synchronized sport accents.
+- `home.js`: fixed allowlisted sport state, synchronized portrait/emotional line/CTA routing, URL history and deep links, resize-aware selected-control visibility, keyboard navigation, and existing local analytics event pattern.
+- `assets/awakening/`: 6 optimized athlete campaign portraits derived from approved App Store hero sources.
+- `assets/fonts/`: self-hosted Work Sans and Cormorant Garamond WOFF2 files with OFL license copies.
 
 ## Build and deployment boundary
 
@@ -35,12 +35,12 @@ No paid `gpt-image-2` request was needed. Existing approved assets covered the s
 
 ## Verification
 
-- Production interaction/accessibility suite: 224 assertions passed.
+- Production interaction/accessibility suite: 229 assertions passed.
 - Existing site check: 63 HTML pages, 47 articles, and 56 sitemap URLs passed.
-- Lighthouse mobile: 96 Performance, 100 Accessibility, 100 Best Practices, and 100 SEO.
+- Lighthouse mobile: 97 Performance, 100 Accessibility, 100 Best Practices, and 100 SEO.
 - Public artifact boundary, secret scan, self-hosted font boundary, broken-image checks, console/network checks, reduced motion, no-JavaScript fallback, and all sport/CTA mappings passed.
 - Independent Impeccable reviewer final disposition: `ship`; remaining findings clear.
-- Final browser evidence: `docs/design/final/`.
+- Final Second Awakening browser evidence: `docs/design/awakening/`.
 
 ## Local preview
 

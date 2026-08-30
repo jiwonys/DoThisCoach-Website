@@ -39,6 +39,8 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Starting proposition: “Train for your game. Not just the gym.”
 - Voice is confident, concrete, athlete-focused, and free of shame, fake urgency, or generic fitness hype.
 - Product evidence uses real DoThis screenshots. Generated athletes are illustrative campaign subjects, not customers or endorsers.
+- Homepage direction: “Second Awakening.” It should create desire, mystery, and recognition before explanation. The central promise is that the athlete never disappeared; they need to train like one again.
+- User-approved language includes “You can be lethal,” “You just need to train like it,” and “Train with us. Become lethal.”
 
 ## Evidence on Hand
 

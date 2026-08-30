@@ -13,14 +13,14 @@ Homepage redesign in Persuade mode. This work changes the marketing website only
 
 ## Audience, job, and action
 
-Adult recreational soccer, basketball, pickleball, tennis, and volleyball athletes who strength train should recognize their sport, understand how DoThis connects gym work to their week, and choose the correct App Store destination.
+Adult recreational soccer, basketball, pickleball, tennis, and volleyball athletes should feel that a dormant athletic identity is still available to them, recognize their sport, and choose the correct App Store destination to discover the product.
 
 ## Proof and content
 
-- Approved sport-specific App Store athlete boards.
-- Real simulator UI in sport-specific workout boards and native product screens.
-- Verified Athlete Week, workout, nutrition, Coach context, progress, import, and Premium Preview facts.
-- Existing training library, support, privacy, terms, and comparison content.
+- Approved sport-specific athlete campaign portraits.
+- A restrained glimpse of real Today, Workout, and Progress screens.
+- Verified Premium Preview terms kept near the first action without turning the homepage into product documentation.
+- Existing training library, support, privacy, terms, and comparison content remain discoverable in the footer.
 
 ## Constraints
 
@@ -31,11 +31,11 @@ Adult recreational soccer, basketball, pickleball, tennis, and volleyball athlet
 
 ## Chosen direction
 
-Field Manual: warm editorial ground, monumental black/green typography, ruled evidence, large approved boards, and one sport selector that changes imagery, benefit, product proof, accent, URL state, and destination together.
+Second Awakening: nocturnal arena black, real athlete portraits, disciplined white type, an emerald signal, and high-contrast serif language that arrives like dawn. The page sells identity and tension first, then reveals only enough product proof to make the App Store action credible.
 
 ## Memorable moment
 
-The selected athlete board and workout board change as one editorial spread while the App Store action follows the same verified sport state.
+The athlete emerges from darkness, the selected sport portrait changes like a focus rack, and the page closes by commanding the athlete to wake up.
 
 ## Unresolved decisions
 

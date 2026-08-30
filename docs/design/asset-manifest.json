@@ -230,6 +230,78 @@
       "crop": "Preserve headline and real simulator UI",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
+    },
+    {
+      "id": "awakening-general-athletes",
+      "path": "assets/awakening/general.webp",
+      "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/general-athlete.png",
+      "kind": "athlete_campaign_image",
+      "sport": "general",
+      "feature": "second-awakening",
+      "dimensions": { "width": 1200, "height": 2150 },
+      "crop": "Keep all five athletes visible; portrait may crop vertically but not relabel sports",
+      "releaseRelevance": "second-awakening-homepage",
+      "approval": "approved-source-derivative"
+    },
+    {
+      "id": "awakening-soccer-athlete",
+      "path": "assets/awakening/soccer.webp",
+      "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/soccer.png",
+      "kind": "athlete_campaign_image",
+      "sport": "soccer",
+      "feature": "second-awakening",
+      "dimensions": { "width": 1200, "height": 2150 },
+      "crop": "Preserve athlete, ball, and field context",
+      "releaseRelevance": "second-awakening-homepage",
+      "approval": "approved-source-derivative"
+    },
+    {
+      "id": "awakening-basketball-athlete",
+      "path": "assets/awakening/basketball.webp",
+      "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/basketball.png",
+      "kind": "athlete_campaign_image",
+      "sport": "basketball",
+      "feature": "second-awakening",
+      "dimensions": { "width": 1200, "height": 2150 },
+      "crop": "Preserve athlete, basketball, and court context",
+      "releaseRelevance": "second-awakening-homepage",
+      "approval": "approved-source-derivative"
+    },
+    {
+      "id": "awakening-pickleball-athlete",
+      "path": "assets/awakening/pickleball.webp",
+      "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/pickleball.png",
+      "kind": "athlete_campaign_image",
+      "sport": "pickleball",
+      "feature": "second-awakening",
+      "dimensions": { "width": 1200, "height": 2150 },
+      "crop": "Preserve athlete, paddle, ball, and court context",
+      "releaseRelevance": "second-awakening-homepage",
+      "approval": "approved-source-derivative"
+    },
+    {
+      "id": "awakening-tennis-athlete",
+      "path": "assets/awakening/tennis.webp",
+      "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/tennis.png",
+      "kind": "athlete_campaign_image",
+      "sport": "tennis",
+      "feature": "second-awakening",
+      "dimensions": { "width": 1200, "height": 2150 },
+      "crop": "Preserve athlete, racket, and court context",
+      "releaseRelevance": "second-awakening-homepage",
+      "approval": "approved-source-derivative"
+    },
+    {
+      "id": "awakening-volleyball-athlete",
+      "path": "assets/awakening/volleyball.webp",
+      "source": "../DoThis/appstore/cpp-system/generated/heroes/higgsfield-2026-08-21-v4/volleyball.png",
+      "kind": "athlete_campaign_image",
+      "sport": "volleyball",
+      "feature": "second-awakening",
+      "dimensions": { "width": 1200, "height": 2150 },
+      "crop": "Preserve athlete, volleyball, knee pads, and court context",
+      "releaseRelevance": "second-awakening-homepage",
+      "approval": "approved-source-derivative"
     }
   ]
 }
