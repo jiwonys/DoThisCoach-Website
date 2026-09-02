@@ -42,11 +42,37 @@ function formValues(form) {
   return values;
 }
 
+function validateSocialProfiles(form) {
+  if (form.id !== 'apply-form') return '';
+  const tiktok = form.elements.tiktokUsername;
+  const instagram = form.elements.instagramUsername;
+  tiktok.setCustomValidity('');
+  instagram.setCustomValidity('');
+  if (tiktok.value.trim() || instagram.value.trim()) return '';
+  const error = 'Enter at least one TikTok or Instagram handle.';
+  tiktok.setCustomValidity(error);
+  tiktok.focus();
+  form.reportValidity();
+  return error;
+}
+
+for (const input of document.querySelectorAll('#apply-form [name="tiktokUsername"], #apply-form [name="instagramUsername"]')) {
+  input.addEventListener('input', () => {
+    for (const profileInput of document.querySelectorAll('#apply-form [name="tiktokUsername"], #apply-form [name="instagramUsername"]')) {
+      profileInput.setCustomValidity('');
+    }
+    $('apply-message').textContent = '';
+  });
+}
+
 function submitForm(formId, path, messageId) {
   const form = $(formId);
   form.addEventListener('submit', async (event) => {
     event.preventDefault(); const button = form.querySelector('button[type="submit"]'); const message = $(messageId);
-    message.textContent = ''; button.disabled = true;
+    message.textContent = '';
+    const validationError = validateSocialProfiles(form);
+    if (validationError) { message.textContent = validationError; return; }
+    button.disabled = true;
     try { renderDashboard(await api(path, { method: 'POST', body: JSON.stringify(formValues(form)) })); }
     catch (error) { message.textContent = error.message; }
     finally { button.disabled = false; }
