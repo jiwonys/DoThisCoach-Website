@@ -143,10 +143,11 @@
   .hero h1{
     font-size:clamp(2.7rem,9.2vw,8rem);
     max-width:14ch;
+    text-shadow:0 2px 18px rgba(0,0,0,.78);
   }
   .hero h1 em{
     font-style:normal;color:var(--green);
-    text-shadow:0 0 34px rgba(46,230,139,.45);
+    text-shadow:0 2px 18px rgba(0,0,0,.9),0 0 34px rgba(46,230,139,.45);
   }
   .line{display:block;overflow:hidden;padding-block:.04em}
   .line>span{display:block;transform:translateY(112%);transition:transform 1.1s var(--ease-out)}
@@ -156,6 +157,7 @@
   .hero-sub{
     margin-top:1.6rem;max-width:44ch;color:var(--ink-2);
     font-size:clamp(1.02rem,1rem + .35vw,1.25rem);
+    text-shadow:0 2px 14px rgba(0,0,0,.95);
     opacity:0;transform:translateY(14px);
     transition:opacity .9s var(--ease-out) .55s,transform .9s var(--ease-out) .55s;
   }
@@ -202,7 +204,7 @@
   .marquee-track{display:inline-block;animation:scroll-x 26s linear infinite}
   .marquee span{
     font-family:var(--font-display);font-stretch:118%;font-weight:700;text-transform:uppercase;
-    font-size:.95rem;letter-spacing:.28em;color:var(--soft);
+    font-size:.95rem;letter-spacing:.28em;color:var(--muted);
     padding:0 1.6rem;
   }
   .marquee span b{color:var(--green);font-weight:700}
@@ -369,7 +371,7 @@
     border-top:1px solid var(--line);
     padding:2rem var(--pad);
     display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;
-    color:var(--soft);font-size:.82rem;
+    color:var(--muted);font-size:.82rem;
   }
   footer nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.7rem 1.6rem}
   footer a{color:var(--muted);text-decoration:none;transition:color .3s}
@@ -378,6 +380,11 @@
   /* ============ RESPONSIVE ============ */
   @media(max-width:900px){
     .nav-links{display:none}
+    .hero-vignette{
+      background:
+        linear-gradient(180deg,rgba(7,9,12,.48) 0%,rgba(7,9,12,.18) 30%,rgba(7,9,12,.78) 49%,rgba(7,9,12,.96) 82%,rgba(7,9,12,.99) 100%),
+        linear-gradient(90deg,rgba(7,9,12,.56) 0%,rgba(7,9,12,.22) 72%,transparent 100%);
+    }
     .chapter{grid-template-columns:1fr;gap:1.1rem}
     .stats{grid-template-columns:repeat(2,1fr)}
     .stat:nth-child(3){border-left:none}
@@ -778,7 +785,7 @@
   camera.lookAt(0, .4, 0);
 
   /* ---- reticle particle system ---- */
-  var COUNT = isMobile ? 3200 : 9000;
+  var COUNT = isMobile ? 2200 : 9000;
   var group = new THREE.Group();
   group.position.y = .9;
   scene.add(group);
@@ -854,7 +861,7 @@
   geo.setAttribute("position", posAttr);
   geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
   var mat = new THREE.PointsMaterial({
-    size: isMobile ? .085 : .062, vertexColors: true, transparent: true, opacity: .95,
+    size: isMobile ? .07 : .062, vertexColors: true, transparent: true, opacity: isMobile ? .72 : .95,
     blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
   });
   group.add(new THREE.Points(geo, mat));
@@ -886,8 +893,8 @@
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     // wide screens: park the reticle in the open right half, clear of the headline
-    group.position.x = camera.aspect > 1.1 ? 4.05 : 0;
-    group.position.y = camera.aspect > 1.1 ? .9 : 2.1;
+    group.position.x = camera.aspect > 1.1 ? 4.05 : 1.45;
+    group.position.y = camera.aspect > 1.1 ? .9 : 2.85;
     queue(); // setSize clears the buffer — always redraw
   }
   var rT; window.addEventListener("resize", function(){ clearTimeout(rT); rT = setTimeout(resize, 120); });
