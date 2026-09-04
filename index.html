@@ -115,6 +115,20 @@
   }
   .nav-cta:hover{border-color:var(--green);background:var(--mint);color:var(--green)}
 
+  .founder-banner{
+    position:absolute;z-index:4;top:4.8rem;left:50%;transform:translateX(-50%);
+    width:min(calc(100% - (var(--pad) * 2)),48rem);min-height:2.8rem;
+    display:flex;align-items:center;justify-content:center;gap:.75rem;
+    padding:.55rem 1rem;border:1px solid var(--mint-line);border-radius:999px;
+    background:rgba(7,9,12,.82);backdrop-filter:blur(12px);
+    color:var(--ink-2);text-decoration:none;text-align:center;
+    font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .founder-banner>span{color:#04140d;background:var(--green);border-radius:999px;padding:.2rem .55rem;font-weight:700;white-space:nowrap}
+  .founder-banner strong{color:var(--ink);font-weight:500}
+  .founder-banner b{color:var(--green);font-weight:700}
+  .founder-banner:hover{border-color:var(--green);background:rgba(7,9,12,.94)}
+
   /* ============ HERO ============ */
   .hero{
     position:relative;min-height:100svh;
@@ -190,8 +204,8 @@
 
   /* HUD chrome */
   .hud{position:absolute;z-index:3;pointer-events:none;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;color:var(--soft)}
-  .hud-tl{top:5.2rem;left:var(--pad)}
-  .hud-tr{top:5.2rem;right:var(--pad);text-align:right}
+  .hud-tl{top:8.4rem;left:var(--pad)}
+  .hud-tr{top:8.4rem;right:var(--pad);text-align:right}
   .hud b{color:var(--green);font-weight:500}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
@@ -331,6 +345,7 @@
   .plan-name{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
   .plan-badge{color:#04140d;background:var(--green);border-radius:5px;padding:.15rem .5rem;font-weight:700;letter-spacing:.08em}
   .plan-price{font-family:var(--font-display);font-stretch:118%;font-weight:800;font-size:clamp(2rem,3.6vw,2.9rem);line-height:1}
+  .plan-price s{display:block;margin-bottom:.35rem;color:var(--soft);font-family:var(--font-body);font-size:.36em;font-weight:500;letter-spacing:.04em}
   .plan-price small{font-size:.38em;font-weight:600;color:var(--soft);letter-spacing:0}
   .plan ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;color:var(--muted);font-size:.92rem}
   .plan li{padding-left:1.3rem;position:relative}
@@ -380,6 +395,8 @@
   /* ============ RESPONSIVE ============ */
   @media(max-width:900px){
     .nav-links{display:none}
+    .founder-banner{top:4.7rem;width:calc(100% - 2.5rem);min-height:0;flex-wrap:wrap;gap:.35rem .55rem;padding:.55rem .7rem;border-radius:14px;font-size:.6rem;line-height:1.35;letter-spacing:.04em}
+    .hud-tl{display:none}
     .hero-vignette{
       background:
         linear-gradient(180deg,rgba(7,9,12,.48) 0%,rgba(7,9,12,.18) 30%,rgba(7,9,12,.78) 49%,rgba(7,9,12,.96) 82%,rgba(7,9,12,.99) 100%),
@@ -423,6 +440,10 @@
     <canvas id="scene" aria-hidden="true"></canvas>
     <div class="hero-fallback" id="fallback" aria-hidden="true"></div>
     <div class="hero-vignette" aria-hidden="true"></div>
+    <a class="founder-banner" href="#pricing" aria-label="Founding 200 offer: 7 days free, then $6.99 per month or $69.99 per year for the first 200 users">
+      <span>Founding 200</span>
+      <strong>7 days free, then <b>$6.99/mo</b> or <b>$69.99/yr</b> · First 200 users</strong>
+    </a>
 
     <div class="hud hud-tl" aria-hidden="true">SYS <b>READY</b><br>PLAN <b>LOADED</b></div>
     <div class="hud hud-tr" aria-hidden="true">LOCK <b id="lock">0%</b><br>TRK <b id="trk">+00.0 / +00.0</b></div>
@@ -597,7 +618,7 @@
     <div class="section-inner">
       <div class="section-head rv">
         <span class="eyebrow">Pricing</span>
-        <h2 class="display">Free to start. <em>≈$10/mo</em> all-in.</h2>
+        <h2 class="display">Founding 200. <em>$6.99/mo</em> or $69.99/yr.</h2>
       </div>
       <div class="plans">
         <div class="plan rv">
@@ -611,8 +632,8 @@
           <p class="plan-note">Everything you need to start showing up.</p>
         </div>
         <div class="plan featured rv rv-d1">
-          <div class="plan-name">Premium · Yearly <span class="plan-badge">Best value</span></div>
-          <div class="plan-price">$119.99<small>/YR — ≈$10/MO</small></div>
+          <div class="plan-name">Premium · Yearly <span class="plan-badge">Founding 200</span></div>
+          <div class="plan-price"><s>$119.99/YR</s>$69.99<small>/YR</small></div>
           <ul>
             <li>AI daily plans &amp; generated workouts</li>
             <li>AI coach with structured memory</li>
@@ -621,17 +642,17 @@
             <li>Cloud backup &amp; cross-device sync</li>
           </ul>
           <a class="btn btn-primary" style="justify-content:center" href="https://apps.apple.com/us/app/dothis-train-for-your-game/id6771322181" target="_blank" rel="noopener">Start the 7-day trial</a>
-          <p class="plan-note">Full access for 7 days. No auto-subscription after.</p>
+          <p class="plan-note">7 days free. Founding price for the first 200 users. No auto-subscription after.</p>
         </div>
         <div class="plan rv rv-d2">
-          <div class="plan-name">Premium · Monthly</div>
-          <div class="plan-price">$12.99<small>/MO</small></div>
+          <div class="plan-name">Premium · Monthly <span class="plan-badge">Founding 200</span></div>
+          <div class="plan-price"><s>$12.99/MO</s>$6.99<small>/MO</small></div>
           <ul>
             <li>7-day full Premium trial</li>
             <li>Everything in Premium</li>
             <li>Cancel anytime</li>
           </ul>
-          <p class="plan-note">7 days free. Monthly billing starts only if you choose it afterward.</p>
+          <p class="plan-note">7 days free. Founding price for the first 200 users. Monthly billing starts only if you choose it afterward.</p>
         </div>
       </div>
     </div>
