@@ -1,5 +1,15 @@
 # Own the Court production QA
 
+## Latest refinement — 2026-09-05
+
+Added the real Today/Workout/Progress demonstration, clearer free-trial CTAs, sport surface textures, floodlight assemblies, and a touch/keyboard Rotate control. Logo inlays and sport-specific geometry remain intact. Four App Store CTAs are synchronized with each selected sport.
+
+Latest packaged checks: **219 passed**, including all three screenshot selections and image decoding, Rotate/Reset, mobile navigation, six acquisition routes, history, reduced motion, and fallbacks. Site check remains 63 pages. No serious/critical axe violations in tested states.
+
+Lighthouse 12.8.2 mobile: **91 performance / 100 accessibility / 100 best practices / 100 SEO**, LCP **2.6s**, TBT **260ms**, CLS **0.03**. These supersede the earlier performance measurements below for this refinement. Hero and product demonstration were visually inspected on desktop and mobile. Current evidence is in `.impeccable/review/own-the-court-plus/`.
+
+The independent ship review below applies to the original court promotion. This later refinement was verified in the implementation turn; it did not receive another independent review.
+
 Verified 2026-09-05 against the packaged static site served at http://127.0.0.1:4174/.
 
 ## Result

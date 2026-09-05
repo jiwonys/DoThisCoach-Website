@@ -25,7 +25,7 @@ Adult recreational athletes should recognize their sport, understand strength tr
 4. Six sport choices followed by “The work you do. The game you love.” and a labeled illustrative seven-day week.
 5. Closing offer and “Find your game” action, then the original supporting footer destinations.
 
-The court contains two original flame logos embedded flat into each playing surface. There is no floating phone, athlete portrait, or app screenshot in the approved homepage. The static flame image is the fallback while the court is unavailable.
+The court contains two original flame logos embedded flat into each playing surface. The court contains no floating phone. A separate Inside section shows real DoThis screens. The static flame image is the fallback while the court is unavailable.
 
 ## Visual system
 
@@ -42,7 +42,7 @@ Use the tokens and eight-section system in `DESIGN.md`. Forest-black surfaces, w
 | Tennis | Your week. Your next match. | Make the next point yours. | `/app/tennis/` |
 | Volleyball | Strength around your sport. | Bring more to the next rally. | `/app/volleyball/` |
 
-All six states synchronize court geometry, both copy lines, pressed state, URL, and all three `data-download` links. Unknown query values use General; back/forward restores selection. Interface lime remains constant.
+All six states synchronize court geometry, both copy lines, pressed state, URL, and all four `data-download` links. Unknown query values use General; back/forward restores selection. Interface lime remains constant.
 
 General and Basketball use hoops and basketball markings. Soccer uses goals, penalty areas, and a center circle. Tennis uses a clay-toned doubles footprint, singles sidelines, service boxes, and a center-dipped net. Pickleball uses a smaller blue court, contrasting kitchen, service centerlines that stop at the kitchen, and a lower center-dipped net. Volleyball uses an (18:9) playing-area ratio, attack lines, and high hanging mesh with antennas. Both logos remain inlaid for every state.
 
@@ -59,3 +59,7 @@ Reduced motion removes pointer tilt and CSS transitions. Pointer exploration is 
 ## Validation scope
 
 This documentation refresh describes the current source after the approved ship decision. Current production validation belongs to the release QA report; earlier Athlete Signal Split assertion counts, Lighthouse scores, and beauty scores do not validate this court homepage. Native iPhone custom-product-page gallery verification remains distinct from route verification.
+
+## Trial-focused refinement (2026-09-05)
+
+The hero now leads with “Try DoThis free” and links directly to the Inside demonstration. Inside has three selectable real screens (Today, Workout, Progress); the volleyball example account is identified as illustrative. Four acquisition actions remain synchronized with sport selection. Court surface materials and floodlight geometry strengthen the sports setting, and an explicit Rotate control makes 3D exploration available to touch and keyboard users.

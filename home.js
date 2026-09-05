@@ -16,6 +16,8 @@
     document.body.dataset.sport = sport;
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.sport === sport)));
     document.querySelector('[data-scene-label]').textContent = descriptions[sport][0];
+    const courtName=document.querySelector('[data-court-name]');
+    if(courtName)courtName.textContent=sport==='general'?'Your home court':sport;
     document.querySelector('[data-sport-detail]').textContent = descriptions[sport][1];
     document.querySelectorAll('[data-download]').forEach(link => { link.href = sport === 'general' ? '/app/' : `/app/${sport}/`; });
     const athlete = document.querySelector('[data-athlete]');
@@ -30,6 +32,19 @@
   document.addEventListener('click',event=>{if(menu?.open && !menu.contains(event.target))menu.open=false;});
   addEventListener('popstate', () => select(new URL(location.href).searchParams.get('sport'), false));
   select(new URL(location.href).searchParams.get('sport'), false);
+  const proofScreens={
+    week:{src:'today-plan',title:'A plan around your real week.',description:'Confirm your sport days. Keep training, food, and recovery in view.',alt:'Real DoThis Today screen showing an example plan for a volleyball athlete'},
+    workout:{src:'adaptive-workout',title:'Put a plan behind the effort.',description:'Your workout, warm-up, and exercises in one place. You stay in control.',alt:'Real DoThis workout screen with an upper-body and shoulder session for a volleyball athlete'},
+    progress:{src:'progress-trends',title:'See the work you have put in.',description:'Completed training and progress trends, together in one view.',alt:'Real DoThis Progress screen showing example training history and weight trends'}
+  };
+  document.querySelectorAll('[data-proof]').forEach(button=>button.addEventListener('click',()=>{
+    const proof=proofScreens[button.dataset.proof];
+    if(!proof)return;
+    document.querySelectorAll('[data-proof]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+    const img=document.querySelector('[data-proof-image]');img.src='/assets/screenshots/'+proof.src+'.webp';img.alt=proof.alt;
+    document.querySelector('[data-proof-title]').textContent=proof.title;
+    document.querySelector('[data-proof-description]').textContent=proof.description;
+  }));
   if (!window.THREE || !document.querySelector('#court')) return;
 
   const T = window.THREE;
@@ -47,16 +62,16 @@
   const camera = new T.PerspectiveCamera(34, 1, .1, 80);
   const composition = new T.Group();
   scene.add(composition);
-  scene.add(new T.HemisphereLight(0xd8e7cb, 0x1a2b23, .55));
-  const light = new T.DirectionalLight(0xffffe7, 1.15);
+  scene.add(new T.HemisphereLight(0xd8e7cb, 0x1a2b23, .42));
+  const light = new T.DirectionalLight(0xffffe7, 1.3);
   light.position.set(-5, 10, 4); light.castShadow = true;
   light.shadow.mapSize.set(1024,1024);
   Object.assign(light.shadow.camera,{left:-8,right:8,top:8,bottom:-8});
   light.shadow.bias = -.001;
   scene.add(light);
-  const rim = new T.DirectionalLight(0xc1efbf, .9); rim.position.set(6,3,-6); scene.add(rim);
+  const rim = new T.DirectionalLight(0xc1efbf, .7); rim.position.set(6,3,-6); scene.add(rim);
   const materials = [];
-  function material(color, options={}) { const m = new T.MeshStandardMaterial({color, roughness:.8, ...options}); materials.push(m); return m; }
+  function material(color, options={}) { const m = new T.MeshStandardMaterial({color, roughness:.8, ...options}); m.color.convertSRGBToLinear();materials.push(m); return m; }
   const green = material(0x3b6650);
   const boundary = material(0x172f25);
   const pale = material(0xf0f0d8);
@@ -68,8 +83,42 @@
     const mesh = new T.Mesh(new T.BoxGeometry(w,h,d),mat);
     mesh.position.set(x,y,z); mesh.castShadow = true; mesh.receiveShadow = true; parent.add(mesh); return mesh;
   }
-  box(8.1,.34,5.1,boundary,0,-.3,0);
+  box(8.1,.2,5.1,boundary,0,-.18,0);
   box(7.9,.1,4.9,green,0,-.08,0);
+  const glow=material(0xd8f4af,{emissive:0x7a9f4e,emissiveIntensity:.65,roughness:.4});
+  box(8.02,.015,.018,glow,0,-.16,2.55);
+  box(.018,.015,5.08,glow,4.05,-.16,0);
+  // Two understated floodlight assemblies establish a believable evening venue.
+  for(const x of [-3.85,3.85]){
+    box(.055,2.35,.055,steel,x,1.14,-2.35);
+    box(.74,.09,.22,black,x,2.32,-2.29);
+    box(.66,.025,.18,glow,x,2.27,-2.25);
+  }
+  const surfaceTextures=new Map();
+  function surfaceTexture(kind){
+    if(surfaceTextures.has(kind))return surfaceTextures.get(kind);
+    const image=document.createElement('canvas');image.width=512;image.height=256;
+    const ctx=image.getContext('2d');
+    if(kind==='wood'){
+      ctx.fillStyle='#b79561';ctx.fillRect(0,0,512,256);
+      for(let row=0;row<20;row++){
+        for(let col=-1;col<5;col++){
+          const shade=150+(row*13+col*7+21)%25;
+          const x=col*128+(row%3)*43,y=row*13;
+          ctx.fillStyle=`rgb(${shade+38},${shade+9},${shade-38})`;ctx.fillRect(x,y,127.7,12.8);
+          for(let grain=0;grain<7;grain++){
+            ctx.fillStyle='rgba(70,38,14,.055)';ctx.fillRect(x+((grain*17+row*9)%90),y+grain*1.7,36, .6);
+          }
+        }
+      }
+    }else{
+      ctx.fillStyle=kind==='grass'?'#275339':kind==='clay'?'#a76043':'#245568';ctx.fillRect(0,0,512,256);
+      if(kind==='grass')for(let stripe=0;stripe<10;stripe++){ctx.fillStyle=stripe%2?'#ffffff0d':'#0000000c';ctx.fillRect(stripe*51.2,0,51.2,256);}
+      for(let i=0;i<7000;i++){const x=(i*173)%512,y=(i*79+Math.floor(i/512)*17)%256;ctx.fillStyle=i%2?'#ffffff0a':'#00000012';ctx.fillRect(x,y,1,1);}
+    }
+    const texture=new T.CanvasTexture(image);texture.encoding=T.sRGBEncoding;texture.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());surfaceTextures.set(kind,texture);return texture;
+  }
+  function setSurface(kind){green.map=surfaceTexture(kind);green.color.setHex(0xffffff);green.roughness=kind==='wood'?.48:.88;green.needsUpdate=true;}
   // A beveled, elevated playing surface. The lines and equipment change with the selected sport.
   const lines = new T.Group(); composition.add(lines);
   const courtLogos = new T.Group(); composition.add(courtLogos);
@@ -144,25 +193,25 @@
     placeCourtLogos(sport);
     if (sport === 'basketball' || sport === 'general') {
       rect(-3.65,-2.1,7.3,4.2); line(0,-2.1,0,2.1);
-      green.color.setHex(0x19432a); circle(0,0,.65);
+      setSurface('wood'); circle(0,0,.65);
       rect(-3.65,-.72,1.3,1.44);rect(2.35,-.72,1.3,1.44);
       circle(-2.35,0,.72,-Math.PI/2,Math.PI/2);circle(2.35,0,.72,Math.PI/2,Math.PI*1.5);
       hoop(-3.65); hoop(3.65);
     } else if(sport === 'soccer') {
       rect(-3.65,-2.1,7.3,4.2); line(0,-2.1,0,2.1);
-      green.color.setHex(0x345e42);circle(0,0,.68);rect(-3.65,-1.1,1.15,2.2);rect(2.5,-1.1,1.15,2.2);
+      setSurface('grass');circle(0,0,.68);rect(-3.65,-1.1,1.15,2.2);rect(2.5,-1.1,1.15,2.2);
       for (const x of [-3.7,3.7]) {box(.06,.7,.06,pale,x,.35,-.65,lines);box(.06,.7,.06,pale,x,.35,.65,lines);box(.06,.06,1.35,pale,x,.7,0,lines);}
     } else if(sport === 'volleyball') {
       // 18:9 playing-area ratio and attack lines 3 m from the center.
       // Elevated hanging mesh and antennas distinguish volleyball at miniature scale.
-      green.color.setHex(0x7a7152);
+      setSurface('wood');
       rect(-3.65,-1.825,7.3,3.65);
       line(0,-1.825,0,1.825);
       for(const x of [-7.3/6,7.3/6])line(x,-1.825,x,1.825);
       net({width:4.12,top:1.45,bottom:.86,antennas:true});
     } else if(sport === 'tennis') {
       // ITF doubles footprint 78 × 36 ft, singles 27 ft; service lines 21 ft from net.
-      green.color.setHex(0x80523b);
+      setSurface('clay');
       const scale=7.3/78, halfWidth=36*scale/2, singles=27*scale/2, service=21*scale;
       rect(-3.65,-halfWidth,7.3,halfWidth*2);
       for(const z of [-singles,singles])line(-3.65,z,3.65,z);
@@ -173,7 +222,7 @@
     } else if(sport === 'pickleball') {
       // USA Pickleball footprint 44 × 20 ft; 7 ft kitchen each side of the net.
       // Service centerlines stop at the kitchen rather than crossing it.
-      green.color.setHex(0x274650);
+      setSurface('hardcourt');
       const scale=6.2/44, halfWidth=20*scale/2, nonVolley=7*scale;
       box(nonVolley*2,.01,halfWidth*2,kitchen,0,-.027,0,lines).castShadow=false;
       rect(-3.1,-halfWidth,6.2,halfWidth*2);
@@ -214,20 +263,22 @@
     logoReady=true;stage.classList.add('ready');queue();
   }).catch(()=>{stage.classList.remove('ready');canvas.style.visibility='hidden';});
   const ground=new T.Mesh(new T.PlaneGeometry(40,40),new T.ShadowMaterial({opacity:.3}));ground.rotation.x=-Math.PI/2;ground.position.y=-.5;ground.receiveShadow=true;scene.add(ground);
-  let raf=0,px=0,py=0,rx=0,ry=0,visible=true;
+  let raf=0,px=0,py=0,rx=0,ry=0,visible=true,turn=0,smoothedTurn=0;
   function render() {
     raf=0; rx+=(px-rx)*.12; ry+=(py-ry)*.12;
-    composition.rotation.y=-.18+rx*.14;composition.rotation.x=ry*.035;
+    smoothedTurn=reduced.matches?turn:smoothedTurn+(turn-smoothedTurn)*.1;
+    composition.rotation.y=-.18+rx*.14+smoothedTurn;composition.rotation.x=ry*.035;
     renderer.render(scene,camera);
-    if (visible && !document.hidden && !reduced.matches && Math.abs(px-rx)+Math.abs(py-ry)>.001) queue();
+    if (visible && !document.hidden && !reduced.matches && Math.abs(px-rx)+Math.abs(py-ry)+Math.abs(turn-smoothedTurn)>.001) queue();
   }
   function queue(){if(!raf && visible && !document.hidden)raf=requestAnimationFrame(render);}
-  function resize(){const width=stage.clientWidth,height=stage.clientHeight;renderer.setSize(width,height,false);camera.aspect=width/height;camera.position.set(8,7.4,12.6);camera.lookAt(0,.15,0);camera.fov=width<500?37:31;camera.updateProjectionMatrix();queue();}
+  function resize(){const width=stage.clientWidth,height=stage.clientHeight;renderer.setSize(width,height,false);camera.aspect=width/height;camera.position.set(8,7.4,12.6);camera.lookAt(0,.3,0);camera.fov=width<500?37:35;camera.updateProjectionMatrix();queue();}
   new ResizeObserver(resize).observe(stage);
   const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)queue();else{cancelAnimationFrame(raf);raf=0;} });observer.observe(stage);
   stage.addEventListener('pointermove', event=>{if(reduced.matches || event.pointerType==='touch')return;const bounds=stage.getBoundingClientRect();px=(event.clientX-bounds.left)/bounds.width-.5;py=(event.clientY-bounds.top)/bounds.height-.5;queue();});
   stage.addEventListener('pointerleave',()=>{px=py=0;queue();});
-  document.querySelector('#reset-view').addEventListener('click',()=>{px=py=0;if(reduced.matches)rx=ry=0;queue();});
+  document.querySelector('#reset-view').addEventListener('click',()=>{px=py=turn=0;if(reduced.matches)rx=ry=smoothedTurn=0;queue();});
+  document.querySelector('#rotate-view')?.addEventListener('click',()=>{turn+=Math.PI/4;queue();});
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)queue();});
   canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();cancelAnimationFrame(raf);raf=0;stage.classList.remove('ready');});
   canvas.addEventListener('webglcontextrestored',()=>{if(logoReady)stage.classList.add('ready');queue();});

@@ -107,16 +107,21 @@ Primary actions have gently squared corners; sport choices, the outline header a
 
 ## Components
 
+The Inside section shows one real DoThis screen at a time with Week, Workout, and Progress buttons. The screenshot is upright at 260px desktop and 228px mobile, with its original pixels intact and the account identified as illustrative. Mobile tabs form one compact row, followed by the screen and free-trial action.
+
+Court surfaces use cached procedural wood, grass, clay, and hardcourt textures, with two small floodlight assemblies and a slender illuminated edge. The two approved logo inlays remain flat. Rotate advances the view by 45 degrees; Reset restores it, including under reduced motion.
+
+
 Primary actions have a (52px) minimum height and lift (-2px) over (200ms) on hover. The secondary method link is underlined. All interactive elements receive a (3px) lime focus outline with (5px) offset. Sport buttons have a (44px) minimum height, native keyboard activation, and `aria-pressed` state; all remain reachable by Tab.
 
 The native details menu retains Method, Inside, Sports, Training library, Compare, Pricing, Partners, Support, Privacy, and Terms. Escape closes it and returns focus to its summary; selection and outside clicks close it. Footer links preserve supporting destinations. The seven-day schedule is explicitly illustrative.
 
-Sport selection synchronizes the court, two descriptive lines, `?sport=`, pressed state, and three App Store actions. Invalid values fall back to General, and browser history restores selection. General and Basketball share the basketball scene; the other sports use distinct markings and equipment. See the surface brief for exact routes and court distinctions.
+Sport selection synchronizes the court, two descriptive lines, `?sport=`, pressed state, and four App Store actions. Invalid values fall back to General, and browser history restores selection. General and Basketball share the basketball scene; the other sports use distinct markings and equipment. See the surface brief for exact routes and court distinctions.
 
 ## Do's and Don'ts
 
 - Do keep the approved court composition and both original flame logos intact.
-- Do synchronize all six sport choices with court geometry, copy, URL, pressed state, and all three acquisition links.
+- Do synchronize all six sport choices with court geometry, copy, URL, pressed state, and all four acquisition links.
 - Do preserve original navigation destinations, legacy fragments, visible focus, and the logo fallback.
 - Don't introduce a floating phone, fabricated app screen, or replacement logo into this homepage.
 - Don't describe the illustrative training week as an actual user plan or measured outcome.

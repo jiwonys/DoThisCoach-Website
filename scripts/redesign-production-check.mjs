@@ -29,7 +29,7 @@ try{
       await page.locator('button[data-sport='+destination.id+']').click();
       check(await page.locator('button[data-sport='+destination.id+']').getAttribute('aria-pressed')==='true','Sport state '+destination.id);
       const paths=await page.locator('[data-download]').evaluateAll(links=>links.map(link=>new URL(link.href).pathname));
-      check(paths.length===3 && paths.every(path=>path===destination.sourceRoute),'Acquisition '+destination.id);
+      check(paths.length===4 && paths.every(path=>path===destination.sourceRoute),'Acquisition '+destination.id);
       check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No overflow '+viewport.width);
     }
     await page.goBack();
@@ -40,6 +40,15 @@ try{
     await page.goto(base+'/?sport=invalid&private=test',{waitUntil:'networkidle'});
     check(await page.locator('button[data-sport=general]').getAttribute('aria-pressed')==='true','Invalid sport falls back');
     check((await page.locator('[data-download]').first().getAttribute('href'))==='/app/','No arbitrary query forwarding');
+    for(const [tab,source] of [['week','today-plan'],['workout','adaptive-workout'],['progress','progress-trends']]){
+      await page.locator('button[data-proof='+tab+']').click();
+      check(await page.locator('button[data-proof='+tab+']').getAttribute('aria-pressed')==='true','Product tab '+tab);
+      await page.locator('[data-proof-image]').evaluate(img=>img.decode());
+      check((await page.locator('[data-proof-image]').getAttribute('src')).endsWith(source+'.webp'),'Correct real screenshot '+tab);
+    }
+    await page.locator('#rotate-view').click();
+    await page.locator('#reset-view').click();
+    check(await page.locator('.stage.ready').count()===1,'Court remains rendered after rotate/reset');
     if(viewport.width<=1150){
       await page.locator('.mobile-menu summary').click();
       const menu=page.getByRole('navigation',{name:'Mobile navigation',exact:true});
