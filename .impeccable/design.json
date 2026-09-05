@@ -1,257 +1,38 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-05T00:00:00Z",
-  "title": "Design System: DoThis Own the Court",
+  "title": "DoThis Teal Court",
   "extensions": {
-    "colorMeta": {
-      "forest-night": {
-        "role": "neutral",
-        "displayName": "forest night",
-        "tonalRamp": [
-          "oklch(15% 0.010 172.8)",
-          "oklch(27% 0.010 172.8)",
-          "oklch(39% 0.010 172.8)",
-          "oklch(51% 0.010 172.8)",
-          "oklch(63% 0.010 172.8)",
-          "oklch(75% 0.010 172.8)",
-          "oklch(87% 0.010 172.8)",
-          "oklch(95% 0.010 172.8)"
-        ]
-      },
-      "chalk": {
-        "role": "neutral",
-        "displayName": "chalk",
-        "tonalRamp": [
-          "oklch(15% 0.013 111.3)",
-          "oklch(27% 0.013 111.3)",
-          "oklch(39% 0.013 111.3)",
-          "oklch(51% 0.013 111.3)",
-          "oklch(63% 0.013 111.3)",
-          "oklch(75% 0.013 111.3)",
-          "oklch(87% 0.013 111.3)",
-          "oklch(95% 0.013 111.3)"
-        ]
-      },
-      "quiet": {
-        "role": "neutral",
-        "displayName": "quiet",
-        "tonalRamp": [
-          "oklch(15% 0.018 153.5)",
-          "oklch(27% 0.018 153.5)",
-          "oklch(39% 0.018 153.5)",
-          "oklch(51% 0.018 153.5)",
-          "oklch(63% 0.018 153.5)",
-          "oklch(75% 0.018 153.5)",
-          "oklch(87% 0.018 153.5)",
-          "oklch(95% 0.018 153.5)"
-        ]
-      },
-      "lime": {
-        "role": "primary",
-        "displayName": "lime",
-        "tonalRamp": [
-          "oklch(15% 0.168 130.9)",
-          "oklch(27% 0.168 130.9)",
-          "oklch(39% 0.168 130.9)",
-          "oklch(51% 0.168 130.9)",
-          "oklch(63% 0.168 130.9)",
-          "oklch(75% 0.168 130.9)",
-          "oklch(87% 0.168 130.9)",
-          "oklch(95% 0.168 130.9)"
-        ]
-      },
-      "rule": {
-        "role": "neutral",
-        "displayName": "rule",
-        "tonalRamp": [
-          "oklch(15% 0.000 89.9)",
-          "oklch(27% 0.000 89.9)",
-          "oklch(39% 0.000 89.9)",
-          "oklch(51% 0.000 89.9)",
-          "oklch(63% 0.000 89.9)",
-          "oklch(75% 0.000 89.9)",
-          "oklch(87% 0.000 89.9)",
-          "oklch(95% 0.000 89.9)"
-        ]
-      },
-      "action-ink": {
-        "role": "neutral",
-        "displayName": "action ink",
-        "tonalRamp": [
-          "oklch(15% 0.038 137.4)",
-          "oklch(27% 0.038 137.4)",
-          "oklch(39% 0.038 137.4)",
-          "oklch(51% 0.038 137.4)",
-          "oklch(63% 0.038 137.4)",
-          "oklch(75% 0.038 137.4)",
-          "oklch(87% 0.038 137.4)",
-          "oklch(95% 0.038 137.4)"
-        ]
-      },
-      "action-hover": {
-        "role": "primary",
-        "displayName": "action hover",
-        "tonalRamp": [
-          "oklch(15% 0.118 128.7)",
-          "oklch(27% 0.118 128.7)",
-          "oklch(39% 0.118 128.7)",
-          "oklch(51% 0.118 128.7)",
-          "oklch(63% 0.118 128.7)",
-          "oklch(75% 0.118 128.7)",
-          "oklch(87% 0.118 128.7)",
-          "oklch(95% 0.118 128.7)"
-        ]
-      },
-      "closing-field": {
-        "role": "neutral",
-        "displayName": "closing field",
-        "tonalRamp": [
-          "oklch(15% 0.026 155.7)",
-          "oklch(27% 0.026 155.7)",
-          "oklch(39% 0.026 155.7)",
-          "oklch(51% 0.026 155.7)",
-          "oklch(63% 0.026 155.7)",
-          "oklch(75% 0.026 155.7)",
-          "oklch(87% 0.026 155.7)",
-          "oklch(95% 0.026 155.7)"
-        ]
-      }
-    },
-    "typographyMeta": {
-      "display": {
-        "displayName": "Archivo Black",
-        "purpose": "Uppercase hero command; local CSS family Archivo."
-      },
-      "headline": {
-        "displayName": "Archivo Black",
-        "purpose": "Method and closing headings."
-      },
-      "body": {
-        "displayName": "Work Sans",
-        "purpose": "Product explanation; local CSS family Work."
-      },
-      "action": {
-        "displayName": "Work Sans action",
-        "purpose": "Primary acquisition labels."
-      }
-    },
-    "shadows": [
-      {
-        "name": "mobile-menu",
-        "value": "0 24px 32px #0006",
-        "purpose": "Separate the expanded native menu from page content."
-      }
-    ],
-    "motion": [
-      {
-        "name": "action-hover",
-        "value": "background .2s, transform .2s",
-        "purpose": "Lighter lime fill and a 2px lift."
-      },
-      {
-        "name": "court-pointer",
-        "value": "0.12 interpolation; yaw 0.14; pitch 0.035",
-        "purpose": "Small pointer-driven tilt, settling after movement."
-      },
-      {
-        "name": "reduced-motion",
-        "value": "No CSS transitions, smooth scrolling, or pointer tilt",
-        "purpose": "Preserve static content and sport selection."
-      }
-    ],
     "breakpoints": [
       {
-        "name": "wide-hero",
-        "value": "1600px"
+        "name": "mobile-nav",
+        "value": "1000px"
       },
       {
-        "name": "mobile-menu",
-        "value": "1150px"
+        "name": "planner-scroll",
+        "value": "860px"
       },
       {
-        "name": "compact",
-        "value": "1050px"
-      },
-      {
-        "name": "stacked",
+        "name": "mobile-grid",
         "value": "760px"
-      },
-      {
-        "name": "small-navigation",
-        "value": "420px"
       }
     ]
   },
-  "components": [
-    {
-      "name": "Primary Action",
-      "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Lime acquisition action for hero and closing offer.",
-      "html": "<a class=\"ds-primary\" href=\"/app/\">Start your 7 days free</a>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:17px 25px;border-radius:6px;background:var(--green,#b6f477);color:#162311;text-decoration:none;font:750 14px/1.5 Work,sans-serif;transition:background .2s,transform .2s}.ds-primary:hover{background:#d7ffa9;transform:translateY(-2px)}.ds-primary:focus-visible{outline:3px solid var(--green,#b6f477);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
-    },
-    {
-      "name": "Header Action",
-      "kind": "button",
-      "description": "Quiet outlined acquisition link in the in-flow header.",
-      "html": "<a class=\"ds-header-action\" href=\"/app/\">Get the app ↗</a>",
-      "css": ".ds-header-action{display:inline-block;border:1px solid var(--line,#ffffff24);padding:12px 20px;border-radius:30px;color:var(--white,#f4f5eb);font:700 12px/1.5 Work,sans-serif;text-decoration:none;white-space:nowrap}.ds-header-action:focus-visible{outline:3px solid var(--green,#b6f477);outline-offset:5px}"
-    },
-    {
-      "name": "Method Link",
-      "kind": "button",
-      "description": "Underlined secondary action beneath the hero command.",
-      "html": "<a class=\"ds-secondary\" href=\"#method\">See the method</a>",
-      "css": ".ds-secondary{display:inline-block;font:400 13px/1.5 Work,sans-serif;color:var(--white,#f4f5eb);padding:12px 0;border-bottom:1px solid #819076;text-decoration:none}.ds-secondary:focus-visible{outline:3px solid var(--green,#b6f477);outline-offset:5px}"
-    },
-    {
-      "name": "Sport Selector",
-      "kind": "chip",
-      "refersTo": "sport-option",
-      "description": "Six native toggle buttons with stable lime selected state.",
-      "html": "<div class=\"ds-choices\" role=\"group\" aria-label=\"Choose your sport\"><button type=\"button\" aria-pressed=\"true\">All sports</button><button type=\"button\" aria-pressed=\"false\">Soccer</button><button type=\"button\" aria-pressed=\"false\">Basketball</button><button type=\"button\" aria-pressed=\"false\">Pickleball</button><button type=\"button\" aria-pressed=\"false\">Tennis</button><button type=\"button\" aria-pressed=\"false\">Volleyball</button></div>",
-      "css": ".ds-choices{display:flex;flex-wrap:wrap;gap:8px}.ds-choices button{border:1px solid transparent;border-radius:30px;background:transparent;padding:11px 17px;min-height:44px;color:var(--quiet,#afbbb2);font:400 12px/1.5 Work,sans-serif;cursor:pointer}.ds-choices button[aria-pressed=true]{border-color:#b6f47766;background:#b6f47712;color:var(--green,#b6f477)}.ds-choices button:hover{color:var(--white,#f4f5eb);border-color:#ffffff33}.ds-choices button:focus-visible{outline:3px solid var(--green,#b6f477);outline-offset:5px}@media(max-width:760px){.ds-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.ds-choices button{padding:10px 5px;font-size:11px}}"
-    },
-    {
-      "name": "Mobile Navigation",
-      "kind": "nav",
-      "description": "Native details menu preserves all production destinations.",
-      "html": "<details class=\"ds-menu\"><summary>Menu</summary><nav aria-label=\"Mobile navigation\"><a href=\"#method\">Method</a><a href=\"#inside\">Inside</a><a href=\"#sports\">Sports</a><a href=\"/articles/\">Training library</a><a href=\"/compare/\">Compare</a><a href=\"#pricing\">Pricing</a><a href=\"/partner/\">Partners</a><a href=\"/support.html\">Support</a><a href=\"/privacy.html\">Privacy</a><a href=\"/terms.html\">Terms</a></nav></details>",
-      "css": ".ds-menu{color:var(--white,#f4f5eb);font-family:Work,sans-serif}.ds-menu summary{display:flex;align-items:center;min-height:44px;min-width:44px;cursor:pointer;font-size:11px;list-style:none}.ds-menu[open] summary{color:var(--green,#b6f477)}.ds-menu nav{display:grid;grid-template-columns:1fr 1fr;padding:20px 22px;gap:4px 24px;background:#142219;border-block:1px solid var(--line,#ffffff24);box-shadow:0 24px 32px #0006}.ds-menu a{display:flex;align-items:center;min-height:44px;padding:10px 0;color:var(--white,#f4f5eb);font-size:14px;text-decoration:none}.ds-menu a:hover{color:var(--green,#b6f477)}.ds-menu summary:focus-visible{outline:3px solid var(--green,#b6f477);outline-offset:5px}.ds-menu a:focus-visible{outline:3px solid var(--green,#b6f477);outline-offset:5px}"
-    },
-    {
-      "name": "Illustrative Training Week",
-      "kind": "custom",
-      "description": "Seven ruled days connect strength sessions and the game in one week.",
-      "html": "<div class=\"ds-week\" aria-label=\"Illustrative training week\"><span>MON<b>Strength</b></span><span>TUE<b>Rest</b></span><span>WED<b>Strength</b></span><span>THU<b>Rest</b></span><span>FRI<b>Rest</b></span><span class=\"ds-game\">SAT<b>Game</b></span><span>SUN<b>Rest</b></span></div><p class=\"ds-example\">Illustrative week. Your plan follows your confirmed schedule.</p>",
-      "css": ".ds-week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:28px;font-family:Work,sans-serif}.ds-week span{font-size:10px;text-align:center;border-top:2px solid #ffffff2a;padding-top:12px;color:var(--quiet,#afbbb2)}.ds-week b{display:block;font-weight:500;font-size:11px;margin-top:8px;color:var(--white,#f4f5eb)}.ds-week .ds-game{border-color:var(--green,#b6f477)}.ds-week .ds-game b{color:var(--green,#b6f477)}.ds-example{font:400 10px/1.5 Work,sans-serif;color:var(--quiet,#afbbb2);margin-top:12px}"
-    }
-  ],
+  "components": [],
   "narrative": {
-    "northStar": "Own the Court",
-    "overview": "Own the Court pairs a compact, dark editorial page with a tactile miniature sports court. Dense Archivo Black commands, quiet Work Sans copy, and a constant lime accent connect the athlete’s competitive ambition to training around their confirmed week.\n\nThis system describes the approved production homepage in `index.html`, `home.css`, and `home.js`. Other website destinations retain their existing designs. The court is illustrative brand scenery; it is not a product screenshot.",
+    "northStar": "Train Around Your Game",
+    "overview": "User-supplied teal-and-amber design is authoritative. Inline CSS and JavaScript in index.html own the surface.",
     "keyCharacteristics": [
-      "Forest-black surfaces, warm chalk text, and a stable lime action color.",
-      "A sport-specific miniature court with two original flame logos embedded flat in the playing surface.",
-      "Compact copy, open sections, quiet rules, and a seven-day illustrative training week."
+      "Condensed Anton headlines",
+      "Amber actions on deep teal",
+      "Interactive illustrative training week"
     ],
-    "rules": [
-      {
-        "name": "The Stable Accent Rule",
-        "body": "Change the playing surface and equipment for each sport; keep the interface lime.",
-        "section": "colors"
-      }
-    ],
+    "rules": [],
     "dos": [
-      "Do keep the approved court composition and both original flame logos intact.",
-      "Do synchronize all six sport choices with court geometry, copy, URL, pressed state, and all three acquisition links.",
-      "Do preserve original navigation destinations, legacy fragments, visible focus, and the logo fallback."
+      "Preserve the supplied design and content"
     ],
     "donts": [
-      "Don't introduce a floating phone, fabricated app screen, or replacement logo into this homepage.",
-      "Don't describe the illustrative training week as an actual user plan or measured outcome.",
-      "Don't collapse the six acquisition routes into one generic App Store destination."
+      "Do not restore the previous 3D-court design"
     ]
   }
 }

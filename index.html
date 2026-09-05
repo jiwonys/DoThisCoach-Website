@@ -1,28 +1,647 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0c1210"><title>DoThis: Train For Your Game</title><meta name="description" content="Train for your game with sport-aware strength workouts built around your week. Start your free 7-day DoThis Premium Preview."><link rel="stylesheet" href="/home.css?v=20260905-court-plus"><link rel="canonical" href="https://dothiscoach.com/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" title="DoThis Training Library" href="/feed.xml"><meta property="og:type" content="website"><meta property="og:title" content="DoThis — Make them notice."><meta property="og:description" content="Strength for the game you play and the week you live."><meta property="og:url" content="https://dothiscoach.com/"><meta property="og:image" content="https://dothiscoach.com/assets/dothis-logo.png"></head>
-<body data-direction="court" class="">
-<!-- User-approved Own the Court. Seed 55982518. Two approved flame logos inlaid into each playing surface. Preserve six fixed acquisition routes and the Founding 200 offer. -->
-<a href="#main" class="skip">Skip to main content</a>
-<div class="offer"><strong>Founding 200.</strong> $6.99/month or $69.99/year for the first 200 users. <a href="#pricing">Explore the offer</a></div>
-<header class="nav"><a class="brand" href="/"><img src="/assets/icons/icon-96.png" width="34" height="34" alt="">DoThis</a><nav class="desktop-links" aria-label="Main navigation"><a href="#method">Method</a><a href="#inside">Inside</a><a href="#sports">Sports</a><a href="/articles/">Training library</a><a href="/compare/">Compare</a><a href="#pricing">Pricing</a><a href="/partner/">Partners</a><a href="/support.html">Support</a></nav><a class="nav-action" href="/app/" data-download>Get the app ↗</a><details class="mobile-menu"><summary aria-label="Open navigation menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Menu</span></summary><nav aria-label="Mobile navigation"><a href="#method">Method</a><a href="#inside">Inside</a><a href="#sports">Sports</a><a href="/articles/">Training library</a><a href="/compare/">Compare</a><a href="#pricing">Pricing</a><a href="/partner/">Partners</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav></details></header>
-<main id="main"><section class="hero" aria-labelledby="hero-title"><div class="copy"><h1 id="hero-title">Make<br>them<br><em>notice.</em></h1><p><strong>Your game still matters.</strong> Get strength training built around your sport, your schedule, and the athlete you want to become.</p><div class="hero-actions"><a class="primary" href="/app/" data-download>Try DoThis free <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg></a><a class="secondary" href="#inside">See your training</a></div><span class="fine">No payment. No automatic charge after your Preview.</span></div>
-<div class="stage" id="stage" aria-label="Interactive three-dimensional sports court with DoThis flame logos inlaid into the playing surface">
-<img src="/assets/courts/logo-face.png" width="386" height="450" alt="DoThis flame logo"><canvas id="court" aria-hidden="true"></canvas>
-<div class="scene-label"><span data-court-name>Your home court</span><strong data-scene-label>One week. All your training.</strong></div>
-<div class="stage-caption"><span>Your court. Your next chapter.</span><div class="view-controls"><button type="button" id="rotate-view" aria-label="Rotate court view">Rotate ↻</button><button type="button" id="reset-view">Reset</button></div></div></div></section>
-<section id="sports" class="selector" aria-labelledby="sport-label"><h2 id="sport-label">Choose your game</h2><div class="choices" role="group" aria-label="Choose your sport"><button type="button" data-sport="general" aria-pressed="true">All sports</button><button type="button" data-sport="soccer" aria-pressed="false">Soccer</button><button type="button" data-sport="basketball" aria-pressed="false">Basketball</button><button type="button" data-sport="pickleball" aria-pressed="false">Pickleball</button><button type="button" data-sport="tennis" aria-pressed="false">Tennis</button><button type="button" data-sport="volleyball" aria-pressed="false">Volleyball</button></div><p class="sport-detail" aria-live="polite" data-sport-detail>Every game starts with the work.</p></section>
-<section class="inside" id="inside" aria-labelledby="inside-title">
-<div class="inside-copy"><h2 id="inside-title">Less guessing.<br><em>More game.</em></h2><p>Open DoThis with a game to play.<br>Leave with work to do.</p>
-<div class="proof-tabs" role="group" aria-label="Explore DoThis">
-<button type="button" data-proof="week" aria-pressed="true"><span>Your week</span><small>Start with the days you play.</small></button>
-<button type="button" data-proof="workout" aria-pressed="false"><span>Your workout</span><small>Put a plan behind the effort.</small></button>
-<button type="button" data-proof="progress" aria-pressed="false"><span>Your progress</span><small>See the work you have put in.</small></button></div>
-<a class="primary" href="/app/" data-download>Try your first week free <span aria-hidden="true">↗</span></a><span class="fine">7 days of Premium. No payment. No automatic charge.</span></div>
-<div class="proof-visual"><div class="proof-caption" aria-live="polite"><strong data-proof-title>A plan around your real week.</strong><span data-proof-description>Confirm your sport days. Keep training, food, and recovery in view.</span></div>
-<figure class="app-screen"><img data-proof-image src="/assets/screenshots/today-plan.webp" width="640" height="1391" loading="lazy" decoding="async" alt="Real DoThis Today screen showing an example plan for a volleyball athlete"></figure>
-<p class="screen-note">Real DoThis screens · Illustrative athlete account</p></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DoThis — Train Around Your Game</title>
+<meta name="description" content="DoThis builds your lifting, nutrition, and recovery around your game days. Sport-aware AI training for people who actually play.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Chivo+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --court:      #0D3B3E;   /* deep indoor-court teal   */
+    --court-deep: #07272A;   /* under the bleachers      */
+    --line:       #F2EEE3;   /* painted boundary white   */
+    --line-dim:   rgba(242,238,227,.72);
+    --line-faint: rgba(242,238,227,.16);
+    --amber:      #FFB43A;   /* scoreboard amber         */
+    --zone:       #E8622C;   /* playing-zone orange = game day */
+    --mint:       #8FD8C6;   /* progress green           */
+    --radius: 14px;
+    --disp: "Anton", sans-serif;
+    --body: "Archivo", sans-serif;
+    --mono: "Chivo Mono", monospace;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--court);
+    color:var(--line);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--amber); color:var(--court-deep); }
+
+  /* ---------- shared ---------- */
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px; }
+  .eyebrow{
+    font-family:var(--mono); font-size:12px; font-weight:500;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--amber);
+  }
+  h1,h2,h3{ font-family:var(--disp); font-weight:400; text-transform:uppercase; line-height:.95; letter-spacing:.01em; }
+  a{ color:inherit; }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:14px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    background:var(--amber); color:var(--court-deep);
+    padding:15px 26px; border-radius:999px; text-decoration:none;
+    border:2px solid var(--amber);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn.ghost{ background:transparent; color:var(--line); border-color:var(--line-dim); }
+  .btn.ghost:hover{ border-color:var(--line); }
+  .btn:focus-visible, a:focus-visible, button:focus-visible{
+    outline:3px solid var(--amber); outline-offset:3px;
+  }
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--court) 88%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-faint);
+  }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:16px 24px; max-width:1120px; margin:0 auto; }
+  .logo{ font-family:var(--disp); font-size:24px; text-transform:uppercase; text-decoration:none; letter-spacing:.02em; }
+  .logo span{ color:var(--amber); }
+  .nav-links{ display:flex; gap:28px; align-items:center; }
+  .nav-links a{ font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--line-dim); transition:color .15s; }
+  .nav-links a:hover{ color:var(--line); }
+  .nav-cta{ font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; background:var(--amber); color:var(--court-deep); padding:10px 18px; border-radius:999px; font-weight:700; }
+  @media(max-width:720px){ .nav-links a:not(.nav-cta){ display:none; } }
+
+  /* ---------- hero ---------- */
+  header.hero{ position:relative; padding:88px 0 72px; }
+  .court-lines{
+    position:absolute; inset:0; pointer-events:none; opacity:.5;
+  }
+  .court-lines svg{ width:100%; height:100%; }
+  .court-lines path, .court-lines rect, .court-lines circle{
+    fill:none; stroke:var(--line-faint); stroke-width:2;
+  }
+  .draw{ stroke-dasharray:2400; stroke-dashoffset:2400; animation:draw 2.4s ease forwards .2s; }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+  .hero-grid{ position:relative; display:grid; gap:56px; }
+  .hero h1{
+    font-size:clamp(56px, 9.5vw, 128px);
+    margin:18px 0 22px;
+  }
+  .hero h1 .em{ color:var(--amber); }
+  .hero .sub{
+    max-width:560px; font-size:19px; color:var(--line-dim); margin-bottom:34px;
+  }
+  .hero .sub strong{ color:var(--line); font-weight:600; }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .fineprint{ font-family:var(--mono); font-size:12px; color:var(--line-dim); margin-top:16px; letter-spacing:.04em; }
+
+  /* ---------- week planner (signature) ---------- */
+  .planner{
+    background:var(--court-deep);
+    border:1px solid var(--line-faint);
+    border-radius:var(--radius);
+    padding:26px 26px 30px;
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+  }
+  .planner-head{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+  .planner-head .eyebrow{ color:var(--mint); }
+  .planner-hint{ font-family:var(--mono); font-size:12px; color:var(--line-dim); }
+  .week{
+    display:grid; grid-template-columns:repeat(7,1fr); gap:10px;
+  }
+  @media(max-width:860px){ .week{ grid-template-columns:repeat(7,minmax(96px,1fr)); overflow-x:auto; padding-bottom:8px; scroll-snap-type:x proximity; } .day{ scroll-snap-align:start; } }
+  .day{
+    background:transparent;
+    border:1.5px solid var(--line-faint);
+    border-radius:10px;
+    padding:12px 10px 14px;
+    text-align:left;
+    cursor:pointer;
+    color:var(--line);
+    font-family:var(--body);
+    transition:border-color .2s, background .2s, transform .2s;
+    min-height:150px;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .day:hover{ border-color:var(--line-dim); transform:translateY(-3px); }
+  .day .dname{ font-family:var(--mono); font-size:11px; letter-spacing:.18em; color:var(--line-dim); }
+  .day .dtag{
+    font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+    padding:3px 7px; border-radius:5px; align-self:flex-start;
+    border:1px solid var(--line-faint); color:var(--line-dim);
+  }
+  .day .dtitle{ font-family:var(--disp); font-size:17px; text-transform:uppercase; line-height:1.05; letter-spacing:.02em; }
+  .day .ddesc{ font-size:12.5px; color:var(--line-dim); line-height:1.45; }
+  .day.game{
+    border-color:var(--zone); background:color-mix(in srgb, var(--zone) 16%, transparent);
+  }
+  .day.game .dtag{ background:var(--zone); border-color:var(--zone); color:#fff; }
+  .day.game .dtitle{ color:var(--zone); }
+  .day.primer .dtag, .day.recover .dtag{ border-color:var(--mint); color:var(--mint); }
+  .day.updated{ animation:pop .35s ease; }
+  @keyframes pop{ 0%{ transform:scale(.96); opacity:.4; } 100%{ transform:scale(1); opacity:1; } }
+  .planner-note{
+    margin-top:18px; font-size:14px; color:var(--line-dim);
+    border-left:3px solid var(--amber); padding-left:14px;
+  }
+  .planner-note b{ color:var(--line); }
+
+  /* ---------- ticker ---------- */
+  .ticker{
+    border-top:1.5px solid var(--line-faint); border-bottom:1.5px solid var(--line-faint);
+    overflow:hidden; padding:14px 0; background:var(--court-deep);
+  }
+  .ticker-track{ display:flex; gap:48px; width:max-content; animation:scroll 30s linear infinite; }
+  .ticker span{ font-family:var(--mono); font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--line-dim); white-space:nowrap; }
+  .ticker b{ color:var(--amber); font-weight:700; }
+  @keyframes scroll{ to{ transform:translateX(-50%); } }
+
+  /* ---------- sections ---------- */
+  section{ padding:96px 0; }
+  .sec-head{ max-width:640px; margin-bottom:56px; }
+  .sec-head h2{ font-size:clamp(38px,5.5vw,64px); margin:14px 0 18px; }
+  .sec-head p{ color:var(--line-dim); font-size:18px; }
+
+  /* problem */
+  .problem{ background:var(--court-deep); }
+  .vs{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media(max-width:760px){ .vs{ grid-template-columns:1fr; } }
+  .vs-card{ border:1.5px solid var(--line-faint); border-radius:var(--radius); padding:30px; }
+  .vs-card.bad h3{ color:var(--line-dim); text-decoration:line-through; text-decoration-color:var(--zone); text-decoration-thickness:3px; }
+  .vs-card.good{ border-color:var(--amber); }
+  .vs-card h3{ font-size:26px; margin-bottom:14px; }
+  .vs-card ul{ list-style:none; display:flex; flex-direction:column; gap:12px; }
+  .vs-card li{ padding-left:26px; position:relative; color:var(--line-dim); font-size:15.5px; }
+  .vs-card li::before{ content:"—"; position:absolute; left:0; color:var(--zone); font-weight:700; }
+  .vs-card.good li::before{ content:"→"; color:var(--amber); }
+  .vs-card.good li{ color:var(--line); }
+
+  /* features */
+  .feat-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  @media(max-width:760px){ .feat-grid{ grid-template-columns:1fr; } }
+  .feat{
+    border:1.5px solid var(--line-faint); border-radius:var(--radius);
+    padding:32px; position:relative; overflow:hidden;
+    transition:border-color .2s;
+  }
+  .feat:hover{ border-color:var(--line-dim); }
+  .feat .fmark{
+    font-family:var(--mono); font-size:12px; color:var(--amber); letter-spacing:.2em; text-transform:uppercase;
+    display:block; margin-bottom:16px;
+  }
+  .feat h3{ font-size:28px; margin-bottom:12px; }
+  .feat p{ color:var(--line-dim); font-size:15.5px; }
+  .feat p b{ color:var(--line); font-weight:600; }
+
+  /* coach chat */
+  .coach{ background:var(--court-deep); }
+  .coach-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:center; }
+  @media(max-width:860px){ .coach-grid{ grid-template-columns:1fr; gap:40px; } }
+  .chat{
+    border:1.5px solid var(--line-faint); border-radius:var(--radius);
+    padding:24px; display:flex; flex-direction:column; gap:14px; background:var(--court);
+  }
+  .msg{ max-width:88%; padding:12px 16px; border-radius:14px; font-size:14.5px; line-height:1.5; }
+  .msg.you{ align-self:flex-end; background:var(--amber); color:var(--court-deep); border-bottom-right-radius:4px; font-weight:500; }
+  .msg.ai{ align-self:flex-start; background:color-mix(in srgb, var(--line) 8%, transparent); border:1px solid var(--line-faint); border-bottom-left-radius:4px; color:var(--line); }
+  .msg.ai .who{ font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--mint); display:block; margin-bottom:6px; }
+
+  /* honesty */
+  .honesty .big-quote{
+    font-family:var(--disp); text-transform:uppercase;
+    font-size:clamp(34px,5.5vw,68px); line-height:1.02; max-width:900px;
+  }
+  .honesty .big-quote .em{ color:var(--amber); }
+  .honesty-points{ margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media(max-width:820px){ .honesty-points{ grid-template-columns:1fr; } }
+  .hp{ border-top:3px solid var(--amber); padding-top:18px; }
+  .hp h3{ font-family:var(--mono); font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-bottom:10px; color:var(--line); }
+  .hp p{ font-size:15px; color:var(--line-dim); }
+
+  /* reviews */
+  .reviews{ background:var(--court-deep); }
+  .stars{ color:var(--amber); letter-spacing:4px; font-size:15px; }
+  .rev-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media(max-width:860px){ .rev-grid{ grid-template-columns:1fr; } }
+  .rev{ border:1.5px solid var(--line-faint); border-radius:var(--radius); padding:28px; display:flex; flex-direction:column; gap:14px; }
+  .rev h3{ font-size:21px; line-height:1.1; }
+  .rev p{ font-size:15px; color:var(--line-dim); flex:1; }
+  .rev .who{ font-family:var(--mono); font-size:12px; color:var(--line-dim); letter-spacing:.08em; }
+  .score{ display:flex; align-items:baseline; gap:16px; margin-bottom:40px; }
+  .score .num{ font-family:var(--disp); font-size:72px; color:var(--amber); line-height:1; }
+  .score .lbl{ font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--line-dim); }
+
+  /* pricing */
+  .price-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:stretch; }
+  @media(max-width:860px){ .price-grid{ grid-template-columns:1fr; } }
+  .plan{ border:1.5px solid var(--line-faint); border-radius:var(--radius); padding:32px; display:flex; flex-direction:column; }
+  .plan.hot{ border-color:var(--amber); position:relative; }
+  .plan.hot::after{
+    content:"7-day full preview · no payment up front";
+    position:absolute; top:-13px; left:24px;
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+    background:var(--amber); color:var(--court-deep); padding:4px 10px; border-radius:5px; font-weight:700;
+  }
+  .plan h3{ font-size:24px; margin-bottom:6px; }
+  .plan .amt{ font-family:var(--disp); font-size:44px; margin:10px 0 4px; }
+  .plan .per{ font-family:var(--mono); font-size:12px; color:var(--line-dim); letter-spacing:.1em; text-transform:uppercase; margin-bottom:20px; }
+  .plan ul{ list-style:none; display:flex; flex-direction:column; gap:10px; flex:1; margin-bottom:26px; }
+  .plan li{ font-size:14.5px; color:var(--line-dim); padding-left:22px; position:relative; }
+  .plan li::before{ content:"✓"; position:absolute; left:0; color:var(--mint); font-weight:700; }
+
+  /* footer */
+  footer{ background:var(--court-deep); border-top:1.5px solid var(--line-faint); padding:72px 0 48px; }
+  .foot-grid{ display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; }
+  .foot-story{ max-width:520px; }
+  .foot-story h3{ font-size:30px; margin-bottom:14px; }
+  .foot-story p{ color:var(--line-dim); font-size:15.5px; margin-bottom:18px; }
+  .foot-links{ display:flex; flex-direction:column; gap:12px; }
+  .foot-links a{ font-family:var(--mono); font-size:13px; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; color:var(--line-dim); }
+  .foot-links a:hover{ color:var(--line); }
+  .legal{ margin-top:56px; padding-top:24px; border-top:1px solid var(--line-faint); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:var(--mono); font-size:11.5px; color:var(--line-dim); letter-spacing:.06em; }
+
+  .js .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+  .js .reveal.in{ opacity:1; transform:none; }
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{ animation:none !important; transition:none !important; }
+    .draw{ stroke-dashoffset:0; }
+    .js .reveal{ opacity:1; transform:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* Preserve the supplied design while integrating existing site navigation. */
+  .nav-links .nav-cta,.nav-links .nav-cta:hover{color:var(--court-deep)}
+  .day.game .dtag{color:var(--court-deep)}
+  .day.game .dtitle{color:var(--line)}
+  html{scroll-padding-top:100px;color-scheme:dark}
+  .hero-grid>*{min-width:0}
+  .founder-offer{text-align:center;background:var(--amber);color:var(--court-deep);padding:10px 24px;font-size:13px;line-height:1.5}
+  .founder-offer a{font-weight:700;text-underline-offset:3px;white-space:nowrap}
+  .site-menu{position:relative}
+  .site-menu summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--line)}
+  .site-menu-links{position:absolute;top:calc(100% + 10px);right:0;display:grid;min-width:220px;max-height:70vh;overflow:auto;padding:12px 20px;background:var(--court-deep);border:1px solid var(--line-faint);border-radius:var(--radius);box-shadow:0 15px 35px #0005}
+  .site-menu-links a{display:flex!important;align-items:center;min-height:44px}
+  .nav-links{gap:18px}
+  .skip-link{position:absolute;top:-90px;left:20px;z-index:100;padding:12px 18px;background:var(--amber);color:var(--court-deep)}
+  .skip-link:focus{top:8px}
+  summary:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+  @media(max-width:1000px){.nav-links>a:not(.nav-cta){display:none}.nav-inner{gap:18px}.nav-links{gap:18px}}
+  @media(max-width:500px){.plan.hot::after{left:16px;right:16px;white-space:normal;line-height:1.4;text-align:center}.plan.hot{padding-top:44px}.btn{font-size:12px;padding:14px 20px}.nav-inner{padding:12px 20px}.nav-cta{font-size:11px;padding:10px 13px}.founder-offer{font-size:11px}}
+
+</style>
+<meta name="theme-color" content="#0D3B3E"><link rel="canonical" href="https://dothiscoach.com/"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="alternate" type="application/rss+xml" title="DoThis Training Library" href="/feed.xml"><meta property="og:title" content="DoThis — Train Around Your Game"><meta property="og:type" content="website"><meta property="og:url" content="https://dothiscoach.com/"><meta property="og:description" content="Sport-aware training for people who actually play."><meta property="og:image" content="https://dothiscoach.com/assets/dothis-logo.png"></head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="logo" href="#top">Do<span>This</span></a>
+    <div class="nav-links">
+      <a href="#week">Your Week</a>
+      <a href="#features">Features</a>
+      <a href="#coach">Coach</a>
+      <a href="#pricing">Pricing</a>
+      <a href="/articles/">Training Library</a>
+      <a href="/partner/">Partners</a>
+      <details class="site-menu"><summary aria-label="Open site menu">Menu</summary><div class="site-menu-links"><a href="#week">Your Week</a><a href="#features">Features</a><a href="#coach">Coach</a><a href="#pricing">Pricing</a><a href="/articles/">Training Library</a><a href="/compare/">Compare</a><a href="/partner/">Partners</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></details>
+      <a class="nav-cta" data-download href="/app/">Get the app</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main"><div class="founder-offer"><strong>Founding 200</strong> · $6.99/month or $69.99/year for the first 200 users. <a href="#pricing">See pricing</a></div>
+<header class="hero" id="top">
+  <div class="court-lines" aria-hidden="true">
+    <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+      <rect class="draw" x="60" y="40" width="1080" height="620" rx="18"/>
+      <path class="draw" d="M600 40 V660" stroke-dasharray="10 14"/>
+      <circle class="draw" cx="600" cy="350" r="120"/>
+      <path class="draw" d="M60 200 H300 M900 200 H1140 M60 500 H300 M900 500 H1140"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">The training app that knows you have a game Thursday</span>
+      <h1>Train around<br><span class="em">your game.</span></h1>
+      <p class="sub">Most fitness apps program you like the gym is your sport. <strong>DoThis plans your lifting, food, and recovery around the days you actually play</strong> — so you show up fresh for the game and still get stronger.</p>
+      <div class="hero-ctas">
+        <a class="btn" data-download href="/app/">&#63743; Download on the App Store</a>
+        <a class="btn ghost" href="#week">See how it plans</a>
+      </div>
+      <p class="fineprint">Free to start · 7-day full Premium preview · No payment required</p>
+    </div>
+
+    <div class="planner" id="week"><span id="method"></span>
+      <div class="planner-head">
+        <span class="eyebrow">Your training week</span>
+        <span class="planner-hint">Illustrative example · Tap a day to move your game — watch the week re-plan</span>
+      </div>
+      <div class="week" id="weekGrid" role="group" aria-label="Interactive weekly plan. Select the day you play your game."></div>
+      <p class="planner-note" id="plannerNote" aria-live="polite"><b>Game on Thursday?</b> Wednesday goes light so your legs are fresh, Friday turns into recovery, and your heavy work lands where it can't hurt your game.</p>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker">
+    <span>Volleyball <b>·</b> Soccer <b>·</b> Basketball <b>·</b> Tennis <b>·</b> Climbing <b>·</b> Pickleball <b>·</b> Hockey <b>·</b> Flag football <b>·</b> Badminton <b>·</b> Rugby <b>·</b> Softball <b>·</b> Ultimate <b>·</b>&nbsp;</span>
+  </div>
+</div>
+
+<section class="problem">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why this exists</span>
+      <h2>Your app thinks leg day matters more than league night.</h2>
+      <p>If you play a sport, generic programs fight your schedule instead of working with it. DoThis was built for the other way around.</p>
+    </div>
+    <div class="vs">
+      <div class="vs-card bad reveal">
+        <h3>Every other app</h3>
+        <ul>
+          <li>Prescribes heavy squats the night before your match</li>
+          <li>Treats a lighter game-day lift as "regression"</li>
+          <li>Same generic routine no matter what you did yesterday</li>
+          <li>Nutrition, workouts, and recovery live in three different apps</li>
+        </ul>
+      </div>
+      <div class="vs-card good reveal">
+        <h3>DoThis</h3>
+        <ul>
+          <li>Coordinates strength, cardio, food, and recovery around game days</li>
+          <li>Game-day sessions never drag your strength baseline down</li>
+          <li>Every workout considers your schedule, equipment, readiness, and limits</li>
+          <li>One Daily Plan. Six essentials. Zero juggling.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="statement" id="method"><h2 id="features">The work you do.<br><em>The game you love.</em></h2><div><p>Your sport and your strength training belong in the same week. Set your game days. DoThis prepares workouts around the schedule you confirm.</p><div class="training-days" aria-label="Illustrative training week"><span>MON<b>Strength</b></span><span>TUE<b>Rest</b></span><span>WED<b>Strength</b></span><span>THU<b>Rest</b></span><span>FRI<b>Rest</b></span><span class="game">SAT<b>Game</b></span><span>SUN<b>Rest</b></span></div><p class="example">Illustrative week. Your plan follows your confirmed schedule.</p></div></section>
-<section class="end" id="pricing"><div id="free-preview"><h2>Give your game<br>a better week.</h2><p>Founding 200: $6.99/month or $69.99/year for the first 200 users.</p><p>Start with a free 7-day Premium Preview. No automatic charge.</p></div><a class="primary" href="/app/" data-download>Start my free week <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 12h15M13 5l7 7-7 7"/></svg></a></section></main>
-<footer class="footer"><span>© 2026 DoThis Labs LLC.</span><nav aria-label="Footer navigation"><a href="/articles/">Training library</a><a href="/compare/">Compare</a><a href="/partner/">Partners</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav></footer>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script><script defer src="/home.js?v=20260905-court-plus"></script></body></html>
+
+<section id="features"><span id="inside"></span>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The six essentials</span>
+      <h2>Everything that moves the needle. Nothing that doesn't.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <span class="fmark">Daily Plan</span>
+        <h3>One plan for the whole day</h3>
+        <p>Strength, cardio or sport, meals, recovery, and goals — coordinated in a single Daily Plan. Training <b>and</b> playing today? It helps you pick the right load instead of guessing.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="fmark">Workout</span>
+        <h3>Sport-aware generation</h3>
+        <p>Workouts built around your schedule, available equipment, recent sessions, and current limitations. Follow set by set, adjust on the fly, and <b>let what you actually lifted shape what comes next</b>.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="fmark">Food + Progress</span>
+        <h3>Log it. See it move.</h3>
+        <p>Fast food logging, daily nutrition totals, weigh-ins, and goal tracking — with progress trends that show whether the work is working.</p>
+      </div>
+      <div class="feat reveal">
+        <span class="fmark">Coach</span>
+        <h3>A coach that remembers</h3>
+        <p>Ask about your sets, meals, weight trend, or this week's plan. Coach knows your context, remembers your preferences and limitations, and <b>advises — you stay in control of every change</b>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="coach" id="coach">
+  <div class="wrap coach-grid">
+    <div class="reveal">
+      <span class="eyebrow">AI Coach</span>
+      <h2 style="font-size:clamp(36px,5vw,58px); margin:14px 0 18px;">Talk to someone who was there for every rep.</h2>
+      <p style="color:var(--line-dim); font-size:17px; margin-bottom:18px;">Your coach can see your workout history, food logs, weight trend, goals, and schedule — so advice is about <em>your</em> training, not training in general.</p>
+      <p style="color:var(--line-dim); font-size:17px;">It remembers narrowly scoped preferences ("my left shoulder hates overhead press") and applies them to future plans. It suggests; you confirm.</p>
+    </div>
+    <div class="chat reveal" aria-label="Example conversation with the DoThis coach">
+      <div class="msg you">I have league volleyball tomorrow but I still want to lift today. What do I do?</div>
+      <div class="msg ai"><span class="who">Coach</span>Go upper body, moderate load. You squatted heavy Monday and your legs need to be live for tomorrow. I'd keep it to 45 minutes — want me to build it?</div>
+      <div class="msg you">Yeah — and remember my left shoulder's been cranky.</div>
+      <div class="msg ai"><span class="who">Coach</span>Noted, and saved. I'll swap overhead pressing for landmine work until it settles. Draft plan is ready in Workout — confirm it there.</div>
+    </div>
+  </div>
+</section>
+
+<section class="honesty">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="display:block; margin-bottom:20px;">Honest progression</span>
+    <p class="big-quote reveal">A lighter lift before game night is a smart choice — <span class="em">not a step backward. Your bench doesn't forget.</span></p>
+    <div class="honesty-points">
+      <div class="hp reveal">
+        <h3>Your weights anchor the plan</h3>
+        <p>New plans start from the load you actually lifted — never a guess. Every progression tells you exactly why a weight went up, held, or eased off.</p>
+      </div>
+      <div class="hp reveal">
+        <h3>Game days don't cost you</h3>
+        <p>A deliberately light session before your match stays a game-day choice. Your strength baseline holds steady.</p>
+      </div>
+      <div class="hp reveal">
+        <h3>Variety like a real coach</h3>
+        <p>Back-to-back sessions rotate muscle groups the way a coach would — so you recover while you keep building.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">From the App Store</span>
+      <h2>Players are noticing.</h2>
+    </div>
+    <div class="score reveal">
+      <span class="num">5.0</span>
+      <div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <span class="lbl">App Store rating</span>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <h3>"Finally feels like I'm training, not just playing"</h3>
+        <p>A hobby soccer player who felt stuck after two years of just playing — a month of training around their match schedule and paying attention to diet gave them real direction.</p>
+        <span class="who">Jadoon5546 · App Store</span>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <h3>"My workout planner finally has a brain"</h3>
+        <p>Used to spend more time deciding what to do than doing it. Now the app accounts for schedule, past workouts, and sport — less overthinking, more lifting.</p>
+        <span class="who">Kyle0as · App Store</span>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <h3>"Lets you turn your brain off"</h3>
+        <p>Generates the routine on the way to the gym — and the workouts complement each other surprisingly well. "Honestly exactly what I was looking for."</p>
+        <span class="who">YongShim · App Store</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing"><span id="free-preview"></span>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Pricing</span>
+      <h2>Start free. Every account gets the full experience for a week.</h2>
+      <p>No payment up front, and the preview never auto-starts a subscription. After it ends, the free core keeps working — your data stays on your device.</p>
+    </div>
+    <div class="price-grid">
+      <div class="plan reveal">
+        <h3>Free</h3>
+        <div class="amt">$0</div>
+        <div class="per">Forever</div>
+        <ul>
+          <li>Saved workouts &amp; local history</li>
+          <li>Food and weight logging</li>
+          <li>Goals &amp; core progress tools</li>
+          <li>Your data stays on your device</li>
+        </ul>
+        <a class="btn ghost" data-download href="/app/">Download free</a>
+      </div>
+      <div class="plan hot reveal">
+        <h3>Premium Monthly</h3>
+        <div class="amt">$6.99</div>
+        <div class="per">Founding 200 · per month<br>Standard price $12.99/month</div>
+        <ul>
+          <li>AI Daily Plans &amp; sport-aware workouts</li>
+          <li>AI Coach chat with structured memory</li>
+          <li>Adaptive, honest progression</li>
+          <li>AI workout imports &amp; edits</li>
+          <li>Private cloud backup &amp; sync</li>
+        </ul>
+        <a class="btn" data-download href="/app/">Start 7-day preview</a>
+      </div>
+      <div class="plan reveal">
+        <h3>Premium Yearly</h3>
+        <div class="amt">$69.99</div>
+        <div class="per">Founding 200 · per year<br>Standard price $119.99/year</div>
+        <ul>
+          <li>Everything in Premium</li>
+          <li>One decision, a full season of training</li>
+          <li>Cancel anytime in Apple ID settings</li>
+        </ul>
+        <a class="btn ghost" data-download href="/app/">Go yearly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-story reveal">
+        <h3>Built courtside.</h3>
+        <p>DoThis is built by one developer who plays league volleyball and got tired of fitness apps that pretend the game doesn't exist. Found something off? Email — every message gets read.</p>
+        <a class="btn ghost" href="mailto:help@dothiscoach.com">help@dothiscoach.com</a>
+      </div>
+      <div class="foot-links reveal">
+        <a href="/articles/">Training Library</a>
+        <a href="/compare/">Compare</a>
+        <a href="/partner/">Partners</a>
+        <a href="/support.html">Support</a>
+        <a data-download href="/app/">App Store</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 DoThis Labs</span>
+      <span>General wellness support — not medical advice. Stop any activity that causes pain.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ---------- interactive week planner ---------- */
+  const DAYS = ["MON","TUE","WED","THU","FRI","SAT","SUN"];
+  let gameDay = 3; // Thursday
+
+  function buildWeek(g){
+    // offsets relative to game day
+    const plan = {};
+    plan[g]                = {cls:"game",    tag:"Game day",  title:"League night",   desc:"Optional primer lift — kept light so it never drags your baseline."};
+    plan[(g+6)%7]          = {cls:"primer",  tag:"Primer",    title:"Light upper",    desc:"Fresh legs for tomorrow. Moderate load, low volume."};
+    plan[(g+1)%7]          = {cls:"recover", tag:"Recovery",  title:"Mobility + easy cardio", desc:"Shake out the match. Zone 2 and movement work."};
+    const rest = [];
+    for(let i=0;i<7;i++) if(!(i in plan)) rest.push(i);
+    const rotation = [
+      {tag:"Strength", title:"Heavy lower", desc:"Squat pattern anchored to your last real working weight."},
+      {tag:"Strength", title:"Heavy upper", desc:"Press + pull. Rotated so muscle groups recover."},
+      {tag:"Engine",   title:"Conditioning", desc:"Intervals matched to your sport's demands."},
+      {tag:"Rest",     title:"Full rest",   desc:"Growth happens here. Coach guards it."}
+    ];
+    rest.forEach((d,i)=>{ plan[d] = {cls:"", ...rotation[i % rotation.length]}; });
+    return plan;
+  }
+
+  const grid = document.getElementById("weekGrid");
+  const note = document.getElementById("plannerNote");
+
+  function render(){
+    const plan = buildWeek(gameDay);
+    grid.innerHTML = "";
+    DAYS.forEach((name,i)=>{
+      const p = plan[i];
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "day updated " + p.cls;
+      b.setAttribute("aria-pressed", i===gameDay ? "true" : "false");
+      b.innerHTML =
+        '<span class="dname">'+name+'</span>' +
+        '<span class="dtag">'+p.tag+'</span>' +
+        '<span class="dtitle">'+p.title+'</span>' +
+        '<span class="ddesc">'+p.desc+'</span>';
+      b.addEventListener("click", ()=>{
+        if(i===gameDay) return;
+        gameDay = i;
+        const scrollPosition=grid.scrollLeft;
+        render();
+        grid.scrollLeft=scrollPosition;
+        grid.children[i].focus({preventScroll:true});
+        const before = DAYS[(i+6)%7], after = DAYS[(i+1)%7];
+        note.innerHTML = "<b>Game on "+cap(DAYS[i])+"?</b> "+cap(before)+" goes light so your legs are fresh, "+cap(after)+" turns into recovery, and your heavy work lands where it can't hurt your game.";
+      });
+      grid.appendChild(b);
+    });
+  }
+  function cap(d){ return {MON:"Monday",TUE:"Tuesday",WED:"Wednesday",THU:"Thursday",FRI:"Friday",SAT:"Saturday",SUN:"Sunday"}[d]; }
+  render();
+
+  /* ---------- ticker duplicate ---------- */
+  const t = document.getElementById("ticker");
+  t.innerHTML += t.innerHTML;
+
+  /* ---------- scroll reveal ---------- */
+  document.documentElement.classList.add("js");
+  const io = new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  },{ threshold:.12 });
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+  const allowedSports=['general','soccer','basketball','pickleball','tennis','volleyball'];
+  function syncAcquisition(){
+    const requested=new URL(location.href).searchParams.get('sport');
+    const sport=allowedSports.includes(requested)?requested:'general';
+    document.querySelectorAll('[data-download]').forEach(link=>link.href=sport==='general'?'/app/':'/app/'+sport+'/');
+  }
+  syncAcquisition();addEventListener('popstate',syncAcquisition);
+  const siteMenu=document.querySelector('.site-menu');
+  siteMenu.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{siteMenu.open=false;}));
+  document.addEventListener('click',event=>{if(!siteMenu.contains(event.target))siteMenu.open=false;});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape' && siteMenu.open){siteMenu.open=false;siteMenu.querySelector('summary').focus();}});
+</script>
+</body>
+</html>

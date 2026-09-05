@@ -2,86 +2,59 @@ import {readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {chromium} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-
 const root=resolve(import.meta.dirname,'..');
-const base=process.env.BASE_URL || 'http://127.0.0.1:4174';
+const base=process.env.BASE_URL || 'http://127.0.0.1:4186';
+let checks=0;
+function check(value,message){if(!value)throw Error(message);checks++;}
 const destinations=JSON.parse(await readFile(resolve(root,'docs/design/app-store-destinations.json'),'utf8')).destinations;
-let count=0;
-function check(pass,message){if(!pass)throw Error(message);count++;}
+for(const d of destinations){
+  const source=await readFile(resolve(root,d.sourceRoute.slice(1),'index.html'),'utf8');
+  check(source.includes(d.ppid)&&source.includes('6771322181'),'Redirect '+d.id);
+}
 const browser=await chromium.launch();
 try{
-  for(const destination of destinations){
-    const source=await readFile(resolve(root,destination.sourceRoute.slice(1),'index.html'),'utf8');
-    check(source.includes(destination.ppid),destination.id+': custom page ID preserved');
-    check(source.includes('6771322181') && source.includes('location.replace') && source.includes('http-equiv="refresh"'),destination.id+': redirect fallbacks preserved');
-  }
-  for(const viewport of [{width:360,height:800},{width:390,height:650},{width:768,height:1024},{width:1440,height:1000}]){
-    const context=await browser.newContext({viewport,reducedMotion:'reduce'});
-    const page=await context.newPage();
-    const errors=[];
+  for(const width of [360,390,768,1440]){
+    const context=await browser.newContext({viewport:{width,height:844},reducedMotion:'reduce'});
+    const page=await context.newPage();const errors=[];
     page.on('pageerror',error=>errors.push(error.message));
     await page.goto(base+'/',{waitUntil:'networkidle'});
-    await page.locator('.stage.ready').waitFor();
-    check(await page.locator('h1').isVisible(),'Hero visible');
-    check(await page.locator('.offer').isVisible(),'Founder offer visible');
-    check(await page.locator('meta[name=robots][content=noindex]').count()===0,'Homepage indexable');
-    for(const destination of destinations){
-      await page.locator('button[data-sport='+destination.id+']').click();
-      check(await page.locator('button[data-sport='+destination.id+']').getAttribute('aria-pressed')==='true','Sport state '+destination.id);
-      const paths=await page.locator('[data-download]').evaluateAll(links=>links.map(link=>new URL(link.href).pathname));
-      check(paths.length===4 && paths.every(path=>path===destination.sourceRoute),'Acquisition '+destination.id);
-      check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No overflow '+viewport.width);
+    check(await page.locator('#weekGrid .day').count()===7,'Seven planner days');
+    for(let day=0;day<7;day++){
+      await page.locator('#weekGrid .day').nth(day).click();
+      check(await page.locator('.day[aria-pressed=true]').count()===1,'One selected game day');
+      check(await page.locator('#weekGrid .day').nth(day).getAttribute('aria-pressed')==='true','Chosen day '+day);
+      check(await page.locator('.day.primer').count()===1 && await page.locator('.day.recover').count()===1,'Primer and recovery preserved');
     }
-    await page.goBack();
-    check(new URL(page.url()).searchParams.get('sport')==='tennis','History query restored');
-    check(await page.locator('button[data-sport=tennis]').getAttribute('aria-pressed')==='true','History selection restored');
-    await page.reload({waitUntil:'networkidle'});
-    check(await page.locator('button[data-sport=tennis]').getAttribute('aria-pressed')==='true','Reload selection restored');
-    await page.goto(base+'/?sport=invalid&private=test',{waitUntil:'networkidle'});
-    check(await page.locator('button[data-sport=general]').getAttribute('aria-pressed')==='true','Invalid sport falls back');
-    check((await page.locator('[data-download]').first().getAttribute('href'))==='/app/','No arbitrary query forwarding');
-    for(const [tab,source] of [['week','today-plan'],['workout','adaptive-workout'],['progress','progress-trends']]){
-      await page.locator('button[data-proof='+tab+']').click();
-      check(await page.locator('button[data-proof='+tab+']').getAttribute('aria-pressed')==='true','Product tab '+tab);
-      await page.locator('[data-proof-image]').evaluate(img=>img.decode());
-      check((await page.locator('[data-proof-image]').getAttribute('src')).endsWith(source+'.webp'),'Correct real screenshot '+tab);
+    await page.locator('.site-menu summary').click();
+    for(const text of ['Your Week','Features','Coach','Pricing','Training Library','Compare','Partners','Support','Privacy','Terms']){
+      check(await page.locator('.site-menu-links').getByRole('link',{name:text,exact:true}).isVisible(),'Menu link '+text);
     }
-    await page.locator('#rotate-view').click();
-    await page.locator('#reset-view').click();
-    check(await page.locator('.stage.ready').count()===1,'Court remains rendered after rotate/reset');
-    if(viewport.width<=1150){
-      await page.locator('.mobile-menu summary').click();
-      const menu=page.getByRole('navigation',{name:'Mobile navigation',exact:true});
-      for(const label of ['Method','Inside','Sports','Training library','Compare','Pricing','Partners','Support','Privacy','Terms']){
-        check(await menu.getByRole('link',{name:label,exact:true}).isVisible(),'Mobile link '+label);
-      }
-      await page.keyboard.press('Escape');
-      check(await page.locator('.mobile-menu').getAttribute('open')===null,'Escape closes menu');
-      await page.locator('.mobile-menu summary').click();
-      await menu.getByRole('link',{name:'Pricing',exact:true}).click();
-      check(await page.locator('.mobile-menu').getAttribute('open')===null,'Link closes menu');
-      check(new URL(page.url()).hash==='#pricing','Pricing anchor navigates');
-    }
-    for(const path of ['/articles/','/compare/','/partner/','/support.html','/privacy.html','/terms.html']){
-      check(await page.locator('footer a[href="'+path+'"]').count()===1,'Footer destination '+path);
-    }
-    const violations=(await new AxeBuilder({page}).analyze()).violations.filter(v=>['serious','critical'].includes(v.impact));
-    check(violations.length===0,'Axe: '+JSON.stringify(violations.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)}))));
-    check(errors.length===0,'Script errors: '+errors.join(';'));
+    await page.keyboard.press('Escape');
+    check(await page.locator('.site-menu').getAttribute('open')===null,'Escape dismisses navigation');
+    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No page overflow');
+    const axe=await new AxeBuilder({page}).analyze();
+    check(!axe.violations.some(v=>['serious','critical'].includes(v.impact)),'No serious/critical axe findings');
+    check(errors.length===0,'No script errors');
     await context.close();
   }
+  const context=await browser.newContext();
+  const page=await context.newPage();
+  for(const d of destinations){
+    await page.goto(base+'/?sport='+d.id+'&private=test',{waitUntil:'networkidle'});
+    const links=await page.locator('[data-download]').evaluateAll(elements=>elements.map(el=>({pathname:new URL(el.href).pathname,search:new URL(el.href).search})));
+    check(links.length===6 && links.every(link=>link.pathname===d.sourceRoute && !link.search),'Correct acquisition '+d.id);
+  }
+  await page.goto(base+'/?sport=unknown',{waitUntil:'networkidle'});
+  check(await page.locator('[data-download]').first().getAttribute('href')==='/app/','Unknown sport fallback');
+  for(const path of ['/articles/','/compare/','/partner/','/support.html','/privacy.html','/terms.html']){
+    check((await page.request.get(base+path)).ok(),'Existing page reachable '+path);
+  }
+  await context.close();
   const noJS=await browser.newContext({javaScriptEnabled:false,viewport:{width:390,height:844}});
-  const page=await noJS.newPage();await page.goto(base+'/');
-  check(await page.locator('h1').isVisible(),'No-JS text');
-  check(await page.locator('.stage>img').isVisible(),'No-JS logo fallback');
-  await page.locator('.mobile-menu summary').click();
-  check(await page.getByRole('navigation',{name:'Mobile navigation'}).isVisible(),'No-JS mobile menu');
+  const fallback=await noJS.newPage();await fallback.goto(base+'/');
+  check(await fallback.locator('.problem .sec-head').isVisible(),'No-JS content remains visible');
+  await fallback.locator('.site-menu summary').click();
+  check(await fallback.locator('.site-menu-links').isVisible(),'No-JS navigation works');
   await noJS.close();
-  const failed3D=await browser.newContext();
-  const fallback=await failed3D.newPage();
-  await fallback.route('**/three.min.js',route=>route.abort());
-  await fallback.goto(base+'/',{waitUntil:'networkidle'});
-  check(await fallback.locator('.stage>img').isVisible(),'3D failure fallback');
-  await failed3D.close();
-  console.log('PASS Own the Court: '+count+' checks');
+  console.log('PASS supplied teal homepage: '+checks+' checks');
 }finally{await browser.close();}

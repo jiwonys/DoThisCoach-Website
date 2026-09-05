@@ -39,7 +39,7 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Starting proposition: “Train for your game. Not just the gym.”
 - Voice is confident, concrete, athlete-focused, and free of shame, fake urgency, or generic fitness hype.
 - Product evidence uses real DoThis screenshots. Generated athletes are illustrative campaign subjects, not customers or endorsers.
-- Homepage direction: “Own the Court,” approved on 2026-09-05. A sport-specific miniature court carries two approved flame logos embedded into the playing surface. Pine-dark backgrounds, chalk typography, lime actions, and the “Make them notice” hook support a concise sports-first story.
+- Homepage direction: the user-supplied “Train Around Your Game” HTML, adopted on 2026-09-05. Deep teal, amber actions, condensed type, and an illustrative weekly planner now define the homepage. This supersedes the prior 3D-court presentation.
 - User-approved language includes “You can be lethal,” “You just need to train like it,” and “Train with us. Become lethal.”
 
 ## Evidence on Hand
