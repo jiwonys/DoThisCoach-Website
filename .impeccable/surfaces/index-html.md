@@ -9,60 +9,53 @@ related_targets: ["home.css","home.js"]
 
 ## Scope, mode, and authority
 
-Production homepage in Persuade mode. Athlete Signal Split is the approved and shipped direction for `index.html`, `home.css`, and `home.js`; it does not redesign the native app or automatically restyle articles, comparison, support, legal, or acquisition redirect pages.
+The production homepage uses Persuade mode and the user-approved Own the Court direction (seed `55982518`). Current `index.html`, `home.css`, and `home.js` define this compact surface. This approved direction supersedes Athlete Signal Split for the homepage; other pages keep their established design and destinations.
 
-The direction contract is the first body comment in `index.html`: grounded candidate 3, seed `fc520847`, approved 2026-08-29. `PRODUCT.md` governs capabilities and claims. Asset and App Store destination manifests govern evidence and routing.
+`PRODUCT.md` remains the product-capability reference. The approved current homepage carries the Founding 200 offer. The existing asset manifest catalogs earlier campaign assets; the court uses `assets/courts/logo-shape.json` and `assets/courts/logo-face.png`.
 
 ## Audience, job, and action
 
-Adult recreational soccer, basketball, pickleball, tennis, and volleyball athletes should recognize their game, understand that DoThis builds strength work around the sport and week they set, and choose the correct App Store destination. An App Store click is not an install.
+Adult recreational athletes should recognize their sport, understand strength training around their confirmed schedule, and choose the relevant App Store page. A website click is not an install.
 
-## Finished narrative and proof
+## Approved composition
 
-1. **Hero and selector:** “You can be lethal” command, one product-truth sentence, synchronized athlete plane, all six sport choices, one primary action, and verified Premium Preview terms in the first viewport.
-2. **Week-led method:** “Your sport” and “Your week” resolve into “Next workout.”
-3. **Progress proof:** One readable, real `assets/screenshots/progress-trends.webp` screen. It stays general across sport states and its interface pixels remain unmodified.
-4. **Closing challenge:** “Make them notice” and one synchronized App Store action.
+1. Founding 200 strip: $6.99/month or $69.99/year for the first 200 users.
+2. Original navigation destinations and header App Store action.
+3. “Make them notice.” hero beside a miniature court, with “Start your 7 days free,” method link, and no-payment/no-automatic-charge copy.
+4. Six sport choices followed by “The work you do. The game you love.” and a labeled illustrative seven-day week.
+5. Closing offer and “Find your game” action, then the original supporting footer destinations.
 
-The safety aside and footer are support bands, not new narrative chapters. Campaign athletes are illustrative subjects, not customers or endorsers.
+The court contains two original flame logos embedded flat into each playing surface. There is no floating phone, athlete portrait, or app screenshot in the approved homepage. The static flame image is the fallback while the court is unavailable.
 
-## Finished visual system
+## Visual system
 
-Athlete Signal Split uses Article Night `#07090c`, Sunken Night `#0b0e12`, Chalk `#f2f4f3`, Muted Copy `#a7b0b8`, Inactive Control `#78828a`, Signal Green `#2ee68b`, Cool Arena Blue `#5b7cff`, and sport-specific accents. Archivo Black commands; Work Sans explains and labels. Fine grain, quiet rules, green/blue counterlight, low-chroma athlete imagery, compact pill actions, and one lifted Progress screen supply the material language.
-
-Do not restore Second Awakening’s serif voice, repeated awakening chapters, or three-screen pile. Do not add card-grid fitness scaffolding, fake product UI, testimonials, metrics, urgency, medical outcomes, or guaranteed performance claims.
+Use the tokens and eight-section system in `DESIGN.md`. Forest-black surfaces, warm chalk type, and stable lime controls frame a lit, matte court. Archivo Black commands; Work Sans explains. The stage remains the primary source of depth. Existing unused athlete-direction styles in `home.css` do not define this production surface.
 
 ## Sport-state contract
 
-| State | Emotional line | Accent | App Store route |
+| State | Scene label | Detail | Route |
 | --- | --- | --- | --- |
-| General | Your game still matters. | `#2ee68b` | `/app/` |
-| Soccer | Another sprint. | `#43d990` | `/app/soccer/` |
-| Basketball | Another possession. | `#f3a33b` | `/app/basketball/` |
-| Pickleball | Your feet remember. | `#c9ec52` | `/app/pickleball/` |
-| Tennis | Another set. | `#c8ef53` | `/app/tennis/` |
-| Volleyball | Jump again. | `#49d8c4` | `/app/volleyball/` |
+| General | One week. All your training. | Every game starts with the work. | `/app/` |
+| Soccer | Strength around match day. | Bring your strength to the field. | `/app/soccer/` |
+| Basketball | Your lift knows game night. | Be ready for the next possession. | `/app/basketball/` |
+| Pickleball | Training around court time. | Stay ready for one more game. | `/app/pickleball/` |
+| Tennis | Your week. Your next match. | Make the next point yours. | `/app/tennis/` |
+| Volleyball | Strength around your sport. | Bring more to the next rally. | `/app/volleyball/` |
 
-Every state synchronizes desktop and mobile media, alt text, emotional line, accent, `?sport=` URL, `aria-pressed`, roving tab stop, CTA accessible labels, and all three allowlisted App Store routes. Invalid values fall back to General; browser back and forward restore state. The Progress proof intentionally does not change by sport. Redirect pages retain their verified custom-product-page `ppid` values and do not forward arbitrary query strings.
+All six states synchronize court geometry, both copy lines, pressed state, URL, and all three `data-download` links. Unknown query values use General; back/forward restores selection. Interface lime remains constant.
 
-## Responsive, motion, and access
+General and Basketball use hoops and basketball markings. Soccer uses goals, penalty areas, and a center circle. Tennis uses a clay-toned doubles footprint, singles sidelines, service boxes, and a center-dipped net. Pickleball uses a smaller blue court, contrasting kitchen, service centerlines that stop at the kitchen, and a lower center-dipped net. Volleyball uses an (18:9) playing-area ratio, attack lines, and high hanging mesh with antennas. Both logos remain inlaid for every state.
 
-At `900px`, main navigation hides and the hero/dock proportions tighten. At `760px`, the hero stacks into a `39svh` athlete plane, copy, and a `3 × 2` selector; method and proof stack; gutters become `16px`; and the hero action fills the dock. Minimum width is `320px`.
+Preserve the six verified custom-product-page identifiers in `docs/design/app-store-destinations.json`. Redirects retain their fallbacks and do not forward arbitrary query strings.
 
-The `760px` picture source uses the six deterministic `780 × 658` derivatives documented in `assets/awakening/ASSET_MANIFEST.md` and `docs/design/asset-manifest.json`. Each preserves the athlete’s face, full stance, and equipment over a darkened blur of its approved source.
+## Navigation, responsive behavior, and access
 
-A single `620ms` signal sweep marks sport changes. Supported browsers add a restrained View Transition. Under `prefers-reduced-motion: reduce`, the sweep and View Transition animation are removed and state changes are effectively instant. Preserve the skip link, `3px` focus outline with `4px` offset, `44px` minimum touch targets, live emotional line, arrow-key wrap, Home/End selection, and meaningful non-JavaScript content.
+Desktop navigation includes Method, Inside, Sports, Training library, Compare, Pricing, Partners, and Support. At (1150px), a native details menu carries these links plus Privacy and Terms. Footer destinations remain available. Existing `#features` and `#free-preview` fragments resolve alongside `#method`, `#inside`, `#sports`, and `#pricing`.
 
-## Validation
+At (760px), copy and the (400px) court stage stack, the selector becomes three columns, and method, offer, and footer stack. Native button keyboard activation, visible (3px) focus with (5px) offset, skip link, live sport detail, and (44px) sport/reset/menu targets remain. Escape closes the mobile menu and returns focus; selection and outside clicks close it.
 
-- Finish-review disposition: `ship`.
-- UI/UX disposition: `ship`.
-- Independent beauty score: `91/100`.
-- Production suite: `503` assertions passed.
-- Lighthouse mobile: `98 / 100 / 100 / 100`; LCP `2.3s`; CLS `0`.
+Reduced motion removes pointer tilt and CSS transitions. Pointer exploration is optional; all information and acquisition actions are in HTML. WebGL or asset failure leaves the approved flame fallback. Rendering settles after movement and pauses when the stage is offscreen. Static geometry batching preserves materials and composition.
 
-## Unresolved decisions and documentation
+## Validation scope
 
-- No owner-approved founder statement was supplied, so none was fabricated.
-- Premium prices and renewal terms remain unpublished until reverified and approved.
-- Physical-iPhone verification of each custom App Store gallery remains separate from browser route verification.
+This documentation refresh describes the current source after the approved ship decision. Current production validation belongs to the release QA report; earlier Athlete Signal Split assertion counts, Lighthouse scores, and beauty scores do not validate this court homepage. Native iPhone custom-product-page gallery verification remains distinct from route verification.

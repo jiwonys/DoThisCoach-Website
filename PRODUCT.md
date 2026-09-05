@@ -30,7 +30,7 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Existing URLs, metadata, canonical URLs, sitemap behavior, legal/support pages, and current analytics semantics must be preserved.
 - The website must not imply medical outcomes, guaranteed performance, installs, or capabilities unsupported by the shipping app.
 - The one-time 7-day Premium Preview begins after the first personalized workout is ready, requires no payment, and does not charge automatically. After it ends, local workouts, logs, and progress remain available; new personalized AI features and cloud sync require Premium.
-- Premium pricing, renewal terms, testimonials, and publication claims remain open until reverified and approved.
+- The user-approved Founding 200 promotion is $6.99 per month or $69.99 per year for the first 200 users. The website must not invent remaining availability or price-lock duration.
 
 ## Brand Commitments
 
@@ -39,7 +39,7 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Starting proposition: “Train for your game. Not just the gym.”
 - Voice is confident, concrete, athlete-focused, and free of shame, fake urgency, or generic fitness hype.
 - Product evidence uses real DoThis screenshots. Generated athletes are illustrative campaign subjects, not customers or endorsers.
-- Homepage direction: “Second Awakening.” It should create desire, mystery, and recognition before explanation. The central promise is that the athlete never disappeared; they need to train like one again.
+- Homepage direction: “Own the Court,” approved on 2026-09-05. A sport-specific miniature court carries two approved flame logos embedded into the playing surface. Pine-dark backgrounds, chalk typography, lime actions, and the “Make them notice” hook support a concise sports-first story.
 - User-approved language includes “You can be lethal,” “You just need to train like it,” and “Train with us. Become lethal.”
 
 ## Evidence on Hand

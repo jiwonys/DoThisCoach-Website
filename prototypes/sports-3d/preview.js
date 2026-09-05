@@ -24,10 +24,6 @@
     if (updateURL) { const url = new URL(location.href); url.searchParams.set('sport', sport); history.pushState({}, '', url); }
   }
   buttons.forEach(button => button.addEventListener('click', () => select(button.dataset.sport)));
-  const menu=document.querySelector('.mobile-menu');
-  menu?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.open=false;}));
-  document.addEventListener('keydown',event=>{if(event.key==='Escape' && menu?.open){menu.open=false;menu.querySelector('summary').focus();}});
-  document.addEventListener('click',event=>{if(menu?.open && !menu.contains(event.target))menu.open=false;});
   addEventListener('popstate', () => select(new URL(location.href).searchParams.get('sport'), false));
   select(new URL(location.href).searchParams.get('sport'), false);
   if (!window.THREE || !document.querySelector('#court')) return;
@@ -115,30 +111,6 @@
     const rim = new T.Mesh(new T.TorusGeometry(.21,.023,8,40),orange); rim.rotation.x=Math.PI/2; rim.position.set(x+(x>0?-.28:.28),1.27,0); lines.add(rim);
   }
   function disposeGroup(group) { while(group.children.length){const c=group.children[0];c.geometry?.dispose();group.remove(c);} }
-  function batchCourtMeshes() {
-    // Combine static pieces sharing a material/shadow state to reduce draw calls.
-    const batches=new Map();
-    for(const mesh of lines.children){
-      mesh.updateMatrix();
-      const geometry=mesh.geometry.index?mesh.geometry.toNonIndexed():mesh.geometry.clone();
-      geometry.applyMatrix4(mesh.matrix);
-      const key=mesh.material.uuid+':'+mesh.castShadow+':'+mesh.receiveShadow;
-      if(!batches.has(key))batches.set(key,{material:mesh.material,cast:mesh.castShadow,receive:mesh.receiveShadow,geometries:[]});
-      batches.get(key).geometries.push(geometry);
-    }
-    disposeGroup(lines);
-    for(const batch of batches.values()){
-      const merged=new T.BufferGeometry();
-      for(const name of ['position','normal','uv']){
-        const length=batch.geometries.reduce((sum,g)=>sum+g.attributes[name].array.length,0);
-        const data=new Float32Array(length);let offset=0;
-        for(const geometry of batch.geometries){const values=geometry.attributes[name].array;data.set(values,offset);offset+=values.length;}
-        merged.setAttribute(name,new T.BufferAttribute(data,name==='uv'?2:3));
-      }
-      batch.geometries.forEach(g=>g.dispose());
-      const mesh=new T.Mesh(merged,batch.material);mesh.castShadow=batch.cast;mesh.receiveShadow=batch.receive;lines.add(mesh);
-    }
-  }
   updateCourt = (sport) => {
     disposeGroup(lines);
     placeCourtLogos(sport);
@@ -181,15 +153,14 @@
       line(-3.1,0,-nonVolley,0);line(nonVolley,0,3.1,0);
       net({width:halfWidth*2+.28,top:.48,center:.48*34/36});
     }
-    batchCourtMeshes();
     queue();
   };
   // Shallow logo inlays follow the playing surface, below the court markings.
   // Front UVs retain the original artwork; lighting and net shadows affect the finish.
   let logoReady=false;
   Promise.all([
-    fetch('/assets/courts/logo-shape.json').then(response=>{if(!response.ok)throw Error('Logo shape unavailable');return response.json();}),
-    new Promise((resolve,reject)=>new T.TextureLoader().load('/assets/courts/logo-face.png',resolve,undefined,reject))
+    fetch('logo-shape.json').then(response=>{if(!response.ok)throw Error('Logo shape unavailable');return response.json();}),
+    new Promise((resolve,reject)=>new T.TextureLoader().load('logo-face.png',resolve,undefined,reject))
   ]).then(([artwork,texture])=>{
     const height=1.15,width=height*artwork.width/artwork.height;
     const convert=points=>points.map(([x,y])=>new T.Vector2((x-.5)*width,(.5-y)*height));
