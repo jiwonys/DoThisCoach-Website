@@ -1,5 +1,7 @@
 # Supplied teal homepage release
 
+2026-09-06 correction: the website ticker now matches the 11 standard app-picker entries in `lib/sportCatalog.ts`; see `sport-catalog-verification.md`. Planner tracks have a 124px minimum width and safely wrapping titles. A rendered 390px mobile check confirmed Conditioning has equal 102px client/scroll widths. The expanded regression suite passes 236 checks, including glyph-bound checks after every game-day selection at five viewport widths.
+
 User requested adopting the color scheme, design, and content of `dothis-website.html` and pushing the website. The supplied page is used directly, with its inline CSS and JavaScript, rather than recreating its visual design.
 
 Integration retains existing Training Library, Compare, Partners, Support, Privacy, and Terms destinations; the active Founding 200 offer; fixed sport acquisition routes; and metadata. Accessibility fixes improve secondary text contrast, primary navigation contrast, heading order, and planner button focus/names. The planner is labeled illustrative. Non-JavaScript readers retain visible page content and native navigation.

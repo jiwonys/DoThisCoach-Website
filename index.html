@@ -112,9 +112,9 @@
   .planner-head .eyebrow{ color:var(--mint); }
   .planner-hint{ font-family:var(--mono); font-size:12px; color:var(--line-dim); }
   .week{
-    display:grid; grid-template-columns:repeat(7,1fr); gap:10px;
+    display:grid; grid-template-columns:repeat(7,minmax(124px,1fr)); gap:10px; overflow-x:auto;
   }
-  @media(max-width:860px){ .week{ grid-template-columns:repeat(7,minmax(96px,1fr)); overflow-x:auto; padding-bottom:8px; scroll-snap-type:x proximity; } .day{ scroll-snap-align:start; } }
+  @media(max-width:860px){ .week{ padding-bottom:8px; scroll-snap-type:x proximity; } .day{ scroll-snap-align:start; } }
   .day{
     background:transparent;
     border:1.5px solid var(--line-faint);
@@ -135,7 +135,7 @@
     padding:3px 7px; border-radius:5px; align-self:flex-start;
     border:1px solid var(--line-faint); color:var(--line-dim);
   }
-  .day .dtitle{ font-family:var(--disp); font-size:17px; text-transform:uppercase; line-height:1.05; letter-spacing:.02em; }
+  .day .dtitle{ font-family:var(--disp); font-size:17px; text-transform:uppercase; line-height:1.05; letter-spacing:.02em; min-width:0; max-width:100%; overflow-wrap:anywhere; }
   .day .ddesc{ font-size:12.5px; color:var(--line-dim); line-height:1.45; }
   .day.game{
     border-color:var(--zone); background:color-mix(in srgb, var(--zone) 16%, transparent);
@@ -351,7 +351,8 @@
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track" id="ticker">
-    <span>Volleyball <b>·</b> Soccer <b>·</b> Basketball <b>·</b> Tennis <b>·</b> Climbing <b>·</b> Pickleball <b>·</b> Hockey <b>·</b> Flag football <b>·</b> Badminton <b>·</b> Rugby <b>·</b> Softball <b>·</b> Ultimate <b>·</b>&nbsp;</span>
+    <!-- Matches the app's canonical picker in lib/sportCatalog.ts. -->
+    <span>Basketball <b>·</b> Tennis <b>·</b> Pickleball <b>·</b> Soccer <b>·</b> Volleyball <b>·</b> Beach Volleyball <b>·</b> Baseball <b>·</b> Softball <b>·</b> Badminton <b>·</b> Bodybuilding <b>·</b> General Athlete <b>·</b>&nbsp;</span>
   </div>
 </div>
 

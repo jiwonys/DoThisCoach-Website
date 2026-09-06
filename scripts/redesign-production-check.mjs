@@ -13,7 +13,7 @@ for(const d of destinations){
 }
 const browser=await chromium.launch();
 try{
-  for(const width of [360,390,768,1440]){
+  for(const width of [360,390,768,900,1440]){
     const context=await browser.newContext({viewport:{width,height:844},reducedMotion:'reduce'});
     const page=await context.newPage();const errors=[];
     page.on('pageerror',error=>errors.push(error.message));
@@ -24,6 +24,12 @@ try{
       check(await page.locator('.day[aria-pressed=true]').count()===1,'One selected game day');
       check(await page.locator('#weekGrid .day').nth(day).getAttribute('aria-pressed')==='true','Chosen day '+day);
       check(await page.locator('.day.primer').count()===1 && await page.locator('.day.recover').count()===1,'Primer and recovery preserved');
+      const overflowing=await page.locator('.day .dtitle').evaluateAll(titles=>titles.filter(title=>{
+        const range=document.createRange();range.selectNodeContents(title);
+        const glyphs=range.getBoundingClientRect(),box=title.getBoundingClientRect();
+        return glyphs.right>box.right+1 || glyphs.left<box.left-1;
+      }).map(title=>title.textContent));
+      check(overflowing.length===0,'Planner titles fit at '+width+'px: '+overflowing.join(', '));
     }
     await page.locator('.site-menu summary').click();
     for(const text of ['Your Week','Features','Coach','Pricing','Training Library','Compare','Partners','Support','Privacy','Terms']){
