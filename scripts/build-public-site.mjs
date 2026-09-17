@@ -12,13 +12,14 @@ const publicFiles = [
   "home.css",
   "home.js",
   "index.html",
+  "footage.html",
   "privacy.html",
   "robots.txt",
   "script.js",
   "sitemap.xml",
   "styles.css",
   "support.html",
-  "terms.html"
+  "terms.html",
 ];
 
 const publicDirectories = ["app", "articles", "assets", "compare", "partner"];
@@ -31,14 +32,25 @@ for (const file of publicFiles) {
 }
 
 for (const directory of publicDirectories) {
-  await cp(resolve(root, directory), resolve(output, directory), { recursive: true });
+  await cp(resolve(root, directory), resolve(output, directory), {
+    recursive: true,
+    // These are superseded, unreferenced film experiments. Keep source work,
+    // but do not publish it with the approved stock-footage homepage.
+    filter: (source) =>
+      ![
+        resolve(root, "assets/center-court"),
+        resolve(root, "assets/next-game/film"),
+      ].some(
+        (excluded) => source === excluded || source.startsWith(`${excluded}/`),
+      ),
+  });
 }
 
 const pruneProvenanceSidecars = async (directory) => {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
     const target = resolve(directory, entry.name);
     if (entry.isDirectory()) await pruneProvenanceSidecars(target);
-    else if (entry.name.endsWith(".webp.json")) await rm(target);
+    else if (/\.(webp|jpe?g|png)\.json$/.test(entry.name)) await rm(target);
   }
 };
 

@@ -1,0 +1,537 @@
+{
+  "createdAt": "2026-09-05",
+  "assets": [
+    {
+      "id": "next-general-athlete",
+      "path": "assets/next-game/general-athlete.webp",
+      "source": "assets/awakening/general.webp",
+      "kind": "illustrative_campaign_image",
+      "sport": "general",
+      "dimensions": {
+        "width": 760,
+        "height": 931
+      },
+      "treatment": "Deterministic removal of unused upper background and resizing. No generative editing.",
+      "approval": "Derivative of existing approved campaign asset; not a customer endorsement."
+    },
+    {
+      "id": "next-general-athlete-week",
+      "path": "assets/next-game/general-athlete-week.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/general-athlete/iphone-6.9-1320x2868/athlete-week.png",
+      "kind": "native_app_screenshot",
+      "sport": "general (volleyball example)",
+      "feature": "athlete-week",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-general-workout",
+      "path": "assets/next-game/general-workout.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/general-athlete/iphone-6.9-1320x2868/workout.png",
+      "kind": "native_app_screenshot",
+      "sport": "general (volleyball example)",
+      "feature": "workout",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-general-coach",
+      "path": "assets/next-game/general-coach.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/general-athlete/iphone-6.9-1320x2868/coach.png",
+      "kind": "native_app_screenshot",
+      "sport": "general (volleyball example)",
+      "feature": "coach",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-general-fuel",
+      "path": "assets/next-game/general-fuel.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/general-athlete/iphone-6.9-1320x2868/fuel.png",
+      "kind": "native_app_screenshot",
+      "sport": "general (volleyball example)",
+      "feature": "fuel",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-general-progress",
+      "path": "assets/next-game/general-progress.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/general-athlete/iphone-6.9-1320x2868/progress.png",
+      "kind": "native_app_screenshot",
+      "sport": "general (volleyball example)",
+      "feature": "progress",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-soccer-athlete",
+      "path": "assets/next-game/soccer-athlete.webp",
+      "source": "assets/awakening/soccer.webp",
+      "kind": "illustrative_campaign_image",
+      "sport": "soccer",
+      "dimensions": {
+        "width": 760,
+        "height": 931
+      },
+      "treatment": "Deterministic removal of unused upper background and resizing. No generative editing.",
+      "approval": "Derivative of existing approved campaign asset; not a customer endorsement."
+    },
+    {
+      "id": "next-soccer-athlete-week",
+      "path": "assets/next-game/soccer-athlete-week.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/soccer/iphone-6.9-1320x2868/athlete-week.png",
+      "kind": "native_app_screenshot",
+      "sport": "soccer",
+      "feature": "athlete-week",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-soccer-workout",
+      "path": "assets/next-game/soccer-workout.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/soccer/iphone-6.9-1320x2868/workout.png",
+      "kind": "native_app_screenshot",
+      "sport": "soccer",
+      "feature": "workout",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-soccer-coach",
+      "path": "assets/next-game/soccer-coach.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/soccer/iphone-6.9-1320x2868/coach.png",
+      "kind": "native_app_screenshot",
+      "sport": "soccer",
+      "feature": "coach",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-soccer-fuel",
+      "path": "assets/next-game/soccer-fuel.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/soccer/iphone-6.9-1320x2868/fuel.png",
+      "kind": "native_app_screenshot",
+      "sport": "soccer",
+      "feature": "fuel",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-soccer-progress",
+      "path": "assets/next-game/soccer-progress.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/soccer/iphone-6.9-1320x2868/progress.png",
+      "kind": "native_app_screenshot",
+      "sport": "soccer",
+      "feature": "progress",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-basketball-athlete",
+      "path": "assets/next-game/basketball-athlete.webp",
+      "source": "assets/awakening/basketball.webp",
+      "kind": "illustrative_campaign_image",
+      "sport": "basketball",
+      "dimensions": {
+        "width": 760,
+        "height": 931
+      },
+      "treatment": "Deterministic removal of unused upper background and resizing. No generative editing.",
+      "approval": "Derivative of existing approved campaign asset; not a customer endorsement."
+    },
+    {
+      "id": "next-basketball-athlete-week",
+      "path": "assets/next-game/basketball-athlete-week.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/basketball/iphone-6.9-1320x2868/athlete-week.png",
+      "kind": "native_app_screenshot",
+      "sport": "basketball",
+      "feature": "athlete-week",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-basketball-workout",
+      "path": "assets/next-game/basketball-workout.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/basketball/iphone-6.9-1320x2868/workout.png",
+      "kind": "native_app_screenshot",
+      "sport": "basketball",
+      "feature": "workout",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-basketball-coach",
+      "path": "assets/next-game/basketball-coach.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/basketball/iphone-6.9-1320x2868/coach.png",
+      "kind": "native_app_screenshot",
+      "sport": "basketball",
+      "feature": "coach",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-basketball-fuel",
+      "path": "assets/next-game/basketball-fuel.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/basketball/iphone-6.9-1320x2868/fuel.png",
+      "kind": "native_app_screenshot",
+      "sport": "basketball",
+      "feature": "fuel",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-basketball-progress",
+      "path": "assets/next-game/basketball-progress.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/basketball/iphone-6.9-1320x2868/progress.png",
+      "kind": "native_app_screenshot",
+      "sport": "basketball",
+      "feature": "progress",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-pickleball-athlete",
+      "path": "assets/next-game/pickleball-athlete.webp",
+      "source": "assets/awakening/pickleball.webp",
+      "kind": "illustrative_campaign_image",
+      "sport": "pickleball",
+      "dimensions": {
+        "width": 760,
+        "height": 931
+      },
+      "treatment": "Deterministic removal of unused upper background and resizing. No generative editing.",
+      "approval": "Derivative of existing approved campaign asset; not a customer endorsement."
+    },
+    {
+      "id": "next-pickleball-athlete-week",
+      "path": "assets/next-game/pickleball-athlete-week.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/pickleball/iphone-6.9-1320x2868/athlete-week.png",
+      "kind": "native_app_screenshot",
+      "sport": "pickleball",
+      "feature": "athlete-week",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-pickleball-workout",
+      "path": "assets/next-game/pickleball-workout.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/pickleball/iphone-6.9-1320x2868/workout.png",
+      "kind": "native_app_screenshot",
+      "sport": "pickleball",
+      "feature": "workout",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-pickleball-coach",
+      "path": "assets/next-game/pickleball-coach.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/pickleball/iphone-6.9-1320x2868/coach.png",
+      "kind": "native_app_screenshot",
+      "sport": "pickleball",
+      "feature": "coach",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-pickleball-fuel",
+      "path": "assets/next-game/pickleball-fuel.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/pickleball/iphone-6.9-1320x2868/fuel.png",
+      "kind": "native_app_screenshot",
+      "sport": "pickleball",
+      "feature": "fuel",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-pickleball-progress",
+      "path": "assets/next-game/pickleball-progress.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/pickleball/iphone-6.9-1320x2868/progress.png",
+      "kind": "native_app_screenshot",
+      "sport": "pickleball",
+      "feature": "progress",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-tennis-athlete",
+      "path": "assets/next-game/tennis-athlete.webp",
+      "source": "assets/awakening/tennis.webp",
+      "kind": "illustrative_campaign_image",
+      "sport": "tennis",
+      "dimensions": {
+        "width": 760,
+        "height": 931
+      },
+      "treatment": "Deterministic removal of unused upper background and resizing. No generative editing.",
+      "approval": "Derivative of existing approved campaign asset; not a customer endorsement."
+    },
+    {
+      "id": "next-tennis-athlete-week",
+      "path": "assets/next-game/tennis-athlete-week.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/tennis/iphone-6.9-1320x2868/athlete-week.png",
+      "kind": "native_app_screenshot",
+      "sport": "tennis",
+      "feature": "athlete-week",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-tennis-workout",
+      "path": "assets/next-game/tennis-workout.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/tennis/iphone-6.9-1320x2868/workout.png",
+      "kind": "native_app_screenshot",
+      "sport": "tennis",
+      "feature": "workout",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-tennis-coach",
+      "path": "assets/next-game/tennis-coach.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/tennis/iphone-6.9-1320x2868/coach.png",
+      "kind": "native_app_screenshot",
+      "sport": "tennis",
+      "feature": "coach",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-tennis-fuel",
+      "path": "assets/next-game/tennis-fuel.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/tennis/iphone-6.9-1320x2868/fuel.png",
+      "kind": "native_app_screenshot",
+      "sport": "tennis",
+      "feature": "fuel",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-tennis-progress",
+      "path": "assets/next-game/tennis-progress.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/tennis/iphone-6.9-1320x2868/progress.png",
+      "kind": "native_app_screenshot",
+      "sport": "tennis",
+      "feature": "progress",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-volleyball-athlete",
+      "path": "assets/next-game/volleyball-athlete.webp",
+      "source": "assets/awakening/volleyball.webp",
+      "kind": "illustrative_campaign_image",
+      "sport": "volleyball",
+      "dimensions": {
+        "width": 760,
+        "height": 931
+      },
+      "treatment": "Deterministic removal of unused upper background and resizing. No generative editing.",
+      "approval": "Derivative of existing approved campaign asset; not a customer endorsement."
+    },
+    {
+      "id": "next-volleyball-athlete-week",
+      "path": "assets/next-game/volleyball-athlete-week.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/volleyball/iphone-6.9-1320x2868/athlete-week.png",
+      "kind": "native_app_screenshot",
+      "sport": "volleyball",
+      "feature": "athlete-week",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-volleyball-workout",
+      "path": "assets/next-game/volleyball-workout.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/volleyball/iphone-6.9-1320x2868/workout.png",
+      "kind": "native_app_screenshot",
+      "sport": "volleyball",
+      "feature": "workout",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-volleyball-coach",
+      "path": "assets/next-game/volleyball-coach.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/volleyball/iphone-6.9-1320x2868/coach.png",
+      "kind": "native_app_screenshot",
+      "sport": "volleyball",
+      "feature": "coach",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-volleyball-fuel",
+      "path": "assets/next-game/volleyball-fuel.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/volleyball/iphone-6.9-1320x2868/fuel.png",
+      "kind": "native_app_screenshot",
+      "sport": "volleyball",
+      "feature": "fuel",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    },
+    {
+      "id": "next-volleyball-progress",
+      "path": "assets/next-game/volleyball-progress.webp",
+      "source": "../DoThis/appstore/cpp-system/raw-simulator/volleyball/iphone-6.9-1320x2868/progress.png",
+      "kind": "native_app_screenshot",
+      "sport": "volleyball",
+      "feature": "progress",
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
+      "treatment": "Full unmodified screenshot resized and encoded as WebP.",
+      "approval": "Real simulator UI from fictional staging account. Source privacy audit passed."
+    }
+  ],
+  "film": {
+    "source": "Higgsfield Seedance 2.5",
+    "jobId": "822fddb9-92b6-48f6-80f1-57327ae5f988",
+    "kind": "illustrative_campaign_video",
+    "sport": "tennis",
+    "authorization": "User explicitly authorized Higgsfield athlete animation on 2026-09-05",
+    "provenance": "docs/design/next-game/film-provenance.json",
+    "outputs": [
+      {
+        "path": "assets/next-game/film/tennis-desktop.mp4",
+        "dimensions": {
+          "width": 1280,
+          "height": 720
+        },
+        "bytes": 1070346
+      },
+      {
+        "path": "assets/next-game/film/tennis-mobile.mp4",
+        "dimensions": {
+          "width": 768,
+          "height": 432
+        },
+        "bytes": 299274
+      },
+      {
+        "path": "assets/next-game/film/tennis-poster.webp",
+        "dimensions": {
+          "width": 1280,
+          "height": 720
+        },
+        "bytes": 36068
+      }
+    ]
+  }
+}

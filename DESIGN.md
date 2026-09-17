@@ -1,307 +1,190 @@
 ---
-name: "DoThis — Community Sports Club"
-description: "A daylight season program for recreational athletes, grounded in real DoThis product evidence."
+name: DoThis — Film first / Match Night
+description: The built dark and emerald homepage system, extracted from src/home.css, index.html, and home.js on 2026-09-17.
 colors:
-  pine: "#245b4a"
-  pine-hover: "#193f34"
-  clay: "#b44f2e"
-  sage: "#e0e9df"
-  paper: "#f6f8f5"
-  white: "#fff"
-  ink: "#192f2b"
-  muted: "#56685f"
-  line: "#ccd7ce"
+  bg: "#0d0d14"
+  surface: "#13131c"
+  ink: "#f5f0e8"
+  muted: "#a7a7bc"
+  accent: "#10b981"
+  line: "#2a2a3a"
+  on-accent: "#06120c"
+  accent-hover: "#49d5a6"
+  media-note: "#d1d1db"
 typography:
   display:
-    fontFamily: "Archivo Black, sans-serif"
-    fontSize: "clamp(58px, 6.9vw, 96px)"
+    fontFamily: "Archivo, sans-serif"
+    fontSize: "clamp(60px, 6.55vw, 96px)"
     fontWeight: 400
     lineHeight: 1.02
-    letterSpacing: "-0.04em"
+    letterSpacing: "-0.035em"
   headline:
-    fontFamily: "Archivo Black, sans-serif"
-    fontSize: "clamp(34px, 3.4vw, 50px)"
-    fontWeight: 400
+    fontFamily: "Work, sans-serif"
+    fontSize: "clamp(34px, 3.7vw, 54px)"
+    fontWeight: 550
     lineHeight: 1.12
     letterSpacing: "-0.035em"
   title:
-    fontFamily: "Work Sans, sans-serif"
-    fontSize: "24px"
-    fontWeight: 650
-    lineHeight: 1.25
-    letterSpacing: "-0.025em"
+    fontFamily: "Work, sans-serif"
+    fontSize: "40px"
+    fontWeight: 500
+    lineHeight: 1.15
+    letterSpacing: "-0.035em"
   body:
-    fontFamily: "Work Sans, sans-serif"
-    fontSize: "16px"
-    fontWeight: 400
-    lineHeight: 1.65
-  body-compact:
-    fontFamily: "Work Sans, sans-serif"
-    fontSize: "14px"
-    fontWeight: 400
-    lineHeight: 1.65
+    fontFamily: "Work, sans-serif"
+    fontSize: "17px"
+    lineHeight: 1.7
   action:
-    fontFamily: "Work Sans, sans-serif"
-    fontSize: "14px"
-    fontWeight: 600
-    lineHeight: 1.4
+    fontFamily: "Work, sans-serif"
+    fontSize: "15px"
+    fontWeight: 650
+  control:
+    fontFamily: "Work, sans-serif"
+    fontSize: "13px"
 rounded:
-  option: "5px"
-  control: "6px"
-  day: "8px"
-  panel: "14px"
+  selector: "3px"
+  control: "4px"
+  screen: "18px"
 spacing:
-  gutter: "clamp(22px, 4.45vw, 72px)"
-  xs: "8px"
-  sm: "12px"
-  md: "16px"
-  lg: "24px"
-  xl: "32px"
-  xxl: "40px"
+  mobile-gutter: "22px"
+  hero-gutter: "4.5vw"
+  section-gutter: "6vw"
+  section: "100px"
+  section-mobile: "65px"
 components:
   button-primary:
-    backgroundColor: "{colors.pine}"
-    textColor: "{colors.white}"
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.on-accent}"
     typography: "{typography.action}"
     rounded: "{rounded.control}"
-    padding: "16px 23px"
+    padding: "16px 24px"
   button-primary-hover:
-    backgroundColor: "{colors.pine-hover}"
-  button-light:
-    backgroundColor: "{colors.white}"
-    textColor: "{colors.pine}"
-    typography: "{typography.action}"
-    rounded: "{rounded.control}"
-    padding: "16px 23px"
-  button-light-hover:
-    backgroundColor: "{colors.sage}"
-  button-outline:
-    backgroundColor: "transparent"
-    textColor: "{colors.pine}"
-    typography: "{typography.action}"
-    rounded: "{rounded.control}"
-    padding: "16px 23px"
-  button-outline-hover:
-    backgroundColor: "{colors.sage}"
-  sport-option:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.option}"
-    padding: "8px 15px"
-  sport-option-selected:
-    backgroundColor: "{colors.pine}"
-    textColor: "{colors.white}"
-  training-choice:
-    backgroundColor: "{colors.white}"
+    backgroundColor: "{colors.accent-hover}"
+  sport-selected:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.on-accent}"
+    rounded: "{rounded.selector}"
+    padding: "10px 15px"
+  billing-selected:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.on-accent}"
+    typography: "{typography.control}"
+    rounded: "{rounded.selector}"
+    padding: "10px 20px"
+  film-control:
+    backgroundColor: "#0d0d14b3"
     textColor: "{colors.ink}"
     rounded: "{rounded.control}"
-    padding: "10px 14px"
-  training-choice-selected:
-    backgroundColor: "{colors.pine}"
-    textColor: "{colors.white}"
-  feature-tab:
-    backgroundColor: "transparent"
-    textColor: "{colors.muted}"
-    rounded: "{rounded.option}"
-    padding: "9px 11px"
-  feature-tab-selected:
-    backgroundColor: "{colors.pine}"
-    textColor: "{colors.white}"
-  week-panel:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.panel}"
-    padding: "28px"
-  week-day:
-    backgroundColor: "{colors.sage}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.day}"
-    padding: "14px 12px 18px"
-  week-day-match:
-    backgroundColor: "{colors.clay}"
-    textColor: "{colors.white}"
-  plan-card:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.panel}"
-    padding: "34px"
-  plan-card-premium:
-    backgroundColor: "{colors.pine}"
-    textColor: "{colors.white}"
-  navigation:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-  faq-row:
-    textColor: "{colors.ink}"
-    padding: "20px 0"
+    padding: "8px 12px"
 ---
-
-# Design System: DoThis — Community Sports Club
+# Design System: DoThis
 
 ## Overview
 
-**Creative North Star: "The Community Sports Club Season Program"**
+**Creative North Star: "Film first / Match Night"**
 
-DoThis borrows the clarity of a community sports club's printed season program: daylight paper, evergreen ink, bold athletic lettering, and clay marking the match. The mood is capable, welcoming, and practical. It belongs to adults who fit strength training around the games they enjoy.
+The selected Film first direction uses real athletic movement, a continuous near-black field, warm readable text, and emerald actions. Broad photographic areas supply energy; quiet two-column passages and authentic app screens explain what DoThis does. Controls are compact, flat, and visibly interactive.
 
-Real product evidence carries the visual argument. Spacious text-and-image compositions alternate with tonal sections and useful schedule, selector, and disclosure patterns. The approved DoThis icon and wordmark treatment remain intact; the founder's beach volleyball example sits within a broad recreational-sport identity.
-
-This is a refresh of the incumbent system following the authorized September 17, 2026 redesign. The finished `index.html`, `home.css`, and `home.js` replace the earlier teal-and-amber homepage as the visual source of truth. Product commitments remain in `PRODUCT.md`; homepage composition and release scope remain in `.impeccable/surfaces/index-html.md` and `docs/design/sport-coach-direction.md`.
+This records the completed local homepage implementation authorized by the user’s September 17 selection of proposal A. It supersedes the former ivory homepage system, preserved under `docs/design/beyond-the-court/pre-full-homepage/`. The unchanged approved logo, authentic product evidence, and athlete-controlled training decisions remain binding product constraints. Publication requires separate approval. The first body comment in `index.html` and `docs/design/beyond-the-court/DIRECTION.md` record direction authority; the page sequence belongs in the homepage surface brief.
 
 **Key Characteristics:**
 
-- Pale paper and sage surfaces with pine actions and ink text.
-- Archivo Black display type paired with readable Work Sans.
-- Real native screenshots and complete approved App Store boards.
-- Flat information surfaces, thin dividers, and modest rounded corners.
-- Explicit selected states, visible focus, and native disclosures.
+- Real stock film and photographic posters on continuous dark ground.
+- Emerald actions and selected states, with warm primary text and muted explanatory copy.
+- Archivo Black display lettering paired with Work Sans reading and controls.
+- Unchanged native app screenshots, flat ruled sections, and text-only film controls.
 
 ## Colors
 
-The palette combines daylight neutrals with evergreen structure and a restrained clay signal; the frontmatter preserves the exact source values.
+The palette follows the native Dark world: near-black ground, subtly raised dark sections, warm off-white text, cool muted copy, and one emerald accent. The frontmatter is the normative value record; CSS aliases are `--bg`, `--surface`, `--ink`, `--muted`, `--accent`, and `--line`.
 
 ### Primary
 
-- **Pine** is the primary action, selected-state, headline-emphasis, and dark-section color.
-- **Pine Hover** deepens primary buttons on pointer hover.
-
-### Secondary
-
-- **Clay** identifies the illustrative match day, keyboard focus, and hovered navigation links.
-- **Sage** provides the announcement, screenshot mounts, schedule days, pricing backdrop, and light-action hover surfaces.
+- **Emerald action:** primary actions, selected sports and billing, feature underlines, links, keyboard focus, and the emphasized hero line.
+- **Bright emerald hover:** primary-button feedback.
+- **On-accent ink:** readable dark lettering on emerald actions and selection.
 
 ### Neutral
 
-- **Paper** is the default page canvas and the light panel color inside darker sections.
-- **White** carries reversed action text and light buttons, and provides discrete control and menu surfaces.
-- **Ink** is the principal body and heading color.
-- **Muted** carries supporting descriptions, captions, and secondary labels on light surfaces.
-- **Line** supplies thin dividers and unselected-control borders.
+- **Night ground:** continuous page and film fallback background.
+- **Dark surface:** product proof, membership, billing contrast, and mobile navigation.
+- **Warm primary text:** headings, selected feature labels, film controls, and main reading text.
+- **Cool muted copy:** supporting paragraphs, unselected selectors, captions, and footer copy.
+- **Quiet rule:** section separation and disclosure boundaries.
+- **Media note:** short supporting notes over photographic fields.
 
-### Named Rules
-
-**The Pine Action Rule.** Use pine for the main action and the selected state; reserve clay for match emphasis, focus, and navigation feedback.
+**The Accent Has a Job Rule.** Use emerald for actions, selected states, focus, and deliberate display emphasis; keep reading surfaces dark and preserve natural photographic color.
 
 ## Typography
 
-**Display Font:** Archivo Black with a sans-serif fallback.
-**Body Font:** Work Sans with a sans-serif fallback.
+**Display Font:** Archivo Black, declared locally as `Archivo`, with `sans-serif` fallback.
+**Body Font:** Work Sans variable, declared locally as `Work`, with `sans-serif` fallback.
 
-Both families are licensed local WOFF2 assets under `assets/fonts/`. Archivo Black uses its actual regular weight; Work Sans supplies the text and control weights. No external font request is required.
+Both families load local WOFF2 assets with `font-display: swap`. Archivo is declared at weight (400); Work supports (100–900). These are aliases for the licensed branded families, not replacement fonts. License files live under `assets/fonts/`.
 
-**Character:** Wide, dense display letters give the page its sporting voice. Work Sans keeps explanations, prices, navigation, and controls direct and readable.
+The hierarchy moves from heavy uppercase display to medium-weight, sentence-case explanation. The display and headline roles are in the frontmatter. The product title uses the title role with a (13ch) maximum width. Body paragraphs generally use (16–18px), line heights (1.65–1.75), and widths around (41–45ch). Supporting product terms use (12px), while FAQ answers use (15px). Small captions and media notes are (11–12px). Price figures use tabular numerals.
 
-### Hierarchy
+At (650px) and below, the hero display becomes `clamp(40px, 10.8vw, 66px)` with line height (1.07); product titles become (34px) with a (15ch) limit. Closing display uses its own smaller scale: `clamp(40px, 5.5vw, 80px)` on desktop and `clamp(38px, 10.8vw, 60px)` on mobile. Section-specific size adjustments preserve hierarchy rather than forcing every heading to the hero scale.
 
-- **Display:** The frontmatter records the desktop hero role. The hero and closing call to action use uppercase, compact leading, and deliberate line breaks; closing display size is adjusted to its own composition.
-- **Headline:** Reused section headings use the responsive Archivo Black role, balanced wrapping, and sentence case.
-- **Title:** Work Sans titles use medium-heavy emphasis. The reusable base is the frontmatter title role; local component sizes range from compact schedule headings to larger session results.
-- **Body:** The normal page base is the frontmatter body role. Longer product explanations commonly use the compact body role; hero and introductory paragraphs are enlarged where the composition calls for them.
-- **Action:** Work Sans semibold carries the main button role. Navigation, sport options, and feature tabs use more compact component-specific sizes.
-- **Supporting text:** Captions and legal or offer notes are subordinate to the content they qualify. Their small source sizes are local treatments, not a general-purpose label scale.
-
-### Named Rules
-
-**The Two Voice Rule.** Use Archivo Black for display, section headings, and large prices; use Work Sans for explanations, controls, navigation, and supporting detail.
+**The Athletic Display Rule.** Reserve Archivo for the largest athletic statements; use Work for explanations, product evidence, navigation, and controls.
 
 ## Layout
 
-The shared content wrapper is capped at 1392px including its fluid gutters. The gutter token grows from 22px to 72px. Desktop compositions generally pair text with product evidence; text widths stay contained inside their columns rather than spanning the full wrapper.
+The page uses native document scrolling. Hero and header share a fluid outer gutter; reading sections use the section gutter and a maximum width of (1600px). The product heading row caps at (1360px), while its proof area caps at (1100px). Explanatory, product, training, onboarding, membership, FAQ, and library areas use two-column desktop arrangements with section-specific ratios. Thin horizontal or vertical rules separate related content instead of enclosing each item in a card.
 
-The layout uses a flexible spacing vocabulary, not a single enforced grid unit. Repeated small spaces are recorded in the frontmatter. Desktop section padding generally falls around 85–105px; the main mobile sections tighten to roughly 57–62px. Dividers and changes in surface color establish structure without boxing every topic into a card.
+Major section padding is generally the section token, with the opening explanation and product using (112px) vertical padding and the product top using (80px). At (1000px) and below, spacing and column gaps tighten. At (650px) and below, content stacks, section padding follows the mobile tokens, and selectors wrap. The desktop navigation is replaced by a native disclosure menu at (900px) and below.
 
-At 1150px and below, gaps, screenshot dimensions, and some typography tighten. At 900px and below, desktop navigation hides while the native menu remains available. At 640px and below, paired sections, pricing, and guide links stack; main headings become 33px, and the hero uses `clamp(49px, 12.7vw, 73px)`. At 370px and below, the smallest controls and screenshot composition tighten again. The 1600px minimum-width rule expands the hero's evidence composition.
-
-The seven-day example keeps all seven days visible on mobile. It reduces internal spacing and hides supporting day notes instead of requiring horizontal scrolling. The match stays fixed while the controls below change the illustrative training dose.
-
-The sticky header has matching scroll offsets for section anchors: 102px normally and 86px on mobile. Preserve legacy fragments alongside current section IDs. All six fixed App Store routes and their existing identifiers remain behavioral constraints, independent of any future layout refinement.
+The hero is (96svh) tall with a (780px) minimum and (1080px) maximum. At (1000px) and below, it uses (92svh) and a (720px) minimum; at (650px) and below, it uses `calc(100svh - 12px)` with the same minimum and a (920px) maximum. These heights protect the headline, disclosure, action, and film controls. The header is positioned over the hero and does not remain sticky. The small-screen action and film control positions leave the headline unobstructed.
 
 ## Elevation & Depth
 
-The system is flat by default. Paper, sage, pine, thin divider lines, and whitespace separate information. Soft shadows belong to actual app-screen images; buttons, pricing panels, schedule panels, and the navigation disclosure do not gain decorative card shadows.
+There is no box-shadow vocabulary in the current homepage. Real photography and video, near-black gradients, dark tonal fields, and restrained borders establish depth. Scrims protect copy over variable frames and merge photographic edges into the page ground. The real app screen has a simple rounded edge without a synthetic phone shell. The mobile menu is a bordered dark surface.
 
-### Shadow Vocabulary
-
-- **Stacked app screens** (`0 15px 28px #192f2b26`): the overlapping hero evidence.
-- **Sport preview** (`0 18px 34px #192f2b24`): the selected full screenshot or approved App Store board.
-- **Feature screen** (`0 15px 32px #192f2b26`): the current native feature capture.
-
-### Named Rules
-
-**The Evidence Depth Rule.** Give soft depth to real product screens; separate ordinary information with tone, spacing, and thin rules.
+**The Photographic Depth Rule.** Let real footage, tonal sections, and protective scrims create depth. Keep ordinary interface surfaces flat.
 
 ## Shapes
 
-Controls are modest rounded rectangles. The source uses the control radius for buttons and training choices, the option radius for sport links and feature tabs, and the panel radius for major containers. Desktop schedule days use the day radius and reduce to the option radius on mobile.
-
-Dividers and outlined controls use 1px strokes. Screenshot corners follow the source presentation rather than imposing one universal device shell. Keep approved App Store boards whole; do not wrap an existing board in another phone frame. The small numbered process markers remain circles because they encode order.
-
-The approved logo asset is unchanged. Its existing rounded image treatment is an identity treatment, not a substitute icon shape for new components.
+Actions, media controls, and the mobile menu use softly squared control corners. Sport and billing selectors use the slightly tighter selector radius. Real app screenshots and their links use the screen radius. The unchanged logo retains its supplied pixels and its existing rounded display treatment. Inline SVG arrows, menu lines, and FAQ plus marks provide functional symbols; film controls use text only. Fine rules define the repeated section and disclosure structure.
 
 ## Components
 
-### Buttons
+### Buttons and links
 
-Confident, compact actions with clear contrast.
+Primary actions use emerald fill and dark text, with a minimum height of (54px). Their background changes over (0.2s) on hover; they do not lift or cast shadows. At the mobile breakpoint their padding becomes (15px 19px) and type becomes (14px). Text links use an emerald underline or ruled row; navigation acquisition links use a light bottom rule. Buttons and links receive an emerald (3px) focus outline with (6px) offset. Native disclosure summaries use a (5px) offset. Reduced motion removes transitions and smooth scrolling.
 
-- **Primary:** Pine with white text, the frontmatter padding and control radius, and a 56px minimum height.
-- **Light:** White with pine text, used on pine surfaces.
-- **Outline:** Transparent with pine text and a pine 1px border, used for the quieter pricing action.
-- **Compact:** Header buttons reduce padding and type size while retaining the same visual family.
-- **Hover:** Primary darkens; light and outline variants use sage.
-- **Focus:** Interactive elements share a clay 3px outline with a 5px offset.
-- **Motion:** Button and sport-link background/color transitions last 180ms. Reduced-motion preference removes transitions and smooth scrolling.
+### Sport, feature, and billing selectors
 
-### Sport options and training choices
+Sport controls are wrapped, (44px) minimum-height buttons. Selected sports use emerald fill and dark text; unselected labels are muted, with an emerald border on hover. Feature controls remain flat and use a (2px) emerald bottom line with primary text for selection. Billing uses a dark inset group with emerald selected state. Each selector exposes `aria-pressed`; do not communicate selection through color alone. URL state and history restore selected sport, feature, and billing.
 
-Sport options are real links, with an `aria-current` selected state. Training choices are buttons with `aria-pressed`. Both use pine and white when selected, but retain their distinct padding, shape, and hover treatment.
+### Navigation and disclosures
 
-Sport selection coordinates copy, truthful visual evidence, and the existing download destination. The general-athlete state shows the neutral Progress capture. The five named sports use their approved App Store boards. Loading and error captions remain visible so a delayed or unavailable image is not presented as new evidence.
+Desktop navigation gives the primary page anchors, with the acquisition action beside it. The mobile menu uses native `details` and `summary`; Escape closes it and restores focus, while link activation and outside clicks close it. FAQ rows use the same native disclosure model, separated by rules; their inline SVG plus rotates (45deg) when expanded. All essential navigation and FAQ content remain useful without JavaScript.
 
-### Feature tabs
+### Film and still states
 
-A compact row of Work Sans controls sits over a thin divider. The selected tab uses pine with white text; inactive tabs use muted text and a light hover surface. Inline SVG icons supplement the labels and hide at narrower tablet widths.
+The hero and training film use muted, inline, looping time-based playback over a persistent poster, with no scroll seeking. The hero crossfade lasts (0.7s); the training film crossfade lasts (0.5s), both ease-out. Text-only controls name the next action: Play film, Pause film, or Retry film. Reduced motion removes video sources, hides video, and disables the control with a Reduced motion label. Save-data begins paused without fetching video and allows explicit manual play. Offscreen or hidden-document films pause; failures preserve the poster and offer retry. A pause chosen by the visitor persists through normal visibility changes.
 
-The tablist supports Left/Right, Home, and End keys and uses one keyboard tab stop. Selection updates the associated panel, real screenshot, and caption. Preserve the tab/panel relationships and image-loading feedback.
+### Real product evidence
 
-### Cards and containers
+Sport and feature selection update the real screenshot, explanatory copy, caption, full-size image link, film, and acquisition links together. Screens are shown at up to (320px) wide on desktop or (300px) on mobile, preserving aspect ratio and original UI. The full-size image opens in a new tab with an explicit accessible label. General identifies its example volleyball account honestly. No generic card or input-field library is present on this homepage.
 
-Use panels when information needs a shared surface: the illustrative week, screenshot mounts, and pricing comparison. Paper and sage carry light containers; pine carries the Premium variant. Major panels use the panel radius with context-specific responsive padding. Keep explanatory and editorial sections open rather than turning every paragraph into a card.
+### Membership and supporting rows
 
-### Navigation
-
-The sticky header uses the paper canvas and a single divider. The desktop navigation is compact Work Sans; hovered links use clay and an underline. A native `details` menu exposes the same primary anchors and the existing library, comparison, partner, support, privacy, and terms destinations.
-
-The disclosure panel is white with a line border and modest rounding. It can scroll within the available viewport. Escape closes it and returns focus to the summary; outside click, outside focus, and following a link also close it.
-
-### Illustrative training week
-
-The seven-column schedule is the signature teaching pattern. Sage days surround a clay match day. The three dose choices use the existing training-choice component; the selected result is announced politely.
-
-Thursday remains Match Day. The user changes Sports Prep, Lighter Workout, or Full Workout, not the calendar. Keep both the illustrative label and the explanation that the real session also considers goals, equipment, and recovery.
-
-### FAQ disclosures and guide links
-
-FAQ rows use native `details`, thin horizontal rules, a generous clickable summary, and an inline SVG plus that rotates when open. Their content remains usable without JavaScript.
-
-Training guides use linked editorial rows, shared borders, Work Sans titles, and simple inline SVG arrows. On mobile they become vertically stacked rows. No decorative category labels are required.
+The offer separates its explanation and action from a ruled pricing column, which stacks on mobile. Prices use tabular numerals; billing state updates price and explanatory copy together. Numbered onboarding items are a real ordered sequence. Training-library links are full ruled rows with SVG arrows. Exact Preview and commercial terms remain in `PRODUCT.md` and the surface brief rather than becoming visual tokens.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** pair product claims with real, appropriately labeled DoThis screenshots or approved App Store boards.
-- **Do** keep the approved logo and icon unchanged and the six existing App Store destinations intact.
-- **Do** use pine to make actions and selected states consistent across components.
-- **Do** preserve keyboard states, semantic links and disclosures, reduced motion, and meaningful non-JavaScript defaults.
-- **Do** keep screenshot subjects, captions, sport copy, and selected download destinations coherent.
-- **Do** label examples and retain clear preview, subscription, and offer explanations.
+- Do preserve the unchanged approved logo and real DoThis screenshots.
+- Do keep selected sport, example-account caption, screenshot, film label, and all acquisition actions coherent.
+- Do retain visible keyboard focus, native scrolling, text-only film state labels, and useful still and non-JavaScript states.
+- Do distinguish a verified local build from publication approval and physical-device validation.
 
 ### Don't:
 
-- **Don't** restore the superseded teal-and-amber homepage palette or its Anton, Archivo, and Chivo Mono type pairing.
-- **Don't** fabricate app screens, customer endorsements, performance claims, or remaining-offer counts.
-- **Don't** treat beach volleyball as the limit of the product's sport coverage.
-- **Don't** add a second phone frame around approved App Store boards or crop away their product evidence.
-- **Don't** add decorative eyebrows, glyph icons, or hard offset shadows to new surfaces.
-- **Don't** present the illustrative week as a live generated plan or imply that selecting a dose moves the match.
+- Don't repaint app UI or present stock athletes as customers or endorsers.
+- Don't label gym footage as volleyball or pickleball match footage.
+- Don't restore the obsolete ivory system, Cormorant emphasis, or scroll-seeking film corridor to this selected homepage.
+- Don't change the six acquisition routes or their verified custom product-page identifiers during visual work.
+- Don't turn the aspirational headline into guaranteed performance, medical outcomes, fabricated metrics, or invented offer scarcity.

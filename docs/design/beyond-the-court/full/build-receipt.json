@@ -1,0 +1,21 @@
+{
+  "status": "complete_local_build_pending_publication_approval",
+  "direction": "A \u2014 Film first",
+  "preview": "http://127.0.0.1:4339/",
+  "chromiumChecks": 163,
+  "webkitChecks": 38,
+  "mobileLighthouse": {
+    "performance": 98,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100
+  },
+  "sixAppStoreRoutesVerified": true,
+  "reviewedFindingsResolved": [
+    "text-only film controls",
+    "current DESIGN and surface records"
+  ],
+  "published": false,
+  "providerGenerationSpend": 0,
+  "homepageSha256": "122e6ecbb2d91092074896e38cf9e8a4f0706620b76b72eb5b276933df66bde7"
+}

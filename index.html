@@ -1,149 +1,562 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DoThis — Strength Training for the Sport You Love</title>
-  <meta name="description" content="Your sport deserves a strength coach. DoThis personalizes gym workouts around your sport, schedule, recovery, and training history. Available on iPhone.">
-  <meta name="theme-color" content="#F6F8F5">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="DoThis — Train for the game you love.">
-  <meta property="og:description" content="Personalized strength training. Your sport. Your week. Your AI coach.">
-  <meta property="og:url" content="https://dothiscoach.com/">
-  <meta property="og:image" content="https://dothiscoach.com/assets/social/sport-coach.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://dothiscoach.com/">
-  <link rel="alternate" type="application/rss+xml" title="DoThis Training Library" href="/feed.xml">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/icon-96.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preload" href="/assets/fonts/archivo-black-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/home.css?v=20260917-1">
-  <script src="/home.js?v=20260917-1" defer></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0d0d14" />
+    <title>DoThis — Train For Your Game</title>
+    <meta
+      name="description"
+      content="Your training doesn’t stop when you step off the court. Connect workouts, nutrition, and recovery with your sport in DoThis for iPhone."
+    />
+    <link rel="canonical" href="https://dothiscoach.com/" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="DoThis Training Library"
+      href="/feed.xml"
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/archivo-black-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/work-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/home.css?v=beyond-court-20260917" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DoThis — Hit harder. Move faster." />
+    <meta
+      property="og:description"
+      content="Workouts. Nutrition. Recovery. Build the work behind your game."
+    />
+    <meta property="og:url" content="https://dothiscoach.com/" />
+    <meta
+      property="og:image"
+      content="https://dothiscoach.com/assets/beyond-court/tennis-poster.jpg"
+    />
+    <meta property="og:image:alt" content="A tennis player preparing a shot" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script defer src="/home.js?v=beyond-court-20260917"></script>
+    <noscript
+      ><style>
+        .sports,
+        .features,
+        .film-controls,
+        .practice-controls,
+        .billing {
+          display: none;
+        }
+      </style></noscript
+    >
   <script type="application/ld+json">
     {"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"DoThis Labs LLC","url":"https://dothiscoach.com/","logo":"https://dothiscoach.com/assets/dothis-logo.png"},{"@type":"SoftwareApplication","name":"DoThis: Train For Your Game","applicationCategory":"HealthApplication","operatingSystem":"iOS 15.1 or later","url":"https://dothiscoach.com/","downloadUrl":"https://dothiscoach.com/app/","description":"Personalized strength training around your sport, schedule, recovery context, and completed workouts.","featureList":["Athlete Week scheduling","Personalized strength workouts","AI Coach with editable memory","Workout imports and logging","Nutrition and progress tracking","One-time 7-day Premium Preview without automatic charges"]}]}
   </script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="announcement" role="region" aria-label="Founder offer"><p>Founder access <span aria-hidden="true">·</span> $6.99/month or $69.99/year</p><a href="#pricing">See the offer <svg class="icon" aria-hidden="true"><use href="#arrow-right"></use></svg></a></div>
-  <header class="site-header">
-    <div class="header-inner wrap">
-      <a class="brand" href="/" aria-label="DoThis home"><img src="/assets/icons/icon-96.png" width="38" height="38" alt=""><span translate="no">DoThis</span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#sports">Your sport</a><a href="#pricing">Pricing</a><a href="#our-story">Our story</a></nav>
-      <div class="header-actions"><a class="button button-small" href="/app/" data-download data-cta-location="header">Get the app <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a>
-        <details class="site-menu"><summary aria-label="Navigation menu"><svg class="icon" aria-hidden="true"><use href="#menu-icon"></use></svg><span>Menu</span></summary><nav aria-label="More navigation" class="site-menu-links"><a href="#how-it-works">How it works</a><a href="#sports">Your sport</a><a href="#inside">Inside the app</a><a href="#pricing">Pricing</a><a href="#our-story">Our story</a><a href="/articles/">Training library</a><a href="/compare/">Compare</a><a href="/partner/">Partners</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav></details>
+  <body>
+    <!-- THESIS: The work off court shows up on court; athlete film leads to concrete app proof.
+OWN-WORLD: Approved Film first / Match Night: #0D0D14, warm #F5F0E8, emerald #10B981, Archivo Black and Work Sans; real stock film, unchanged app screens, compact flat controls.
+STORY: Feel the sport, see the off-court work, choose your game, understand the offer, reach the correct App Store page.
+FIRST VIEWPORT: Full-bleed athlete film under “Hit harder. Move faster.”; readable scrim and one emerald action, visible pause and native scrolling.
+FORM: User selected proposal A on September 17, 2026. Code-led continuation; no new concept roll or raster comp. No publication approval implied.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance -->
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="DoThis home"
+        ><img
+          src="/assets/icons/icon-96.png"
+          width="38"
+          height="38"
+          alt=""
+        /><span translate="no">DoThis</span></a
+      >
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#your-game">Your game</a><a href="#inside">Inside DoThis</a
+        ><a href="#pricing">Membership</a>
+      </nav>
+      <div class="header-actions">
+        <a class="nav-cta" href="/app/" data-download data-placement="header" data-cta-location="header"
+          >Get DoThis
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+        ></a>
+        <details class="mobile-menu">
+          <summary aria-label="Navigation menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16M4 16h16" />
+            </svg>
+          </summary>
+          <nav aria-label="Mobile navigation">
+            <a href="#your-game">Your game</a><a href="#inside">Inside DoThis</a
+            ><a href="#pricing">Membership</a
+            ><a href="/articles/">Training library</a
+            ><a href="/support.html">Support</a>
+          </nav>
+        </details>
       </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 id="hero-title">Train for<br>the game<br><span>you love.</span></h1>
-        <p class="hero-description">Meet your AI strength coach. Personalized gym workouts built around your sport, your week, and how you feel.</p>
-        <div class="hero-actions"><a class="button" href="/app/" data-download data-cta-location="hero"><svg class="icon apple-icon" aria-hidden="true"><use href="#apple-icon"></use></svg>Download for iPhone</a><a class="text-link" href="#inside">See the app <svg class="icon" aria-hidden="true"><use href="#arrow-down"></use></svg></a></div>
-        <p class="preview-note">7 days of Premium, free. No payment. No automatic charge.</p>
-        <div class="hero-signoff"><span class="signoff-line" aria-hidden="true"></span><p>For the days you lift.<br><strong>And the days you live to play.</strong></p></div>
-      </div>
-      <figure class="hero-proof">
-        <div class="proof-heading"><span>Your effort, with a plan.</span><span>DoThis for iOS</span></div>
-        <div class="proof-screens">
-          <img class="screen-behind" src="/assets/screenshots/today-plan.webp" alt="DoThis daily plan coordinating upper-body strength with tomorrow’s beach volleyball" width="640" height="1391" decoding="async">
-          <img class="screen-front" src="/assets/screenshots/adaptive-workout.webp" alt="DoThis upper-body strength and shoulder durability workout for a beach volleyball athlete" width="640" height="1391" fetchpriority="high" decoding="async">
+    </header>
+    <main id="main">
+      <section
+        class="hero"
+        data-film-section="hero"
+        aria-labelledby="hero-title"
+      >
+        <div class="film" aria-hidden="true">
+          <img
+            id="poster"
+            fetchpriority="high"
+            src="/assets/beyond-court/tennis-poster.jpg"
+            width="1280"
+            height="720"
+            alt=""
+          /><video
+            id="hero-video"
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="/assets/beyond-court/tennis-poster.jpg"
+          ></video>
+          <div class="shade"></div>
         </div>
-        <figcaption><svg class="icon" aria-hidden="true"><use href="#check-icon"></use></svg>Real app screens. A beach volleyball training example.</figcaption>
-      </figure>
-    </section>
-
-    <div class="sport-roll wrap" aria-label="Some of the sports supported"><p>For people who play.</p><ul><li>Volleyball</li><li>Tennis</li><li>Basketball</li><li>Soccer</li><li>Pickleball</li><li>And more.</li></ul></div>
-
-    <section class="intro-section wrap" aria-labelledby="intro-title">
-      <h2 id="intro-title">You put in the work.<br><span>Give it a direction.</span></h2>
-      <div class="intro-copy"><p>You want your gym time to mean something when you step onto the court, field, or sand.</p><p>Meet your AI strength coach: workouts shaped by the sport you play, space for your specific requests, and a record of the work you actually do.</p></div>
-    </section>
-
-    <section id="how-it-works" class="week-section" aria-labelledby="week-title">
-      <span id="week" class="anchor-alias"></span><span id="athlete-week" class="anchor-alias"></span>
-      <div class="wrap">
-        <div class="section-heading"><h2 id="week-title">Your week sets<br>the starting point.</h2><p>Add your sport, gym sessions, and game days. On Match Day, choose the amount of training you want. DoThis uses that context to build your session.</p></div>
-        <div class="week-example">
-          <div class="week-heading"><h3>A week with room to play.</h3><span>Illustrative week</span></div>
-          <ol class="week-days" aria-label="Example schedule with a Thursday match"><li><span>Mon</span><strong>Gym</strong><small>Strength</small></li><li><span>Tue</span><strong>Sport</strong><small>Practice</small></li><li><span>Wed</span><strong>Rest</strong><small>Take a breather</small></li><li class="match-day"><span>Thu</span><strong>Match</strong><small>League night</small></li><li><span>Fri</span><strong>Rest</strong><small>Recover</small></li><li><span>Sat</span><strong>Gym</strong><small>Strength</small></li><li><span>Sun</span><strong>Cardio</strong><small>Keep moving</small></li></ol>
-          <div class="day-choice">
-            <div class="choice-copy"><h3>Playing and training today?</h3><p>You choose the load. Your game stays on the calendar.</p><div class="dose-options" role="group" aria-label="Choose an illustrative Match Day workout"><button type="button" data-dose="prep" aria-pressed="false">Sports Prep</button><button type="button" data-dose="lighter" aria-pressed="true">Lighter Workout</button><button type="button" data-dose="full" aria-pressed="false">Full Workout</button></div></div>
-            <div class="session-result" aria-live="polite" aria-atomic="true"><h3 id="session-title">Get some work in.<br>Keep some in reserve.</h3><p id="session-description">A reduced training dose, with your match and recent workouts in mind.</p><small>Example only. Your session also considers your goals, equipment, and recovery.</small></div>
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            <span>Hit harder.</span><span>Move faster.</span>
+          </h1>
+          <p class="hero-description">
+            Your training doesn’t stop<br />when you step off the court.
+          </p>
+          <div class="hero-actions">
+            <a class="button" data-download data-placement="hero" data-cta-location="hero" href="/app/"
+              >Build my game
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+            ><span>DoThis for iPhone</span>
+          </div>
+          <p class="preview-note">
+            7-day Premium Preview. No payment required.
+          </p>
+        </div>
+        <div class="film-controls">
+          <span id="film-label">The next point starts here.</span
+          ><button id="motion" type="button" aria-label="Pause film">
+            <span>Pause film</span>
+          </button>
+        </div>
+        <a class="hero-down" href="#beyond"
+          ><span>There’s more to your game.</span
+          ><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 4v16m-6-6 6 6 6-6" /></svg
+        ></a>
+      </section>
+      <span id="method" class="legacy-anchor"></span>
+      <section class="beyond" id="beyond" aria-labelledby="beyond-title">
+        <h2 id="beyond-title">
+          The work off court.<br /><span>The difference on it.</span>
+        </h2>
+        <p>
+          DoThis brings your workouts, nutrition, and recovery into the same
+          plan—built around your sport, your schedule, and where you want to go.
+        </p>
+        <div class="principles">
+          <a href="#your-game" data-feature="workout"
+            ><span>Workouts</span><strong>Build your strength.</strong
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+          ><a href="#your-game" data-feature="fuel"
+            ><span>Nutrition</span><strong>Fuel the effort.</strong
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+          ><a href="#your-game" data-feature="athlete-week"
+            ><span>Recovery</span><strong>Make room to come back.</strong
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+      </section>
+      <span id="sports" class="legacy-anchor"></span>
+      <section class="game" id="your-game" aria-labelledby="game-title">
+        <div class="game-top">
+          <h2 id="game-title">Your sport.<br />Your starting point.</h2>
+          <div class="sports" role="group" aria-label="Choose your sport">
+            <button data-sport="general" aria-pressed="true">All sports</button
+            ><button data-sport="tennis" aria-pressed="false">Tennis</button
+            ><button data-sport="basketball" aria-pressed="false">
+              Basketball</button
+            ><button data-sport="volleyball" aria-pressed="false">
+              Volleyball</button
+            ><button data-sport="pickleball" aria-pressed="false">
+              Pickleball</button
+            ><button data-sport="soccer" aria-pressed="false">Soccer</button>
           </div>
         </div>
-        <ol class="steps"><li><span>1</span><p><strong>Tell us about your week.</strong> Your sport, your goals, your available days.</p></li><li><span>2</span><p><strong>Get your workout.</strong> A session built around your context.</p></li><li><span>3</span><p><strong>Train, log, and build.</strong> Let completed work inform what comes next.</p></li></ol>
-      </div>
-    </section>
-
-    <section id="sports" class="sports-section wrap" aria-labelledby="sports-title">
-      <div class="sports-copy">
-        <h2 id="sports-title">Your game.<br>Your kind of strong.</h2>
-        <p class="section-intro">Pick your sport. Explore how DoThis brings your gym work and the way you play into the same conversation.</p>
-        <div class="sport-selector" role="group" aria-label="Choose your sport"><a href="?sport=general#sports" data-sport="general" aria-current="true">All athletes</a><a href="?sport=volleyball#sports" data-sport="volleyball">Volleyball</a><a href="?sport=tennis#sports" data-sport="tennis">Tennis</a><a href="?sport=basketball#sports" data-sport="basketball">Basketball</a><a href="?sport=soccer#sports" data-sport="soccer">Soccer</a><a href="?sport=pickleball#sports" data-sport="pickleball">Pickleball</a></div>
-        <div class="sport-description" aria-live="polite"><h3 id="sport-name">You don’t need to go pro to train with purpose.</h3><p id="sport-description">Whether it’s a weekly league or a weekend game, put a strength plan behind the sport you enjoy. DoThis brings your schedule, equipment, preferences, and training history together.</p></div>
-        <a class="text-link" href="/app/" data-download data-cta-location="sport">Find your training plan <svg class="icon" aria-hidden="true"><use href="#arrow-right"></use></svg></a>
-      </div>
-      <figure class="sport-proof"><img id="sport-image" src="/assets/screenshots/progress-trends.webp" alt="Actual DoThis Progress screen showing example training history and weight trends" width="640" height="1391" loading="lazy" decoding="async"><figcaption id="sport-caption" aria-live="polite">Actual app screen · Training progress</figcaption></figure>
-    </section>
-
-    <section id="inside" class="inside-section" aria-labelledby="inside-title">
-      <span id="features" class="anchor-alias"></span><span id="coach" class="anchor-alias"></span>
-      <div class="wrap inside-layout">
-        <div class="inside-copy"><h2 id="inside-title">A coach with context.<br>A place for the work.</h2><p class="section-intro">Your requests, your workouts, your progress. Connected in one app, so every conversation has a starting point.</p>
-          <div class="feature-tabs" role="tablist" aria-label="Explore DoThis features"><button id="tab-workout" type="button" role="tab" data-feature="workout" aria-selected="true" aria-controls="feature-panel"><svg class="icon" aria-hidden="true"><use href="#dumbbell-icon"></use></svg>Workouts</button><button id="tab-coach" type="button" role="tab" data-feature="coach" aria-selected="false" aria-controls="feature-panel" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#chat-icon"></use></svg>Coach</button><button id="tab-progress" type="button" role="tab" data-feature="progress" aria-selected="false" aria-controls="feature-panel" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#trend-icon"></use></svg>Progress</button><button id="tab-food" type="button" role="tab" data-feature="food" aria-selected="false" aria-controls="feature-panel" tabindex="-1"><svg class="icon" aria-hidden="true"><use href="#food-icon"></use></svg>Nutrition</button></div>
-          <div id="feature-panel" role="tabpanel" aria-labelledby="tab-workout" tabindex="0"><h3 id="feature-title">Walk into the gym with a plan.</h3><p id="feature-description">Generate a workout for your sport and available equipment. Follow it set by set, log your weights and reps, or import a routine you already use.</p><ul id="feature-points"><li>Sessions shaped by your sport and schedule</li><li>Your requests and limitations considered</li><li>Completed sets inform future training</li></ul></div>
-          <a class="text-link" href="/app/" data-download data-cta-location="features">Try your first workout <svg class="icon" aria-hidden="true"><use href="#arrow-right"></use></svg></a>
+        <span id="week" class="legacy-anchor"></span><span id="athlete-week" class="legacy-anchor"></span><span id="coach" class="legacy-anchor"></span><span id="inside" class="legacy-anchor"></span
+        ><span id="features" class="legacy-anchor"></span>
+        <div class="proof">
+          <div class="proof-copy">
+            <div
+              class="features"
+              role="group"
+              aria-label="Explore DoThis features"
+            >
+              <button data-view="workout" aria-pressed="true">Workouts</button
+              ><button data-view="fuel" aria-pressed="false">Nutrition</button
+              ><button data-view="athlete-week" aria-pressed="false">
+                Recovery</button
+              ><button data-view="coach" aria-pressed="false">Coach</button
+              ><button data-view="progress" aria-pressed="false">
+                Progress
+              </button>
+            </div>
+            <h3 id="proof-title">Training for the sport you love.</h3>
+            <p id="proof-description">
+              Personalized sessions that take your sport, available equipment,
+              training history, and feedback into account.
+            </p>
+            <a
+              class="button"
+              data-download
+              data-placement="product" data-cta-location="product"
+              href="/app/"
+              >Try DoThis free
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+            ></a>
+            <p class="terms">
+              Your one-time 7-day Premium Preview starts after your first
+              personalized workout is ready. No payment required. No automatic
+              charge.
+            </p>
+          </div>
+          <figure>
+            <a
+              class="screen-link"
+              id="screen-link"
+              href="/assets/next-game/general-workout.webp"
+              target="_blank"
+              rel="noopener"
+              aria-label="Real DoThis workout screen from an example volleyball account — view full size in a new tab"
+              ><img
+                id="app-screen"
+                src="/assets/next-game/general-workout.webp"
+                width="660"
+                height="1434"
+                loading="lazy"
+                alt="Real DoThis workout screen from an example volleyball account"
+            /></a>
+            <figcaption id="screen-caption">
+              Actual DoThis screen · Example volleyball account
+            </figcaption>
+            <span class="screen-hint">Tap the screen to see it up close.</span>
+          </figure>
         </div>
-        <figure class="feature-proof"><img id="feature-image" src="/assets/screenshots/adaptive-workout.webp" alt="Actual DoThis workout screen showing upper-body strength and shoulder durability for beach volleyball" width="640" height="1391" loading="lazy" decoding="async"><figcaption id="feature-caption" aria-live="polite">Actual app screen · Beach volleyball example</figcaption></figure>
+        <p class="sr-only" id="selection-status" aria-live="polite"></p>
+      </section>
+
+      <span id="our-story" class="legacy-anchor"></span><section class="practice" aria-labelledby="practice-title">
+        <div class="practice-film" data-film-section="training">
+          <div class="practice-media" aria-hidden="true">
+            <img
+              src="/assets/beyond-court/gym-poster.jpg"
+              width="1280"
+              height="720"
+              loading="lazy"
+              alt=""
+            /><video
+              muted
+              loop
+              playsinline
+              preload="none"
+              poster="/assets/beyond-court/gym-poster.jpg"
+            ></video>
+          </div>
+          <div class="practice-controls">
+            <span>Off-court strength training</span
+            ><button
+              type="button"
+              data-training-motion
+              aria-label="Pause training film"
+            >
+              <span>Pause film</span>
+            </button>
+          </div>
+        </div>
+        <div class="practice-copy">
+          <h2 id="practice-title">
+            You bring the drive.<br /><span>We help with the plan.</span>
+          </h2>
+          <p>
+            The session between matches. The meal after practice. The day you
+            make time to recover.
+          </p>
+          <p>
+            Keep the work connected to the game you love. Tell Coach what
+            changed, review your options, and make the plan yours.
+          </p>
+          <a class="text-link" href="#inside" data-feature="coach"
+            >See Coach in the app
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+      </section>
+      <span id="how-it-works" class="legacy-anchor"></span><section class="starting" aria-labelledby="starting-title">
+        <div>
+          <h2 id="starting-title">
+            Start where you are.<br /><span>Train toward what’s next.</span>
+          </h2>
+          <p>
+            Your sport matters. So does the time, equipment, and experience
+            you’re working with.
+          </p>
+        </div>
+        <ol>
+          <li>
+            <h3>Tell us about your game.</h3>
+            <p>
+              Choose your sport, goals, training experience, and available
+              equipment.
+            </p>
+          </li>
+          <li>
+            <h3>Make space in your week.</h3>
+            <p>
+              Confirm the days you lift, play, and recover. Start with a
+              schedule you can actually follow.
+            </p>
+          </li>
+          <li>
+            <h3>Build your first workout.</h3>
+            <p>
+              Get a personalized session. Log what you do and leave feedback for
+              the next one.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <span id="free-preview" class="legacy-anchor"></span>
+      <section class="membership" id="pricing" aria-labelledby="pricing-title">
+        <div class="membership-copy">
+          <h2 id="pricing-title">
+            Find your rhythm.<br /><span>Start with seven days.</span>
+          </h2>
+          <p>
+            Your one-time Premium Preview starts after your first personalized
+            workout is ready. Explore DoThis with no payment required and no
+            automatic charge.
+          </p>
+          <a class="button" href="/app/" data-download data-placement="pricing" data-cta-location="pricing"
+            >Start your free Preview
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+          <p class="small-print">
+            When your Preview ends, local workouts, logs, and progress stay
+            available. New personalized AI features and cloud sync require
+            Premium.
+          </p>
+        </div>
+        <div class="membership-details">
+          <h3>Keep building with Premium.</h3>
+          <p>Founder pricing · First 200 subscriptions in each offer.</p>
+          <div class="billing" role="group" aria-label="Membership billing">
+            <button type="button" data-billing="monthly" aria-pressed="true">
+              Monthly</button
+            ><button type="button" data-billing="yearly" aria-pressed="false">
+              Yearly
+            </button>
+          </div>
+          <p class="price" aria-live="polite">
+            <span data-price>$6.99</span><span data-price-period> / month</span>
+          </p>
+          <p class="billing-detail" data-price-detail>
+            Choose Premium after your free Preview. Confirm availability and local prices in the app.
+          </p>
+          <ul class="included">
+            <li>Personalized workouts and AI Coach</li>
+            <li>Nutrition and macro logging</li>
+            <li>Sport, lifting, and recovery in Athlete Week</li>
+            <li>Your training history and cloud backup</li>
+          </ul>
+        </div>
+      </section>
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Before your<br />next session.</h2>
+        <div>
+          <details>
+            <summary>
+              Do I need to be an experienced athlete?<svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5v14" />
+              </svg>
+            </summary>
+            <p>
+              No. Share your training experience, equipment, and goals. DoThis
+              is for people who take their game seriously, whether they’re
+              starting out or have trained for years.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Which sports can I explore?<svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5v14" />
+              </svg>
+            </summary>
+            <p>
+              Choose tennis, basketball, volleyball, pickleball, or soccer to
+              see the relevant app preview. All sports opens the general DoThis
+              experience.
+            </p>
+          </details>
+          <details>
+            <summary>
+              What happens during the free Preview?<svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5v14" />
+              </svg>
+            </summary>
+            <p>
+              Your one-time 7-day Premium Preview begins after your first
+              personalized workout is ready. No payment is required, and it does
+              not charge automatically. You can choose Premium afterward.
+            </p>
+          </details>
+          <details>
+            <summary>
+              What if my schedule or equipment changes?<svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5v14" />
+              </svg>
+            </summary>
+            <p>
+              Update your training settings and confirmed week, or tell Coach
+              what changed. Review the suggested plan before training. You stay
+              in control of what you do.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Can I log food and track progress too?<svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5v14" />
+              </svg>
+            </summary>
+            <p>
+              Yes. Log meals and macros, record the weights and reps you
+              actually complete, and view your training progress in the same
+              app.
+            </p>
+          </details>
+          <details>
+            <summary>
+              Is DoThis available on Android?<svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M12 5v14" />
+              </svg>
+            </summary>
+            <p>
+              DoThis is currently available for iPhone. The download links on
+              this site lead to the Apple App Store.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="library" aria-labelledby="library-title">
+        <div>
+          <h2 id="library-title">
+            Get more from<br /><span>the work you put in.</span>
+          </h2>
+          <p>
+            Explore the DoThis training library for practical reading beyond
+            your next session.
+          </p>
+        </div>
+        <div class="library-links">
+          <a href="/articles/"
+            >Explore the training library
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+          ><a href="/compare/"
+            >Compare training approaches
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+          ><a href="/partner/"
+            >Partner with DoThis
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+      </section>
+      <section class="closing" aria-labelledby="closing-title">
+        <img
+          id="closing-poster"
+          src="/assets/beyond-court/tennis-poster.jpg"
+          width="1280"
+          height="720"
+          loading="lazy"
+          alt=""
+        />
+        <div class="closing-shade"></div>
+        <div class="closing-copy">
+          <h2 id="closing-title">Bring more<br />to your game.</h2>
+          <p>Put the work behind the moments you play for.</p>
+          <a class="button" href="/app/" data-download data-placement="closing" data-cta-location="closing"
+            >Let’s do this
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+          ><span>Available for iPhone.</span>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="brand" href="/" aria-label="DoThis home"
+          ><img
+            src="/assets/icons/icon-96.png"
+            width="34"
+            height="34"
+            alt=""
+          /><span translate="no">DoThis</span></a
+        >
+        <p>Train for your game.</p>
+        <nav aria-label="Footer navigation">
+          <a href="/articles/">Training library</a
+          ><a href="/compare/">Compare</a><a href="/partner/">Partners</a
+          ><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a
+          ><a href="/terms.html">Terms</a>
+        </nav>
       </div>
-    </section>
-
-    <section id="our-story" class="story-section wrap" aria-labelledby="story-title">
-      <div class="story-title"><h2 id="story-title">It started<br>on the sand.</h2><p>Built by Jiwon Kim.<br>Software engineer. Recreational athlete.</p></div>
-      <div class="story-body"><p class="story-lead">“I wanted my gym training to connect to my beach volleyball.”</p><p>After eight years in the gym, I wanted more than a bodybuilding routine. I wanted a strength coach who understood my sport, could take specific training requests, and helped me keep track of the work.</p><p>So I put six years of software engineering experience into building DoThis. It started with my own training. Now it’s for anyone who wants to bring more purpose to the days they lift and the days they play.</p><a class="text-link" href="mailto:help@dothiscoach.com">Tell me what you’re training for <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a></div>
-    </section>
-
-    <section id="pricing" class="pricing-section" aria-labelledby="pricing-title"><span id="free-preview" class="anchor-alias"></span><div class="wrap">
-      <div class="section-heading"><h2 id="pricing-title">Try the coaching.<br>Find your rhythm.</h2><p>Your first personalized workout starts a one-time, 7-day Premium Preview. No payment required. It never turns into a subscription automatically.</p></div>
-      <div class="pricing-grid">
-        <article class="free-plan"><h3>Free</h3><p class="price">$0<span>to get started</span></p><p>Keep your training in one place.</p><ul class="check-list"><li>Saved workouts and local history</li><li>Food and weight logging</li><li>Goals and core progress tools</li><li>7-day Premium Preview included</li></ul><a class="button button-outline" href="/app/" data-download data-cta-location="free-plan">Start free <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a></article>
-        <article class="premium-plan"><div class="premium-heading"><h3>Premium</h3><span>Founder access</span></div><div class="founder-prices"><p class="price">$6.99<span>per month</span></p><span class="price-or">or</span><p class="price">$69.99<span>per year</span></p></div><p class="offer-detail">Founder offer for the first 200 monthly and first 200 yearly subscribers.</p><ul class="check-list"><li>Personalized workouts and Daily Plans</li><li>AI Coach with training context and memory</li><li>Workout imports, edits, and adaptive progression</li><li>Private cloud backup and sync</li></ul><a class="button button-light" href="/app/" data-download data-cta-location="premium-plan">Explore Premium in the app <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a><p class="subscription-note">Standard pricing: $12.99/month or $119.99/year. Offer availability and local pricing are shown in the app before purchase. Paid subscriptions renew automatically; manage or cancel in Apple ID settings.</p></article>
+      <div class="footer-bottom">
+        <span>© 2026 DoThis Labs LLC.</span
+        ><a href="/footage.html">Footage credits</a
+        ><a href="#main">Back to top</a>
       </div>
-    </div></section>
-
-    <section id="questions" class="faq-section wrap" aria-labelledby="faq-title"><div><h2 id="faq-title">Before your<br>first session.</h2><a class="text-link" href="/support.html">More questions? Get in touch <svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a></div><div class="faq-list">
-      <details><summary>Do I have to be a competitive athlete?<svg class="icon" aria-hidden="true"><use href="#plus-icon"></use></svg></summary><p>No. DoThis is built for people who lift and play a sport, including adult recreational players. Your goals, experience, equipment, and weekly schedule help shape your training.</p></details>
-      <details><summary>Is this a human personal trainer?<svg class="icon" aria-hidden="true"><use href="#plus-icon"></use></svg></summary><p>DoThis is an AI-assisted training app. Coach uses your relevant training context to offer guidance, and you confirm changes yourself. It does not provide an in-person trainer or assess your exercise technique in person.</p></details>
-      <details><summary>Can I ask for a specific kind of workout?<svg class="icon" aria-hidden="true"><use href="#plus-icon"></use></svg></summary><p>Yes. Share your training requests and preferences, use your available equipment, or import a workout you already follow. You can review and adjust workouts and manage what Coach remembers.</p></details>
-      <details><summary>What happens after the free preview?<svg class="icon" aria-hidden="true"><use href="#plus-icon"></use></svg></summary><p>You keep access to saved workouts, local history, food and weight logging, goals, and core progress tools. Premium is required for new personalized AI workouts and plans, Coach, AI imports and edits, and cloud backup and sync. The preview never charges you automatically.</p></details>
-      <details><summary>Can DoThis help with rehab or an injury?<svg class="icon" aria-hidden="true"><use href="#plus-icon"></use></svg></summary><p>You can tell DoThis about training limitations and recovery needs. It provides general fitness and planning support, not injury diagnosis, treatment, or rehabilitation care. Follow a qualified clinician’s guidance for an injury and stop any activity that causes pain.</p></details>
-      <details><summary>Where can I download it?<svg class="icon" aria-hidden="true"><use href="#plus-icon"></use></svg></summary><p>DoThis is available on iPhone. <a href="/app/" data-download data-cta-location="faq">Get it on the App Store</a> and build your first personalized workout to start your preview.</p></details>
-    </div></section>
-
-    <section class="library-section wrap" aria-labelledby="library-title"><div class="library-heading"><h2 id="library-title">A little more<br>training know-how.</h2><a class="text-link" href="/articles/">Explore the training library <svg class="icon" aria-hidden="true"><use href="#arrow-right"></use></svg></a></div><div class="guide-links"><a href="/articles/training-around-game-day/"><h3>How to train around game day</h3><svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a><a href="/articles/volleyball-strength-conditioning-workout/"><h3>Strength training for volleyball</h3><svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a><a href="/articles/strength-training-for-tennis/"><h3>Strength training for tennis</h3><svg class="icon" aria-hidden="true"><use href="#arrow-up-right"></use></svg></a></div></section>
-
-    <section class="closing-section" aria-labelledby="closing-title"><div class="wrap closing-inner"><div><h2 id="closing-title">For the love<br>of the game.</h2><p>Put a plan behind the work you put in.</p></div><div class="closing-action"><a class="button button-light" href="/app/" data-download data-cta-location="closing"><svg class="icon apple-icon" aria-hidden="true"><use href="#apple-icon"></use></svg>Get DoThis for iPhone</a><p>Start with 7 days of Premium, free.</p></div></div></section>
-  </main>
-  <footer class="site-footer wrap"><div class="footer-top"><a class="brand" href="/" aria-label="DoThis home"><img src="/assets/icons/icon-96.png" width="38" height="38" alt=""><span translate="no">DoThis</span></a><p>Strength training.<br>With your sport in mind.</p><nav aria-label="Footer navigation"><a href="/articles/">Training library</a><a href="/compare/">Compare</a><a href="/partner/">Partners</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></nav></div><div class="footer-bottom"><span>© <span id="year">2026</span> DoThis Labs LLC</span><p>General fitness and nutrition support, not medical advice.</p></div></footer>
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon-definitions" aria-hidden="true"><defs>
-    <symbol id="arrow-right" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></symbol>
-    <symbol id="arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></symbol>
-    <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6"></path></symbol>
-    <symbol id="menu-icon" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></symbol>
-    <symbol id="check-icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></symbol>
-    <symbol id="plus-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"></path></symbol>
-    <symbol id="dumbbell-icon" viewBox="0 0 24 24"><path d="M6 8V5H3v14h3v-3m12-8V5h3v14h-3v-3M6 8h3v8H6zm9 0h3v8h-3zm-6 4h6"></path></symbol>
-    <symbol id="chat-icon" viewBox="0 0 24 24"><path d="M20 4H4v13h4v4l5-4h7zM8 8h8M8 12h5"></path></symbol>
-    <symbol id="trend-icon" viewBox="0 0 24 24"><path d="M4 5v15h16M7 15l4-5 4 2 5-7m-5 0h5v5"></path></symbol>
-    <symbol id="food-icon" viewBox="0 0 24 24"><path d="M8 3v7m-3-7v5a3 3 0 0 0 6 0V3M8 11v10M19 3c-4 2-4 6-4 9h4m0-9v18"></path></symbol>
-    <symbol id="apple-icon" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.1 12.2c0-2 1.6-3 1.7-3.1-1-1.5-2.5-1.7-3.1-1.8-1.3-.1-2.5.8-3.2.8-.6 0-1.7-.8-2.7-.8-1.4 0-2.8.9-3.5 2.1-1.5 2.6-.4 6.4 1 8.5.7 1 1.5 2 2.6 1.9 1-.1 1.4-.6 2.7-.6s1.7.6 2.8.6c1.2 0 1.9-1 2.5-1.9.8-1.1 1.1-2.2 1.1-2.3-.1 0-1.9-.8-1.9-3.4ZM15 5.9c.5-.7.9-1.6.8-2.5-.8 0-1.8.5-2.4 1.2-.5.6-1 1.5-.8 2.4.9.1 1.8-.5 2.4-1.1Z"></path></symbol>
-  </defs></svg>
-</body>
+      <p class="footer-note">
+        Stock athletes are illustrative, not customer endorsements. App screens
+        show example accounts. Training guidance is educational.
+      </p>
+    </footer>
+  </body>
 </html>

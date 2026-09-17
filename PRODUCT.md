@@ -39,9 +39,8 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Starting proposition: “Train for your game. Not just the gym.”
 - Voice is confident, concrete, athlete-focused, and free of shame, fake urgency, or generic fitness hype.
 - Product evidence uses real DoThis screenshots. Generated athletes are illustrative campaign subjects, not customers or endorsers.
-- Homepage direction: the September 17, 2026 redesign leads with “Train for the game you love.” A daylight community-sport identity, real app screens, a fixed Match Day example, and explicit AI coaching support the visitor's download decision. This supersedes the September 5 teal-and-amber homepage under the user's explicit redesign-and-deploy request.
-- The founder's origin is beach volleyball. His supplied story includes eight years of gym training and six years of software engineering. This explains why the product exists without limiting it to one sport.
-- User-approved language includes “You can be lethal,” “You just need to train like it,” and “Train with us. Become lethal.”
+- On 2026-09-05, the user requested a complete homepage aesthetic reset and delegated creative judgment. The replacement direction is recorded in DESIGN.md; the prior homepage visual direction no longer constrains the redesign. The approved app logo remains unchanged.
+- On 2026-09-17, the user selected the Film first proposal (A): “Hit harder. Move faster.” and the off-court workouts, nutrition, and recovery story. This authorizes the complete local homepage build in that direction; publication still requires approval.
 
 ## Evidence on Hand
 
@@ -62,3 +61,5 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 ## Accessibility & Inclusion
 
 The website must support keyboard and touch input, visible focus, zoom, reduced motion, semantic HTML, readable contrast, and meaningful non-JavaScript defaults. Athlete imagery should represent adult recreational athletes without presenting generated people as real customers.
+
+The founder’s origin is beach volleyball; his supplied background includes eight years of gym training and six years of software engineering. This product context is retained from the September 17 upstream release.

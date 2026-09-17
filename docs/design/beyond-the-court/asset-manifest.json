@@ -1,0 +1,95 @@
+{
+  "assets": [
+    {
+      "id": "tennis",
+      "bytes": 1701209,
+      "sha256": "487f730ea520088f6ac4802411353557d21df9fa99823dca71bb21682768ed53",
+      "kind": "human-shot stock video",
+      "sourceUrl": "https://mixkit.co/free-stock-video/man-playing-tennis-877/",
+      "license": "Mixkit Stock Video Free License",
+      "licenseUrl": "https://mixkit.co/license/#videoFree",
+      "verifiedDate": "2026-09-17",
+      "commercialPermissionEvidence": "Item page explicitly says commercial or personal use",
+      "sourceFile": "docs/design/beyond-the-court/source-media/tennis-source.mp4",
+      "output": "prototypes/beyond-the-court/media/tennis.mp4",
+      "poster": "prototypes/beyond-the-court/media/tennis-poster.jpg",
+      "treatment": "Source seconds 2\u201310, muted, 1280px wide H.264 faststart, CRF25; poster at source second 3",
+      "publicationStatus": "Local proposal; not deployed",
+      "thirdPartyRights": "Incidental apparel/ball marks are not endorsements or partnerships; no isolated mark reuse."
+    },
+    {
+      "id": "basketball",
+      "bytes": 1525712,
+      "sha256": "dbdd38420914c340397f7dd33fcc7064ea1d06bf741cb418c453aa3c7c7982b5",
+      "kind": "human-shot stock video",
+      "sourceUrl": "https://mixkit.co/free-stock-video/basketball-player-dribbling-ball-744/",
+      "license": "Mixkit Stock Video Free License",
+      "licenseUrl": "https://mixkit.co/license/#videoFree",
+      "verifiedDate": "2026-09-17",
+      "commercialPermissionEvidence": "Item page explicitly says commercial or personal use",
+      "sourceFile": "docs/design/beyond-the-court/source-media/basketball-source.mp4",
+      "output": "prototypes/beyond-the-court/media/basketball.mp4",
+      "poster": "prototypes/beyond-the-court/media/basketball-poster.jpg",
+      "treatment": "Source seconds 2\u201310, muted, 1280px wide H.264 faststart, CRF25; poster at source second 3",
+      "publicationStatus": "Local proposal; not deployed",
+      "thirdPartyRights": "Incidental apparel/ball marks are not endorsements or partnerships; no isolated mark reuse."
+    },
+    {
+      "id": "soccer",
+      "bytes": 596898,
+      "sha256": "7835c6665576ac188a03462c4df1ca723c22246b16dbd028db3d2f4c373fdabc",
+      "kind": "human-shot stock video",
+      "sourceUrl": "https://mixkit.co/free-stock-video/football-player-moving-forward-2921/",
+      "license": "Mixkit Stock Video Free License",
+      "licenseUrl": "https://mixkit.co/license/#videoFree",
+      "verifiedDate": "2026-09-17",
+      "commercialPermissionEvidence": "Item page explicitly says commercial or personal use",
+      "sourceFile": "docs/design/beyond-the-court/source-media/soccer-source.mp4",
+      "output": "prototypes/beyond-the-court/media/soccer.mp4",
+      "poster": "prototypes/beyond-the-court/media/soccer-poster.jpg",
+      "treatment": "Source seconds 2\u201310, muted, 1280px wide H.264 faststart, CRF25; poster at source second 3",
+      "publicationStatus": "Local proposal; not deployed",
+      "thirdPartyRights": "Incidental apparel/ball marks are not endorsements or partnerships; no isolated mark reuse."
+    },
+    {
+      "id": "gym",
+      "bytes": 1143207,
+      "sha256": "5502d52cfcbb764b2364ec7344bb19aa80837ce7acbcaa634cec6dbd2594fcf0",
+      "kind": "human-shot stock video",
+      "sourceUrl": "https://mixkit.co/free-stock-video/couple-exercising-with-dumbbells-in-the-gym-40238/",
+      "license": "Mixkit Stock Video Free License",
+      "licenseUrl": "https://mixkit.co/license/#videoFree",
+      "verifiedDate": "2026-09-17",
+      "commercialPermissionEvidence": "Item page explicitly says commercial or personal use",
+      "sourceFile": "docs/design/beyond-the-court/source-media/gym-source.mp4",
+      "output": "prototypes/beyond-the-court/media/gym.mp4",
+      "poster": "prototypes/beyond-the-court/media/gym-poster.jpg",
+      "treatment": "Source seconds 2\u201310, muted, 1280px wide H.264 faststart, CRF25; poster at source second 3",
+      "publicationStatus": "Local proposal; not deployed",
+      "thirdPartyRights": "Incidental apparel/ball marks are not endorsements or partnerships; no isolated mark reuse."
+    }
+  ],
+  "rejected": [
+    {
+      "url": "https://mixkit.co/free-stock-video/volleyball-match-view-towards-the-net-12321/",
+      "reason": "Free version is personal-use only; not downloaded or used"
+    }
+  ],
+  "screenshots": "Existing assets/next-game/*-(workout|fuel|athlete-week).webp; source manifest docs/design/next-game/asset-manifest.json",
+  "fontLicenses": [
+    "assets/fonts/LICENSE-Archivo-Black.txt",
+    "assets/fonts/LICENSE-Work-Sans.txt"
+  ],
+  "fullHomepage": {
+    "selectedDirection": "A \u2014 Film first",
+    "approvedAt": "2026-09-17",
+    "publicationStatus": "Local production build, not deployed",
+    "publicMediaRoot": "assets/beyond-court",
+    "copyOfPrototypeMedia": true,
+    "originalClipsUnchanged": true,
+    "posterOverrides": {
+      "gym": "Public poster uses source second 6; prototype retains its original poster."
+    },
+    "selectedScreens": "Existing assets/next-game/{general,tennis,basketball,volleyball,pickleball,soccer}-{workout,fuel,athlete-week,coach,progress}.webp"
+  }
+}

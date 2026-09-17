@@ -10,7 +10,10 @@
       "kind": "logo_icon",
       "sport": "general",
       "feature": "brand",
-      "dimensions": { "width": 1080, "height": 1080 },
+      "dimensions": {
+        "width": 1080,
+        "height": 1080
+      },
       "crop": "Do not crop or alter the mark",
       "releaseRelevance": "production",
       "approval": "approved"
@@ -22,7 +25,10 @@
       "kind": "athlete_campaign_image",
       "sport": "volleyball",
       "feature": "athlete-week",
-      "dimensions": { "width": 1536, "height": 1024 },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
       "crop": "Athlete sits right of center; preserve left-side negative space",
       "releaseRelevance": "current-homepage",
       "approval": "existing-production"
@@ -34,7 +40,10 @@
       "kind": "native_app_screenshot",
       "sport": "general",
       "feature": "today",
-      "dimensions": { "width": 640, "height": 1391 },
+      "dimensions": {
+        "width": 640,
+        "height": 1391
+      },
       "crop": "Preserve full UI; restrained device framing allowed",
       "releaseRelevance": "production",
       "approval": "approved"
@@ -46,7 +55,10 @@
       "kind": "native_app_screenshot",
       "sport": "general",
       "feature": "workout",
-      "dimensions": { "width": 640, "height": 1391 },
+      "dimensions": {
+        "width": 640,
+        "height": 1391
+      },
       "crop": "Preserve full UI; restrained device framing allowed",
       "releaseRelevance": "production",
       "approval": "approved"
@@ -58,7 +70,10 @@
       "kind": "native_app_screenshot",
       "sport": "general",
       "feature": "coach",
-      "dimensions": { "width": 640, "height": 1391 },
+      "dimensions": {
+        "width": 640,
+        "height": 1391
+      },
       "crop": "Preserve full UI; restrained device framing allowed",
       "releaseRelevance": "production",
       "approval": "approved"
@@ -70,7 +85,10 @@
       "kind": "native_app_screenshot",
       "sport": "general",
       "feature": "nutrition",
-      "dimensions": { "width": 640, "height": 1391 },
+      "dimensions": {
+        "width": 640,
+        "height": 1391
+      },
       "crop": "Preserve full UI; restrained device framing allowed",
       "releaseRelevance": "production",
       "approval": "approved"
@@ -82,7 +100,10 @@
       "kind": "native_app_screenshot",
       "sport": "general",
       "feature": "progress",
-      "dimensions": { "width": 640, "height": 1391 },
+      "dimensions": {
+        "width": 640,
+        "height": 1391
+      },
       "crop": "Preserve full UI; restrained device framing allowed",
       "releaseRelevance": "production",
       "approval": "approved"
@@ -94,7 +115,10 @@
       "kind": "app_store_marketing_board",
       "sport": "general",
       "feature": "athlete-identity",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "May crop outer board edge; never place in another phone frame",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -106,7 +130,10 @@
       "kind": "app_store_marketing_board",
       "sport": "general",
       "feature": "workout",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve headline and real simulator UI",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -118,7 +145,10 @@
       "kind": "app_store_marketing_board",
       "sport": "soccer",
       "feature": "athlete-identity",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve athlete and claim; never place in another phone frame",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -130,7 +160,10 @@
       "kind": "app_store_marketing_board",
       "sport": "soccer",
       "feature": "workout",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve headline and real simulator UI",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -142,7 +175,10 @@
       "kind": "app_store_marketing_board",
       "sport": "basketball",
       "feature": "athlete-identity",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve athlete and claim; never place in another phone frame",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -154,7 +190,10 @@
       "kind": "app_store_marketing_board",
       "sport": "basketball",
       "feature": "workout",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve headline and real simulator UI",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -166,7 +205,10 @@
       "kind": "app_store_marketing_board",
       "sport": "pickleball",
       "feature": "athlete-identity",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve athlete and claim; never place in another phone frame",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -178,7 +220,10 @@
       "kind": "app_store_marketing_board",
       "sport": "pickleball",
       "feature": "workout",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve headline and real simulator UI",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -190,7 +235,10 @@
       "kind": "app_store_marketing_board",
       "sport": "tennis",
       "feature": "athlete-identity",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve athlete and claim; never place in another phone frame",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -202,7 +250,10 @@
       "kind": "app_store_marketing_board",
       "sport": "tennis",
       "feature": "workout",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve headline and real simulator UI",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -214,7 +265,10 @@
       "kind": "app_store_marketing_board",
       "sport": "volleyball",
       "feature": "athlete-identity",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve athlete and claim; never place in another phone frame",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -226,7 +280,10 @@
       "kind": "app_store_marketing_board",
       "sport": "volleyball",
       "feature": "workout",
-      "dimensions": { "width": 660, "height": 1434 },
+      "dimensions": {
+        "width": 660,
+        "height": 1434
+      },
       "crop": "Preserve headline and real simulator UI",
       "releaseRelevance": "production-homepage",
       "approval": "approved-source-derivative"
@@ -238,7 +295,10 @@
       "kind": "athlete_campaign_image",
       "sport": "general",
       "feature": "athlete-signal-split-desktop",
-      "dimensions": { "width": 1200, "height": 2150 },
+      "dimensions": {
+        "width": 1200,
+        "height": 2150
+      },
       "crop": "Keep all five athletes visible; portrait may crop vertically but not relabel sports",
       "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
@@ -250,7 +310,10 @@
       "kind": "athlete_campaign_image",
       "sport": "soccer",
       "feature": "athlete-signal-split-desktop",
-      "dimensions": { "width": 1200, "height": 2150 },
+      "dimensions": {
+        "width": 1200,
+        "height": 2150
+      },
       "crop": "Preserve athlete, ball, and field context",
       "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
@@ -262,7 +325,10 @@
       "kind": "athlete_campaign_image",
       "sport": "basketball",
       "feature": "athlete-signal-split-desktop",
-      "dimensions": { "width": 1200, "height": 2150 },
+      "dimensions": {
+        "width": 1200,
+        "height": 2150
+      },
       "crop": "Preserve athlete, basketball, and court context",
       "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
@@ -274,7 +340,10 @@
       "kind": "athlete_campaign_image",
       "sport": "pickleball",
       "feature": "athlete-signal-split-desktop",
-      "dimensions": { "width": 1200, "height": 2150 },
+      "dimensions": {
+        "width": 1200,
+        "height": 2150
+      },
       "crop": "Preserve athlete, paddle, ball, and court context",
       "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
@@ -286,7 +355,10 @@
       "kind": "athlete_campaign_image",
       "sport": "tennis",
       "feature": "athlete-signal-split-desktop",
-      "dimensions": { "width": 1200, "height": 2150 },
+      "dimensions": {
+        "width": 1200,
+        "height": 2150
+      },
       "crop": "Preserve athlete, racket, and court context",
       "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
@@ -298,7 +370,10 @@
       "kind": "athlete_campaign_image",
       "sport": "volleyball",
       "feature": "athlete-signal-split-desktop",
-      "dimensions": { "width": 1200, "height": 2150 },
+      "dimensions": {
+        "width": 1200,
+        "height": 2150
+      },
       "crop": "Preserve athlete, volleyball, knee pads, and court context",
       "releaseRelevance": "production-homepage-desktop",
       "approval": "approved-source-derivative"
@@ -310,7 +385,10 @@
       "kind": "athlete_campaign_image",
       "sport": "general",
       "feature": "athlete-signal-split-mobile",
-      "dimensions": { "width": 780, "height": 658 },
+      "dimensions": {
+        "width": 780,
+        "height": 658
+      },
       "crop": "Unused upper field removed; all five athletes and sport equipment remain visible over a darkened blur of the same approved source",
       "releaseRelevance": "production-homepage-mobile",
       "approval": "deterministic-responsive-derivative"
@@ -322,7 +400,10 @@
       "kind": "athlete_campaign_image",
       "sport": "soccer",
       "feature": "athlete-signal-split-mobile",
-      "dimensions": { "width": 780, "height": 658 },
+      "dimensions": {
+        "width": 780,
+        "height": 658
+      },
       "crop": "Unused upper field removed; athlete face, full stance, ball, and field remain visible over a darkened blur of the same approved source",
       "releaseRelevance": "production-homepage-mobile",
       "approval": "deterministic-responsive-derivative"
@@ -334,7 +415,10 @@
       "kind": "athlete_campaign_image",
       "sport": "basketball",
       "feature": "athlete-signal-split-mobile",
-      "dimensions": { "width": 780, "height": 658 },
+      "dimensions": {
+        "width": 780,
+        "height": 658
+      },
       "crop": "Unused upper field removed; athlete face, full stance, basketball, and court remain visible over a darkened blur of the same approved source",
       "releaseRelevance": "production-homepage-mobile",
       "approval": "deterministic-responsive-derivative"
@@ -346,7 +430,10 @@
       "kind": "athlete_campaign_image",
       "sport": "pickleball",
       "feature": "athlete-signal-split-mobile",
-      "dimensions": { "width": 780, "height": 658 },
+      "dimensions": {
+        "width": 780,
+        "height": 658
+      },
       "crop": "Unused upper field removed; athlete face, paddle, ball, and court remain visible over a darkened blur of the same approved source",
       "releaseRelevance": "production-homepage-mobile",
       "approval": "deterministic-responsive-derivative"
@@ -358,7 +445,10 @@
       "kind": "athlete_campaign_image",
       "sport": "tennis",
       "feature": "athlete-signal-split-mobile",
-      "dimensions": { "width": 780, "height": 658 },
+      "dimensions": {
+        "width": 780,
+        "height": 658
+      },
       "crop": "Unused upper field removed; athlete face, racket, and court remain visible over a darkened blur of the same approved source",
       "releaseRelevance": "production-homepage-mobile",
       "approval": "deterministic-responsive-derivative"
@@ -370,10 +460,21 @@
       "kind": "athlete_campaign_image",
       "sport": "volleyball",
       "feature": "athlete-signal-split-mobile",
-      "dimensions": { "width": 780, "height": 658 },
+      "dimensions": {
+        "width": 780,
+        "height": 658
+      },
       "crop": "Unused upper field removed; athlete face, volleyball, knee pads, and court remain visible over a darkened blur of the same approved source",
       "releaseRelevance": "production-homepage-mobile",
       "approval": "deterministic-responsive-derivative"
     }
-  ]
+  ],
+  "activeHomepageAssetManifest": "docs/design/beyond-the-court/asset-manifest.json",
+  "activeHomepage": {
+    "direction": "Beyond the court \u2014 Film first (A)",
+    "selectedByUser": "2026-09-17",
+    "assetType": "Commercial-use Mixkit stock films and authentic native screenshot examples",
+    "mediaPath": "assets/beyond-court",
+    "publication": "pending"
+  }
 }
