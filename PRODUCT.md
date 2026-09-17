@@ -30,7 +30,7 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Existing URLs, metadata, canonical URLs, sitemap behavior, legal/support pages, and current analytics semantics must be preserved.
 - The website must not imply medical outcomes, guaranteed performance, installs, or capabilities unsupported by the shipping app.
 - The one-time 7-day Premium Preview begins after the first personalized workout is ready, requires no payment, and does not charge automatically. After it ends, local workouts, logs, and progress remain available; new personalized AI features and cloud sync require Premium.
-- The user-approved Founding 200 promotion is $6.99 per month or $69.99 per year for the first 200 users. The website must not invent remaining availability or price-lock duration.
+- The user-approved founder promotion is $6.99 per month or $69.99 per year, with the first 200 subscriptions in each offer. The website must not invent remaining availability or price-lock duration. Availability and local prices are confirmed in the app before purchase.
 
 ## Brand Commitments
 
@@ -39,7 +39,8 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Starting proposition: “Train for your game. Not just the gym.”
 - Voice is confident, concrete, athlete-focused, and free of shame, fake urgency, or generic fitness hype.
 - Product evidence uses real DoThis screenshots. Generated athletes are illustrative campaign subjects, not customers or endorsers.
-- Homepage direction: the user-supplied “Train Around Your Game” HTML, adopted on 2026-09-05. Deep teal, amber actions, condensed type, and an illustrative weekly planner now define the homepage. This supersedes the prior 3D-court presentation.
+- Homepage direction: the September 17, 2026 redesign leads with “Train for the game you love.” A daylight community-sport identity, real app screens, a fixed Match Day example, and explicit AI coaching support the visitor's download decision. This supersedes the September 5 teal-and-amber homepage under the user's explicit redesign-and-deploy request.
+- The founder's origin is beach volleyball. His supplied story includes eight years of gym training and six years of software engineering. This explains why the product exists without limiting it to one sport.
 - User-approved language includes “You can be lethal,” “You just need to train like it,” and “Train with us. Become lethal.”
 
 ## Evidence on Hand

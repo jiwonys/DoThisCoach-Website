@@ -1,286 +1,141 @@
-(() => {
-  'use strict';
-  const descriptions = {
-    general: ['One week. All your training.', 'Every game starts with the work.'],
-    soccer: ['Strength around match day.', 'Bring your strength to the field.'],
-    basketball: ['Your lift knows game night.', 'Be ready for the next possession.'],
-    pickleball: ['Training around court time.', 'Stay ready for one more game.'],
-    tennis: ['Your week. Your next match.', 'Make the next point yours.'],
-    volleyball: ['Strength around your sport.', 'Bring more to the next rally.']
-  };
-  const buttons = [...document.querySelectorAll('[data-sport]')];
-  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let updateCourt = () => {};
-  function select(requested, updateURL = true) {
-    const sport = Object.hasOwn(descriptions, requested) ? requested : 'general';
-    document.body.dataset.sport = sport;
-    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.sport === sport)));
-    document.querySelector('[data-scene-label]').textContent = descriptions[sport][0];
-    const courtName=document.querySelector('[data-court-name]');
-    if(courtName)courtName.textContent=sport==='general'?'Your home court':sport;
-    document.querySelector('[data-sport-detail]').textContent = descriptions[sport][1];
-    document.querySelectorAll('[data-download]').forEach(link => { link.href = sport === 'general' ? '/app/' : `/app/${sport}/`; });
-    const athlete = document.querySelector('[data-athlete]');
-    if (athlete) { athlete.src = `/assets/awakening/${sport}.webp`; athlete.alt = `Illustrative recreational ${sport === 'general' ? 'multisport athletes' : sport + ' athlete'}`; }
-    updateCourt(sport);
-    if (updateURL) { const url = new URL(location.href); url.searchParams.set('sport', sport); history.pushState({}, '', url); }
+const allowedSports = {
+  general: {name: 'General athlete', title: 'You don’t need to go pro to train with purpose.', description: 'Whether it’s a weekly league or a weekend game, put a strength plan behind the sport you enjoy. DoThis brings your schedule, equipment, preferences, and training history together.'},
+  volleyball: {name: 'Volleyball', title: 'Put a plan behind every rally.', description: 'On the sand or in the gym, your sport belongs in your strength plan. Give DoThis your volleyball schedule and training requests, then log the work that supports your time on court.'},
+  tennis: {name: 'Tennis', title: 'Make your gym time part of your tennis week.', description: 'Fit strength training around court time and match days. Your tennis schedule, recent sessions, and recovery give DoThis the context to build your next workout.'},
+  basketball: {name: 'Basketball', title: 'Your next lift knows about game night.', description: 'Keep strength sessions and basketball on the same calendar. Tell DoThis when you play and how you feel, then choose the training load that fits your day.'},
+  soccer: {name: 'Soccer', title: 'Train with the next match in mind.', description: 'Bring practices, matches, and gym work into one week. DoThis uses your soccer schedule, equipment, and completed training to help shape the next session.'},
+  pickleball: {name: 'Pickleball', title: 'Bring a little more purpose to your court time.', description: 'You play because you enjoy it. Give your gym training that same direction, with workouts shaped by your pickleball schedule, training goals, and recovery.'}
+};
+const sportLinks = [...document.querySelectorAll('[data-sport]')];
+const sportImage = document.querySelector('#sport-image');
+let activeSport = 'general';
+let sportImageRequest = 0;
+function setSport(requested, updateURL = false) {
+  activeSport = Object.hasOwn(allowedSports, requested) ? requested : 'general';
+  const sport = allowedSports[activeSport];
+  document.body.dataset.selectedSport = activeSport;
+  sportLinks.forEach(link => {
+    if (link.dataset.sport === activeSport) link.setAttribute('aria-current', 'true');
+    else link.removeAttribute('aria-current');
+  });
+  document.querySelectorAll('[data-download]').forEach(link => {
+    link.href = activeSport === 'general' ? '/app/' : `/app/${activeSport}/`;
+  });
+  document.querySelector('#sport-name').textContent = sport.title;
+  document.querySelector('#sport-description').textContent = sport.description;
+  if (updateURL) {
+    const url = new URL(location.href);
+    url.searchParams.set('sport', activeSport);
+    history.pushState({}, '', url);
   }
-  buttons.forEach(button => button.addEventListener('click', () => select(button.dataset.sport)));
-  const menu=document.querySelector('.mobile-menu');
-  menu?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{menu.open=false;}));
-  document.addEventListener('keydown',event=>{if(event.key==='Escape' && menu?.open){menu.open=false;menu.querySelector('summary').focus();}});
-  document.addEventListener('click',event=>{if(menu?.open && !menu.contains(event.target))menu.open=false;});
-  addEventListener('popstate', () => select(new URL(location.href).searchParams.get('sport'), false));
-  select(new URL(location.href).searchParams.get('sport'), false);
-  const proofScreens={
-    week:{src:'today-plan',title:'A plan around your real week.',description:'Confirm your sport days. Keep training, food, and recovery in view.',alt:'Real DoThis Today screen showing an example plan for a volleyball athlete'},
-    workout:{src:'adaptive-workout',title:'Put a plan behind the effort.',description:'Your workout, warm-up, and exercises in one place. You stay in control.',alt:'Real DoThis workout screen with an upper-body and shoulder session for a volleyball athlete'},
-    progress:{src:'progress-trends',title:'See the work you have put in.',description:'Completed training and progress trends, together in one view.',alt:'Real DoThis Progress screen showing example training history and weight trends'}
+  const source = activeSport === 'general' ? '/assets/screenshots/progress-trends.webp' : `/assets/sports/${activeSport}-workout.webp`;
+  const caption = document.querySelector('#sport-caption');
+  const captionText = activeSport === 'general' ? 'Actual app screen · Training progress' : `DoThis App Store preview · ${sport.name}`;
+  const request = ++sportImageRequest;
+  if (sportImage.getAttribute('src') === source) {
+    sportImage.removeAttribute('aria-busy');
+    caption.textContent = captionText;
+    return;
+  }
+  caption.textContent = 'Loading app preview…';
+  sportImage.setAttribute('aria-busy', 'true');
+  const next = new Image();
+  next.onload = () => {
+    if (request !== sportImageRequest) return;
+    sportImage.src = source;
+    sportImage.alt = activeSport === 'general' ? 'Actual DoThis Progress screen showing example training history and weight trends' : `DoThis App Store preview showing a workout for ${sport.name.toLowerCase()}`;
+    sportImage.width = activeSport === 'general' ? 640 : 660;
+    sportImage.height = activeSport === 'general' ? 1391 : 1434;
+    sportImage.removeAttribute('aria-busy');
+    caption.textContent = captionText;
   };
-  document.querySelectorAll('[data-proof]').forEach(button=>button.addEventListener('click',()=>{
-    const proof=proofScreens[button.dataset.proof];
-    if(!proof)return;
-    document.querySelectorAll('[data-proof]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
-    const img=document.querySelector('[data-proof-image]');img.src='/assets/screenshots/'+proof.src+'.webp';img.alt=proof.alt;
-    document.querySelector('[data-proof-title]').textContent=proof.title;
-    document.querySelector('[data-proof-description]').textContent=proof.description;
-  }));
-  if (!window.THREE || !document.querySelector('#court')) return;
+  next.onerror = () => {
+    if (request !== sportImageRequest) return;
+    sportImage.removeAttribute('aria-busy');
+    caption.textContent = 'Preview unavailable. Select your sport again to retry.';
+  };
+  next.src = source;
+}
+sportLinks.forEach(link => link.addEventListener('click', event => {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  setSport(link.dataset.sport, true);
+}));
+setSport(new URL(location.href).searchParams.get('sport'));
+addEventListener('popstate', () => setSport(new URL(location.href).searchParams.get('sport')));
 
-  const T = window.THREE;
-  const stage = document.querySelector('#stage');
-  const canvas = document.querySelector('#court');
-  let renderer;
-  try { renderer = new T.WebGLRenderer({canvas, antialias:true, alpha:true, powerPreference:'low-power'}); } catch { return; }
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = T.PCFSoftShadowMap;
-  renderer.outputEncoding = T.sRGBEncoding;
-  renderer.toneMapping = T.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = .95;
-  const scene = new T.Scene();
-  const camera = new T.PerspectiveCamera(34, 1, .1, 80);
-  const composition = new T.Group();
-  scene.add(composition);
-  scene.add(new T.HemisphereLight(0xd8e7cb, 0x1a2b23, .42));
-  const light = new T.DirectionalLight(0xffffe7, 1.3);
-  light.position.set(-5, 10, 4); light.castShadow = true;
-  light.shadow.mapSize.set(1024,1024);
-  Object.assign(light.shadow.camera,{left:-8,right:8,top:8,bottom:-8});
-  light.shadow.bias = -.001;
-  scene.add(light);
-  const rim = new T.DirectionalLight(0xc1efbf, .7); rim.position.set(6,3,-6); scene.add(rim);
-  const materials = [];
-  function material(color, options={}) { const m = new T.MeshStandardMaterial({color, roughness:.8, ...options}); m.color.convertSRGBToLinear();materials.push(m); return m; }
-  const green = material(0x3b6650);
-  const boundary = material(0x172f25);
-  const pale = material(0xf0f0d8);
-  const steel = material(0x454d46,{metalness:.8,roughness:.3});
-  const black = material(0x101a15);
-  const orange = material(0xdc8438);
-  const kitchen = material(0x2c757c);
-  function box(w,h,d,mat,x,y,z,parent=composition) {
-    const mesh = new T.Mesh(new T.BoxGeometry(w,h,d),mat);
-    mesh.position.set(x,y,z); mesh.castShadow = true; mesh.receiveShadow = true; parent.add(mesh); return mesh;
-  }
-  box(8.1,.2,5.1,boundary,0,-.18,0);
-  box(7.9,.1,4.9,green,0,-.08,0);
-  const glow=material(0xd8f4af,{emissive:0x7a9f4e,emissiveIntensity:.65,roughness:.4});
-  box(8.02,.015,.018,glow,0,-.16,2.55);
-  box(.018,.015,5.08,glow,4.05,-.16,0);
-  // Two understated floodlight assemblies establish a believable evening venue.
-  for(const x of [-3.85,3.85]){
-    box(.055,2.35,.055,steel,x,1.14,-2.35);
-    box(.74,.09,.22,black,x,2.32,-2.29);
-    box(.66,.025,.18,glow,x,2.27,-2.25);
-  }
-  const surfaceTextures=new Map();
-  function surfaceTexture(kind){
-    if(surfaceTextures.has(kind))return surfaceTextures.get(kind);
-    const image=document.createElement('canvas');image.width=512;image.height=256;
-    const ctx=image.getContext('2d');
-    if(kind==='wood'){
-      ctx.fillStyle='#b79561';ctx.fillRect(0,0,512,256);
-      for(let row=0;row<20;row++){
-        for(let col=-1;col<5;col++){
-          const shade=150+(row*13+col*7+21)%25;
-          const x=col*128+(row%3)*43,y=row*13;
-          ctx.fillStyle=`rgb(${shade+38},${shade+9},${shade-38})`;ctx.fillRect(x,y,127.7,12.8);
-          for(let grain=0;grain<7;grain++){
-            ctx.fillStyle='rgba(70,38,14,.055)';ctx.fillRect(x+((grain*17+row*9)%90),y+grain*1.7,36, .6);
-          }
-        }
-      }
-    }else{
-      ctx.fillStyle=kind==='grass'?'#275339':kind==='clay'?'#a76043':'#245568';ctx.fillRect(0,0,512,256);
-      if(kind==='grass')for(let stripe=0;stripe<10;stripe++){ctx.fillStyle=stripe%2?'#ffffff0d':'#0000000c';ctx.fillRect(stripe*51.2,0,51.2,256);}
-      for(let i=0;i<7000;i++){const x=(i*173)%512,y=(i*79+Math.floor(i/512)*17)%256;ctx.fillStyle=i%2?'#ffffff0a':'#00000012';ctx.fillRect(x,y,1,1);}
-    }
-    const texture=new T.CanvasTexture(image);texture.encoding=T.sRGBEncoding;texture.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());surfaceTextures.set(kind,texture);return texture;
-  }
-  function setSurface(kind){green.map=surfaceTexture(kind);green.color.setHex(0xffffff);green.roughness=kind==='wood'?.48:.88;green.needsUpdate=true;}
-  // A beveled, elevated playing surface. The lines and equipment change with the selected sport.
-  const lines = new T.Group(); composition.add(lines);
-  const courtLogos = new T.Group(); composition.add(courtLogos);
-  function placeCourtLogos(sport) {
-    courtLogos.children.forEach((logo,index)=>{
-      logo.visible=true;
-      logo.position.set(index===0?-1.95:1.95,-.031,0);
-      logo.rotation.set(-Math.PI/2,0,0);
-      logo.rotateZ(index===0?-Math.PI/2:Math.PI/2);
-    });
-  }
-  function line(x1,z1,x2,z2,width=.022,mat=pale) {
-    const length = Math.hypot(x2-x1,z2-z1);
-    const mesh = box(length,.012,width,mat,(x1+x2)/2,-.017,(z1+z2)/2,lines);
-    mesh.rotation.y = -Math.atan2(z2-z1,x2-x1); mesh.castShadow = false;
-  }
-  function rect(x,z,w,d) { line(x,z,x+w,z);line(x+w,z,x+w,z+d);line(x+w,z+d,x,z+d);line(x,z+d,x,z); }
-  function circle(x,z,r,start=0,end=Math.PI*2) { for(let i=0;i<72;i++){const a=start+(end-start)*i/72,b=start+(end-start)*(i+1)/72;line(x+Math.cos(a)*r,z+Math.sin(a)*r,x+Math.cos(b)*r,z+Math.sin(b)*r,.024);} }
-  function net({width, top, center=top, bottom=.04, antennas=false}) {
-    const half=width/2;
-    const postHeight=top+.12;
-    for(const z of [-half,half])box(.055,postHeight,.055,steel,0,postHeight/2,z,lines);
-    // The tape and mesh follow the lower center height of racket-sport nets.
-    const heightAt=z=>center+(top-center)*Math.pow(Math.abs(z)/half,2);
-    for(let z=-half;z<half;z+=.12){
-      const end=Math.min(z+.12,half), mid=(z+end)/2;
-      const tape=box(.025,.035,end-z,pale,0,heightAt(mid),mid,lines);
-      tape.rotation.x=-Math.atan2(heightAt(end)-heightAt(z),end-z);
-      box(.012,heightAt(z)-bottom,.012,black,0,(heightAt(z)+bottom)/2,z,lines);
-    }
-    for(let y=bottom;y<center-.02;y+=.1)box(.012,.01,width,black,0,y,0,lines);
-    if(antennas){
-      box(.025,.025,width,pale,0,bottom,0,lines);
-      for(const z of [-half+.12,half-.12]){
-        box(.04,top-bottom,.05,pale,0,(top+bottom)/2,z,lines);
-        for(let i=0;i<6;i++)box(.025,.075,.025,i%2?orange:pale,0,top+.075*i,z,lines);
-      }
-    }
-  }
-  function hoop(x) {
-    box(.08,1.5,.08,steel,x,.75,0,lines);
-    box(.09,.62,.95,pale,x,1.5,0,lines);
-    const rim = new T.Mesh(new T.TorusGeometry(.21,.023,8,40),orange); rim.rotation.x=Math.PI/2; rim.position.set(x+(x>0?-.28:.28),1.27,0); lines.add(rim);
-  }
-  function disposeGroup(group) { while(group.children.length){const c=group.children[0];c.geometry?.dispose();group.remove(c);} }
-  function batchCourtMeshes() {
-    // Combine static pieces sharing a material/shadow state to reduce draw calls.
-    const batches=new Map();
-    for(const mesh of lines.children){
-      mesh.updateMatrix();
-      const geometry=mesh.geometry.index?mesh.geometry.toNonIndexed():mesh.geometry.clone();
-      geometry.applyMatrix4(mesh.matrix);
-      const key=mesh.material.uuid+':'+mesh.castShadow+':'+mesh.receiveShadow;
-      if(!batches.has(key))batches.set(key,{material:mesh.material,cast:mesh.castShadow,receive:mesh.receiveShadow,geometries:[]});
-      batches.get(key).geometries.push(geometry);
-    }
-    disposeGroup(lines);
-    for(const batch of batches.values()){
-      const merged=new T.BufferGeometry();
-      for(const name of ['position','normal','uv']){
-        const length=batch.geometries.reduce((sum,g)=>sum+g.attributes[name].array.length,0);
-        const data=new Float32Array(length);let offset=0;
-        for(const geometry of batch.geometries){const values=geometry.attributes[name].array;data.set(values,offset);offset+=values.length;}
-        merged.setAttribute(name,new T.BufferAttribute(data,name==='uv'?2:3));
-      }
-      batch.geometries.forEach(g=>g.dispose());
-      const mesh=new T.Mesh(merged,batch.material);mesh.castShadow=batch.cast;mesh.receiveShadow=batch.receive;lines.add(mesh);
-    }
-  }
-  updateCourt = (sport) => {
-    disposeGroup(lines);
-    placeCourtLogos(sport);
-    if (sport === 'basketball' || sport === 'general') {
-      rect(-3.65,-2.1,7.3,4.2); line(0,-2.1,0,2.1);
-      setSurface('wood'); circle(0,0,.65);
-      rect(-3.65,-.72,1.3,1.44);rect(2.35,-.72,1.3,1.44);
-      circle(-2.35,0,.72,-Math.PI/2,Math.PI/2);circle(2.35,0,.72,Math.PI/2,Math.PI*1.5);
-      hoop(-3.65); hoop(3.65);
-    } else if(sport === 'soccer') {
-      rect(-3.65,-2.1,7.3,4.2); line(0,-2.1,0,2.1);
-      setSurface('grass');circle(0,0,.68);rect(-3.65,-1.1,1.15,2.2);rect(2.5,-1.1,1.15,2.2);
-      for (const x of [-3.7,3.7]) {box(.06,.7,.06,pale,x,.35,-.65,lines);box(.06,.7,.06,pale,x,.35,.65,lines);box(.06,.06,1.35,pale,x,.7,0,lines);}
-    } else if(sport === 'volleyball') {
-      // 18:9 playing-area ratio and attack lines 3 m from the center.
-      // Elevated hanging mesh and antennas distinguish volleyball at miniature scale.
-      setSurface('wood');
-      rect(-3.65,-1.825,7.3,3.65);
-      line(0,-1.825,0,1.825);
-      for(const x of [-7.3/6,7.3/6])line(x,-1.825,x,1.825);
-      net({width:4.12,top:1.45,bottom:.86,antennas:true});
-    } else if(sport === 'tennis') {
-      // ITF doubles footprint 78 × 36 ft, singles 27 ft; service lines 21 ft from net.
-      setSurface('clay');
-      const scale=7.3/78, halfWidth=36*scale/2, singles=27*scale/2, service=21*scale;
-      rect(-3.65,-halfWidth,7.3,halfWidth*2);
-      for(const z of [-singles,singles])line(-3.65,z,3.65,z);
-      for(const x of [-service,service])line(x,-singles,x,singles);
-      line(-service,0,service,0);
-      line(-3.65,0,-3.55,0);line(3.55,0,3.65,0);
-      net({width:(36+6)*scale,top:.62,center:.53});
-    } else if(sport === 'pickleball') {
-      // USA Pickleball footprint 44 × 20 ft; 7 ft kitchen each side of the net.
-      // Service centerlines stop at the kitchen rather than crossing it.
-      setSurface('hardcourt');
-      const scale=6.2/44, halfWidth=20*scale/2, nonVolley=7*scale;
-      box(nonVolley*2,.01,halfWidth*2,kitchen,0,-.027,0,lines).castShadow=false;
-      rect(-3.1,-halfWidth,6.2,halfWidth*2);
-      for(const x of [-nonVolley,nonVolley])line(x,-halfWidth,x,halfWidth);
-      line(-3.1,0,-nonVolley,0);line(nonVolley,0,3.1,0);
-      net({width:halfWidth*2+.28,top:.48,center:.48*34/36});
-    }
-    batchCourtMeshes();
-    queue();
+const sessions = {
+  prep: {label: 'Sports Prep', title: 'Get ready for the game.', description: 'A warm-up and cooldown for your sport, without an added strength session in this example.'},
+  lighter: {label: 'Lighter Workout', title: 'Get some work in. Keep some in reserve.', description: 'A reduced training dose, with your match and recent workouts in mind.'},
+  full: {label: 'Full Workout', title: 'Choose a full training session.', description: 'Your normal training dose, with your sport schedule, readiness, and recent sessions as context.'}
+};
+document.querySelectorAll('[data-dose]').forEach(button => button.addEventListener('click', () => {
+  const session = sessions[button.dataset.dose];
+  document.querySelectorAll('[data-dose]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  document.querySelector('#session-title').textContent = session.title;
+  document.querySelector('#session-description').textContent = session.description;
+}));
+
+const features = {
+  workout: {title: 'Walk into the gym with a plan.', description: 'Generate a workout for your sport and available equipment. Follow it set by set, log your weights and reps, or import a routine you already use.', points: ['Sessions shaped by your sport and schedule', 'Your requests and limitations considered', 'Completed sets inform future training'], image: 'adaptive-workout', alt: 'Actual DoThis workout screen showing upper-body strength and shoulder durability for beach volleyball', caption: 'Actual app screen · Beach volleyball example'},
+  coach: {title: 'Your training comes with context.', description: 'Talk through a specific request or ask about your recent training. Coach uses your relevant history, schedule, and preferences to offer guidance. You make the final call.', points: ['Ask about workouts, recovery, and nutrition', 'Review, edit, or delete Coach memory', 'Confirm changes in the app yourself'], image: 'coach-memory', alt: 'Actual DoThis Coach Memory screen with editable training preferences', caption: 'Actual app screen · Coach memory example'},
+  progress: {title: 'Keep a record of the work.', description: 'See completed sessions, logged sets, and weight trends together. Your next workout has a history to build on, and you have a clearer picture of your consistency.', points: ['Keep your completed workout history', 'Track the weights and reps you log', 'Review your progress over time'], image: 'progress-trends', alt: 'Actual DoThis Progress screen showing example training history and weight trends', caption: 'Actual app screen · Progress example'},
+  food: {title: 'Keep your fuel in the picture.', description: 'Log meals and review nutrition totals alongside your training. Use search, barcode scanning, manual entry, or an AI estimate you can review.', points: ['Food and macro logging in the same app', 'Daily nutrition totals at a glance', 'Review and adjust AI estimates'], image: 'ai-nutrition', alt: 'Actual DoThis food logging screen with daily calories and macronutrients', caption: 'Actual app screen · Nutrition example'}
+};
+const featureTabs = [...document.querySelectorAll('[data-feature]')];
+let featureImageRequest = 0;
+function selectFeature(tab) {
+  const feature = features[tab.dataset.feature];
+  featureTabs.forEach(item => {
+    item.setAttribute('aria-selected', String(item === tab));
+    item.tabIndex = item === tab ? 0 : -1;
+  });
+  document.querySelector('#feature-panel').setAttribute('aria-labelledby', tab.id);
+  document.querySelector('#feature-title').textContent = feature.title;
+  document.querySelector('#feature-description').textContent = feature.description;
+  document.querySelector('#feature-points').replaceChildren(...feature.points.map(point => {
+    const item = document.createElement('li'); item.textContent = point; return item;
+  }));
+  const request = ++featureImageRequest;
+  const caption = document.querySelector('#feature-caption');
+  const image = document.querySelector('#feature-image');
+  caption.textContent = 'Loading app screen…';
+  image.setAttribute('aria-busy', 'true');
+  const next = new Image();
+  next.onload = () => {
+    if (request !== featureImageRequest) return;
+    image.src = next.src; image.alt = feature.alt;
+    image.removeAttribute('aria-busy'); caption.textContent = feature.caption;
   };
-  // Shallow logo inlays follow the playing surface, below the court markings.
-  // Front UVs retain the original artwork; lighting and net shadows affect the finish.
-  let logoReady=false;
-  Promise.all([
-    fetch('/assets/courts/logo-shape.json').then(response=>{if(!response.ok)throw Error('Logo shape unavailable');return response.json();}),
-    new Promise((resolve,reject)=>new T.TextureLoader().load('/assets/courts/logo-face.png',resolve,undefined,reject))
-  ]).then(([artwork,texture])=>{
-    const height=1.15,width=height*artwork.width/artwork.height;
-    const convert=points=>points.map(([x,y])=>new T.Vector2((x-.5)*width,(.5-y)*height));
-    const outline=new T.Shape(convert(artwork.contours[0]));
-    for(const contour of artwork.contours.slice(1))outline.holes.push(new T.Path(convert(contour)));
-    const uv=(x,y)=>new T.Vector2(x/width+.5,y/height+.5);
-    const geometry=new T.ExtrudeGeometry(outline,{
-      depth:.012,bevelEnabled:false,steps:1,
-      UVGenerator:{
-        generateTopUV:(geometry,vertices,a,b,c)=>[a,b,c].map(i=>uv(vertices[i*3],vertices[i*3+1])),
-        generateSideWallUV:()=>[new T.Vector2(0,0),new T.Vector2(1,0),new T.Vector2(1,1),new T.Vector2(0,1)]
-      }
-    });
-    texture.encoding=T.sRGBEncoding;texture.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());
-    const face=new T.MeshStandardMaterial({map:texture,roughness:.8,metalness:0,alphaTest:.2});
-    const side=material(0x087d68,{roughness:.8});
-    for(let i=0;i<2;i++){
-      const logo=new T.Mesh(geometry,[face,side]);logo.name='DoThis court inlay';
-      logo.receiveShadow=true;logo.castShadow=false;courtLogos.add(logo);
-    }
-    placeCourtLogos(document.body.dataset.sport || 'general');
-    logoReady=true;stage.classList.add('ready');queue();
-  }).catch(()=>{stage.classList.remove('ready');canvas.style.visibility='hidden';});
-  const ground=new T.Mesh(new T.PlaneGeometry(40,40),new T.ShadowMaterial({opacity:.3}));ground.rotation.x=-Math.PI/2;ground.position.y=-.5;ground.receiveShadow=true;scene.add(ground);
-  let raf=0,px=0,py=0,rx=0,ry=0,visible=true,turn=0,smoothedTurn=0;
-  function render() {
-    raf=0; rx+=(px-rx)*.12; ry+=(py-ry)*.12;
-    smoothedTurn=reduced.matches?turn:smoothedTurn+(turn-smoothedTurn)*.1;
-    composition.rotation.y=-.18+rx*.14+smoothedTurn;composition.rotation.x=ry*.035;
-    renderer.render(scene,camera);
-    if (visible && !document.hidden && !reduced.matches && Math.abs(px-rx)+Math.abs(py-ry)+Math.abs(turn-smoothedTurn)>.001) queue();
-  }
-  function queue(){if(!raf && visible && !document.hidden)raf=requestAnimationFrame(render);}
-  function resize(){const width=stage.clientWidth,height=stage.clientHeight;renderer.setSize(width,height,false);camera.aspect=width/height;camera.position.set(8,7.4,12.6);camera.lookAt(0,.3,0);camera.fov=width<500?37:35;camera.updateProjectionMatrix();queue();}
-  new ResizeObserver(resize).observe(stage);
-  const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)queue();else{cancelAnimationFrame(raf);raf=0;} });observer.observe(stage);
-  stage.addEventListener('pointermove', event=>{if(reduced.matches || event.pointerType==='touch')return;const bounds=stage.getBoundingClientRect();px=(event.clientX-bounds.left)/bounds.width-.5;py=(event.clientY-bounds.top)/bounds.height-.5;queue();});
-  stage.addEventListener('pointerleave',()=>{px=py=0;queue();});
-  document.querySelector('#reset-view').addEventListener('click',()=>{px=py=turn=0;if(reduced.matches)rx=ry=smoothedTurn=0;queue();});
-  document.querySelector('#rotate-view')?.addEventListener('click',()=>{turn+=Math.PI/4;queue();});
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden)queue();});
-  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();cancelAnimationFrame(raf);raf=0;stage.classList.remove('ready');});
-  canvas.addEventListener('webglcontextrestored',()=>{if(logoReady)stage.classList.add('ready');queue();});
-  updateCourt(document.body.dataset.sport || 'general');resize();
-})();
+  next.onerror = () => {
+    if (request !== featureImageRequest) return;
+    image.removeAttribute('aria-busy'); caption.textContent = 'Screen unavailable. Select the feature again to retry.';
+  };
+  next.src = `/assets/screenshots/${feature.image}.webp`;
+}
+featureTabs.forEach((tab,index) => {
+  tab.addEventListener('click', () => selectFeature(tab));
+  tab.addEventListener('keydown', event => {
+    let next;
+    if (event.key === 'ArrowRight') next = (index + 1) % featureTabs.length;
+    if (event.key === 'ArrowLeft') next = (index - 1 + featureTabs.length) % featureTabs.length;
+    if (event.key === 'Home') next = 0;
+    if (event.key === 'End') next = featureTabs.length - 1;
+    if (next === undefined) return;
+    event.preventDefault(); selectFeature(featureTabs[next]); featureTabs[next].focus();
+  });
+});
+
+const menu = document.querySelector('.site-menu');
+menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+document.addEventListener('click', event => { if (!menu.contains(event.target)) menu.open = false; });
+document.addEventListener('focusin', event => { if (!menu.contains(event.target)) menu.open = false; });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); }
+});
+document.querySelector('#year').textContent = String(new Date().getFullYear());
+
+// Local event only: no third-party tracker or personal data is added.
+document.querySelectorAll('[data-download]').forEach(link => link.addEventListener('click', () => {
+  window.dispatchEvent(new CustomEvent('dothis:cta', {detail: {event: 'homepage_app_store_click', sport: activeSport, location: link.dataset.ctaLocation}}));
+}));

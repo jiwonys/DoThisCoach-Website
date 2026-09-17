@@ -7,12 +7,12 @@ related_targets: []
 
 # Homepage surface brief
 
-User-approved source: `/Users/jiwonkim/Downloads/dothis-website.html`. The latest request explicitly adopts its design, color scheme, and content and authorizes publishing.
+Current request, September 17, 2026: “redesign and deploy our website.” This replaces the earlier supplied homepage and authorizes publication after verification.
 
 Mode: Persuade. Audience: recreational athletes planning gym work around games. Primary action: open the appropriate DoThis App Store page.
 
-Production uses the supplied inline CSS and JavaScript. The visual sequence is hero, interactive week, comparison, features, Coach example, progression, reviews, pricing, and footer. There is no active 3D court on this version.
+The page uses external `home.css` and `home.js` and locally hosted licensed fonts. The sequence is benefit and real screenshots, coaching problem, fixed-week training choices, sport-specific previews, feature walkthrough, founder story, pricing, FAQ, training guides, and a download close.
 
-Integration changes: canonical/favicon/social metadata, actual site destinations, native mobile Menu, active Founding 200 pricing, legacy fragment aliases, campaign sport routing, planner focus preservation, illustrative label, and narrow accessibility fixes. The supplied base colors and font families remain the authority.
+The signature example keeps Thursday match day fixed while visitors choose Sports Prep, Lighter Workout, or Full Workout. It is labeled illustrative. Six sport states coordinate native app evidence with the existing fixed acquisition routes: a neutral Progress screen for all athletes and matching App Store boards for the five named sports. The founder's beach volleyball origin coexists with a broad recreational-athlete audience.
 
-Validation and release evidence: `docs/design/teal-release.md`.
+Direction contract: `docs/design/sport-coach-direction.md`. Validation and release evidence: `docs/design/sport-coach-release.md`. Product truth, unchanged logo assets, existing URLs, and no-charge preview semantics remain constraints.
