@@ -1,5 +1,5 @@
 {
-  "status": "complete_local_build_pending_publication_approval",
+  "status": "published_verified",
   "direction": "A \u2014 Film first",
   "preview": "http://127.0.0.1:4339/",
   "chromiumChecks": 163,
@@ -15,7 +15,16 @@
     "text-only film controls",
     "current DESIGN and surface records"
   ],
-  "published": false,
+  "published": true,
   "providerGenerationSpend": 0,
-  "homepageSha256": "122e6ecbb2d91092074896e38cf9e8a4f0706620b76b72eb5b276933df66bde7"
+  "homepageSha256": "122e6ecbb2d91092074896e38cf9e8a4f0706620b76b72eb5b276933df66bde7",
+  "url": "https://dothiscoach.com/",
+  "sourceCommit": "9ef9e432bfbfa4b17e3b93bca5319a88e53e7bec",
+  "deploymentRun": "https://github.com/jiwonys/DoThisCoach-Website/actions/runs/35286509665",
+  "verifiedAt": "2026-09-17T23:26:05.944895+00:00",
+  "liveHtmlSha256": "bfb6901f2b3e4e51ab9fe5e905aeb919e4b4f5b5feb82aade00bc879b491bdcc",
+  "liveVideoPlayback": true,
+  "liveSportStatesVerified": 6,
+  "liveAppStoreRoutesVerified": 6,
+  "upstreamCompatibility": "Preserved newer founder-offer wording, legacy anchors, structured data, and local dothis:cta event."
 }
