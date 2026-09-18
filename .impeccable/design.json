@@ -1,303 +1,274 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-17T23:11:19.505386+00:00",
+  "generatedAt": "2026-09-18T21:16:23.054Z",
   "title": "Design System: DoThis",
   "extensions": {
     "colorMeta": {
-      "bg": {
-        "role": "neutral",
-        "displayName": "Night ground",
+      "accent": {
+        "role": "primary",
+        "displayName": "Court red",
         "tonalRamp": [
-          "oklch(15% 0.015 285)",
-          "oklch(26% 0.015 285)",
-          "oklch(38% 0.015 285)",
-          "oklch(49% 0.015 285)",
-          "oklch(61% 0.015 285)",
-          "oklch(72% 0.015 285)",
-          "oklch(84% 0.015 285)",
-          "oklch(95% 0.015 285)"
-        ]
-      },
-      "surface": {
-        "role": "neutral",
-        "displayName": "Dark surface",
-        "tonalRamp": [
-          "oklch(15% 0.018 285)",
-          "oklch(26% 0.018 285)",
-          "oklch(38% 0.018 285)",
-          "oklch(49% 0.018 285)",
-          "oklch(61% 0.018 285)",
-          "oklch(72% 0.018 285)",
-          "oklch(84% 0.018 285)",
-          "oklch(95% 0.018 285)"
+          "oklch(15% 0.1707 29.36)",
+          "oklch(26% 0.1707 29.36)",
+          "oklch(38% 0.1707 29.36)",
+          "oklch(49% 0.1707 29.36)",
+          "oklch(61% 0.1707 29.36)",
+          "oklch(72% 0.1707 29.36)",
+          "oklch(84% 0.1707 29.36)",
+          "oklch(95% 0.1707 29.36)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Warm primary text",
+        "displayName": "Charcoal ink",
         "tonalRamp": [
-          "oklch(15% 0.013 85)",
-          "oklch(26% 0.013 85)",
-          "oklch(38% 0.013 85)",
-          "oklch(49% 0.013 85)",
-          "oklch(61% 0.013 85)",
-          "oklch(72% 0.013 85)",
-          "oklch(84% 0.013 85)",
-          "oklch(95% 0.013 85)"
+          "oklch(15% 0.0059 156.71)",
+          "oklch(26% 0.0059 156.71)",
+          "oklch(38% 0.0059 156.71)",
+          "oklch(49% 0.0059 156.71)",
+          "oklch(61% 0.0059 156.71)",
+          "oklch(72% 0.0059 156.71)",
+          "oklch(84% 0.0059 156.71)",
+          "oklch(95% 0.0059 156.71)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Chalk paper",
+        "tonalRamp": [
+          "oklch(15% 0.0040 106.47)",
+          "oklch(26% 0.0040 106.47)",
+          "oklch(38% 0.0040 106.47)",
+          "oklch(49% 0.0040 106.47)",
+          "oklch(61% 0.0040 106.47)",
+          "oklch(72% 0.0040 106.47)",
+          "oklch(84% 0.0040 106.47)",
+          "oklch(95% 0.0040 106.47)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Pale gray-green surface",
+        "tonalRamp": [
+          "oklch(15% 0.0074 132.42)",
+          "oklch(26% 0.0074 132.42)",
+          "oklch(38% 0.0074 132.42)",
+          "oklch(49% 0.0074 132.42)",
+          "oklch(61% 0.0074 132.42)",
+          "oklch(72% 0.0074 132.42)",
+          "oklch(84% 0.0074 132.42)",
+          "oklch(95% 0.0074 132.42)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Cool muted copy",
+        "displayName": "Muted slate",
         "tonalRamp": [
-          "oklch(15% 0.03 285)",
-          "oklch(26% 0.03 285)",
-          "oklch(38% 0.03 285)",
-          "oklch(49% 0.03 285)",
-          "oklch(61% 0.03 285)",
-          "oklch(72% 0.03 285)",
-          "oklch(84% 0.03 285)",
-          "oklch(95% 0.03 285)"
-        ]
-      },
-      "accent": {
-        "role": "primary",
-        "displayName": "Emerald action",
-        "tonalRamp": [
-          "oklch(15% 0.16 163)",
-          "oklch(26% 0.16 163)",
-          "oklch(38% 0.16 163)",
-          "oklch(49% 0.16 163)",
-          "oklch(61% 0.16 163)",
-          "oklch(72% 0.16 163)",
-          "oklch(84% 0.16 163)",
-          "oklch(95% 0.16 163)"
+          "oklch(15% 0.0129 149.65)",
+          "oklch(26% 0.0129 149.65)",
+          "oklch(38% 0.0129 149.65)",
+          "oklch(49% 0.0129 149.65)",
+          "oklch(61% 0.0129 149.65)",
+          "oklch(72% 0.0129 149.65)",
+          "oklch(84% 0.0129 149.65)",
+          "oklch(95% 0.0129 149.65)"
         ]
       },
       "line": {
         "role": "neutral",
         "displayName": "Quiet rule",
         "tonalRamp": [
-          "oklch(15% 0.03 285)",
-          "oklch(26% 0.03 285)",
-          "oklch(38% 0.03 285)",
-          "oklch(49% 0.03 285)",
-          "oklch(61% 0.03 285)",
-          "oklch(72% 0.03 285)",
-          "oklch(84% 0.03 285)",
-          "oklch(95% 0.03 285)"
+          "oklch(15% 0.0098 140.51)",
+          "oklch(26% 0.0098 140.51)",
+          "oklch(38% 0.0098 140.51)",
+          "oklch(49% 0.0098 140.51)",
+          "oklch(61% 0.0098 140.51)",
+          "oklch(72% 0.0098 140.51)",
+          "oklch(84% 0.0098 140.51)",
+          "oklch(95% 0.0098 140.51)"
         ]
       },
-      "on-accent": {
+      "ink-hover": {
         "role": "neutral",
-        "displayName": "On-accent ink",
+        "displayName": "Ink hover",
         "tonalRamp": [
-          "oklch(15% 0.025 155)",
-          "oklch(26% 0.025 155)",
-          "oklch(38% 0.025 155)",
-          "oklch(49% 0.025 155)",
-          "oklch(61% 0.025 155)",
-          "oklch(72% 0.025 155)",
-          "oklch(84% 0.025 155)",
-          "oklch(95% 0.025 155)"
-        ]
-      },
-      "accent-hover": {
-        "role": "primary",
-        "displayName": "Bright emerald hover",
-        "tonalRamp": [
-          "oklch(15% 0.15 163)",
-          "oklch(26% 0.15 163)",
-          "oklch(38% 0.15 163)",
-          "oklch(49% 0.15 163)",
-          "oklch(61% 0.15 163)",
-          "oklch(72% 0.15 163)",
-          "oklch(84% 0.15 163)",
-          "oklch(95% 0.15 163)"
-        ]
-      },
-      "media-note": {
-        "role": "neutral",
-        "displayName": "Media note",
-        "tonalRamp": [
-          "oklch(15% 0.015 285)",
-          "oklch(26% 0.015 285)",
-          "oklch(38% 0.015 285)",
-          "oklch(49% 0.015 285)",
-          "oklch(61% 0.015 285)",
-          "oklch(72% 0.015 285)",
-          "oklch(84% 0.015 285)",
-          "oklch(95% 0.015 285)"
+          "oklch(15% 0.0161 148.83)",
+          "oklch(26% 0.0161 148.83)",
+          "oklch(38% 0.0161 148.83)",
+          "oklch(49% 0.0161 148.83)",
+          "oklch(61% 0.0161 148.83)",
+          "oklch(72% 0.0161 148.83)",
+          "oklch(84% 0.0161 148.83)",
+          "oklch(95% 0.0161 148.83)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Athletic display",
-        "purpose": "Archivo is the local alias for Archivo Black; large athletic statements only."
+        "displayName": "Display",
+        "purpose": "Hero invitation."
       },
       "headline": {
-        "displayName": "Section headline",
-        "purpose": "Work is the local alias for Work Sans; explanatory section hierarchy."
+        "displayName": "Headline",
+        "purpose": "Major editorial statements."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sentence-case explanatory subheads."
       },
       "body": {
-        "displayName": "Reading copy",
-        "purpose": "Supporting explanations on dark surfaces."
+        "displayName": "Body",
+        "purpose": "Sustained reading."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Primary actions and text links."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Sport controls."
+      },
+      "supporting": {
+        "displayName": "Supporting",
+        "purpose": "Notes, captions, and terms."
       }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "mobile-menu",
+        "value": "0 12px 28px #191c1a15",
+        "purpose": "Ambient separation under the mobile navigation."
+      }
+    ],
     "motion": [
       {
         "name": "button-feedback",
-        "value": "background 0.2s",
-        "purpose": "Primary button hover."
+        "value": "background .18s, color .18s",
+        "purpose": "Standard button state feedback; removed for reduced motion."
       },
       {
-        "name": "hero-film-reveal",
-        "value": "opacity 0.7s ease-out",
-        "purpose": "Reveal decoded hero video above the poster."
-      },
-      {
-        "name": "training-film-reveal",
-        "value": "opacity 0.5s ease-out",
-        "purpose": "Reveal decoded gym video above the poster."
-      },
-      {
-        "name": "disclosure-marker",
-        "value": "transform 0.2s",
-        "purpose": "Rotate FAQ SVG 45 degrees when open."
+        "name": "disclosure",
+        "value": "transform .2s",
+        "purpose": "FAQ SVG plus rotation; removed for reduced motion."
       }
     ],
     "breakpoints": [
       {
-        "name": "mobile-stack",
-        "value": "650px"
+        "name": "max-1100",
+        "value": "1100px"
       },
       {
-        "name": "mobile-navigation",
-        "value": "900px"
-      },
-      {
-        "name": "compact-desktop",
+        "name": "max-1000",
         "value": "1000px"
       },
       {
-        "name": "wide-hero",
-        "value": "1600px"
-      }
-    ],
-    "focus": [
-      {
-        "name": "action",
-        "value": "3px solid var(--accent); outline-offset: 6px"
+        "name": "max-800",
+        "value": "800px"
       },
       {
-        "name": "summary",
-        "value": "3px solid var(--accent); outline-offset: 5px"
+        "name": "max-650",
+        "value": "650px"
+      },
+      {
+        "name": "max-600",
+        "value": "600px"
       }
-    ],
-    "tonalRampNote": "Synthesized display metadata only; the frontmatter owns implemented color primitives. No tonal-ramp shades are prescribed as additional application tokens."
+    ]
   },
   "components": [
     {
-      "name": "Primary action",
+      "name": "Primary action and disclosure",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Emerald acquisition action with a flat hover state.",
-      "html": "<a class=\"ds-primary\" href=\"#\">Build my game<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
-      "css": ".ds-primary{font-family:Work,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:32px;background:var(--accent,#10b981);color:#06120c;min-height:54px;padding:16px 24px;font-size:15px;font-weight:650;border-radius:4px;text-decoration:none;transition:background .2s}.ds-primary svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.ds-primary:hover{background:#49d5a6}.ds-primary:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:6px;}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+      "description": "The Preview disclosure stays 10px below its acquisition action.",
+      "html": "<div class=\"ds-action\"><a class=\"ds-primary\" href=\"/app/\">Start your next chapter <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a><p>On iPhone · 7 days of Premium, free.<br>No payment required. No automatic charge.</p></div>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;padding:16px 22px;border:1px solid var(--ink, #191c1a);border-radius:3px;font:600 14px Work,Arial,sans-serif;text-decoration:none;transition:background .18s,color .18s;background:var(--ink, #191c1a);color:var(--paper, #f8f8f5)}.ds-primary:hover{background:var(--ink-hover, #343c35)}.ds-primary:focus-visible{outline:3px solid var(--accent, #b63226);outline-offset:6px}.ds-action p{font:12px/1.55 Work,Arial,sans-serif;color:var(--ink, #191c1a);margin:10px 0 0}@media(max-width:600px){.ds-primary{min-height:54px;padding:15px 18px;font-size:13px;gap:20px}.ds-action p{font-size:11px}}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
     },
     {
-      "name": "Sport selectors",
+      "name": "Inverse closing action",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Chalk action on the dark closing field.",
+      "html": "<div class=\"ds-closing\"><a class=\"ds-inverse\" href=\"/app/\">Start your next chapter <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" aria-hidden=\"true\"><path d=\"M4 12h16m-6-6 6 6-6 6\"/></svg></a></div>",
+      "css": ".ds-closing{background:var(--ink, #191c1a);padding:22px}.ds-inverse{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;padding:16px 22px;border:1px solid var(--ink, #191c1a);border-radius:3px;font:600 14px Work,Arial,sans-serif;text-decoration:none;transition:background .18s,color .18s;background:var(--paper, #f8f8f5);color:var(--ink, #191c1a);border-color:var(--paper, #f8f8f5)}.ds-inverse:hover{background:var(--paper, #f8f8f5);border-color:var(--surface, #e9ece7)}.ds-inverse:focus-visible{outline:3px solid var(--paper, #f8f8f5);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-inverse{transition:none}}"
+    },
+    {
+      "name": "Sport selector",
       "kind": "chip",
       "refersTo": "sport-selected",
-      "description": "Pressed sport uses emerald fill; other choices retain muted text.",
-      "html": "<div class=\"ds-sports\" role=\"group\" aria-label=\"Choose your sport\"><button aria-pressed=\"true\">All sports</button><button aria-pressed=\"false\">Tennis</button></div>",
-      "css": ".ds-sports{display:flex;flex-wrap:wrap;gap:6px}.ds-sports button{font-family:Work,sans-serif;min-height:44px;border:1px solid transparent;border-radius:3px;background:none;padding:10px 15px;color:var(--muted,#a7a7bc);font-size:14px;cursor:pointer}.ds-sports button[aria-pressed=true]{background:var(--accent,#10b981);color:#06120c}.ds-sports button:hover{border-color:var(--accent,#10b981)}.ds-sports button:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:6px;}"
+      "description": "Sport controls belong directly above their changing demonstration; selection chooses its workout view.",
+      "html": "<div class=\"ds-sports\" role=\"group\" aria-label=\"Choose your sport\"><button aria-pressed=\"true\">All sports</button><button aria-pressed=\"false\">Tennis</button><button aria-pressed=\"false\">Basketball</button></div>",
+      "css": ".ds-sports{display:flex;flex-wrap:wrap;gap:6px}.ds-sports button{min-height:42px;padding:9px 13px;border:1px solid var(--line, #c9cec8);border-radius:2px;background:transparent;color:var(--ink, #191c1a);font:550 12px Work,Arial,sans-serif;cursor:pointer}.ds-sports button[aria-pressed=true]{background:var(--ink, #191c1a);color:var(--paper, #f8f8f5);border-color:var(--ink, #191c1a)}.ds-sports button:hover{border-color:var(--ink, #191c1a)}.ds-sports button:focus-visible{outline:3px solid var(--accent, #b63226);outline-offset:6px}"
     },
     {
-      "name": "Feature selectors",
+      "name": "Feature selector",
       "kind": "custom",
-      "description": "Flat feature controls use an underline to retain a calm proof area.",
-      "html": "<div class=\"ds-features\" role=\"group\" aria-label=\"Explore features\"><button aria-pressed=\"true\">Workouts</button><button aria-pressed=\"false\">Nutrition</button></div>",
-      "css": ".ds-features{display:flex;flex-wrap:wrap;gap:6px 24px;border-bottom:1px solid var(--line,#2a2a3a)}.ds-features button{font-family:Work,sans-serif;min-height:44px;border:1px solid transparent;border-radius:0;background:none;padding:12px 0;color:var(--muted,#a7a7bc);font-size:13px;cursor:pointer}.ds-features button[aria-pressed=true]{color:var(--ink,#f5f0e8);border-bottom:2px solid var(--accent,#10b981)}.ds-features button:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:6px;}"
+      "refersTo": "feature-selected",
+      "description": "Five features share the genuine screen; Coach is the initial view.",
+      "html": "<div class=\"ds-features\" role=\"group\" aria-label=\"App feature\"><button aria-pressed=\"true\">Coach</button><button aria-pressed=\"false\">Workouts</button><button aria-pressed=\"false\">Your week</button><button aria-pressed=\"false\">Nutrition</button><button aria-pressed=\"false\">Progress</button></div>",
+      "css": ".ds-features{display:flex;flex-wrap:wrap;gap:5px 20px;border-bottom:1px solid var(--line, #c9cec8);padding-bottom:7px}.ds-features button{background:transparent;border:0;border-bottom:2px solid transparent;color:var(--muted, #575e58);min-height:44px;padding:10px 0;font:13px Work,Arial,sans-serif;cursor:pointer}.ds-features button[aria-pressed=true]{color:var(--ink, #191c1a);border-bottom-color:var(--accent, #b63226);font-weight:650}.ds-features button:hover{color:var(--accent, #b63226)}.ds-features button:focus-visible{outline:3px solid var(--accent, #b63226);outline-offset:6px}"
     },
     {
-      "name": "Billing selectors",
+      "name": "Billing selector",
       "kind": "custom",
       "refersTo": "billing-selected",
-      "description": "Inset two-choice billing group; selected state is explicit.",
-      "html": "<div class=\"ds-billing\" role=\"group\" aria-label=\"Membership billing\"><button aria-pressed=\"true\">Monthly</button><button aria-pressed=\"false\">Yearly</button></div>",
-      "css": ".ds-billing{display:inline-flex;gap:2px;background:var(--bg,#0d0d14);padding:4px;border-radius:4px}.ds-billing button{font-family:Work,sans-serif;border:0;background:transparent;min-height:44px;border-radius:3px;color:var(--muted,#a7a7bc);padding:10px 20px;font-size:13px;cursor:pointer}.ds-billing button[aria-pressed=true]{background:var(--accent,#10b981);color:#06120c}.ds-billing button:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:6px;}"
+      "description": "Monthly and yearly selection update price and explanation together.",
+      "html": "<div class=\"ds-billing\" role=\"group\" aria-label=\"Billing period\"><button aria-pressed=\"true\">Monthly</button><button aria-pressed=\"false\">Yearly</button></div>",
+      "css": ".ds-billing{display:flex;gap:25px;width:fit-content;border-bottom:1px solid var(--line, #c9cec8)}.ds-billing button{background:none;border:0;border-bottom:2px solid transparent;min-height:44px;padding:10px 0;font:13px Work,Arial,sans-serif;color:var(--muted, #575e58);cursor:pointer}.ds-billing button[aria-pressed=true]{color:var(--ink, #191c1a);font-weight:600;border-color:var(--accent, #b63226)}.ds-billing button:hover{cursor:pointer}.ds-billing button:focus-visible{outline:3px solid var(--accent, #b63226);outline-offset:6px}"
     },
     {
-      "name": "Film control",
-      "kind": "button",
-      "refersTo": "film-control",
-      "description": "Text-only next-action label over film; disabled label names reduced motion.",
-      "html": "<button class=\"ds-film-control\" aria-label=\"Play film — hero\"><span>Play film</span></button>",
-      "css": ".ds-film-control{font-family:Work,sans-serif;min-height:44px;display:flex;align-items:center;background:#0d0d14b3;border:1px solid #f5f0e855;border-radius:4px;padding:8px 12px;font-size:12px;color:var(--ink,#f5f0e8);cursor:pointer}.ds-film-control:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:6px;}.ds-film-control:disabled{cursor:default;color:var(--muted,#a7a7bc)}"
-    },
-    {
-      "name": "Text link",
-      "kind": "button",
-      "description": "Compact secondary action below explanatory copy.",
-      "html": "<a class=\"ds-text-link\" href=\"#\">See Coach in the app</a>",
-      "css": ".ds-text-link{font-family:Work,sans-serif;display:inline-flex;align-items:center;gap:20px;border-bottom:1px solid var(--accent,#10b981);padding:12px 0;font-size:15px;color:var(--ink,#f5f0e8);text-decoration:none}.ds-text-link:hover{color:var(--accent,#10b981)}.ds-text-link:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:6px;}"
-    },
-    {
-      "name": "Desktop navigation",
+      "name": "Header navigation",
       "kind": "nav",
-      "description": "Simple Work Sans anchor navigation on the photographic header.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#\">Your game</a><a href=\"#\">Inside DoThis</a><a href=\"#\">Membership</a></nav>",
-      "css": ".ds-nav{font-family:Work,sans-serif;display:flex;align-items:center;gap:32px;font-size:14px;font-weight:500;color:var(--ink,#f5f0e8)}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:6px;}"
+      "description": "Simple page anchors on the chalk header.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#your-game\">Your game</a><a href=\"#coach\">Your coach</a><a href=\"#story\">Our story</a></nav>",
+      "css": ".ds-nav{display:flex;gap:32px;color:var(--ink, #191c1a);background:var(--paper, #f8f8f5);font:550 13px Work,Arial,sans-serif}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:hover{text-decoration:underline;text-underline-offset:6px}.ds-nav a:focus-visible{outline:3px solid var(--accent, #b63226);outline-offset:6px}"
     },
     {
       "name": "FAQ disclosure",
       "kind": "custom",
-      "description": "Native expandable answer with a ruled boundary and SVG state marker.",
-      "html": "<details class=\"ds-faq\"><summary>What happens during the free Preview?<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\"/></svg></summary><p>Your one-time 7-day Premium Preview begins after your first personalized workout is ready. No payment is required, and it does not charge automatically.</p></details>",
-      "css": ".ds-faq{font-family:Work,sans-serif;color:var(--ink,#f5f0e8);border-bottom:1px solid var(--line,#2a2a3a)}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;padding:26px 0;font-size:18px;font-weight:500;list-style:none;min-height:60px}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;transition:transform .2s}.ds-faq[open] svg{transform:rotate(45deg)}.ds-faq p{color:var(--muted,#a7a7bc);font-size:15px;line-height:1.75;margin:0 28px 26px 0;max-width:64ch}.ds-faq summary:focus-visible{outline:3px solid var(--accent,#10b981);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-faq svg{transition:none}}"
+      "description": "Native disclosure with ruled boundaries and an SVG expansion mark.",
+      "html": "<div class=\"ds-faq\"><details><summary>Is Coach a real person?<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" aria-hidden=\"true\"><path d=\"M5 12h14M12 5v14\"/></svg></summary><p>Coach uses AI. It provides general fitness and nutrition support, not medical care or a replacement for a qualified professional. You make the final decision about your training.</p></details></div>",
+      "css": ".ds-faq{color:var(--ink, #191c1a);font-family:Work,Arial,sans-serif;border-top:1px solid var(--line, #c9cec8)}.ds-faq details{border-bottom:1px solid var(--line, #c9cec8)}.ds-faq summary{cursor:pointer;list-style:none;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:16px;font-weight:550;line-height:1.4}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary svg{flex:none;transition:transform .2s}.ds-faq details[open] svg{transform:rotate(45deg)}.ds-faq summary:focus-visible{outline:3px solid var(--accent, #b63226);outline-offset:6px}.ds-faq p{font-size:14px;line-height:1.8;padding-bottom:24px;max-width:540px;margin:0}@media(prefers-reduced-motion:reduce){.ds-faq summary svg{transition:none}}"
     }
   ],
   "narrative": {
-    "northStar": "Film first / Match Night",
-    "overview": "The selected Film first direction uses real athletic movement, a continuous near-black field, warm readable text, and emerald actions. Broad photographic areas supply energy; quiet two-column passages and authentic app screens explain what DoThis does. Controls are compact, flat, and visibly interactive.\n\nThis records the completed local homepage implementation authorized by the user’s September 17 selection of proposal A. It supersedes the former ivory homepage system, preserved under `docs/design/beyond-the-court/pre-full-homepage/`. The unchanged approved logo, authentic product evidence, and athlete-controlled training decisions remain binding product constraints. Publication requires separate approval. The first body comment in `index.html` and `docs/design/beyond-the-court/DIRECTION.md` record direction authority; the page sequence belongs in the homepage surface brief.",
+    "northStar": "The photographic sports editorial",
+    "overview": "DoThis addresses adult recreational athletes with direct encouragement, condensed sporting headlines, real photography, and genuine app evidence. Chalk reading space and charcoal ink carry most of the page; restrained court red emphasizes key words and selected controls. Open columns and ruled rows keep product explanation and purchase decisions clear.\n\nThis records the final September 18 homepage after the user rejected the acid/blue palette and all 3D equipment. It replaces the obsolete Film first / Match Night system and the superseded equipment proposal. The build was code-led under delegated creative authority, without an approved raster composition. PRODUCT.md owns product truth and publication authority; docs/design/you-can-too/DIRECTION.md owns the surface brief. Existing library, comparison, partner, support, and legal pages were not redesigned.",
     "keyCharacteristics": [
-      "Real stock film and photographic posters on continuous dark ground.",
-      "Emerald actions and selected states, with warm primary text and muted explanatory copy.",
-      "Archivo Black display lettering paired with Work Sans reading and controls.",
-      "Unchanged native app screenshots, flat ruled sections, and text-only film controls."
+      "Chalk and charcoal, restrained red emphasis, and a pale gray-green product chapter.",
+      "Heavy Barlow Condensed statements with conversational Work Sans reading text.",
+      "Real sporting photographs and unchanged app screenshots without a device shell.",
+      "An attached action/disclosure group and sport controls beside their changing result."
     ],
     "rules": [
       {
-        "name": "The Accent Has a Job Rule",
-        "body": "Use emerald for actions, selected states, focus, and deliberate display emphasis; keep reading surfaces dark and preserve natural photographic color.",
+        "name": "The Restrained Accent Rule",
+        "body": "Use court red for emphasis and interaction; keep large interface fields neutral.",
         "section": "colors"
       },
       {
         "name": "The Athletic Display Rule",
-        "body": "Reserve Archivo for the largest athletic statements; use Work for explanations, product evidence, navigation, and controls.",
+        "body": "Reserve condensed uppercase for major statements and prices; use Work Sans for decisions and sustained reading.",
         "section": "typography"
       },
       {
-        "name": "The Photographic Depth Rule",
-        "body": "Let real footage, tonal sections, and protective scrims create depth. Keep ordinary interface surfaces flat.",
+        "name": "The Real Evidence Rule",
+        "body": "Use licensed human-shot photography and genuine app pixels; keep ordinary interface surfaces flat.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do preserve the unchanged approved logo and real DoThis screenshots.",
-      "Do keep selected sport, example-account caption, screenshot, film label, and all acquisition actions coherent.",
-      "Do retain visible keyboard focus, native scrolling, text-only film state labels, and useful still and non-JavaScript states.",
-      "Do distinguish a verified local build from publication approval and physical-device validation."
+      "Do preserve the approved logo, genuine screenshots, accurate captions, and photo credits.",
+      "Do keep each sport control beside its visibly changing result and preserve all six acquisition destinations.",
+      "Do keep the Preview disclosure attached to its primary action.",
+      "Do retain native scrolling, keyboard focus, reduced-motion support, and useful non-JavaScript content.",
+      "Do keep commercial claims grounded in PRODUCT.md and the actual purchase flow."
     ],
     "donts": [
-      "Don't repaint app UI or present stock athletes as customers or endorsers.",
-      "Don't label gym footage as volleyball or pickleball match footage.",
-      "Don't restore the obsolete ivory system, Cormorant emphasis, or scroll-seeking film corridor to this selected homepage.",
-      "Don't change the six acquisition routes or their verified custom product-page identifiers during visual work.",
-      "Don't turn the aspirational headline into guaranteed performance, medical outcomes, fabricated metrics, or invented offer scarcity."
+      "Don't restore the rejected acid/blue palette, 3D equipment, dark-film system, or Archivo display type.",
+      "Don't generate people, repaint app UI, invent customers or outcomes, or use Blender for this redesign.",
+      "Don't move the page when a visitor selects a sport.",
+      "Don't treat the existing library, legal, support, comparison, or partner destinations as redesigned by this record."
     ]
   }
 }

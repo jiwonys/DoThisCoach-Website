@@ -8,7 +8,7 @@
     "build:comparisons": "node scripts/build-comparisons.mjs",
     "build:site": "npm run build:css && npm run build:articles && npm run build:comparisons",
     "build:public": "npm run build:site && node scripts/build-public-site.mjs",
-    "check:redesign": "node scripts/redesign-production-check.mjs",
+    "check:redesign": "node scripts/next-chapter-check.mjs",
     "build:css": "tailwindcss -i ./src/home.css -o ./home.css --minify",
     "dev": "node scripts/serve-preview.mjs"
   },

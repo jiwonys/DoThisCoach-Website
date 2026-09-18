@@ -1,0 +1,28 @@
+{
+  "matrix": 120,
+  "checks": [
+    "120 sport/feature/viewport combinations; six CTA routes; billing history; FAQ; mobile menu",
+    "deep links, invalid state, query preservation, nearby sport results without scrolling, failed image retry",
+    "reduced: visible photography, CTA and product content",
+    "no-js: visible photography, CTA and product content"
+  ],
+  "axe": [
+    {
+      "width": 360,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

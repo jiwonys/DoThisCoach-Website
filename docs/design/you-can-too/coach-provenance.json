@@ -1,0 +1,16 @@
+{
+  "source": "User supplied September 18, 2026",
+  "sourcePath": "docs/design/you-can-too/sources/coach-original.png",
+  "path": "assets/you-can-too/coach-conversation.webp",
+  "kind": "native_app_screenshot",
+  "feature": "coach",
+  "sport": "shared, no sport is specified in the visible conversation",
+  "dimensions": {
+    "width": 1290,
+    "height": 2796
+  },
+  "treatment": "Lossless WebP encoding. No cropping, repainting, resizing, or content edits.",
+  "pixelEquality": true,
+  "sha256": "3496adf8790d2efb82e9b6d403c75f7eb8ea1c13a5829e4c613125406adc878f",
+  "approval": "User selected this as the new Coach screenshot."
+}

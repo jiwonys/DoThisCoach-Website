@@ -1,0 +1,39 @@
+{
+  "createdAt": "2026-09-18",
+  "revision": "Photographic editorial; supersedes rejected 3D proposal",
+  "assets": [
+    {
+      "path": "assets/beyond-court/tennis-poster.jpg",
+      "role": "Hero main photograph",
+      "kind": "Licensed human-shot stock footage still",
+      "source": "https://mixkit.co/free-stock-video/man-playing-tennis-877/",
+      "treatment": "Unmodified source pixels; CSS cover positioning at 52% center"
+    },
+    {
+      "path": "assets/beyond-court/basketball-poster.jpg",
+      "role": "Hero supporting photograph",
+      "kind": "Licensed human-shot stock footage still",
+      "source": "https://mixkit.co/free-stock-video/basketball-player-dribbling-ball-744/",
+      "treatment": "Unmodified source pixels; responsive CSS cover positioning"
+    },
+    {
+      "path": "assets/beyond-court/gym-poster.jpg",
+      "role": "Illustrative training photograph",
+      "provenance": "docs/design/beyond-the-court/asset-manifest.json",
+      "treatment": "Original pixels retained; CSS grayscale(1) and neutral charcoal caption overlay."
+    },
+    {
+      "path": "assets/you-can-too/coach-conversation.webp",
+      "role": "User-selected genuine Coach conversation",
+      "provenance": "docs/design/you-can-too/coach-provenance.json"
+    },
+    {
+      "path": "assets/you-can-too/share.jpg",
+      "role": "Browser-rendered social composition",
+      "provenance": "Embedded JPEG origin statement"
+    }
+  ],
+  "existingScreens": "docs/design/next-game/asset-manifest.json",
+  "fontLicense": "assets/fonts/LICENSE-Barlow-Condensed.txt",
+  "removed": "All authored Three.js equipment models, posters, bundle, build script and direct dependencies"
+}

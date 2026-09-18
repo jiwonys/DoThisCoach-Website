@@ -41,6 +41,7 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 - Product evidence uses real DoThis screenshots. Generated athletes are illustrative campaign subjects, not customers or endorsers.
 - On 2026-09-05, the user requested a complete homepage aesthetic reset and delegated creative judgment. The replacement direction is recorded in DESIGN.md; the prior homepage visual direction no longer constrains the redesign. The approved app logo remains unchanged.
 - On 2026-09-17, the user selected the Film first proposal (A): “Hit harder. Move faster.” and the off-court workouts, nutrition, and recovery story. This authorizes the complete local homepage build in that direction; publication still requires approval.
+- On 2026-09-18, the user superseded that direction with a complete, creative, motivational redesign, requested award-winning website research, and delegated executive decisions. The continuing redesign-and-deploy request authorizes publication after validation. The new direction is “You've still got game,” with original Three.js equipment and genuine product evidence. The user explicitly prohibited Blender. The supplied Coach conversation replaces the former Coach images on the homepage.
 
 ## Evidence on Hand
 
@@ -63,3 +64,5 @@ Visitors evaluate DoThis on mobile and desktop, often from sport-specific acquis
 The website must support keyboard and touch input, visible focus, zoom, reduced motion, semantic HTML, readable contrast, and meaningful non-JavaScript defaults. Athlete imagery should represent adult recreational athletes without presenting generated people as real customers.
 
 The founder’s origin is beach volleyball; his supplied background includes eight years of gym training and six years of software engineering. This product context is retained from the September 17 upstream release.
+
+- Later on 2026-09-18, the user rejected the acid/blue colors and 3D equipment, explicitly requested removing the models, grouping the iPhone/Preview disclosure with its action, and placing sport controls beside a visibly changing result. That correction supersedes the first September 18 direction. The revised homepage uses charcoal, chalk, restrained court red, real licensed photography, and sport controls directly above the actual app example.
