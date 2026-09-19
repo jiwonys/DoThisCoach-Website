@@ -1,0 +1,200 @@
+[
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\index.html",
+    "line": 0,
+    "snippet": "text color rgb(0, 0, 0) on a \"Skip to content\" is outside DESIGN.md colors",
+    "ignoreValue": "rgb(0, 0, 0)"
+  },
+  {
+    "antipattern": "design-system-font",
+    "name": "Font outside DESIGN.md",
+    "description": "A font is used that is not declared in DESIGN.md typography. Use the documented type system or update DESIGN.md if this is an intentional brand addition.",
+    "severity": "warning",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 1,
+    "snippet": "font-family: Work Sans is not declared in DESIGN.md typography",
+    "ignoreValue": "Work Sans"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 20,
+    "snippet": "font-size: clamp(48px,5.1vw,72px) has fluid endpoints 48px and 72px off the DESIGN.md type ramp",
+    "ignoreValue": "48px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 22,
+    "snippet": "font-size: 18px is off the DESIGN.md type ramp",
+    "ignoreValue": "18px"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 24,
+    "snippet": "border-radius: 8px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "8px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 24,
+    "snippet": "font-size: 16px is off the DESIGN.md type ramp",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 25,
+    "snippet": "Undocumented color #55e5a4 is outside DESIGN.md colors",
+    "ignoreValue": "#55e5a4"
+  },
+  {
+    "antipattern": "design-system-color",
+    "name": "Color outside DESIGN.md",
+    "description": "A literal color is outside the DESIGN.md palette and sidecar tonal ramps. This may be legitimate, but it should be an intentional design-system addition rather than drift.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 26,
+    "snippet": "Undocumented color #17bd76 is outside DESIGN.md colors",
+    "ignoreValue": "#17bd76"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 28,
+    "snippet": "font-size: 13px is off the DESIGN.md type ramp",
+    "ignoreValue": "13px"
+  },
+  {
+    "antipattern": "design-system-radius",
+    "name": "Radius outside DESIGN.md",
+    "description": "A border-radius value is outside the DESIGN.md rounded scale. Use a documented radius token or update the design system if the new shape is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 33,
+    "snippet": "border-radius: 16px is outside the DESIGN.md rounded scale",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 37,
+    "snippet": "font-size: 22px is off the DESIGN.md type ramp",
+    "ignoreValue": "22px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 38,
+    "snippet": "font-size: 16px is off the DESIGN.md type ramp",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 42,
+    "snippet": "font-size: 13px is off the DESIGN.md type ramp",
+    "ignoreValue": "13px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 53,
+    "snippet": "font-size: 16px is off the DESIGN.md type ramp",
+    "ignoreValue": "16px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 54,
+    "snippet": "font-size: 22px is off the DESIGN.md type ramp",
+    "ignoreValue": "22px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 54,
+    "snippet": "font-size: 52px is off the DESIGN.md type ramp",
+    "ignoreValue": "52px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 54,
+    "snippet": "font-size: 17px is off the DESIGN.md type ramp",
+    "ignoreValue": "17px"
+  },
+  {
+    "antipattern": "design-system-font-size",
+    "name": "Font size outside DESIGN.md",
+    "description": "A literal font-size is off the type ramp documented in DESIGN.md typography. Use a documented size step or update the design system if the new step is intentional.",
+    "severity": "advisory",
+    "category": "quality",
+    "file": "C:\\Users\\Jiwon\\Desktop\\DoThisCoach-Website\\src\\home.css",
+    "line": 54,
+    "snippet": "font-size: 20px is off the DESIGN.md type ramp",
+    "ignoreValue": "20px"
+  }
+]
