@@ -1,209 +1,155 @@
 ---
-name: DoThis — Photographic sports editorial
-description: The implemented September 18 photographic homepage, recorded from source and reviewed captures.
+name: DoThis — Simple black and green
+description: The finished simplified homepage, recorded from source and reviewed captures.
 colors:
-  accent: "#b63226"
-  ink: "#191c1a"
-  paper: "#f8f8f5"
-  surface: "#e9ece7"
-  muted: "#575e58"
-  line: "#c9cec8"
-  ink-hover: "#343c35"
+  bg: "#0b100e"
+  text: "#f4f7f5"
+  muted: "#a5b4ab"
+  green: "#25d78a"
+  line: "#28372f"
+  green-hover: "#55e5a4"
+  green-active: "#17bd76"
 typography:
   display:
-    fontFamily: "Barlow, sans-serif"
-    fontSize: "clamp(74px, 8.25vw, 96px)"
-    fontWeight: 800
-    lineHeight: 0.9
-    letterSpacing: "-0.02em"
-  headline:
-    fontFamily: "Barlow, sans-serif"
-    fontSize: "clamp(50px, 6vw, 86px)"
-    fontWeight: 800
-    lineHeight: 0.98
-    letterSpacing: "-0.015em"
+    fontFamily: "Work Sans, sans-serif"
+    fontSize: "clamp(48px, 5.1vw, 72px)"
+    fontWeight: 650
+    lineHeight: 1.06
+    letterSpacing: "-0.04em"
   title:
-    fontFamily: "Work, Arial, sans-serif"
-    fontSize: "clamp(24px, 2.5vw, 34px)"
+    fontFamily: "Work Sans, sans-serif"
+    fontSize: "22px"
     fontWeight: 600
-    lineHeight: 1.2
-    letterSpacing: "-0.025em"
+    lineHeight: 1.4
+    letterSpacing: "-0.02em"
   body:
-    fontFamily: "Work, Arial, sans-serif"
-    fontSize: "15px"
+    fontFamily: "Work Sans, sans-serif"
+    fontSize: "16px"
     fontWeight: 400
-    lineHeight: 1.65
-  action:
-    fontFamily: "Work, Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 600
-  control:
-    fontFamily: "Work, Arial, sans-serif"
-    fontSize: "12px"
-    fontWeight: 550
+    lineHeight: 1.6
   supporting:
-    fontFamily: "Work, Arial, sans-serif"
-    fontSize: "12px"
-    lineHeight: 1.7
+    fontFamily: "Work Sans, sans-serif"
+    fontSize: "13px"
+    fontWeight: 400
+    lineHeight: 1.6
 rounded:
-  control: "3px"
-  sport: "2px"
-  screen: "12px"
-  sequence: "50%"
+  action: "8px"
+  screen: "16px"
 spacing:
-  gutter: "clamp(22px, 4.5vw, 76px)"
-  section: "120px"
-  section-compact: "85px"
-  section-mobile: "70px"
+  small: "8px"
+  supporting: "12px"
+  standard: "24px"
+  large: "32px"
 components:
   button-primary:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper}"
-    typography: "{typography.action}"
-    rounded: "{rounded.control}"
-    padding: "16px 22px"
+    backgroundColor: "{colors.green}"
+    textColor: "{colors.bg}"
+    rounded: "{rounded.action}"
+    padding: "12px 24px"
   button-primary-hover:
-    backgroundColor: "{colors.ink-hover}"
-  button-inverse:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    typography: "{typography.action}"
-    rounded: "{rounded.control}"
-    padding: "16px 22px"
-  sport-selected:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper}"
-    typography: "{typography.control}"
-    rounded: "{rounded.sport}"
-    padding: "9px 13px"
-  feature-selected:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    padding: "10px 0"
-  billing-selected:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink}"
-    padding: "10px 0"
+    backgroundColor: "{colors.green-hover}"
+  button-primary-active:
+    backgroundColor: "{colors.green-active}"
+  disclosure:
+    textColor: "{colors.muted}"
+    typography: "{typography.supporting}"
 ---
 
 # Design System: DoThis
 
 ## Overview
 
-**Creative North Star: "The photographic sports editorial"**
+**Creative North Star: "Simple black and green"**
 
-DoThis addresses adult recreational athletes with direct encouragement, condensed sporting headlines, real photography, and genuine app evidence. Chalk reading space and charcoal ink carry most of the page; restrained court red emphasizes key words and selected controls. Open columns and ruled rows keep product explanation and purchase decisions clear.
+DoThis uses a near-black field, logo-family green emphasis, and plain Work Sans typography. Short copy, open space, and genuine product evidence make the homepage easy to understand.
 
-This records the final September 18 homepage after the user rejected the acid/blue palette and all 3D equipment. It replaces the obsolete Film first / Match Night system and the superseded equipment proposal. The build was code-led under delegated creative authority, without an approved raster composition. PRODUCT.md owns product truth and publication authority; docs/design/you-can-too/DIRECTION.md owns the surface brief. Existing library, comparison, partner, support, and legal pages were not redesigned.
+This records index.html, src/home.css, home.js, and the reviewed 390px and 1440px captures. The user's latest correction in docs/design/simple/DIRECTION.md supersedes the rejected photographic editorial direction. There is no approved comp. Other site destinations are outside this homepage record.
 
 **Key Characteristics:**
 
-- Chalk and charcoal, restrained red emphasis, and a pale gray-green product chapter.
-- Heavy Barlow Condensed statements with conversational Work Sans reading text.
-- Real sporting photographs and unchanged app screenshots without a device shell.
-- An attached action/disclosure group and sport controls beside their changing result.
+- One green accent on a near-black ground.
+- One font family and a clear reading hierarchy.
+- The unchanged logo and Coach screen as the only imagery.
+- Compact pricing, native disclosure, and no animation.
 
 ## Colors
 
-The frontmatter is the normative reusable palette. Root CSS uses the same names, except that ink-hover is a literal button state.
+The frontmatter records the five root palette properties and the two literal button-state colors.
 
 ### Primary
 
-- **Court red:** deliberate heading emphasis, selected feature and billing underlines, link hover, and focus on light surfaces.
+- **Logo-family green:** headline emphasis, the primary action, benefit markers, link hover, selection, and focus.
+- **Green hover and active:** immediate action feedback.
 
 ### Neutral
 
-- **Charcoal ink:** primary text, filled buttons, selected sports, and the closing background.
-- **Chalk paper:** reading ground, button text, and inverse closing actions.
-- **Pale gray-green surface:** the product demonstration chapter.
-- **Muted slate:** supporting copy, inactive features, captions, and terms.
-- **Quiet rule:** separators and unselected sport borders.
-- **Ink hover:** background feedback on the standard primary button.
+- **Near-black ground:** the page and action text.
+- **Off-white text:** headings and emphasized prices.
+- **Muted green-neutral:** reading text, navigation, disclosure, captions, and footer.
+- **Quiet rule:** pricing and footer separators.
 
-The founder section has a local pale neutral field (#eceee8). The logo, genuine app screens, and hero photography retain their own colors; they do not expand the UI palette. The training photograph uses `grayscale(1)` and a neutral `linear-gradient(transparent 30%, #191c1acc)` scrim.
-
-**The Restrained Accent Rule.** Use court red for emphasis and interaction; keep large interface fields neutral.
+**The Green Emphasis Rule.** Use green for emphasis and interaction; keep the page ground neutral.
 
 ## Typography
 
-**Display Font:** Barlow Condensed ExtraBold, self-hosted as `Barlow`, weight (800), with `sans-serif` fallback.
+**Display and Body Font:** Work Sans variable, self-hosted with `font-display: swap` and `sans-serif` fallback.
 
-**Body Font:** Work Sans variable, self-hosted as `Work`, weights (100–900), with `Arial, sans-serif` fallback. Both fonts use `font-display: swap`.
+The frontmatter records the main roles. The hero becomes (52px) at (650px) and below. The pricing title becomes (20px). Introductory copy uses (18px), line height (1.65), and a (440px) maximum width; it becomes (16px) at (900px) and below, then (17px) with a (380px) maximum at (650px) and below. Action text is (16px), weight (650). Benefits and header links are (14px); captions and footer are (12px).
 
-The hierarchy is purpose-built rather than a single ratio. The frontmatter records recurring roles; section adjustments remain contextual.
-
-- **Display:** the hero follows the display token, becomes (88px) below (1100px), (74px) below (800px), and `clamp(68px, 19.2vw, 96px)` below (650px). At (600px) and below its line height becomes (0.91). The red final word is inline, allowing a two-line invitation.
-- **Headlines:** ordinary sections use the headline role. Recognition uses `clamp(60px, 7vw, 96px)`, product uses `clamp(58px, 7vw, 96px)`, and closing uses `clamp(72px, 10vw, 96px)`. Below (650px), these become (56px), (67px), (70px), and (90px), respectively. Product and closing use line height (0.93) on mobile.
-- **Titles:** Work subheads follow the title role. Product explanation uses `clamp(30px, 3vw, 42px)` at line height (1.15), becoming (32px) on mobile. The demo introduction is (28px), with an intermediate (24px) adjustment. Its changing result is (22px), with an intermediate (20px) adjustment.
-- **Reading:** main copy generally uses (15–16px), line height (1.65–1.75), and widths around (410–475px). Narrow layouts use (14px). Large editorial lead paragraphs use (24–37px), line height (1.3).
-- **Controls:** buttons use the action role; navigation and selectors use (12–13px). Selected controls gain weight or an underline as well as color. Prices use Barlow at (80px), with an intermediate (72px) adjustment and tabular numerals.
-- **Supporting text:** product captions, notes, and offer terms use (12px). Hero disclosure uses (12px), becoming (11px) below (800px). Existing credits and footer fine print use smaller contextual sizes; these are not a minimum reading-size recommendation.
-
-**The Athletic Display Rule.** Reserve condensed uppercase for major statements and prices; use Work Sans for decisions and sustained reading.
+**The Plain Type Rule.** Use Work Sans for every website text role; express hierarchy through size, weight, and spacing.
 
 ## Layout
 
-The wrapper caps at (1560px), including its fluid gutter. Most desktop sections pair open columns with gaps around (7–9vw). Training and membership use the section spacing token, tightening below (1000px) and stacking below (650px). Other section paddings remain local to their content. The header stays in document flow, with desktop navigation replaced by a native disclosure below (800px).
+The centered wrapper caps at (1080px), with (40px) side gutters. Gutters become (24px) at (900px) and below and (20px) at (650px) and below.
 
-The final hero has a (690px) minimum height and (45px) column gap. Photography occupies a (570px) region, stepping to (500px), (475px), and (390px) below (1100px), (800px), and (650px). The hero stacks below (650px), keeping copy, the attached action/disclosure, and the separate secondary link before photography. The first-view action does not depend on animation or media playback.
+Desktop pairs the pitch with a (310px) screenshot column and a (96px) gap. At (900px) and below these become (270px) and (40px). At (650px) and below, content stacks in reading order: pitch, action and disclosure, benefits, then screenshot. The mobile screenshot is centered and capped at (290px); the action fills the copy width.
 
-The product demonstration is at most (550px) wide; its screen is at most (340px), becoming (310px) below (650px). Sport buttons sit directly above the changing sport heading, feature controls, and screenshot. On mobile the demo precedes the changing supporting copy through a reversed column layout, so selection does not shift the controls. Training copy precedes its photograph on mobile. Membership's vertical divider becomes a top rule, and three library links become a vertical list.
+The header remains in document flow, with a (100px) minimum height, becoming (84px) on mobile. Hero padding is (40px) above and (64px) below; at (1600px) and above it becomes (64px) and (80px). Mobile uses (28px) above and (32px) below. Compact pricing and footer follow fine rules. Footer content stacks at (900px) and below, with naturally wrapping links.
 
 ## Elevation & Depth
 
-Real photography supplies depth. The hero uses overlapping rectangular crops separated by a paper border; ordinary interface surfaces are flat. The mobile menu alone uses the reusable ambient shadow (`0 12px 28px #191c1a15`). The training photo's neutral scrim protects its caption. There is no 3D scene, renderer, canvas, film playback, fake phone shell, or card-elevation system.
+There are no website shadows, gradients, overlays, or animated layers. Space and (1px) rules separate content. The genuine screenshot retains its own internal depth.
 
-**The Real Evidence Rule.** Use licensed human-shot photography and genuine app pixels; keep ordinary interface surfaces flat.
+**The Flat Surface Rule.** Keep website surfaces flat. Use space and fine rules to separate content.
 
 ## Shapes
 
-Actions have softly squared control corners; sport selectors have the tighter sport radius. Screens use the screen radius without a device frame. Ordered step markers are circular. The approved icon keeps its unchanged artwork and existing (9px) display radius. Fine rules organize sections and controls. Functional symbols use SVG strokes or the existing CSS check mark, not glyph substitutes.
+The primary action uses the action radius; the screenshot and its link share the screen radius. Benefit markers are small CSS circles. The unchanged logo retains its artwork. The action arrow is inline SVG; subscription terms use the native disclosure marker.
 
 ## Components
 
-### 1. Actions with disclosure
+### Download action and disclosure
 
-Primary actions use charcoal with chalk text, at least (56px) high, with (24px) internal gap. Below (600px), they use (54px) minimum height, (15px 18px) padding, (13px) type, and (20px) gap. The hero disclosure belongs inside the action group, (10px) below the button; its secondary link remains separate. Standard hover changes background over (0.18s). The closing action is inverse. Keyboard focus is a (3px) court-red outline with (6px) offset, switching to chalk in the dark closing.
+One green action uses near-black text, a (56px) minimum height, and a (24px) internal gap. Hover and active fill changes are immediate. The preview disclosure sits (10px) below it. Links and summaries use a (2px) green focus outline with a (6px) offset. The skip link appears on focus. Sport-specific URL queries still choose the appropriate acquisition route without adding visible selectors.
 
-### 2. Sport and feature controls
+### Genuine Coach evidence
 
-Sport buttons are bordered, wrapped, at least (42px) high, and use the sport radius. Selected sports use charcoal fill and chalk text. Selection chooses the workout feature and updates the adjacent sport heading, context, genuine screen, and acquisition route without scrolling. Five feature controls use a (2px) red selected underline; their targets are at least (44px) high. All selections expose `aria-pressed`; query state and browser history restore sport, feature, and billing. Nonfunctional selector groups stay hidden without JavaScript.
+The unchanged (1290 × 2796) Coach conversation scales proportionally, without a crop or device frame. Its full-size link opens in a new tab and announces that behavior accessibly. Preserve its meaningful alt text and Coach caption.
 
-### 3. Genuine screenshot demonstration
+### Navigation
 
-Coach is the default feature and uses the supplied active-recovery conversation at its original (1290 × 2796) aspect ratio. It keeps the same truthful caption for every sport. Other features use actual sport-account examples; All sports identifies its volleyball example. The full-size link, alt text, caption, loading state, and retry message remain coherent. Keep the exact six acquisition routes and their existing redirect identifiers: `/app/`, `/app/tennis/`, `/app/basketball/`, `/app/volleyball/`, `/app/soccer/`, and `/app/pickleball/`.
+The header contains the approved logo, DoThis name, Pricing, and Support. Links have (44px) minimum targets and a (28px) gap, becoming (20px) on mobile. Hover uses green. Footer links preserve existing library, comparison, partner, privacy, and terms destinations.
 
-### 4. Photographic composition
+### Pricing and native disclosure
 
-The hero pairs a large tennis photograph and a smaller overlapping basketball crop, with a credit link and no invented subject endorsement. The training still is grayscale with a neutral caption scrim. Preserve source provenance and credit destinations. No generated people, 3D equipment, or Blender assets belong to this revision.
+The price summary stays compact. Native `details` and `summary` work without JavaScript. The summary has a (44px) minimum height and (10px) vertical padding; hover uses off-white. Expanded text caps at (760px). Price amounts stay together, with the mobile founder-price line below its label. Product and purchase claims remain governed by PRODUCT.md.
 
-### 5. Navigation
-
-The approved logo, three page anchors, and acquisition link share a ruled header. Desktop links use Work at (13px), weight (550), with underline hover. The mobile menu is a paper panel (240px) wide with (22px) padding and a thin ink border. Native `details` and `summary` remain usable without JavaScript; Escape closes the menu and restores summary focus, while link activation and outside click close it.
-
-### 6. Membership and billing
-
-An open explanation column faces a ruled offer column, with (40px) left padding, then (25px) below (1000px), then none after stacking. Monthly/yearly controls update price and explanation together and use a red selected underline. Preserve the one-time 7-day Preview, no payment or automatic charge, retained local records, and the paid AI/cloud distinction. Founder prices, standard prices, and availability language remain grounded in PRODUCT.md and the in-app purchase flow.
-
-### 7. Disclosures and supporting rows
-
-FAQ uses native disclosure, fine rules, and an SVG plus rotating (45deg) when open. Summary padding is (24px) vertically, becoming (21px) on mobile; answers use readable Work text. Training and library links are open ruled rows with SVG arrows. Keep native scrolling, real destinations, visible focus, and reduced-motion behavior. The homepage has no input-field or generic card library to standardize.
+The homepage has no input fields, cards, tabs, or component framework to standardize.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- Do preserve the approved logo, genuine screenshots, accurate captions, and photo credits.
-- Do keep each sport control beside its visibly changing result and preserve all six acquisition destinations.
-- Do keep the Preview disclosure attached to its primary action.
-- Do retain native scrolling, keyboard focus, reduced-motion support, and useful non-JavaScript content.
-- Do keep commercial claims grounded in PRODUCT.md and the actual purchase flow.
+- Do preserve the approved logo, unchanged screenshot, and full-size inspection link.
+- Do keep the preview and no-charge disclosure directly below the download action.
+- Do retain visible focus, real links, native disclosure, and useful non-JavaScript content.
+- Do keep claims consistent with PRODUCT.md and the in-app purchase flow.
 
 ### Don't:
 
-- Don't restore the rejected acid/blue palette, 3D equipment, dark-film system, or Archivo display type.
-- Don't generate people, repaint app UI, invent customers or outcomes, or use Blender for this redesign.
-- Don't move the page when a visitor selects a sport.
-- Don't treat the existing library, legal, support, comparison, or partner destinations as redesigned by this record.
+- Don't add decorative pictures, generated imagery, 3D models, or ornamental motion.
+- Don't restore the rejected editorial palette, display font, sport selectors, or repeated closing pitch.
+- Don't repaint the app screenshot or promote its internal colors into website tokens.
+- Don't treat other site destinations as redesigned by this record.
 
-Not canonized: overridden legacy CSS values and class names, unused photo-caption selectors, isolated fine-print sizes, and one-off crop offsets. They are implementation remnants or contextual details, not new reusable tokens. The former 83 detector findings compared an earlier build with an obsolete system; this replacement records the final photographic implementation and does not claim a fresh detector run.
+Not canonized: app-screen internals, isolated layout values as a larger token scale, and superseded editorial components. These are product evidence, local composition, or rejected work. The finish review reports no craft-floor defects in the supplied source and captures.
