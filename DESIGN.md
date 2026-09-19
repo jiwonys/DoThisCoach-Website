@@ -1,155 +1,133 @@
 ---
-name: DoThis — Simple black and green
-description: The finished simplified homepage, recorded from source and reviewed captures.
+name: DoThis — Reference-led black and green
+description: The built homepage system, grounded in the user's MyFitnessPal reference.
 colors:
-  bg: "#0b100e"
-  text: "#f4f7f5"
-  muted: "#a5b4ab"
-  green: "#25d78a"
-  line: "#28372f"
-  green-hover: "#55e5a4"
-  green-active: "#17bd76"
+  bg: "#090e0c"
+  panel: "#14221b"
+  text: "#f5f8f6"
+  muted: "#b0beb6"
+  green: "#18cf91"
+  ink: "#071b12"
+  line: "#30443a"
 typography:
   display:
     fontFamily: "Work Sans, sans-serif"
-    fontSize: "clamp(48px, 5.1vw, 72px)"
-    fontWeight: 650
-    lineHeight: 1.06
+    fontSize: "clamp(52px, 5.2vw, 74px)"
+    fontWeight: 700
+    lineHeight: 1.09
     letterSpacing: "-0.04em"
-  title:
+  headline:
     fontFamily: "Work Sans, sans-serif"
-    fontSize: "22px"
-    fontWeight: 600
-    lineHeight: 1.4
-    letterSpacing: "-0.02em"
+    fontSize: "36px"
+    fontWeight: 650
+    lineHeight: 1.18
+    letterSpacing: "-0.03em"
   body:
     fontFamily: "Work Sans, sans-serif"
     fontSize: "16px"
     fontWeight: 400
     lineHeight: 1.6
-  supporting:
-    fontFamily: "Work Sans, sans-serif"
-    fontSize: "13px"
-    fontWeight: 400
-    lineHeight: 1.6
 rounded:
-  action: "8px"
-  screen: "16px"
+  pill: "999px"
+  panel: "16px"
 spacing:
-  small: "8px"
-  supporting: "12px"
+  small: "16px"
   standard: "24px"
   large: "32px"
 components:
   button-primary:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.pill}"
+    padding: "14px 30px"
+  button-green:
     backgroundColor: "{colors.green}"
-    textColor: "{colors.bg}"
-    rounded: "{rounded.action}"
-    padding: "12px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.green-hover}"
-  button-primary-active:
-    backgroundColor: "{colors.green-active}"
-  disclosure:
-    textColor: "{colors.muted}"
-    typography: "{typography.supporting}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+    padding: "14px 30px"
+  feature-panel:
+    backgroundColor: "{colors.panel}"
+    rounded: "{rounded.panel}"
+    padding: "32px 32px 24px"
 ---
 
 # Design System: DoThis
 
 ## Overview
 
-**Creative North Star: "Simple black and green"**
+**Creative North Star: "Reference-led black and green"**
 
-DoThis uses a near-black field, logo-family green emphasis, and plain Work Sans typography. Short copy, open space, and genuine product evidence make the homepage easy to understand.
+DoThis pairs a centered green opening with near-black content and genuine app evidence. Heavy Work Sans, short explanations, and pill actions give the page a direct, approachable character.
 
-This records index.html, src/home.css, home.js, and the reviewed 390px and 1440px captures. The user's latest correction in docs/design/simple/DIRECTION.md supersedes the rejected photographic editorial direction. There is no approved comp. Other site destinations are outside this homepage record.
+This records index.html, src/home.css, home.js, and the reviewed reference captures. The user-selected MyFitnessPal reference and docs/design/reference/DIRECTION.md supersede the rejected sparse layout. MyFitnessPal's wide desktop uses a left-aligned pitch beside photography; DoThis intentionally centers its desktop opening because the user prohibited decorative pictures. There is no random seed or approved visual comp. The finish review records a ship disposition. Other site destinations are outside this homepage record.
 
 **Key Characteristics:**
 
-- One green accent on a near-black ground.
-- One font family and a clear reading hierarchy.
-- The unchanged logo and Coach screen as the only imagery.
-- Compact pricing, native disclosure, and no animation.
+- A solid green opening and dark phrase highlight.
+- Black content with two genuine screenshot feature panels.
+- Pill actions, concise pricing, three native FAQ disclosures, and a quiet footer.
 
 ## Colors
 
-The frontmatter records the five root palette properties and the two literal button-state colors.
-
 ### Primary
 
-- **Logo-family green:** headline emphasis, the primary action, benefit markers, link hover, selection, and focus.
-- **Green hover and active:** immediate action feedback.
+Logo-family green fills the opening and pricing action, and marks interaction states on dark surfaces. Dark ink supplies opening text, the headline highlight, and the first action.
 
 ### Neutral
 
-- **Near-black ground:** the page and action text.
-- **Off-white text:** headings and emphasized prices.
-- **Muted green-neutral:** reading text, navigation, disclosure, captions, and footer.
-- **Quiet rule:** pricing and footer separators.
+Near-black is the content ground; panel green separates product evidence. Off-white carries headings and emphasized text; muted green-neutral carries supporting copy. Quiet rules divide FAQ rows and the footer.
 
-**The Green Emphasis Rule.** Use green for emphasis and interaction; keep the page ground neutral.
+**The Green Opening Rule.** Use the solid green field for the opening, then dark surfaces for product evidence and supporting content.
 
 ## Typography
 
-**Display and Body Font:** Work Sans variable, self-hosted with `font-display: swap` and `sans-serif` fallback.
+Work Sans is self-hosted with `font-display: swap` and a sans-serif fallback. The frontmatter records the main hierarchy. Feature titles use (25px), weight (600), and line height (1.25). At the mobile breakpoint, display type becomes (47px), section headings (30px), and feature titles (23px). Introductory copy changes from (18px) to (16px).
 
-The frontmatter records the main roles. The hero becomes (52px) at (650px) and below. The pricing title becomes (20px). Introductory copy uses (18px), line height (1.65), and a (440px) maximum width; it becomes (16px) at (900px) and below, then (17px) with a (380px) maximum at (650px) and below. Action text is (16px), weight (650). Benefits and header links are (14px); captions and footer are (12px).
-
-**The Plain Type Rule.** Use Work Sans for every website text role; express hierarchy through size, weight, and spacing.
+**The Plain Type Rule.** Use Work Sans throughout; express hierarchy through size, weight, and spacing.
 
 ## Layout
 
-The centered wrapper caps at (1080px), with (40px) side gutters. Gutters become (24px) at (900px) and below and (20px) at (650px) and below.
+The centered wrapper caps at (1120px), with (32px) side gutters. Gutters become (24px) at (850px) and below, then (20px) at (600px) and below. The opening centers the proposition, explanation, action, and adjacent Preview disclosure.
 
-Desktop pairs the pitch with a (310px) screenshot column and a (96px) gap. At (900px) and below these become (270px) and (40px). At (650px) and below, content stacks in reading order: pitch, action and disclosure, benefits, then screenshot. The mobile screenshot is centered and capped at (290px); the action fills the copy width.
-
-The header remains in document flow, with a (100px) minimum height, becoming (84px) on mobile. Hero padding is (40px) above and (64px) below; at (1600px) and above it becomes (64px) and (80px). Mobile uses (28px) above and (32px) below. Compact pricing and footer follow fine rules. Footer content stacks at (900px) and below, with naturally wrapping links.
+Two equal feature columns use a (24px) gap; they stack with a (20px) gap on mobile. Screens remain proportional, capped at (264px) wide on desktop and (260px) on mobile. Pricing and questions use separate two-column layouts that also stack on mobile. Sections use (56px–64px) vertical padding on desktop and (40px) on mobile. Footer links wrap; footer groups stack as space narrows.
 
 ## Elevation & Depth
 
-There are no website shadows, gradients, overlays, or animated layers. Space and (1px) rules separate content. The genuine screenshot retains its own internal depth.
+The website has no shadows or gradients. Solid fields, tonal panels, and fine rules provide structure. Screenshots retain their original internal appearance. There is no animated sequence; the button's immediate pressed offset is disabled for reduced motion.
 
-**The Flat Surface Rule.** Keep website surfaces flat. Use space and fine rules to separate content.
+**The Flat Surface Rule.** Separate content with solid color, space, and fine rules.
 
 ## Shapes
 
-The primary action uses the action radius; the screenshot and its link share the screen radius. Benefit markers are small CSS circles. The unchanged logo retains its artwork. The action arrow is inline SVG; subscription terms use the native disclosure marker.
+Actions are pills. Feature panels and screenshots share rounded corners. The highlighted headline phrase uses a smaller rounded rectangle. Action arrows are inline SVG; FAQ plus/minus marks are CSS strokes.
 
 ## Components
 
-### Download action and disclosure
+### Actions and navigation
 
-One green action uses near-black text, a (56px) minimum height, and a (24px) internal gap. Hover and active fill changes are immediate. The preview disclosure sits (10px) below it. Links and summaries use a (2px) green focus outline with a (6px) offset. The skip link appears on focus. Sport-specific URL queries still choose the appropriate acquisition route without adding visible selectors.
+The opening action uses dark ink; pricing reverses to green. Both use (56px) minimum height, becoming (54px) on mobile. Hover changes the fill immediately; active presses move (1px). Links and summaries receive a (3px) focus outline with a (5px) offset, dark in the opening and green elsewhere. Preview disclosure stays beneath the opening action. Header and footer navigation use real links with (44px) minimum targets. Both acquisition actions retain general and sport-specific routing.
 
-### Genuine Coach evidence
+### Genuine product panels
 
-The unchanged (1290 × 2796) Coach conversation scales proportionally, without a crop or device frame. Its full-size link opens in a new tab and announces that behavior accessibly. Preserve its meaningful alt text and Coach caption.
+Two rounded panels pair short explanations with Athlete Week and Coach screens. Screens remain uncropped and link to full-size originals with accessible new-tab labels. Athlete Week is explicitly identified as an example volleyball account. Screenshot-internal colors and controls are not website primitives.
 
-### Navigation
+### Native disclosures
 
-The header contains the approved logo, DoThis name, Pricing, and Support. Links have (44px) minimum targets and a (28px) gap, becoming (20px) on mobile. Hover uses green. Footer links preserve existing library, comparison, partner, privacy, and terms destinations.
-
-### Pricing and native disclosure
-
-The price summary stays compact. Native `details` and `summary` work without JavaScript. The summary has a (44px) minimum height and (10px) vertical padding; hover uses off-white. Expanded text caps at (760px). Price amounts stay together, with the mobile founder-price line below its label. Product and purchase claims remain governed by PRODUCT.md.
-
-The homepage has no input fields, cards, tabs, or component framework to standardize.
+Pricing terms and three FAQ entries use native `details` and `summary`, with useful content available without JavaScript. FAQ rows use a bottom rule and green plus/minus indicator; hover uses green and keyboard focus remains visible. Pricing retains its native disclosure marker.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- Do preserve the approved logo, unchanged screenshot, and full-size inspection link.
-- Do keep the preview and no-charge disclosure directly below the download action.
-- Do retain visible focus, real links, native disclosure, and useful non-JavaScript content.
-- Do keep claims consistent with PRODUCT.md and the in-app purchase flow.
+- Do preserve the logo, genuine app screens, meaningful captions, and full-size links.
+- Do keep the Preview disclosure adjacent to the opening action.
+- Do retain visible focus, native disclosures, and responsive reading order.
+- Do keep product and purchase claims consistent with PRODUCT.md.
 
 ### Don't:
 
-- Don't add decorative pictures, generated imagery, 3D models, or ornamental motion.
-- Don't restore the rejected editorial palette, display font, sport selectors, or repeated closing pitch.
-- Don't repaint the app screenshot or promote its internal colors into website tokens.
-- Don't treat other site destinations as redesigned by this record.
+- Don't add decorative pictures, generated imagery, 3D assets, or ornamental motion.
+- Don't copy the reference's branding, photography, claims, or testimonials.
+- Don't restore the rejected sparse layout or treat this adaptation as a pixel-identical desktop copy.
 
-Not canonized: app-screen internals, isolated layout values as a larger token scale, and superseded editorial components. These are product evidence, local composition, or rejected work. The finish review reports no craft-floor defects in the supplied source and captures.
+Not canonized: screenshot internals and isolated composition values are evidence and local layout, not reusable website tokens. The finish review identifies no material craft defect in the supplied build.

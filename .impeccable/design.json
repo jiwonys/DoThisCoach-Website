@@ -1,87 +1,87 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-19T01:50:51.2066970Z",
+  "generatedAt": "2026-09-19T02:06:33.7530302Z",
   "title": "Design System: DoThis",
   "extensions": {
-    "shadows": [],
-    "motion": [],
     "breakpoints": [
       {
         "name": "mobile-max",
-        "value": "650px"
+        "value": "600px"
       },
       {
         "name": "compact-max",
-        "value": "900px"
-      },
+        "value": "850px"
+      }
+    ],
+    "shadows": [],
+    "motion": [
       {
-        "name": "wide-min",
-        "value": "1600px"
+        "purpose": "Immediate active feedback, disabled for prefers-reduced-motion: reduce.",
+        "value": "transform: translateY(1px)",
+        "name": "button-press"
       }
     ]
   },
   "components": [
     {
-      "name": "Download action",
-      "kind": "button",
       "refersTo": "button-primary",
-      "description": "The homepage's single primary action.",
-      "html": "<a class=\"ds-button\" href=\"/app/\">Download for iPhone <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;padding:12px 24px;border-radius:8px;background:var(--green,#25d78a);color:var(--bg,#0b100e);font:650 16px/1.6 var(--font,'Work Sans',sans-serif);text-decoration:none}.ds-button:hover{background:#55e5a4;color:var(--bg,#0b100e)}.ds-button:active{background:#17bd76}.ds-button:focus-visible{outline:2px solid var(--green,#25d78a);outline-offset:6px}.ds-button svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8}"
+      "html": "<a class=\"ds-button\" href=\"/app/\">Start free on iPhone <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "kind": "button",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;padding:14px 30px;border-radius:999px;background:var(--ink,#071b12);color:var(--text,#f5f8f6);font:650 16px/1.6 var(--font,\"Work Sans\",sans-serif);text-decoration:none}.ds-button:hover{background:#153d2a;color:var(--text,#f5f8f6)}.ds-button:focus-visible{outline:3px solid var(--ink,#071b12);outline-offset:5px}.ds-button:active{transform:translateY(1px)}.ds-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}@media(prefers-reduced-motion:reduce){.ds-button:active{transform:none}}",
+      "name": "Opening action",
+      "description": "Dark pill action on the green opening."
     },
     {
-      "name": "Header links",
-      "kind": "nav",
-      "description": "Two simple navigation links.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#pricing\">Pricing</a><a href=\"/support.html\">Support</a></nav>",
-      "css": ".ds-nav{display:flex;gap:28px;align-items:center;font-family:var(--font,'Work Sans',sans-serif)}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:14px;color:var(--muted,#a5b4ab)}.ds-nav a:hover{color:var(--green,#25d78a)}.ds-nav a:focus-visible{outline:2px solid var(--green,#25d78a);outline-offset:6px}"
+      "refersTo": "button-green",
+      "html": "<a class=\"ds-green-button\" href=\"/app/\">Get DoThis for iPhone <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></a>",
+      "kind": "button",
+      "css": ".ds-green-button{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;padding:14px 30px;border-radius:999px;background:var(--green,#18cf91);color:var(--ink,#071b12);font:650 16px/1.6 var(--font,\"Work Sans\",sans-serif);text-decoration:none}.ds-green-button:hover{background:#49dfa7;color:var(--ink,#071b12)}.ds-green-button:focus-visible{outline:3px solid var(--green,#18cf91);outline-offset:5px}.ds-green-button:active{transform:translateY(1px)}.ds-green-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}@media(prefers-reduced-motion:reduce){.ds-green-button:active{transform:none}}",
+      "name": "Pricing action",
+      "description": "Green pill action on the dark pricing surface."
     },
     {
-      "name": "Subscription disclosure",
+      "html": "<details class=\"ds-faq\"><summary>Do I have to be a serious athlete?</summary><p>No. DoThis is for people who want their gym training to support the sport they enjoy. Share your experience, equipment, and goals to give your workouts context.</p></details>",
+      "description": "Native disclosure with a rule and CSS plus/minus indicator.",
+      "css": ".ds-faq{border-bottom:1px solid var(--line,#30443a);color:var(--text,#f5f8f6);font:400 16px/1.6 var(--font,\"Work Sans\",sans-serif)}.ds-faq summary{cursor:pointer;padding:16px 28px 16px 0;list-style:none;font-weight:500;position:relative}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:after,.ds-faq summary:before{content:\"\";position:absolute;right:2px;top:28px;width:12px;height:1.5px;background:var(--green,#18cf91)}.ds-faq summary:before{transform:rotate(90deg)}.ds-faq[open] summary:before{transform:none}.ds-faq summary:hover{color:var(--green,#18cf91)}.ds-faq summary:focus-visible{outline:3px solid var(--green,#18cf91);outline-offset:5px}.ds-faq p{font-size:14px;color:var(--muted,#b0beb6);margin:0;padding-bottom:20px;max-width:520px}",
       "kind": "custom",
-      "refersTo": "disclosure",
-      "description": "Native expandable subscription details.",
-      "html": "<details class=\"ds-terms\"><summary>Preview and subscription details</summary><div><p>Your one-time 7-day Premium Preview starts after your first personalized workout is ready. No payment required and no automatic charge. Afterward, keep your local workouts, logs, and progress. New personalized AI features and cloud sync require Premium.</p><p>Founder pricing is for the first 200 subscriptions in each offer. Standard pricing: $12.99/month or $119.99/year. Availability and local prices are confirmed in the app. Paid subscriptions renew automatically; manage or cancel in Apple ID settings.</p></div></details>",
-      "css": ".ds-terms{margin-top:12px;color:var(--muted,#a5b4ab);font:400 13px/1.6 var(--font,'Work Sans',sans-serif);max-width:760px}.ds-terms summary{cursor:pointer;width:fit-content;padding:10px 0;min-height:44px;text-underline-offset:4px}.ds-terms summary:hover{color:var(--text,#f4f7f5)}.ds-terms summary:focus-visible{outline:2px solid var(--green,#25d78a);outline-offset:6px}.ds-terms div{padding:4px 0 8px}.ds-terms p{margin:0}.ds-terms p+p{margin-top:12px}"
+      "name": "FAQ disclosure"
     }
   ],
   "narrative": {
-    "northStar": "Simple black and green",
-    "overview": "DoThis uses a near-black field, logo-family green emphasis, and plain Work Sans typography. Short copy, open space, and genuine product evidence make the homepage easy to understand.\n\nThis records index.html, src/home.css, home.js, and the reviewed 390px and 1440px captures. The user's latest correction in docs/design/simple/DIRECTION.md supersedes the rejected photographic editorial direction. There is no approved comp. Other site destinations are outside this homepage record.",
+    "northStar": "Reference-led black and green",
+    "dos": [
+      "Do preserve the logo, genuine app screens, meaningful captions, and full-size links.",
+      "Do keep the Preview disclosure adjacent to the opening action.",
+      "Do retain visible focus, native disclosures, and responsive reading order.",
+      "Do keep product and purchase claims consistent with PRODUCT.md."
+    ],
     "keyCharacteristics": [
-      "One green accent on a near-black ground.",
-      "One font family and a clear reading hierarchy.",
-      "The unchanged logo and Coach screen as the only imagery.",
-      "Compact pricing, native disclosure, and no animation."
+      "A solid green opening and dark phrase highlight.",
+      "Black content with two genuine screenshot feature panels.",
+      "Pill actions, concise pricing, three native FAQ disclosures, and a quiet footer."
     ],
     "rules": [
       {
-        "name": "The Green Emphasis Rule",
-        "body": "Use green for emphasis and interaction; keep the page ground neutral.",
-        "section": "colors"
+        "section": "colors",
+        "body": "Use the solid green field for the opening, then dark surfaces for product evidence and supporting content.",
+        "name": "The Green Opening Rule"
       },
       {
-        "name": "The Plain Type Rule",
-        "body": "Use Work Sans for every website text role; express hierarchy through size, weight, and spacing.",
-        "section": "typography"
+        "section": "typography",
+        "body": "Use Work Sans throughout; express hierarchy through size, weight, and spacing.",
+        "name": "The Plain Type Rule"
       },
       {
-        "name": "The Flat Surface Rule",
-        "body": "Keep website surfaces flat. Use space and fine rules to separate content.",
-        "section": "elevation"
+        "section": "elevation",
+        "body": "Separate content with solid color, space, and fine rules.",
+        "name": "The Flat Surface Rule"
       }
     ],
-    "dos": [
-      "Do preserve the approved logo, unchanged screenshot, and full-size inspection link.",
-      "Do keep the preview and no-charge disclosure directly below the download action.",
-      "Do retain visible focus, real links, native disclosure, and useful non-JavaScript content.",
-      "Do keep claims consistent with PRODUCT.md and the in-app purchase flow."
-    ],
+    "overview": "DoThis pairs a centered green opening with near-black content and genuine app evidence. Heavy Work Sans, short explanations, and pill actions give the page a direct, approachable character.\n\nThis records index.html, src/home.css, home.js, and the reviewed reference captures. The user-selected MyFitnessPal reference and docs/design/reference/DIRECTION.md supersede the rejected sparse layout. MyFitnessPal's wide desktop uses a left-aligned pitch beside photography; DoThis intentionally centers its desktop opening because the user prohibited decorative pictures. There is no random seed or approved visual comp. The finish review records a ship disposition. Other site destinations are outside this homepage record.",
     "donts": [
-      "Don't add decorative pictures, generated imagery, 3D models, or ornamental motion.",
-      "Don't restore the rejected editorial palette, display font, sport selectors, or repeated closing pitch.",
-      "Don't repaint the app screenshot or promote its internal colors into website tokens.",
-      "Don't treat other site destinations as redesigned by this record."
+      "Don't add decorative pictures, generated imagery, 3D assets, or ornamental motion.",
+      "Don't copy the reference's branding, photography, claims, or testimonials.",
+      "Don't restore the rejected sparse layout or treat this adaptation as a pixel-identical desktop copy."
     ]
   }
 }
